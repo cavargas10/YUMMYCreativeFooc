@@ -151,12 +151,79 @@ color: #444;
     font-size: 30px;
 }
 .new-recetas h2{
-    color: rgb(136, 136, 136);
+    color: rgb(153, 152, 152);
 }
 
   /*  cards*/
-  
+  .grid{
+      display: grid;
+      grid-gap: 40px;
+      padding: 60px 0;      
 
+  }
+.text-medium{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+.rating{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: black;
+}
+.container-card-recet{
+    grid-column: 2/span12;
+    display: grid;
+    grid-template-columns:repeat(12, minmax(auto,60px)) ;
+    grid-gap: 40px;
+}
+.card-recet{
+grid-column-end: span 4;
+display: flex;
+flex-direction: column;
+background-color: #999;
+cursor: pointer;
+transition: all 0.3s ease 0s;
+} 
+.img-card-recet{
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+}
+.img-card-recet img{
+    width: 100%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+.card-content{
+    padding: 20px;
+    color: white;
+}
+.card-title{
+    margin-bottom: 20px;
+}
+.card-inf{
+ 
+    align-self: end;
+}
+.card-view{
+  display: inline;
+  margin-left: 60%;
+}
+
+/*img tesxt*/
+.inf-mensaje h1{ 
+    position: absolute;
+    color: white;
+    font-size: 25px;
   
-/*card2*/
+    width: 550px;
+    margin-left: 10%;
+}
  
