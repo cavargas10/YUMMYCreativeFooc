@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+body{
+    background-color: #FAF0CA;
+    font-family: 'calibri';
+}
+/* Parte superior con el logo y el user*/
+.logo-admin{
+    background-color: black;
+    
+    
+}
+.logo-admin .img-user{
+    padding-left: 95%;
+}
+
+
+/* navbar */
+header{
+    background: rgb(122, 122, 122);
+    width: 100%;
+    clear: both;
+    content: '';
+    display: table;
+}
+.menu{
+    width: 100%;
+    margin: 0 auto;
+}
+nav{
+    float: right;
+}
+nav ul li{
+    list-style: none;
+    margin-left: 25px;
+    padding: 15px ;
+    float: left;
+
+}
+nav ul li a{ 
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+
+}
+nav ul li:hover{
+    background-color: rgb(255, 123, 0);
+}
+
+/* Primera img con su respectivo texto*/
+.container-main img{
+    width: 100%;
+    height: 600px;
+    
+}
+.container-main span{
+    color:orange
+}
+
+.text-main{
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    top: 25%;
+    width: 550px;
+    margin-left: 10%;
+}
+/* segunda img con su respectivo texto*/
+.text-second{
+    position: absolute;
+    color: black;
+    font-size: 25px;
+    top: 80%;
+    width: 550px;
+    margin-left: 10%;
+}
+.text-second h2{
+    margin-top: 20px;
+}
+/* Card search*/
+.card-search{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    flex-flow:wrap ;
+    padding-bottom: 60px;
+}
+.card-search form{
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+}
+
+.card-search form .input-box{
+    margin-top: 20px ;
+    padding: 10px;
+}
+.card-search form .input-box span{
+    display: block;
+    columns: #999;
+    padding-bottom: 5px;
+    
+}
+.card-search form .input-box input,
+.card-search form .input-box select{
+width: 100%;
+padding: 10px;
+border-radius: 10px;
+border: 1px solid rgba(0,0, 0,.3);
+color: #444;
+
+}
+.card-search form .flex-box{
+    display: flex;
+    gap: 15px;
+}
+.card-search form .flex-box .input-box{
+    flex: 1 1 150px;
+}
+
+.card-search form .submit-btn{
+    width: 200px;
+    height: 40px;
+    background: tomato;
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: 2.s linear;
+}
+.card-title-input{
+    padding: 15px;
+}
+
+
+
+/* Card recetas*/
+.new-recetas{
+    top: 35px;
+    height: 15vh;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.new-recetas h2{
+    color: rgb(136, 136, 136);
+}
+
+  /*  cards*/
+  
+
+  
+/*card2*/
+ 
