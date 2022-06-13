@@ -56,12 +56,13 @@ nav ul li a{
    font-weight: bold;
 }
 nav ul li:hover{
-    background-color: rgb(255, 123, 0);
+    background-color: rgb(165, 93, 30);
 }
 
 /* Primera img con su respectivo texto*/
 .container-main img{
     width: 100%;
+    margin-top: -0.3%;
     height: 550px;
     
 }
@@ -93,7 +94,7 @@ nav ul li:hover{
 /* Card search*/
 .card-search{
     display: flex;
-    background-color: white;
+    background-color: #FCF7E4;
     justify-content: center;
     flex-flow:wrap ;
     padding-bottom: 60px;
@@ -175,7 +176,7 @@ color: #444;
       display: inline-block;
       position: relative;
       margin-left: 0%;
-      background-color: #FAF0CA;
+      background-color: #F1E7C2;
 
   }
 .text-medium{
@@ -200,7 +201,7 @@ color: #444;
 grid-column-end: span 4;
 display: flex;
 flex-direction: column;
-background-color: white;
+background-color: #FCF7E4;
 cursor: pointer;
 transition: all 0.3s ease 0s;
 } 
@@ -242,13 +243,23 @@ transition: all 0.3s ease 0s;
     padding: 4%;
     margin-left: 13%;
 }
+.inf_general{
+    display: grid;
+    grid-gap: 30px;
+    padding: 2%;
+    width: 96%;
+    display: inline-block;
+    position: relative;
+    margin-left: 0%;
+    background-color: #FCF7E4;
+}
 
 /*img tesxt*/
 .inf-mensaje h1{ 
     position: absolute;
     color: black;
     font-size: 29px;
-  margin-top: -26%;
+    margin-top: -26%;
     width: 550px;
     text-align: left;
     margin-left: 9%;
@@ -263,33 +274,82 @@ transition: all 0.3s ease 0s;
     display: inline-block;
     padding: 3%;
     text-align: center;
-    margin-left: 15%;
+    grid-gap: 23px;
+    padding: 1%;
+    width: 10%;
+    margin-right: -3%;
+    
 }
 .recetas{
     background-color: rgb(244, 240, 231);
+    padding: 2%;
 }
 .email{
     text-align:center;
     display: inline-block;
-    margin-top: 13%;
+    margin-top: 5%;
     margin-left: 13%;
 }
 .email input{
     margin-top: 2%;
     text-align: center;
 }
+.email h1{
+    color: rgb(0, 0, 0);
+    align-items: center;
+    font-size: 50px;
+}
 .email h2{
     color: #999;
-    font-weight: bold;
 }
-.img{
-    width: 35%;
-    margin-left: 50%;
-    margin-top: -18%;
+.img img{
+    width: 33%;
+    margin-left: 54%;
+    margin-top: -21%;
+    height: 400px;
 }
-.footer img{
-    width: 25%;
-    height: 2%;
+.footer{
+    background-color: #EADBC2;
+    color: black;
+    padding: 2%;
 }
+.footer1 .d1{
+    text-align: left;
+    margin-left: 58%;
+    margin-top: 4%;
+}
+.footer1 .d2{
+    text-align: left;
+    margin-left: 31%;
+    margin-top: -7%;
+}
+.footer1 .d3{
+    text-align: left;
+    margin-left: 10%;
+    margin-top: -7%;
+}
+.footer .footer2{
+    margin-top: -3%;
+    float: right;
+}
+.footer2 img{
+    width: 30%;
+    height: 12%;
+}
+.footer .footer2 .df img{
+    width: 75px;
+    display: block;
+    position: relative;
+    margin-top: -130%;
+}
+hr{
+    margin-top: -10%;
+    margin-left: 85%;
+    height:200px;
+    width:.5vw;
+    border-width:0;
+    color:#000;
+    background-color:#000;
+   }
 
  
