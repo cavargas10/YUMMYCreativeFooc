@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
    
+   
 }
 
 body{
@@ -110,7 +111,7 @@ nav ul li:hover{
     background-color: #FCF7E4;
     justify-content: center;
     flex-flow:wrap ;
-    margin-top: -0.5%;
+    margin-top: 5%;
     padding-bottom: 60px;
 }
 
@@ -172,13 +173,14 @@ color: #444;
     top: 35px;
     height: 15vh;
     margin: 15px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-size: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+
 }
 .new-recetas h2{
     color: rgb(153, 152, 152);
+    
 }
 
   /*  cards*/
@@ -338,19 +340,79 @@ transition: all 0.3s ease 0s;
 .footer{
     background-color: #EADBC2;
     color: black;
-    padding: 2%;
+
 }
+.footer .footer1{
+    display: flex;
+}
+.footer1 .d1{
+    padding: 10px 0 10px 10px;
+    text-align: left;
+    width: 30%; 
+}
+.footer1 .d2{
+    padding: 10px 0 10px 10px;
+    text-align: left;
+    
+    width: 30%;
+}
+.footer1 .d3{
+    padding: 10px 0 10px 10px;
+    text-align: left;
+   
+    width: 30%;
+}
+.footer1 .d3 *{
+    text-align: center;
+}
+.footer .footer2{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 10%;
+   flex-wrap: wrap;
+}
+.footer2 .df{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.footer2 .redesSociales{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.footer2 img{
+    height: 35px;
+    width: 35px;
+    margin: 5px;
+}
+.footer2 .redesSociales img{
+    display: flex;
+    flex-wrap: wrap;
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+}
+
+
+/*
 .footer1 .d1{
     text-align: left;
     margin-left: 58%;
+    width: 33%;
+    
 }
 .footer1 .d2{
     text-align: left;
     margin-left: 31%;
+    width: 33%;
 }
 .footer1 .d3{
     text-align: left;
     margin-left: 10%;
+    width: 33%;
 }
 .footer .footer2{
     margin-top: -3%;
@@ -366,6 +428,7 @@ transition: all 0.3s ease 0s;
     position: relative;
     margin-top: -130%;
 }
+
 hr{
     margin-top: -10%;
     margin-left: 85%;
@@ -375,5 +438,6 @@ hr{
     color:#000;
     background-color:#000;
    }
+   */
 
  
