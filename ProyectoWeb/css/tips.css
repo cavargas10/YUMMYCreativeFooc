@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+body{
+    background-color: #FCF7E4;
+    font-family: 'calibri';
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+}
+/* Parte superior con el logo y el user*/
+.logo-admin{
+    background-color: black;
+    height: 60px;
+    
+}
+.logo1{
+    margin-top: 0.5%;
+    margin-left: 2%;
+}
+.logo2{
+    width: 2.5%;
+    margin-top: 0%;
+    margin-left: 89%;
+}
+
+
+/* navbar */
+header{
+    background: #474747;
+    width: 100%;
+    clear: both;
+    content: '';
+    display: table;
+}
+.menu{
+    width: 100%;
+    margin: 0 auto;
+}
+.menu nav ul{
+    margin-left: -12%;
+}
+nav{
+    float: right;
+}
+nav ul li{
+    list-style: none;
+    margin-left: 55px;
+    padding: 10px ;
+    float: left;
+
+}
+nav ul li a{ 
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+}
+nav ul li:hover{
+    background-color: rgb(165, 93, 30);
+}
+/* card tips*/
+.title{
+    text-align: center;
+    font-size: 40px;
+    color: #6a6a6a;
+    margin-top: 50px;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    
+}
+
+.container .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img{
+    width: 330px;
+    height: 220px;
+}
+
+
+.container .card h4{
+    font-weight: 600;
+}
+
+.container .card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container .card a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
+
+
+/*footer*/
+.footer{
+    margin-top: 80vh;
+    background-color: #EADBC2;
+    color: black; 
+}
+.footer1 .d1{
+    text-align: left;
+    margin-left: 58%;    
+}
+.footer1 .d2{
+    text-align: left;
+    margin-left: 31%;
+    margin-top: -7%;
+}
+.footer1 .d3{
+    text-align: left;
+    margin-left: 10%;
+    margin-top: -7%;
+}
+.footer .footer2{
+    margin-top: -3%;
+    float: right;
+}
+.footer2 img{
+    width: 30%;
+    height: 12%;
+}
+.footer .footer2 .df img{
+    width: 75px;
+    display: block;
+    position: relative;
+    margin-top: -130%;
+}
+hr{
+    margin-top: -10%;
+    margin-left: 85%;
+    height:200px;
+    width:.5vw;
+    border-width:0;
+    color:#000;
+    background-color:#000;
+   }
