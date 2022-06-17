@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +8,12 @@
 body{
     background-color: #FCF7E4;
     font-family: 'calibri';
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
 }
 /* Parte superior con el logo y el user*/
 .logo-admin{
@@ -26,6 +33,8 @@ body{
 
 
 /* navbar */
+
+
 header{
     background: #474747;
     width: 100%;
@@ -60,6 +69,7 @@ nav ul li:hover{
 }
 
 /* Primera img con su respectivo texto*/
+
 .container-main img{
     width: 100%;
     margin-top: -0.3%;
@@ -79,6 +89,8 @@ nav ul li:hover{
     margin-left: 10%;
 }
 /* segunda img con su respectivo texto*/
+
+
 .text-second{
     position: absolute;
     margin-top: 10%;
@@ -92,13 +104,16 @@ nav ul li:hover{
     margin-top: 20px;
 }
 /* Card search*/
+
 .card-search{
     display: flex;
     background-color: #FCF7E4;
     justify-content: center;
     flex-flow:wrap ;
+    margin-top: -0.5%;
     padding-bottom: 60px;
 }
+
 .card-search form{
     background: rgb(255, 255, 255);
     border-radius: 5px;
@@ -141,6 +156,7 @@ color: #444;
     height: 40px;
     background: rgb(208, 174, 144);
     margin-top: 4%;
+    border-radius: 8%;
     font-size: 20px;
     color: black;
     cursor: pointer;
@@ -150,14 +166,12 @@ color: #444;
     padding: 15px;
 }
 
-
-
 /* Card recetas*/
+
 .new-recetas{
     top: 35px;
     height: 15vh;
     margin: 15px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -168,18 +182,20 @@ color: #444;
 }
 
   /*  cards*/
+  
   .grid{
       display: grid;
       grid-gap: 30px;
       padding: 2%;
       width: 96%;
-      display: inline-block;
+      display: block;
       position: relative;
-      margin-left: 0%;
-      background-color: #F1E7C2;
+      margin-left:0%;
+      background-color: #FAF0CA;
 
   }
 .text-medium{
+    background-color: #FCF7E4;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -207,27 +223,37 @@ transition: all 0.3s ease 0s;
 } 
 .card-recet img{
     width: 100%;
-    height: 25%;
+    height: 35%;
 }
-/*
+
 .img-card-recet{
     width: 100%;
-    height: 20%;
+    height: 90%;
     padding-top: 56.25%;
     overflow: hidden;
     position: relative;
 }
 .img-card-recet img{
     width: 100%;
-    position: absolute;
-    top:50%;
-    left:50%;
+    height: 320px;
+    position: relative;
+    margin-top: -18%;
+    left: 50%;
     transform: translate(-50%,-50%);
 
-}*/
+}
 .card-content{
+    margin-top: -35%;
     padding: 20px;
     color: white;
+}
+.card-content h1{
+        color: rgb(0, 0, 0);
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 25px;
+        text-align: center;
+    
 }
 .card-title{
     margin-bottom: 20px;
@@ -255,6 +281,7 @@ transition: all 0.3s ease 0s;
 }
 
 /*img tesxt*/
+
 .inf-mensaje h1{ 
     position: absolute;
     color: black;
@@ -316,17 +343,14 @@ transition: all 0.3s ease 0s;
 .footer1 .d1{
     text-align: left;
     margin-left: 58%;
-    margin-top: 4%;
 }
 .footer1 .d2{
     text-align: left;
     margin-left: 31%;
-    margin-top: -7%;
 }
 .footer1 .d3{
     text-align: left;
     margin-left: 10%;
-    margin-top: -7%;
 }
 .footer .footer2{
     margin-top: -3%;
