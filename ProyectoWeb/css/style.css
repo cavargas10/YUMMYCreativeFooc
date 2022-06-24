@@ -30,7 +30,7 @@ body{
 
 /* navbar */
 nav{
-  position: fixed;
+    position: fixed;
     background: #b5a384;
     height: 80px;
     width: 100%;
@@ -369,8 +369,6 @@ transition: all 0.3s ease 0s;
     margin-top: -450px;
     height: 400px;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 footer{
   background: #b5a384;
