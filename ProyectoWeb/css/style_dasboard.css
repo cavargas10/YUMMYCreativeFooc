@@ -47,6 +47,7 @@ nav .logo-name .logo_name{
 }
 
 nav .menu-items{
+    
     margin-top: 40px;
     height: calc(100% - 90px);
     display: flex;
@@ -63,6 +64,8 @@ nav .menu-items{
     text-decoration: none;
     position: relative;
 }
+
+
 
 .menu-items li a i{
     font-size: 24px;
