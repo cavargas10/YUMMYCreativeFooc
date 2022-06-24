@@ -30,7 +30,8 @@ body{
 
 /* navbar */
 nav{
-    background: #2fcdcd;
+  position: fixed;
+    background: #b5a384;
     height: 80px;
     width: 100%;
     text-decoration: none;
@@ -43,6 +44,16 @@ nav{
 }
 .logo{
     height: 40px;
+}
+.menu .nombre{
+  margin-top: -19%;
+  width: 100%;
+  margin-left: 18%;
+  color: #000;
+}
+
+.enlace .nombre span{
+  color: #a56e20;
 }
 nav ul{
     float: right;
@@ -60,7 +71,7 @@ nav ul li a{
     border-radius: 3px;
 }
 li a.active, li a:hover{
-    background: #000090;
+    background: #a56e20;
     transition: .5s;
 }
 
@@ -69,7 +80,7 @@ li a.active, li a:hover{
 .container-main img{
     width: 100%;
     margin-top: -0.5%;
-    height: 550px;
+    height: 760px;
     
 }
 .container-main span{
@@ -82,7 +93,9 @@ li a.active, li a:hover{
     font-size: 25px;
     top: 25%;
     width: 550px;
-    margin-left: 3.2%;
+    margin-left: 58%;
+    margin-top: -1%;
+    text-align: right;
 }
 
 
@@ -91,7 +104,7 @@ li a.active, li a:hover{
 
 .text-second{
     position: absolute;
-    margin-top: 5%;
+    margin-top: 15%;
     color: rgb(111, 76, 34);
     font-size: 25px;
     top: 80%;
@@ -155,8 +168,8 @@ color: rgb(190, 130, 50);
     width: 200px;
     height: 40px;
     background: rgb(208, 174, 144);
-    margin-top: 8%;
-    border-radius: 8%;
+    margin-top: 4.7%;
+    border-radius: 5%;
     font-size: 20px;
     color: black;
     cursor: pointer;
@@ -317,19 +330,29 @@ transition: all 0.3s ease 0s;
     width: 100%;
 }
 .recetas{
-    background-color: #edd1b3;
-    padding: 4%;
-    width: 92%;
+    background-color: #FCF7E4;
+    width: 100%;
 }
 .email{
-    width: 30%;
+    width: 50%;
+    padding: 2%;
     margin-top: 5%;
-    margin-left: 13%;
+    margin-left: 3%;
 }
 .email input{
     margin-top: 2%;
+    height: 29px;
+    width: 70%;
     text-align: center;
 }
+.email button{
+  width: 25%;
+  margin-top: 4%;
+  margin-left: 25%;
+  height: 40px;
+  background-color: #906f2c;
+}
+
 .email h1{
     color: rgb(0, 0, 0);
     align-items: center;
@@ -337,18 +360,20 @@ transition: all 0.3s ease 0s;
 }
 .email h2{
     color: #999;
+    text-decoration: dotted;
+    text-align: left;
 }
 .img img{
     width: 33%;
     margin-left: 54%;
-    margin-top: -21%;
+    margin-top: -450px;
     height: 400px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 footer{
-  background: #55491d;
+  background: #b5a384;
   width: 100%;
   bottom: 0;
   left: 0;
@@ -475,7 +500,7 @@ footer .content .link-boxes .box{
   width: calc(100% + 55px);
   outline: none;
   border: 2px solid #AFAFB6;
-  background: #292260;
+  background: #b6682493;
   border-radius: 4px;
   padding: 0 15px;
   font-size: 15px;
@@ -488,7 +513,7 @@ footer .content .link-boxes .box{
 }
 .link-boxes .input-box input[type="button"]{
   background: #fff;
-  color: #292260;
+  color: #b6682493;
   border: none;
   font-size: 18px;
   font-weight: 500;
@@ -502,7 +527,7 @@ footer .content .link-boxes .box{
 }
 footer .bottom-details{
   width: 100%;
-  background: #0F0844;
+  background: #7b481b93;
 }
 footer .bottom-details .bottom_text{
   max-width: 1250px;
@@ -578,103 +603,6 @@ footer .bottom-details .bottom_text{
 }
 
 
-
-
-/*
-.footer{
-    background-color: #070707;
-    color: rgb(255, 250, 244);
-
-}
-.footer .footer1{
-    display: flex;
-}
-.footer1 .d1{
-    padding: 10px 0 10px 10px;
-    text-align: left;
-    width: 30%; 
-}
-.footer1 .d2{
-    padding: 10px 0 10px 10px;
-    text-align: left;
-    
-    width: 30%;
-}
-.footer1 .d3{
-    padding: 10px 0 10px 10px;
-    text-align: left;
-   
-    width: 30%;
-}
-.footer1 .d3 *{
-    text-align: center;
-}
-.footer .footer2{
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   width: 10%;
-   flex-wrap: wrap;
-}
-.footer2 .df{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.footer2 .redesSociales{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100%;
-}
-.footer2 img{
-    height: 35px;
-    width: 35px;
-    margin: 5px;
-}
-.footer2 .redesSociales img{
-    display: flex;
-    flex-wrap: wrap;
-    height: 25px;
-    width: 25px;
-    margin: 5px;
-}
-
-
-
-
-/*
-.footer1 .d1{
-    text-align: left;
-    margin-left: 58%;
-    width: 33%;
-    
-}
-.footer1 .d2{
-    text-align: left;
-    margin-left: 31%;
-    width: 33%;
-}
-.footer1 .d3{
-    text-align: left;
-    margin-left: 10%;
-    width: 33%;
-}
-.footer .footer2{
-    margin-top: -3%;
-    float: right;
-}
-.footer2 img{
-    width: 30%;
-    height: 12%;
-}
-.footer .footer2 .df img{
-    width: 75px;
-    display: block;
-    position: relative;
-    margin-top: -130%;
-}
-
 hr{
     margin-top: -10%;
     margin-left: 85%;
@@ -684,6 +612,6 @@ hr{
     color:#000;
     background-color:#000;
    }
-   */
+  
 
  
