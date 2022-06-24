@@ -2,8 +2,7 @@
 *{
     margin: 0;
     padding: 0;
-   
-   
+    text-decoration: none;
 }
 
 body{
@@ -15,6 +14,7 @@ body{
     letter-spacing: 0.03em;
     line-height: 1.6;
     font-family: 'Open Sans', sans-serif;
+    
 }
 /* Parte superior con el logo y el user*/
 
@@ -29,39 +29,39 @@ body{
 }*/
 
 /* navbar */
-header{
-    background: #dec8a4;
-    width: 100%;
-    height: 90px;
-    clear: both;
-    content: '';
-    display: table;
-}
-.menu{
-    width: 100%;
-    margin: 0 auto;
-}
-.menu nav ul{
-    margin-left: -12%;
-}
 nav{
+    background: #2fcdcd;
+    height: 80px;
+    width: 100%;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 40px;
+}
+nav ul{
     float: right;
+    margin-right: 20px;
 }
 nav ul li{
-    list-style: none;
-    margin-top: 2%;
-    margin-left: 55px;
-    padding: 10px ;
-    float: left;
-
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
 }
-nav ul li a{ 
-   text-decoration: none;
-   color: rgb(15, 15, 15);
-   font-weight: bold;
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
 }
-nav ul li:hover{
-    background-color: rgba(251, 234, 212, 0.995);
+li a.active, li a:hover{
+    background: #000090;
+    transition: .5s;
 }
 
 /* Primera img con su respectivo texto*/
@@ -317,8 +317,9 @@ transition: all 0.3s ease 0s;
     width: 100%;
 }
 .recetas{
-    background-color: rgb(231, 205, 179);
+    background-color: #edd1b3;
     padding: 4%;
+    width: 92%;
 }
 .email{
     width: 30%;
@@ -347,14 +348,14 @@ transition: all 0.3s ease 0s;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 footer{
-  background: #140B5C;
+  background: #55491d;
   width: 100%;
   bottom: 0;
   left: 0;
 }
 footer::before{
   content: '';
-  position: absolute;
+  position: relative;
   left: 0;
   top: 100px;
   height: 1px;
@@ -362,7 +363,7 @@ footer::before{
   background: #AFAFB6;
 }
 footer .content{
-  max-width: 1250px;
+  max-width: 1300px;
   margin: auto;
   padding: 30px 40px 40px 40px;
 }
@@ -392,7 +393,7 @@ footer .content .top{
   transition: all 0.4s ease;
 }
 .top .media-icons a:nth-child(1){
-  background: #4267B2;
+  background: #c1a860;
 }
 .top .media-icons a:nth-child(1):hover{
   color: #4267B2;
@@ -420,7 +421,7 @@ footer .content .top{
   background: #fff;
 }
 .top .media-icons a:nth-child(5){
-  background: #FF0000;
+  background: #ff840099;
 }
 .top .media-icons a:nth-child(5):hover{
   color: #FF0000;
@@ -474,7 +475,7 @@ footer .content .link-boxes .box{
   width: calc(100% + 55px);
   outline: none;
   border: 2px solid #AFAFB6;
-  background: #140B5C;
+  background: #292260;
   border-radius: 4px;
   padding: 0 15px;
   font-size: 15px;
@@ -487,7 +488,7 @@ footer .content .link-boxes .box{
 }
 .link-boxes .input-box input[type="button"]{
   background: #fff;
-  color: #140B5C;
+  color: #292260;
   border: none;
   font-size: 18px;
   font-weight: 500;
