@@ -15,15 +15,11 @@
   <header>
 
     <div class="menu">
-
       <nav>
-
         <a href="#" class="enlace">
           <img src="img/logo.png" alt="" class="logo">
           <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
-
         </a>
-
         <ul>
           <li><a class="active" href="#">Inicio</a></li>
           <li><a href="#">Grupos Etarios</a></li>
@@ -31,8 +27,38 @@
           <li><a href="#">Tips</a></li>
           <li><a href="#">Videos</a></li>
           <li><a href="#">Acerca de</a></li>
+          <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
         </ul>
       </nav>
+    </div>
+    <!-- Modal -->
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close"
+        title="Close Modal">&times;</span>
+
+      <form class="modal-content animate" action="">
+        <div class="container">
+          <h2>Inicio de Sesión</h2><br>
+          <label for="usuario"><b>Usuario</b></label><br>
+          <input type="text" placeholder="  Ingrese su Usuario" name="usuario" required><br><br>
+
+          <label for="correo"><b>E-mail</b></label><br>
+          <input type="text" placeholder="  Ingrese su Correo Electronico" name="correo" required><br><br>
+
+          <label for="clave"><b>Contraseña</b></label><br>
+          <input type="password" placeholder="  Ingrese su Contraseña" name="clave" required><br>
+
+          <br><button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Recuerdamelo
+          </label>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn">Cancelar</button>
+          <span class="psw"><a href="#">Olvido su contraseña?</a></span>
+        </div>
+      </form>
     </div>
   </header>
   <main class="container-main">

@@ -1,115 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style_Login.css" />
-    <title>Yummi Creative Food</title>
-  </head>
 
-  <body>
-    <div class="logo-admin">
-      <img class="logo1" src="img/logo.png" alt="" />
-      <img class="logo2" src="img/user.png" alt="" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style_Login.css" />
+  <title>Yummi Creative Food</title>
+</head>
+
+
+<body>
+  <header>
+
+    <div class="menu">
+
+      <nav>
+
+        <a href="#" class="enlace">
+          <img src="img/logo.png" alt="" class="logo">
+          <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
+
+        </a>
+
+        <ul>
+          <li><a class="active" href="#">Inicio</a></li>
+          <li><a href="#">Grupos Etarios</a></li>
+          <li><a href="#">Especiales</a></li>
+          <li><a href="#">Tips</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Acerca de</a></li>
+          <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+        </ul>
+      </nav>
     </div>
-
-    <header>
-      <div class="menu">
-        <nav>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="gruposEtarios.html">Grupos Etarios</a></li>
-            <li><a href="#">Especiales</a></li>
-            <li><a href="tips.html">Tips</a></li>
-            <li><a href="videos.html">Videos</a></li>
-            <li><a href="#">Acerca de</a></li>
-          </ul>
-        </nav>
+  </header>
+  <div class="container">
+    <div class="content">
+      <div class="image-box">
+        <!----<img src="contact.png" alt=""> ----->
       </div>
-    </header>
-    <main>
-      <div class="contenedor-formulario">
-        <section class="s1">
-          <img src="img/imglogin.jpg" alt="" />
-        </section>
-
-        <section class="s2">
-          <form class="formulario">
-            <div class="texto-formulario">
-              <h2>Bienvenido</h2>
-              <p>Inicia sesión con tu cuenta</p>
-            </div>
-            <div class="input">
-              <br />
-              <label for="usuario">Usuario</label><br />
-              <input placeholder="Ingrese su nombre" type="text" id="usuario" />
-            </div>
-            <div class="input">
-              <br />
-              <label for="correo">Correo Electronico</label><br />
-              <input
-                placeholder="Ingrese su correo electronico"
-                type="text"
-                id="correo"
-              />
-            </div>
-            <div class="input">
-              <br />
-              <label for="contraseña">Contraseña</label><br />
-              <input
-                placeholder="Ingrese su contraseña"
-                type="password"
-                id="contraseña"
-              />
-            </div>
-            <div class="password-olvidada">
-              <br />
-              <a href="#">¿Olvidaste tu contraseña?</a><br />
-            </div>
-            <div class="input">
-              <br />
-              <input type="submit" value="Login"/>
-            </div>
-          </form>
-        </section>
+      <form action="#">
+        <div class="topic">Send us a message</div>
+        <div class="input-box">
+          <input type="text" required>
+          <label>Enter your name</label>
+        </div>
+        <div class="input-box">
+          <input type="text" required>
+          <label>Enter your email</label>
+        </div>
+        <div class="message-box">
+          <label>Enter your message</label>
+        </div>
+        <div class="input-box">
+          <input type="submit" value="Send Message">
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <i class="fab fa-slack"></i>
+          <span class="logo_name">YUMMI CREATIVE FOOD</span>
+        </div>
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
       </div>
-      <footer class="footer">
-        <section class="footer1">
-          <div class="d1">
-            <h3>CATEGORÍAS DE LA RECETA</h3>
-            <p>Platos Fuertes</p>
-            <p>Desayunos</p>
-            <p>Sopas</p>
-            <p>Cena</p>
-          </div>
-          <div class="d2">
-            <h3>GRUPOS ETARIOS</h3>
-            <p>Madre en Gestación</p>
-            <p>Primera infancia (0-5 años)</p>
-            <p>Infancia (6-11 años)</p>
-            <p>Adolescencia (12-18 años)</p>
-          </div>
-          <div class="d3">
-            <h3>OTROS</h3>
-            <p>Tips</p>
-            <p>Especiales</p>
-            <p>Videos</p>
-            <p>Acerca de</p>
-          </div>
-        </section>
-        <hr />
-
-        <section class="footer2">
-          <div class="df">
-            <img src="img/logo.png" alt="" />
-          </div>
-
-          <img src="img/Vectorfb.png" alt="" />
-          <img src="img/Vectortw.png" alt="" />
-          <img src="img/Vectorins.png" alt="" />
-        </section>
-      </footer>
-    </main>
-  </body>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Company</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Get started</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Services</li>
+          <li><a href="#">App design</a></li>
+          <li><a href="#">Web design</a></li>
+          <li><a href="#">Logo design</a></li>
+          <li><a href="#">Banner design</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Account</li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">My account</a></li>
+          <li><a href="#">Prefrences</a></li>
+          <li><a href="#">Purchase</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Courses</li>
+          <li><a href="#">HTML & CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">Photography</a></li>
+          <li><a href="#">Photoshop</a></li>
+        </ul>
+        <ul class="box input-box">
+          <li class="link_name">Subscribe</li>
+          <li><input type="text" placeholder="Enter your email"></li>
+          <li><input type="button" value="Subscribe"></li>
+        </ul>
+      </div>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text">Copyright © 2021 <a href="#">CodingLab.</a>All rights reserved</span>
+          <span class="policy_terms">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & condition</a>
+          </span>
+        </div>
+      </div>
+  </footer>
+</body>
 </html>
