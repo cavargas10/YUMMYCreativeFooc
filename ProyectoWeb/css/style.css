@@ -4,10 +4,11 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  /*background-attachment: fixed;*/
 }
 
 body {
-  background-color: white;
+  background-color: #FAF0CA;
   font-family: 'calibri';
   width: 100%;
   height: 100%;
@@ -15,7 +16,6 @@ body {
   letter-spacing: 0.03em;
   line-height: 1.6;
   font-family: 'Open Sans', sans-serif;
-
 }
 
 /* Parte superior con el logo y el user*/
@@ -33,6 +33,7 @@ body {
 /* navbar */
 nav {
   position: fixed;
+  z-index: 100;
   background: #b5a384;
   height: 80px;
   width: 100%;
@@ -58,7 +59,7 @@ nav {
 }
 
 .enlace .nombre span {
-  color: #a56e20;
+  color: rgb(225, 146, 61);
 }
 
 nav ul {
@@ -73,15 +74,17 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
-  font-size: 18px;
+  color: rgb(67, 39, 9);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
   padding: 7px 13px;
   border-radius: 3px;
 }
 
 li a.active,
 li a:hover {
-  background: #a56e20;
+  background: rgb(225, 146, 61);
   transition: .5s;
 }
 
@@ -91,11 +94,11 @@ li a:hover {
   width: 100%;
   margin-top: -0.5%;
   height: 760px;
-
 }
 
 .container-main span {
-  color: rgba(255, 166, 0, 0.818);
+  color: rgb(225, 146, 61);
+  font-weight: bold;
 }
 
 .text-main {
@@ -124,24 +127,28 @@ li a:hover {
 }
 
 .text-second h2 {
+  height: 2px;
   margin-top: 20px;
-}
-
+  text-align: justify;
+  width: 90%;
+  }
+  
 /* Card search*/
 
 .card-search {
+  background-color: #e1923d;
   display: flex;
-  background-color: #fff;
+  height: 175%;
   justify-content: center;
   flex-flow: wrap;
-  margin-top: 5%;
+  margin-top: -0.5%;
   padding-bottom: 60px;
 }
 
 .card-search form {
   background: rgb(255, 255, 255);
   border-radius: 5px;
-  width: 80%;
+  width: 82%;
   box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
   padding: 20px;
   margin-top: 2%;
@@ -150,6 +157,8 @@ li a:hover {
 .card-search form .input-box {
   margin-top: 20px;
   padding: 10px;
+  text-transform: uppercase;
+  color: #000;
 }
 
 .card-title-input {
@@ -168,8 +177,8 @@ li a:hover {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, .3);
-  color: rgb(190, 130, 50);
+  border: 1px solid rgba(115, 79, 6, 0.837);
+  color: rgb(116, 72, 14);
 
 }
 
@@ -211,7 +220,7 @@ li a:hover {
 }
 
 .new-recetas h2 {
-  color: rgb(160, 84, 51);
+  color: rgb(225, 146, 61);
 
 }
 
@@ -226,8 +235,6 @@ li a:hover {
   display: block;
   position: relative;
   margin-left: 0%;
-  background-color: white;
-
 }
 
 .text-medium {
@@ -253,48 +260,35 @@ li a:hover {
 
 .card-recet {
   grid-column-end: span 4;
+  margin-top: 50%;
+  height: 310px;
   display: flex;
   flex-direction: column;
-  background-color: #edd1b3;
+  background-color: #FCF7E4;
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
 
-.card-recet img {
-  width: 100%;
-  height: 550px;
-}
-
-.img-card-recet {
-  width: 100%;
-  height: 90%;
-  padding-top: 56.25%;
-  overflow: hidden;
-  position: relative;
-}
-
 .img-card-recet img {
   width: 100%;
-  height: 320px;
+  height: 265px;
   position: relative;
   margin-top: -18%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 .card-content {
   margin-top: -35%;
   padding: 20px;
-  color: white;
 }
 
 .card-content h1 {
-  color: rgb(0, 0, 0);
-  align-items: center;
-  text-transform: uppercase;
-  font-size: 25px;
+  color: rgb(215, 140, 42);
   text-align: center;
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: bold;
 
 }
 
@@ -319,12 +313,11 @@ li a:hover {
 .inf_general {
   display: grid;
   grid-gap: 30px;
-  padding: 2%;
-  width: 96%;
+  width: 100%;
   display: inline-block;
-  position: relative;
   margin-left: 0%;
-  background-color: #ffffff;
+  /*background-image: radial-gradient(circle at 52.14% 74.43%, #699c3f 0, #6eac5f 10%, #93bd5d 20%, #d7ab1d 30%, #cd9b2b 40%, #d59327 50%, #df923a 60%, #ea8a36 70%, #ca7e4e 80%, #c47929 90%, #f28b37 100%);
+*/
 }
 
 /*img tesxt*/
@@ -346,7 +339,8 @@ li a:hover {
 }
 
 .com {
-  background-color: #ffffff;
+  background-image: radial-gradient(circle at 52.14% 74.43%, #4ebe95 0, #04c17b 30%, #04aa6d 70%,  #016a43 100%);
+  border-radius: 12px;
   display: inline-block;
   padding: 3%;
   text-align: center;
@@ -356,27 +350,37 @@ li a:hover {
   margin-right: -3%;
 
 }
+.mensaje{
+  padding: 2%;
+  background-color: #FCF7E4;
+}
 
 .mensaje .inf-mensaje h1 {
-  animation-duration: 3s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
+  margin-top: -21%;
+  font-weight: bold;
+  margin-left: 2%;
+  width: 53%;
+  color: rgb(0, 0, 0);
+  font-style: italic;
+  font-size: 40px;
 }
 
 .mensaje .inf-mensaje img {
-  width: 100%;
+  width: 22%;
+  height: 302px;
+  border-radius: 5000px;
+  margin-left: 65%;
 }
 
 .recetas {
   background-color: #FCF7E4;
-  width: 100%;
 }
 
 .email {
-  width: 50%;
-  padding: 2%;
+  height: 475px;
+  width: 35%;
   margin-top: 5%;
-  margin-left: 3%;
+  margin-left: 4.5%;
 }
 
 .email input {
@@ -387,11 +391,11 @@ li a:hover {
 }
 
 .email button {
-  width: 25%;
+  width: 60%;
   margin-top: 4%;
-  margin-left: 25%;
+  margin-left: 15%;
   height: 40px;
-  background-color: #906f2c;
+  background-color: #e1923d;
 }
 
 .email h1 {
@@ -407,10 +411,10 @@ li a:hover {
 }
 
 .img img {
-  width: 33%;
-  margin-left: 54%;
-  margin-top: -450px;
-  height: 400px;
+  width: 74%;
+  height: 472px;
+  margin-left: 115%;
+  margin-top: -422px;
 }
 
 footer {
@@ -637,9 +641,6 @@ footer .bottom-details .bottom_text {
   margin-right: 10px;
 }
 
-
-
-
 /*MODAL LOGIN*/
 button {
   font-size: 18px;
@@ -672,8 +673,9 @@ input {
 }
 
 .container {
-  padding: 16px;  
+  padding: 16px;
 }
+
 span.psw {
   float: right;
   padding-top: 16px;

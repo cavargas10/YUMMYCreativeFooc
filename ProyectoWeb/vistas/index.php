@@ -1,6 +1,7 @@
 <?php
 include("header.php");
 ?>
+
  <main class="container-main">
     <img src="../img/plato1.jpg" alt="" />
     <div class="text-main">
