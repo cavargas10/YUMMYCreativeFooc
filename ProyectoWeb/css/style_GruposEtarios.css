@@ -23,6 +23,8 @@ nav{
     text-decoration: none;
     box-sizing: border-box;
     list-style: none;
+    top: 0;
+    bottom: 0;
 }
 .enlace{
     position: absolute;
@@ -37,6 +39,9 @@ nav{
   margin-left: 18%;
   color: #000;
 }
+ .menu nav{
+ z-index:1;
+} 
 
 .enlace .nombre span{
   color: #a56e20;
@@ -59,6 +64,16 @@ nav ul li a{
 li a.active, li a:hover{
     background: #a56e20;
     transition: .5s;
+}
+
+.title{
+  text-align: center;
+  font-size: 40px;
+  color: #6a6a6a;
+  margin-top: 100px;
+  font-weight: 100;
+  padding: 12px 0 20px;
+  font-family: 'Roboto', sans-serif;  
 }
 /*MODAL LOGIN*/
 button {
@@ -154,12 +169,13 @@ button {
 
 .container-grupos{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     height: 430px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
+
 }
 
 .container-grupos .card{
@@ -168,10 +184,10 @@ button {
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    margin-top: ;
-    margin: 60px 20px;
+    margin:20px 100px 20px 0;
     text-align: center;
     transition: all 0.25s;
+    z-index: 0;
 }
 
 .container-grupos .card:hover{
@@ -204,7 +220,7 @@ button {
 
 /*footer*/
 footer {
-    margin-top: 80%;
+    margin-top: 53%;
     background: #b5a384;
     width: 100%;
     bottom: 0;
