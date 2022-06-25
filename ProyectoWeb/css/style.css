@@ -20,16 +20,6 @@ body {
 
 /* Parte superior con el logo y el user*/
 
-/*.logo1{
-    margin-top: 0.5%;
-    margin-left: 2%;
-}
-.logo2{
-    width: 2.5%;
-    margin-top: 0%;
-    margin-left: 89%;
-}*/
-
 /* navbar */
 nav {
   position: fixed;
@@ -224,7 +214,7 @@ li a:hover {
 
 }
 
-/*  cards*/
+/* cards*/
 
 .grid {
   display: grid;
@@ -410,10 +400,11 @@ li a:hover {
   text-align: left;
 }
 
-.img img {
-  width: 74%;
+.img .img12{
+  display: block;
+  width: 92%;
   height: 472px;
-  margin-left: 115%;
+  margin-left: 142%;
   margin-top: -422px;
 }
 
