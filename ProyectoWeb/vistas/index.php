@@ -1,76 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yummi Creative Food</title>
-  <link rel="stylesheet" href="css/style.css " />
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-  <script src="js/main.js"></script>
-</head>
-
-<body>
-  <header>
-
-    <div class="menu">
-      <nav>
-        <a href="index.html" class="enlace">
-          <img src="img/logo.png" alt="" class="logo">
-          <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
-        </a>
-        <ul>
-          <li><a class="active" href="index.html">Inicio</a></li>
-          <li><a href="gruposEtarios.html">Grupos Etarios</a></li>
-          <li><a href="#">Especiales</a></li>
-          <li><a href="tips.html">Tips</a></li>
-          <li><a href="videos.html">Videos</a></li>
-          <li><a href="#">Acerca de</a></li>
-          <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
-        </ul>
-      </nav>
-    </div>
-    <!-- Modal -->
-    <div id="id01" class="modal">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close"
-        title="Close Modal">&times;</span>
-
-      <form class="modal-content animate" action="">
-        <div class="container">
-          <h2>Inicio de Sesión</h2><br>
-          <label for="usuario"><b>Usuario</b></label><br>
-          <input type="text" placeholder="  Ingrese su Usuario" name="usuario" required><br><br>
-
-          <label for="correo"><b>E-mail</b></label><br>
-          <input type="text" placeholder="  Ingrese su Correo Electronico" name="correo" required><br><br>
-
-          <label for="clave"><b>Contraseña</b></label><br>
-          <input type="password" placeholder="  Ingrese su Contraseña" name="clave" required><br>
-
-          <br><button type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Recuerdamelo
-          </label>
-        </div>
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'"
-            class="cancelbtn">Cancelar</button>
-          <span class="psw"><a href="#">Olvido su contraseña?</a></span>
-        </div>
-      </form>
-    </div>
-  </header>
-  
-  <main class="container-main">
-    <img src="img/plato1.jpg" alt="" />
+<?php
+include("header.php");
+?>
+ <main class="container-main">
+    <img src="../img/plato1.jpg" alt="" />
     <div class="text-main">
       <h1>
         OLVIDATE DE LA COCINA TRADICIONAL Y EMPEZEMOS CON LA COCINA
         <span>CREATIVA </span>”
       </h1>
     </div>
-    <img src="img/plato2.png" alt="" />
+    <img src="../img/plato2.png" alt="" />
 
     <div class="text-second">
       <h1>La Cocina <span>CREATIVA</span></h1>
@@ -143,7 +82,7 @@
       <div class="container-card-recet">
         <div class="card-recet">
           <div class="img-card-recet">
-            <img src="img/card1.png" alt="">
+            <img src="../img/card1.png" alt="">
           </div>
           <div class="card-content">
             <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -159,8 +98,8 @@
       </div>
       <div class="container-card-recet">
         <div class="card-recet">
-          <div class="img-card-recet">
-            <img src="img/card1.png" alt="">
+          <div class="../img-card-recet">
+            <img src="../img/card1.png" alt="">
           </div>
           <div class="card-content">
             <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -178,8 +117,8 @@
       </div>
       <div class="container-card-recet">
         <div class="card-recet">
-          <div class="img-card-recet">
-            <img src="img/card1.png" alt="">
+          <div class="../img-card-recet">
+            <img src="../img/card1.png" alt="">
           </div>
           <div class="card-content">
             <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -199,7 +138,7 @@
     <div class="card-recet">
       <div class="mensaje">
         <div class="inf-mensaje">
-          <img src="img/img1.jpg" alt=""></IMg>
+          <img src="../img/img1.jpg" alt=""></IMg>
           <h1><br>“Deje que los alimentos sean su medicina y que la medicina sea su alimento”</br></h1>
         </div>
       </div>
@@ -211,8 +150,8 @@
       </div>
       <section class="container-card-recet">
         <div class="card-recet">
-          <div class="img-card-recet">
-            <img src="img/card1.png" alt="">
+          <div class="../img-card-recet">
+            <img src="../img/card1.png" alt="">
           </div>
           <div class="card-content">
             <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -230,8 +169,8 @@
       </section>
       <div class="container-card-recet">
         <div class="card-recet">
-          <div class="img-card-recet">
-            <img src="img/card1.png" alt="">
+          <div class="../img-card-recet">
+            <img src="../img/card1.png" alt="">
           </div>
           <div class="card-content">
             <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -249,8 +188,8 @@
       </div>
       <div class="container-card-recet">
         <div class="card-recet">
-          <div class="img-card-recet">
-            <img src="img/card1.png" alt="">
+          <div class="../img-card-recet">
+            <img src="../img/card1.png" alt="">
           </div>
           <div class="card-content">
             <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -267,19 +206,19 @@
       </div>
       <div class="inf_general">
         <div class="com">
-          <img src="img/Vector-1.png" alt="">
+          <img src="../img/Vector-1.png" alt="">
           <h2>256</h2>
           <h3>comentarios</h3>
         </div>
 
         <div class="com">
-          <img src="img/contadorPlatos.png" alt="">
+          <img src="../img/contadorPlatos.png" alt="">
           <h2>256</h2>
           <h3>comentarios</h3>
         </div>
 
         <div class="com">
-          <img src="img/contadorVisitante.png" alt="#">
+          <img src="../img/contadorVisitante.png" alt="#">
           <h2>256</h2>
           <h3>comentarios</h3>
         </div>
@@ -294,77 +233,12 @@
           <button type="submit" value="Suscribete">Suscribete</button>
         </div>
         <div class="img">
-          <img src="img/fot.png" alt="">
+          <img src="../img/fot.png" alt="">
         </div>
       </section>
       
-      <footer>
-        <div class="content">
-          <div class="top">
-            <div class="logo-details">
-              <img src="img/logo.png" alt="" class="logo">
-              <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
-            </div>
-            <div class="media-icons">
-              <a href="#"><i class="uil uil-facebook-f"></i></a>
-              <a href="#"><i class="uil uil-twitter-alt"></i></a>
-              <a href="#"><i class="uil uil-instagram"></i></a>
-              <a href="#"><i class="uil uil-linkedin-alt"></i></a>
 
-            </div>
-          </div>
-          <div class="link-boxes">
-            <ul class="box">
-              <li class="link_name">Grupos Etarios</li>
-              <li><a href="#">Madre en gestación</a></li>
-              <li><a href="#">Primera Infancia</a></li>
-              <li><a href="#">Segunda Infancia</a></li>
-              <li><a href="#">Adolescencia</a></li>
-              <li><a href="#">Juventud</a></li>
-              <li><a href="#">Adultez</a></li>
-              <li><a href="#">Vejez</a></li>
-            </ul>
-            <ul class="box">
-              <li class="link_name">Recetas</li>
-              <li><a href="#">Desayunos</a></li>
-              <li><a href="#">Almuerzos</a></li>
-              <li><a href="#">Meriendas</a></li>
-              <li><a href="#">Cenas</a></li>
-              <li><a href="#">Postres</a></li>
-            </ul>
-            <ul class="box">
-              <li class="link_name">Especiales</li>
-              <li><a href="#">Semana Santa</a></li>
-              <li><a href="#">Cumpleaños</a></li>
-              <li><a href="#">Navidad</a></li>
-              <li><a href="#">San Valentin</a></li>
-              <li><a href="#">Carnaval</a></li>
-            </ul>
-            <ul class="box">
-              <li class="link_name">Otros</li>
-              <li><a href="#">Tips</a></li>
-              <li><a href="#">Videos</a></li>
-              <li><a href="#">Acerca de</a></li>
-            </ul>
-            <ul class="box input-box">
-              <li class="link_name">Subscribete</li>
-              <li><input type="text" placeholder="Ingrese su Correo Electronico"></li>
-              <li><input type="button" value="Subscribete"></li>
-            </ul>
-          </div>
-          <div class="bottom-details">
-            <div class="bottom_text">
-              <span class="copyright_text">Copyright © 2022 <a href="#">Yummy Creative Food.</a>Todos los derechos
-                reservados</span>
-              <span class="policy_terms">
-                <a href="#">Politica de Privacidad</a>
-                <a href="#">Terminos y Condiciones</a>
-              </span>
-            </div>
-          </div>
-      </footer>
-
-  </main>
-</body>
-
-</html>
+<?php
+include("footer.php");
+?>
+	

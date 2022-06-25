@@ -637,6 +637,9 @@ footer .bottom-details .bottom_text {
   margin-right: 10px;
 }
 
+
+
+
 /*MODAL LOGIN*/
 button {
   font-size: 18px;
@@ -669,9 +672,8 @@ input {
 }
 
 .container {
-  padding: 16px;
+  padding: 16px;  
 }
-
 span.psw {
   float: right;
   padding-top: 16px;
