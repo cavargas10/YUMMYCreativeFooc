@@ -256,7 +256,7 @@ li a:hover {
 }
 
 .container-card-recet .card-recet{
-
+background-color: #FCF7E4;
  
   height: 460px;
   border-radius: 8px;
@@ -292,12 +292,18 @@ li a:hover {
   color: #1DA1F2;
     font-size: 15px;
     margin-top: -7%;
-    margin-left: 74%;
+    margin-left: 74%;   
+}
+.grid .container-card-recet .card-recet .card-title{
+  color: rgb(225, 146, 61);
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
     
 }
 .rating {
-  margin-left: -70%;
-  font-size: 16px;
+  margin-left: -68%;
+  font-size: 20px;
   line-height: 20px;
   font-weight: 400;
 }
