@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yummi Creative Food</title>
-  <link rel="stylesheet" href="../css/style.css " />
+  <link rel="stylesheet" href="css/style.css " />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <script src="js/main.js"></script>
 </head>
@@ -17,7 +17,7 @@
     <div class="menu">
       <nav>
         <a href="index.html" class="enlace">
-          <img src="../img/logo.png" alt="" class="logo">
+          <img src="img/logo.png" alt="" class="logo">
           <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
         </a>
         <ul>
@@ -27,36 +27,31 @@
           <li><a href="tips.html">Tips</a></li>
           <li><a href="videos.html">Videos</a></li>
           <li><a href="#">Acerca de</a></li>
+          <!-- Boton Login -->
           <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
         </ul>
       </nav>
     </div>
-    <!-- Modal -->
+    <!-- Modal LOGIN-->
     <div id="id01" class="modal">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close"
-        title="Close Modal">&times;</span>
-
       <form class="modal-content animate" action="">
-        <div class="container">
-          <h2  style="text-align:center;">Inicio de Sesión</h2><br>
-          <label for="usuario"><b>Usuario</b></label><br>
-          <input type="text" placeholder="  Ingrese su Usuario" name="usuario" required><br><br>
-
-          <label for="correo"><b>E-mail</b></label><br>
-          <input type="text" placeholder="  Ingrese su Correo Electronico" name="correo" required><br><br>
-
-          <label for="clave"><b>Contraseña</b></label><br>
-          <input type="password" placeholder="  Ingrese su Contraseña" name="clave" required><br>
-
-          <br><button type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Recuerdamelo
-          </label>
+        <div class="tittle">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+          <p>Inicio de Sesión</p>
         </div>
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'"
-            class="cancelbtn">Cancelar</button>
+        <div class="container-form">
+          <label for="correo"><b>E-mail</b></label><br>
+          <input type="text" placeholder="  Ingrese su Correo Electronico" name="correo" required><br>
+
+          <br><label for="clave"><b>Contraseña</b></label><br>
+          <input type="password" placeholder="  Ingrese su Contraseña" name="clave" required><br>
           <span class="psw"><a href="#">Olvido su contraseña?</a></span>
+          <br><br><button type="submit">Login</button>
+        </div>
+        <div class="container-sub">
+          <h4>!Aún no tienes una cuenta!</h4>
+          <button type="button" class="subbtn">Suscribete</button>
         </div>
       </form>
     </div>
