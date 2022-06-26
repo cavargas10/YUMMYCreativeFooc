@@ -75,7 +75,7 @@ nav {
 
 /*Tarjetas*/
 .main-cards{
-	width: 100%;
+	width: 98%;
 	height: auto;
 	display: flex;
 	flex-direction: column;
