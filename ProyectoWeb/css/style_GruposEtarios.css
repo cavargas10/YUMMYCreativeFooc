@@ -23,6 +23,7 @@ body {
 /* navbar */
 nav {
   position: fixed;
+  margin-top: -7%;
   z-index: 100;
   background: #b5a384;
   height: 80px;
@@ -78,68 +79,82 @@ li a:hover {
   transition: .5s;
 }
 
-.title{
+
+/* card tips*/
+
+
+.grid {
+  width: 100%;
+  height: 530px;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: inline;
+  flex-direction: column;
+}
+
+.grid .new-recetas h1{
   text-align: center;
   font-size: 40px;
   color: #6a6a6a;
   margin-top: 100px;
   font-weight: 100;
   padding: 12px 0 20px;
-  font-family: 'Roboto', sans-serif;  
+  font-family: 'Roboto', sans-serif; 
+}
+.container-card-recet {
+  width: 25%;
+  margin-left: 5%;
+  height: 350px;
+  display: inline-block;
 }
 
-/* card tips*/
-
-.container-grupos{
-    width: 100%;
-    max-width: 1400px;
-    height: 430px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-
+.container-card-recet .card-recet {
+  background-color: #FCF7E4;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.25s;
+  width: 90%;
+  z-index: 0;
 }
 
-.container-grupos .card{
-    width: 330px;
-    height: 430px;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin:20px 100px 20px 0;
-    text-align: center;
-    transition: all 0.25s;
-    z-index: 0;
+.grid .container-card-recet .card-recet:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
-.container-grupos .card:hover{
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+.grid .container-card-recet .card-recet img {
+  width: 100%;
+  height: 220px;
 }
 
-.container-grupos .card img{
-    width: 330px;
-    height: 220px;
+.grid .container-card-recet .card-recet .card-title {
+  font-weight: 600;
 }
 
-
-.container-grupos .card h4{
-    font-weight: 600;
+.grid .container-card-recet .card-recet .text-medium {
+  padding: 0 1rem;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: justify;
 }
 
-.container-grupos .card p{
-    padding: 0 1rem;
-    font-size: 16px;
-    font-weight: 300;
+.grid .container-card-recet .card-recet h3 {
+  color: #1DA1F2;
+  font-size: 15px;
+  margin-top: -7%;
+  margin-left: 74%;
 }
 
-.container-grupos .card a {
-    font-weight: 500;
-    text-decoration: none;
-    color: #3498db;
-}
+.grid .container-card-recet .card-recet .card-title {
+  color: rgb(225, 146, 61);
+  font-size: 18px;
+  margin-top: 4%;
+  text-align: center;
+  font-weight: bold;
 
+}
 
 /*MODAL LOGIN*/
 button {
