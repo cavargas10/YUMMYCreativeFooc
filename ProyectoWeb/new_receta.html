@@ -58,64 +58,94 @@
 
 
 <body>
-      <main class="container-main">
-        <section class="primera_sec">
-          <div class="izq">
+  <main class="container-main">
+    <section class="primera_sec">
+        <div class="izq">
             <h1>NUEVAS RECETAS</h1>
             <button class="im1">Imagen </button> 
             <button class="im2">Video</button>
-              <button class="im3">Diseño 3D</button>
+            <button class="im3">Diseño 3D</button>
             <img class="img3d" src="img/img3d.jpg" alt="" >
+        </div>
+      <aside class="der">   
+        <h2>Accordion with symbols</h2>
+        <p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
+        <button class="accordion">Información Nutricional</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+          <button class="accordion">Semáforo Nutricional</button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
-          <aside class="der">
-            <button class="in">Información Nutricional</button>
-            <button class="sn">Semáforo Nutricional</button>
-            <div>
-              <table class="informacion"></table>
-            </div>
-          </aside>
-        </section>
+        <script>
+              var acc = document.getElementsByClassName("accordion");
+              var i;
+
+              for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                  this.classList.toggle("active");
+                  var panel = this.nextElementSibling;
+                  if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                  } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                  } 
+                });
+              }
+          </script>
+      </aside>
+    </section>
 
         <section class="segunda_sec">
           <h1>
             Mushroon and cream vegan vegetables <span class="rating">★★★★☆</span>
           </h1>
+        </section>
           <div class="ingredientes">
-            <div>
-              <h2>INGREDIENTES</h2>
-              <h5> Pakkjdfnc ajkkdcn </h5>
-              <h5> Pkajdcnakdjcn ajdc  </h5>
-              <h5> Plasadjknc laskjcnl </h5>
+            <div class="ing_izq">
+              <h2>INGREDIENTES </h2>
+              <ul style= "list-style-type: square;">
+                <li>2 Tazas Carne De Res Molida</li>
+                <li>2 Cucharaditas Cebolla en polvo</li>
+                <li>2 Cucharaditas Ajo en Polvo</li>
+                <li>1 Cucharadita Orégano seco</li>
+                <li>4 Tajadas Queso Cheddar</li>
+              </ul>
             </div>
-            <div>
+            <hr width="1" size="200" color="black"> 
+            <div class="ing_der">
               <h5><i class="uil uil-clock-nine"></i> Preparación: 37 min.</h5>
               <h5><i class="uil uil-crockery"></i> Porciones: 12 porciones.</h5>
               <h5><i class="uil uil-signal-alt-3"></i> Dificultad: intermedio</h5>
             </div>
           </div>
-        </section>
 
-        <section class="segunda_sec">
-          <h1>
-            INSTRUCCIONES
-          </h1>
-          <div class="">
-              <h2>Paso 1:</h2>
-              <h5> Coloca la carne molida, cebolla, ajo y orégano molido en un recipiente 
-                e integra todo formando una mezcla homogénea. Rectifica con sal y pimienta.</h5>
-              <h2>Paso 2:</h2>
-              <h5>Mientras esta refrigerada la carne, prepara el guacamole aplastando en aguacate y 
-                mezclándolo con la cebolla, cilantro y jugo de limón. Rectifica con sal y pimienta y reserva </h5>
-                <h2>Paso 3:</h2>
-              <h5> Una vez reposadas las carnes cocínalas en un sartén caliente con un poquito de aceite, 
-                dorándolas por 5 a 6 minutos por lado. </h5>
-                <h2>Paso 4:</h2>
-              <h5> Arma las hamburguesas colocando el queso sobre la carne caliente, esta sobre el pan, 
-                previamente cubierto con suficiente salsa de tomate de chipotle. Sobre el queso coloca un poco 
-                de guacamole y acompaña con salsa de tomate adicional. </h5>
-          </div>
-        </section>
-      </main>
+          <section class="segunda_sec1">
+              <h1>
+                INSTRUCCIONES
+              </h1>
+          </section>
+            <div class="pasos">
+                <h2>Paso 1:</h2>
+                <h5> Coloca la carne molida, cebolla, ajo y orégano molido en un recipiente 
+                  e integra todo formando una mezcla homogénea. Rectifica con sal y pimienta.</h5>
+                  <img src="img/paso1.jpg" alt="">
+                <h2>Paso 2:</h2>
+                <h5>Mientras esta refrigerada la carne, prepara el guacamole aplastando en aguacate y 
+                  mezclándolo con la cebolla, cilantro y jugo de limón. Rectifica con sal y pimienta y reserva </h5>
+                  <img src="img/paso2.jpg" alt="">
+                  <h2>Paso 3:</h2>
+                <h5> Una vez reposadas las carnes cocínalas en un sartén caliente con un poquito de aceite, 
+                  dorándolas por 5 a 6 minutos por lado. </h5>
+                  <img src="img/paso3.jfif" alt="">
+                  <h2>Paso 4:</h2>
+                <h5> Arma las hamburguesas colocando el queso sobre la carne caliente, esta sobre el pan, 
+                  previamente cubierto con suficiente salsa de tomate de chipotle. Sobre el queso coloca un poco 
+                  de guacamole y acompaña con salsa de tomate adicional. </h5>
+                  <img src="img/paso4.jpg" alt="">
+            </div>
+    </main>
 </body>
 
 
