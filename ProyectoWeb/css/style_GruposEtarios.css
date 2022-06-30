@@ -50,7 +50,7 @@ nav {
 }
 
 .enlace .nombre span {
-  color: rgb(225, 146, 61);
+  color: #a56e20;
 }
 
 nav ul {
@@ -160,7 +160,7 @@ li a:hover {
 button {
   font-weight: bold;
   font-size: 18px;
-  background-color: #1a7b42;
+  background-color: #eab354;
   color: white;
   padding: 8px 20px;
   margin: 8px 0;

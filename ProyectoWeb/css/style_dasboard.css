@@ -27,6 +27,7 @@ nav.close{
 nav .logo-name{
     display: flex;
     align-items: center;
+      
 }
 nav .logo-image{
     display: flex;
@@ -42,7 +43,7 @@ nav .logo-image img{
 nav .logo-name .logo_name{
     font-size: 22px;
     font-weight: 600;
-    color: #2E3532;
+    color: #a56e20;;
     margin-left: 14px;
 }
 
