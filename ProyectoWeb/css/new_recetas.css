@@ -178,7 +178,7 @@ li a:hover {
     font-size: 30px;
     height: 100px;
 }
-.segunda_sec h3{
+.segunda_sec h3{ 
   text-align: center;
   padding-top: 1.5%;
   font-size: 30px;
@@ -270,9 +270,6 @@ hr{
 }
 /*grid cards*/
 
-
-.grid {
-}
 
 .container-card-recet {
   width: 27%;
