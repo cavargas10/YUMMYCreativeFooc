@@ -234,26 +234,28 @@
         <h2>Comentarios</h2>
       </div>
 
-      <div class="form-comentario">
-        <label for="calificacion"><b>Calificación de la receta:</b></label><br>
-        
-        <input class="calificacion" type="radio" name="calificacion" id="rate-5" required>
-          <label for="rate-5" class="uil uil-star"></label>
-        <input class="calificacion" type="radio" name="calificacion" id="rate-4" required>
-          <label for="rate-4" class="uil uil-star"></label>
-        <input class="calificacion" type="radio" name="calificacion" id="rate-3" required>
-          <label for="rate-3" class="uil uil-star"></label>
-        <input class="calificacion" type="radio" name="calificacion" id="rate-2" required>
-          <label for="rate-2" class="uil uil-star"></label>
-        <input class="calificacion" type="radio" name="calificacion" id="rate-1" required>
-          <label for="rate-1" class="uil uil-star"></label>
-        
-          <br><label for="clave"><b>Comentario:</b></label><br>
-        <input class="comentario" type="text" placeholder="Escriba su comentario aqui..." name="clave" required><br>
+      <div class="center">
+        <p>Valoracion:</p>
+        <div class="stars">
+          <input type="radio" id="five" name="rate" value="5">
+          <label for="five"></label>
+          <input type="radio" id="four" name="rate" value="4">
+          <label for="four"></label>
+          <input type="radio" id="three" name="rate" value="3">
+          <label for="three"></label>
+          <input type="radio" id="two" name="rate" value="2">
+          <label for="two"></label>
+          <input type="radio" id="one" name="rate" value="1">
+          <label for="one"></label>
+          <span class="result"></span>
+        </div>
+        <p>Comentario: </p>
+        <input class="comentario" type="text" placeholder="  Ingrese su Comentario aqui..." name="comentario"
+          readonly=»readonly»><br>
       </div>
 
       <div class="boton-comentario">
-        <br><br><button class="button-form-comentario" type="submit">Envia tu comentario</button>
+        <button onclick="document.getElementById('id01').style.display='block'">Envia tu comentario</button>
       </div>
     </div>
   </main>
