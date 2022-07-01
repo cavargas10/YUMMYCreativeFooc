@@ -17,17 +17,17 @@
 
     <div class="menu">
       <nav>
-        <a href="index.html" class="enlace">
+        <a href="index.php" class="enlace">
           <img src="img/logo.png" alt="" class="logo">
           <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
         </a>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="gruposEtarios.html">Grupos Etarios</a></li>
-          <li><a href="recetas.html">Recetas</a></li>
-          <li><a href="tips.html">Tips</a></li>
-          <li><a class="active" href="videos.html">Videos</a></li>
-          <li><a href="acerca.html">Acerca de</a></li>
+          <li><a href="index.php">Inicio</a></li>
+          <li><a href="gruposEtarios.php">Grupos Etarios</a></li>
+          <li><a href="recetas.php">Recetas</a></li>
+          <li><a href="tips.php">Tips</a></li>
+          <li><a class="active" href="videos.php">Videos</a></li>
+          <li><a href="acerca.php">Acerca de</a></li>
           <!-- Boton Login -->
           <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
         </ul>
@@ -37,8 +37,7 @@
     <div id="id01" class="modal">
       <form class="modal-content animate" action="">
         <div class="tittle">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
           <p>Inicio de Sesión</p>
         </div>
         <div class="container-form">
@@ -64,10 +63,7 @@
     </div>
     <section class="container-card-recet">
       <div class="card-recet">
-        <iframe width="260" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+        <iframe width="260" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <h1 class="card-title text-medium">Salud</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
           iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
@@ -76,10 +72,7 @@
 
     <section class="container-card-recet">
       <div class="card-recet">
-        <iframe width="260" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+        <iframe width="260" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <h1 class="card-title text-medium">Salud</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
           iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
@@ -88,10 +81,7 @@
 
     <section class="container-card-recet">
       <div class="card-recet">
-        <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+        <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <h1 class="card-title text-medium">Salud</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
           iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
@@ -100,10 +90,7 @@
 
     <section class="container-card-recet">
       <div class="card-recet">
-        <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+        <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <h1 class="card-title text-medium">Salud</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
           iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
@@ -112,10 +99,7 @@
 
     <section class="container-card-recet">
       <div class="card-recet">
-        <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+        <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <h1 class="card-title text-medium">Salud</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
           iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
@@ -124,10 +108,7 @@
 
     <section class="container-card-recet">
       <div class="card-recet">
-        <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+        <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <h1 class="card-title text-medium">Salud</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
           iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
@@ -194,8 +175,7 @@
 
           <form class="modal-content animate" action="">
             <div class="tittle-modal">
-              <span onclick="document.getElementById('id03').style.display='none'" class="close"
-                title="Close Modal">&times;</span>
+              <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
               <h2 class="sus">Suscribete</h2>
             </div>
             <div class="container-form">

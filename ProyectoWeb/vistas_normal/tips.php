@@ -17,17 +17,17 @@
 
     <div class="menu">
       <nav>
-        <a href="index.html" class="enlace">
+        <a href="index.php" class="enlace">
           <img src="img/logo.png" alt="" class="logo">
           <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
         </a>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="gruposEtarios.html">Grupos Etarios</a></li>
-          <li><a href="recetas.html">Recetas</a></li>
-          <li><a class="active" href="tips.html">Tips</a></li>
-          <li><a href="videos.html">Videos</a></li>
-          <li><a href="acerca.html">Acerca de</a></li>
+          <li><a href="index.php">Inicio</a></li>
+          <li><a href="gruposEtarios.htphpml">Grupos Etarios</a></li>
+          <li><a href="recetas.php">Recetas</a></li>
+          <li><a class="active" href="tips.php">Tips</a></li>
+          <li><a href="videos.php">Videos</a></li>
+          <li><a href="acerca.php">Acerca de</a></li>
           <!-- Boton Login -->
           <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
         </ul>
@@ -37,8 +37,7 @@
     <div id="id01" class="modal">
       <form class="modal-content animate" action="">
         <div class="tittle">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
           <p>Inicio de Sesión</p>
         </div>
         <div class="container-form">
@@ -57,83 +56,83 @@
       </form>
     </div>
   </header>
-  
-    <div class="grid">
-      <div class="new-recetas">
-        <h1>Tips</h1>
-      </div>
-      <section class="container-card-recet">
-        <div class="card-recet">
-          <img src="img/tip1.png" />
-          <h1 class="card-title text-medium">Salud</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
-            excepturi unde?
-          </p>
-          <button class="btnTips"><a href="">Leer más..</a></button>
-        </div>
-      </section>
-  
-      <section class="container-card-recet">
-        <div class="card-recet">
-          <img src="img/tip1.png" />
-          <h1 class="card-title text-medium">Comida</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
-            excepturi unde?
-          </p>
-          <button class="btnTips"><a href="">Leer más..</a></button>
-        </div>
-      </section>
-  
-      <section class="container-card-recet">
-        <div class="card-recet">
-          <img src="img/tip1.png" />
-          <h1 class="card-title text-medium">Recetas</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
-            excepturi unde?
-          </p>
-          <button class="btnTips"><a href="">Leer más..</a></button>
-        </div>
-      </section>
-  
-      <section class="container-card-recet">
-        <div class="card-recet">
-          <img src="img/tip1.png" />
-          <h1 class="card-title text-medium">Alimentación</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
-            excepturi unde?
-          </p>
-          <button class="btnTips"><a href="">Leer más..</a></button>
-        </div>
-      </section>
-  
-      <section class="container-card-recet">
-        <div class="card-recet">
-          <img src="img/tip1.png" />
-          <h1 class="card-title text-medium">Cuidado Salud</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
-            excepturi unde?
-          </p>
-          <button class="btnTips"><a href="">Leer más..</a></button>
-        </div>
-      </section>
-  
-      <section class="container-card-recet">
-        <div class="card-recet">
-          <img src="img/tip1.png" />
-          <h1 class="card-title text-medium">Comida</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
-            excepturi unde?
-          </p>
-          <button class="btnTips"><a href="">Leer más..</a></button>
-        </div>
-      </section>
+
+  <div class="grid">
+    <div class="new-recetas">
+      <h1>Tips</h1>
     </div>
+    <section class="container-card-recet">
+      <div class="card-recet">
+        <img src="img/tip1.png" />
+        <h1 class="card-title text-medium">Salud</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
+          excepturi unde?
+        </p>
+        <button class="btnTips"><a href="">Leer más..</a></button>
+      </div>
+    </section>
+
+    <section class="container-card-recet">
+      <div class="card-recet">
+        <img src="img/tip1.png" />
+        <h1 class="card-title text-medium">Comida</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
+          excepturi unde?
+        </p>
+        <button class="btnTips"><a href="">Leer más..</a></button>
+      </div>
+    </section>
+
+    <section class="container-card-recet">
+      <div class="card-recet">
+        <img src="img/tip1.png" />
+        <h1 class="card-title text-medium">Recetas</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
+          excepturi unde?
+        </p>
+        <button class="btnTips"><a href="">Leer más..</a></button>
+      </div>
+    </section>
+
+    <section class="container-card-recet">
+      <div class="card-recet">
+        <img src="img/tip1.png" />
+        <h1 class="card-title text-medium">Alimentación</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
+          excepturi unde?
+        </p>
+        <button class="btnTips"><a href="">Leer más..</a></button>
+      </div>
+    </section>
+
+    <section class="container-card-recet">
+      <div class="card-recet">
+        <img src="img/tip1.png" />
+        <h1 class="card-title text-medium">Cuidado Salud</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
+          excepturi unde?
+        </p>
+        <button class="btnTips"><a href="">Leer más..</a></button>
+      </div>
+    </section>
+
+    <section class="container-card-recet">
+      <div class="card-recet">
+        <img src="img/tip1.png" />
+        <h1 class="card-title text-medium">Comida</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
+          excepturi unde?
+        </p>
+        <button class="btnTips"><a href="">Leer más..</a></button>
+      </div>
+    </section>
+  </div>
 </body>
 
 <footer>
@@ -194,8 +193,7 @@
 
           <form class="modal-content animate" action="">
             <div class="tittle-modal">
-              <span onclick="document.getElementById('id03').style.display='none'" class="close"
-                title="Close Modal">&times;</span>
+              <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
               <h2 class="sus">Suscribete</h2>
             </div>
             <div class="container-form">

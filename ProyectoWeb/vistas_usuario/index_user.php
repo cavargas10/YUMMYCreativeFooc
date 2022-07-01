@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yummi Creative Food</title>
-    <link rel="stylesheet" href="css/style.css " />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="js/main.js"></script>
 </head>
@@ -16,22 +16,22 @@
 
     <div class="menu">
         <nav>
-            <a href="index.html" class="enlace">
+            <a href="index.php" class="enlace">
                 <img src="img/logo.png" alt="" class="logo">
                 <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
             </a>
             <ul>
-                <li><a class="active" href="index.html">Inicio</a></li>
-                <li><a href="gruposEtarios.html">Grupos Etarios</a></li>
+                <li><a class="active" href="index.php">Inicio</a></li>
+                <li><a href="gruposEtarios.php">Grupos Etarios</a></li>
                 <li><a href="#">Recetas</a></li>
-                <li><a href="tips.html">Tips</a></li>
-                <li><a href="videos.html">Videos</a></li>
-                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="tips.php">Tips</a></li>
+                <li><a href="videos.php">Videos</a></li>
+                <li><a href="acerca.php">Acerca de</a></li>
                 <!-- Dropdown Uuario-->
                 <li><button onclick="myFunction()" class="dropbtn">Carlos Vargas</button></li>
                 <div id="myDropdown" class="dropdown-content">
-                    <a href="#home">Perfil</a>
-                    <a href="index.html">Salir</a>
+                    <a href="perfil_user.php">Perfil</a>
+                    <a href="index.php">Salir</a>
                 </div>
 
             </ul>

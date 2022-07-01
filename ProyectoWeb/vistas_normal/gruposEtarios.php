@@ -17,16 +17,16 @@
 
     <div class="menu">
       <nav>
-        <a href="index.html" class="enlace">
+        <a href="index.php" class="enlace">
           <img src="img/logo.png" alt="" class="logo">
           <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
         </a>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a class="active" href="gruposEtarios.html">Grupos Etarios</a></li>
-          <li><a href="recetas.html">Recetas</a></li>
-          <li><a href="tips.html">Tips</a></li>
-          <li><a href="videos.html">Videos</a></li>
+          <li><a href="index.php">Inicio</a></li>
+          <li><a class="active" href="gruposEtarios.php">Grupos Etarios</a></li>
+          <li><a href="recetas.php">Recetas</a></li>
+          <li><a href="tips.php">Tips</a></li>
+          <li><a href="videos.php">Videos</a></li>
           <li><a href="#">Acerca de</a></li>
           <!-- Boton Login -->
           <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
@@ -37,8 +37,7 @@
     <div id="id01" class="modal">
       <form class="modal-content animate" action="">
         <div class="tittle">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
           <p>Inicio de Sesión</p>
         </div>
         <div class="container-form">
@@ -176,8 +175,7 @@
 
           <form class="modal-content animate" action="">
             <div class="tittle-modal">
-              <span onclick="document.getElementById('id03').style.display='none'" class="close"
-                title="Close Modal">&times;</span>
+              <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
               <h2 class="sus">Suscribete</h2>
             </div>
             <div class="container-form">
