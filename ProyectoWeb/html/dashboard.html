@@ -1,110 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style_dasboard.css" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
     <title>Admin Dashboard Panel</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav>
-        <div class="logo-name">
-            <div class="logo-image">
-                <img src="../img/logo.png" alt="" />
-            </div>
-
-            <span class="logo_name">Yummi Food</span>
+      <div class="logo-name">
+        <div class="logo-image">
+          <img src="../img/logo.png" alt="" />
         </div>
 
-        <div class="menu-items">
-            <ul class="nav-links">
-                <li>
-                    <a href="#">
-                        <i class="uil uil-estate"></i>
-                        <span class="link-name">Dahsboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="uil uil-files-landscapes"></i>
-                        <span class="link-name">Contentido</span>
-                        <i class="uil uil-angle-down"></i>
-                    </a>
-                    <ul class="sub-nav-links">
-                        <li>
-                            <a href="../html/recetas_dashboard.html">
-                                <i class="uil uil-crockery"></i>
-                                <span class="link-name">Recetas</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="uil uil-favorite"></i>
-                                <span class="link-name">Especiales</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="uil uil-sun"></i>
-                                <span class="link-name">Tips</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="uil uil-play-circle"></i>
-                                <span class="link-name">Videos</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="uil uil-chart"></i>
-                        <span class="link-name">Gráficos</span>
-                    </a>
-                </li>
+        <span class="logo_name">Yummi Food</span>
+      </div>
 
-                <li>
-                    <a href="#">
-                        <i class="uil uil-user"></i>
-                        <span class="link-name">Clientes</span>
-                    </a>
-                </li>
+      <div class="sidenav">
+        <a href="#about">
+          <i class="uil uil-estate"></i>
+          <span class="link-name">Dashboard</span>
+        </a>
+        <a href="#services">Perfil</a>
 
-                <li>
-                    <a href="">
-                        <i class="uil uil-question-circle"></i>
-                        <span class="link-name">AYUDA</span>
-                    </a>
-                </li>
-            </ul>
-
-            <ul class="logout-mode">
-                <li>
-                    <a href="index.html">
-                        <i class="uil uil-signout"></i>
-                        <span class="link-name">SALIR</span>
-                    </a>
-                </li>
-            </ul>
+        <button class="dropdown-btn">
+          Contenido
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="../html/recetas_dashboard.html">
+            <i class="uil uil-crockery"></i>
+            <span class="link-name">Recetas</span>
+          </a>
+          <a href="#">Ingredientes</a>
+          <a href="#">
+            <i class="uil uil-sun"></i>
+            <span class="link-name">Tips</span>
+          </a>
+          <a href="#">
+            <i class="uil uil-play-circle"></i>
+            <span class="link-name">Videos</span>
+          </a>
         </div>
+
+        <a href="#">
+          <i class="uil uil-chart"></i>
+          <span class="link-name">Gráficos</span>
+        </a>
+        <a href="#">
+          <i class="uil uil-user"></i>
+          <span class="link-name">Clientes</span>
+        </a>
+        <a href="">
+          <i class="uil uil-question-circle"></i>
+          <span class="link-name">AYUDA</span>
+        </a>
+
+        <ul class="logout-mode">
+          <li>
+            <a href="index.html">
+              <i class="uil uil-signout"></i>
+              <span class="link-name">SALIR</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <section class="dashboard">
-        <div class="top">
-            <i class="uil uil-bars sidebar-toggle"></i>
-            <h3>Dashboard</h3>
-            <img src="../img/Juventud.jpg" alt="" />
-        </div>
+      <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
+        <h3>Dashboard</h3>
+        <img src="../img/Juventud.jpg" alt="" />
+      </div>
 
-        <div class="panel">
-            
-        </div>
+      <div class="panel"></div>
     </section>
-</body>
 
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
