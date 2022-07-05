@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,51 +12,54 @@
 </head>
 
 
-<header>
+  <header>
 
-  <div class="menu">
-    <nav>
-      <a href="index.php" class="enlace">
-        <img src="img/logo.png" alt="" class="logo">
-        <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
-      </a>
-      <ul>
-        <li><a class="active" href="index.php">Inicio</a></li>
-        <li><a href="gruposEtarios.php">Grupos Etarios</a></li>
-        <li><a href="recetas.php">Recetas</a></li>
-        <li><a href="tips.php">Tips</a></li>
-        <li><a href="videos.php">Videos</a></li>
-        <li><a href="acerca.php">Acerca de</a></li>
-        <!-- Boton Login -->
-        <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
-      </ul>
-    </nav>
-  </div>
-  <!-- Modal LOGIN-->
-  <div id="id01" class="modal">
-    <form class="modal-content animate" action="">
-      <div class="tittle">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <p>Inicio de Sesión</p>
-      </div>
-      <div class="container-form">
-        <label for="correo"><b>E-mail</b></label><br>
-        <input type="text" placeholder="  Ingrese su Correo Electronico" name="correo" required><br>
+    <div class="menu">
+      <nav>
+        <a href="index.php" class="enlace">
+          <img src="img/logo.png" alt="" class="logo">
+          <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
+        </a>
+        <ul>
+          <li><a class="active" href="index.php">Inicio</a></li>
+          <li><a href="vistas_normal/gruposEtarios.php">Grupos Etarios</a></li>
+          <li><a href="vistas_normal/recetas.php">Recetas</a></li>
+          <li><a href="vistas_normal/tips.php">Tips</a></li>
+          <li><a href="vistas_normal/videos.php">Videos</a></li>
+          <li><a href="vistas_normal/acerca.php">Acerca de</a></li>
+          <!-- Boton Login -->
+          <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Modal LOGIN-->
+    <div id="id01" class="modal">
+      <form class="modal-content animate" method="post" action="dll/validar.php">
+        <div class="tittle">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+          <p>Inicio de Sesión</p>
+        </div>
+        <div class="container-form">
 
-        <br><label for="clave"><b>Contraseña</b></label><br>
-        <input type="password" placeholder="  Ingrese su Contraseña" name="clave" required><br>
-        <span class="psw"><a href="#">Olvido su contraseña?</a></span>
-        <br><br><button type="submit">Login</button>
-      </div>
-      <div class="container-sub">
-        <h4>!Aún no tienes una cuenta!</h4>
-        <button type="button" class="subbtn">Suscribete</button>
-      </div>
-    </form>
-  </div>
-</header>
+          <label for="correo_Usuario"><b>E-mail</b></label><br>
+          <input type="email" name="correo_Usuario" id="correo_Usuario" placeholder="Ingrese su Correo Electronico" required><br>
 
-<body>
+          <br><label for="clave_Usuario"><b>Contraseña</b></label><br>
+          <input type="password" name="clave_Usuario" id="clave_Usuario" placeholder="Ingrese su Contraseña" required><br>
+          <br><span class="psw"><a href="#">Olvido su contraseña?</a></span><br>
+          <br><button type="submit" value="Procesar">Login</button>
+
+        </div>
+        <div class="container-sub">
+          <h4>!Aún no tienes una cuenta!</h4>
+          <!-- <button onclick="document.getElementById('id02').style.display='block'" class="subbtn">Suscribete</button>  -->
+          <button type="button" class="subbtn">Suscribete</button>  
+        </div>
+      </form>
+    </div>
+  </header>
+  <body>
   <main class="container-main">
     <img src="img/plato1.jpg" alt="" class="i1" />
     <div class="text-main">
@@ -280,22 +282,27 @@
         <!-- Modal Signup -->
         <div id="id02" class="modal">
 
-          <form class="modal-content animate" action="">
+          <form class="modal-content animate"  method="post" action="internas/procesar.php">
             <div class="tittle-modal">
-              <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
               <h2 class="sus">Suscribete</h2>
             </div>
             <div class="container-form">
-              <label for="usuario"><b>Usuario</b></label><br>
-              <input type="text" placeholder="  Ingrese su Usuario" name="usuario" required><br>
 
-              <br><label for="correo"><b>E-mail</b></label><br>
-              <input type="text" placeholder="  Ingrese su Correo Electronico" name="correo" required><br>
+              <label for="nombre_Usuario"><b>Nombre</b></label><br>
+              <input type="text" name="nombre_Usuario" id="nombre_Usuario" placeholder="Ingrese su Nombre" required><br>
 
-              <br><label for="clave"><b>Contraseña</b></label><br>
-              <input type="password" placeholder="  Ingrese su Contraseña" name="clave" required><br>
+              <br><label for="apellido_Usuarios"><b>Apellido</b></label><br>
+              <input type="text" name="apellido_Usuario" id="apellido_Usuario" placeholder="Ingrese su Apellido" required><br>
 
-              <br><button type="submit">Suscribete</button>
+              <br><label for="correo_Usuario"><b>E-mail</b></label><br>
+              <input type="email" name="correo_Usuario" id="correo_Usuario" placeholder="Ingrese su Correo Electronico" required><br>
+
+              <br><label for="clave_Usuario"><b>Contraseña</b></label><br>
+              <input type="password" name="clave_Usuario" id="clave_Usuario" placeholder="Ingrese su Contraseña" required><br>
+
+              <br><button type="submit" value="Procesar">Suscribete</button>
             </div>
             <div class="container-sub">
               <h4>!Ya tienes una cuenta!</h4>
@@ -367,26 +374,31 @@
         <!-- Modal Signup -->
         <div id="id03" class="modal">
 
-          <form class="modal-content animate" action="">
+          <form class="modal-content animate"  method="post" action="internas/procesar.php">
             <div class="tittle-modal">
-              <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <span onclick="document.getElementById('id03').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
               <h2 class="sus">Suscribete</h2>
             </div>
             <div class="container-form">
-              <label for="usuario"><b>Usuario</b></label><br>
-              <input type="text" placeholder="  Ingrese su Usuario" name="usuario" required><br>
 
-              <br><label for="correo"><b>E-mail</b></label><br>
-              <input type="text" placeholder="  Ingrese su Correo Electronico" name="correo" required><br>
+              <label for="nombre_Usuario"><b>Nombre</b></label><br>
+              <input type="text" name="nombre_Usuario" id="nombre_Usuario" placeholder="Ingrese su Nombre" required><br>
 
-              <br><label for="clave"><b>Contraseña</b></label><br>
-              <input type="password" placeholder="  Ingrese su Contraseña" name="clave" required><br>
+              <br><label for="apellido_Usuario"><b>Apellido</b></label><br>
+              <input type="text" name="apellido_Usuario" id="apellido_Usuario" placeholder="Ingrese su Apellido" required><br>
 
-              <br><button type="submit">Suscribete</button>
+              <br><label for="correo_Usuario"><b>E-mail</b></label><br>
+              <input type="email" name="correo_Usuario" id="correo_Usuario" placeholder="Ingrese su Correo Electronico" required><br>
+
+              <br><label for="clave_Usuario"><b>Contraseña</b></label><br>
+              <input type="password" name="clave_Usuario" id="clave_Usuario" placeholder="Ingrese su Contraseña" required><br>
+
+              <br><button type="submit" value="Procesar">Suscribete</button>
             </div>
             <div class="container-sub">
               <h4>!Ya tienes una cuenta!</h4>
-              <button type="button" class="subbtn2">Login</button>
+              <button type="submit" class="subbtn2">Login</button>
             </div>
           </form>
         </div>
