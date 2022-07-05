@@ -79,6 +79,16 @@ li a:hover {
   transition: .5s;
 }
 
+.grup_et span{
+  color: rgb(225, 146, 61);
+}
+.grup_et hr{
+  width: 12%;
+  background-color: rgb(241, 163, 80);
+  height: 2px;
+  margin-left: 44%;
+}
+
 
 /* card tips*/
 
@@ -86,7 +96,6 @@ li a:hover {
 .grid {
   width: 100%;
   height: 530px;
-  flex-wrap: wrap;
   justify-content: center;
   display: inline;
   flex-direction: column;

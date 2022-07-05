@@ -19,6 +19,15 @@ body {
 }
 
 /* Parte superior con el logo y el user*/
+.tips span{
+  color: rgb(225, 146, 61);
+}
+.tips hr{
+  width: 3%;
+  background-color: rgb(241, 163, 80);
+  height: 2px;
+  margin-left: 48.5%;
+}
 
 /* navbar */
 nav {
@@ -49,6 +58,19 @@ nav {
   color: #000;
 }
 
+/**/
+/*
+.heading-cards::after{
+	content: " ";
+	position: absolute;
+	width: 60%;
+	height: 3px;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -5px;
+	background-color: rgb(225, 146, 61);
+}
+*/
 .enlace .nombre span {
   color: #a56e20;
 }
