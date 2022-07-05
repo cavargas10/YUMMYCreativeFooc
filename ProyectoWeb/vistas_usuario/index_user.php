@@ -1,3 +1,6 @@
+<?php
+include("../seguridad/seguridad.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yummi Creative Food</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="js/main.js"></script>
 </head>
@@ -16,22 +19,22 @@
 
     <div class="menu">
         <nav>
-            <a href="index.php" class="enlace">
-                <img src="img/logo.png" alt="" class="logo">
+            <a href="../index.php" class="enlace">
+                <img src="../img/logo.png" alt="" class="logo">
                 <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
             </a>
             <ul>
-                <li><a class="active" href="index.php">Inicio</a></li>
-                <li><a href="gruposEtarios.php">Grupos Etarios</a></li>
+                <li><a class="active" href="../index.php">Inicio</a></li>
+                <li><a href="#">Grupos Etarios</a></li>
                 <li><a href="#">Recetas</a></li>
-                <li><a href="tips.php">Tips</a></li>
-                <li><a href="videos.php">Videos</a></li>
-                <li><a href="acerca.php">Acerca de</a></li>
+                <li><a href="#">Tips</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Acerca de</a></li>
                 <!-- Dropdown Uuario-->
-                <li><button onclick="myFunction()" class="dropbtn">Carlos Vargas</button></li>
+                <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username'];?></button></li>
                 <div id="myDropdown" class="dropdown-content">
                     <a href="perfil_user.php">Perfil</a>
-                    <a href="index.php">Salir</a>
+                    <a href="../seguridad/exit.php?salir=true">Salir</a>
                 </div>
 
             </ul>
@@ -50,14 +53,14 @@
 
 <body>
     <main class="container-main">
-        <img src="img/plato1.jpg" alt="" class="i1" />
+        <img src="../img/plato1.jpg" alt="" class="i1" />
         <div class="text-main">
             <h1>
                 OLVIDATE DE LA COCINA TRADICIONAL Y EMPEZEMOS CON LA COCINA
                 <span>CREATIVA </span>”
             </h1>
         </div>
-        <img src="img/plato2.png" alt="" class="i2" />
+        <img src="../img/plato2.png" alt="" class="i2" />
 
         <div class="text-second">
             <h1>La Cocina <span>CREATIVA</span></h1>
@@ -130,7 +133,7 @@
             <div class="container-card-recet">
                 <div class="card-recet">
                     <div class="img-card-recet">
-                        <img src="img/card1.png" alt="">
+                        <img src="../img/card1.png" alt="">
                     </div>
                     <div class="card-content">
                         <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -149,7 +152,7 @@
             <div class="container-card-recet">
                 <div class="card-recet">
                     <div class="img-card-recet">
-                        <img src="img/card1.png" alt="">
+                        <img src="../img/card1.png" alt="">
                     </div>
                     <div class="card-content">
                         <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -170,7 +173,7 @@
             <div class="container-card-recet">
                 <div class="card-recet">
                     <div class="img-card-recet">
-                        <img src="img/card1.png" alt="">
+                        <img src="../img/card1.png" alt="">
                     </div>
                     <div class="card-content">
                         <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -191,7 +194,7 @@
         </div>
         <div class="mensaje">
             <div class="inf-mensaje">
-                <img src="img/img1.jpg" alt=""></IMg>
+                <img src="../img/img1.jpg" alt=""></IMg>
                 <h1><br>“No empieces una dieta que terminará algun día, comienza un estilo de vida que dure para
                     siempre"</br>
                 </h1>
@@ -205,7 +208,7 @@
             </div>
             <section class="container-card-recet">
                 <div class="card-recet">
-                    <img src="img/card1.png" alt="">
+                    <img src="../img/card1.png" alt="">
                     <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
                     <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
                         officia
@@ -219,7 +222,7 @@
 
             <section class="container-card-recet">
                 <div class="card-recet">
-                    <img src="img/card1.png" alt="">
+                    <img src="../img/card1.png" alt="">
                     <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
                     <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
                         officia
@@ -233,7 +236,7 @@
 
             <section class="container-card-recet">
                 <div class="card-recet">
-                    <img src="img/card1.png" alt="">
+                    <img src="../img/card1.png" alt="">
                     <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
                     <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
                         officia
@@ -271,7 +274,7 @@
     <div class="content">
         <div class="top">
             <div class="logo-details">
-                <img src="img/logo.png" alt="" class="logo">
+                <img src="../img/logo.png" alt="" class="logo">
                 <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
             </div>
             <div class="media-icons">

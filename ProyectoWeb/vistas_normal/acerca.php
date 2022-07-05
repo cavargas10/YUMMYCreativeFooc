@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yummi Creative Food</title>
-  <link rel="stylesheet" href="css/style_acerca.css" />
+  <link rel="stylesheet" href="../css/style_acerca.css" />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <script src="js/main.js"></script>
 </head>
@@ -15,12 +15,12 @@
 
   <div class="menu">
     <nav>
-      <a href="index.php" class="enlace">
-        <img src="img/logo.png" alt="" class="logo">
+      <a href="../index.php" class="enlace">
+        <img src="../img/logo.png" alt="" class="logo">
         <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
       </a>
       <ul>
-        <li><a href="index.php">Inicio</a></li>
+        <li><a href="../index.php">Inicio</a></li>
         <li><a href="gruposEtarios.php">Grupos Etarios</a></li>
         <li><a href="recetas.php">Recetas</a></li>
         <li><a href="tips.php">Tips</a></li>
@@ -33,22 +33,25 @@
   </div>
   <!-- Modal LOGIN-->
   <div id="id01" class="modal">
-    <form class="modal-content animate" action="">
+    <form class="modal-content animate" method="post" action="../dll/validar.php">
       <div class="tittle">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
         <p>Inicio de Sesión</p>
       </div>
       <div class="container-form">
-        <label for="correo"><b>E-mail</b></label><br>
-        <input type="text" placeholder="  Ingrese su Correo Electronico" name="correo" required><br>
 
-        <br><label for="clave"><b>Contraseña</b></label><br>
-        <input type="password" placeholder="  Ingrese su Contraseña" name="clave" required><br>
-        <span class="psw"><a href="#">Olvido su contraseña?</a></span>
-        <br><br><button type="submit">Login</button>
+        <label for="correo_Usuario"><b>E-mail</b></label><br>
+        <input type="email" name="correo_Usuario" id="correo_Usuario" placeholder="Ingrese su Correo Electronico" required><br>
+
+        <br><label for="clave_Usuario"><b>Contraseña</b></label><br>
+        <input type="password" name="clave_Usuario" id="clave_Usuario" placeholder="Ingrese su Contraseña" required><br>
+        <br><span class="psw"><a href="#">Olvido su contraseña?</a></span><br>
+        <br><button type="submit" value="Procesar">Login</button>
+
       </div>
       <div class="container-sub">
         <h4>!Aún no tienes una cuenta!</h4>
+        <!-- <button onclick="document.getElementById('id02').style.display='block'" class="subbtn">Suscribete</button>  -->
         <button type="button" class="subbtn">Suscribete</button>
       </div>
     </form>
@@ -107,7 +110,7 @@
     <h3 class="heading-cards"><span>Directores </span>Proyecto</h3>
     <div class="container-cards">
       <div class="card-about">
-        <img src="img/Norma Verónica Cárdenas.jpg">
+        <img src="../img/Norma Verónica Cárdenas.jpg">
         <div class="details-cards">
           <h3>Mgtr. Norma Cárdenas Mazón</h3>
           <p>Directora de la Carrera de Nutrición y Dietética</p>
@@ -120,7 +123,7 @@
         </div>
       </div>
       <div class="card-about">
-        <img src="">
+        <img src="../img/chef2.jpg">
         <div class="details-cards">
           <h3>Mgtr. Norma Cárdenas Mazón</h3>
           <p>Directora de la Carrera de Nutrición y Dietética</p>
@@ -139,7 +142,7 @@
     <h3 class="heading-cards"><span>Personalidades </span>Importantes</h3>
     <div class="container-cards">
       <div class="card-about">
-        <img src="">
+        <img src="../img/chef3.jpg">
         <div class="details-cards">
           <h3>Mgtr. Norma Cárdenas Mazón</h3>
           <p>Directora de la Carrera de Nutrición y Dietética</p>
@@ -152,7 +155,7 @@
         </div>
       </div>
       <div class="card-about">
-        <img src="">
+        <img src="../img/chef1.jpg">
         <div class="details-cards">
           <h3>Mgtr. Norma Cárdenas Mazón</h3>
           <p>Directora de la Carrera de Nutrición y Dietética</p>
@@ -165,7 +168,7 @@
         </div>
       </div>
       <div class="card-about">
-        <img src="">
+        <img src="../img/chef4.jpg">
         <div class="details-cards">
           <h3>Mgtr. Norma Cárdenas Mazón</h3>
           <p>Directora de la Carrera de Nutrición y Dietética</p>
@@ -184,7 +187,7 @@
     <h3 class="heading-cards"><span>Jovenes </span>Desarrolladores</h3>
     <div class="container-cards">
       <div class="card-about">
-        <img src="">
+        <img src="../img/carlos.jpeg">
         <div class="details-cards">
           <h3>Carlos Andres Vargas Ramirez</h3>
           <p>Estudiante Ing. Sistemas Computacionales y Computacion UTPL</p>
@@ -197,7 +200,7 @@
         </div>
       </div>
       <div class="card-about">
-        <img src="">
+        <img src="../img/arianna.jpeg">
         <div class="details-cards">
           <h3>Arianna Michelle Vinueza Ortega</h3>
           <p>Estudiante Ing. Sistemas Computacionales y Computacion UTPL</p>
@@ -210,7 +213,7 @@
         </div>
       </div>
       <div class="card-about">
-        <img src="">
+        <img src="../img/luis.jpg">
         <div class="details-cards">
           <h3>Luis Angel Celi Montaño</h3>
           <p>Estudiante Ing. Sistemas Computacionales y Computacion UTPL</p>
@@ -230,7 +233,7 @@
   <div class="content">
     <div class="top">
       <div class="logo-details">
-        <img src="img/logo.png" alt="" class="logo">
+        <img src="../img/logo.png" alt="" class="logo">
         <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
       </div>
       <div class="media-icons">
@@ -282,26 +285,30 @@
         <!-- Modal Signup -->
         <div id="id03" class="modal">
 
-          <form class="modal-content animate" action="">
+          <form class="modal-content animate" method="post" action="../internas/procesar.php">
             <div class="tittle-modal">
               <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
               <h2 class="sus">Suscribete</h2>
             </div>
             <div class="container-form">
-              <label for="usuario"><b>Usuario</b></label><br>
-              <input type="text" placeholder="  Ingrese su Usuario" name="usuario" required><br>
 
-              <br><label for="correo"><b>E-mail</b></label><br>
-              <input type="text" placeholder="  Ingrese su Correo Electronico" name="correo" required><br>
+              <label for="nombre_Usuario"><b>Nombre</b></label><br>
+              <input type="text" name="nombre_Usuario" id="nombre_Usuario" placeholder="Ingrese su Nombre" required><br>
 
-              <br><label for="clave"><b>Contraseña</b></label><br>
-              <input type="password" placeholder="  Ingrese su Contraseña" name="clave" required><br>
+              <br><label for="apellido_Usuario"><b>Apellido</b></label><br>
+              <input type="text" name="apellido_Usuario" id="apellido_Usuario" placeholder="Ingrese su Apellido" required><br>
 
-              <br><button type="submit">Suscribete</button>
+              <br><label for="correo_Usuario"><b>E-mail</b></label><br>
+              <input type="email" name="correo_Usuario" id="correo_Usuario" placeholder="Ingrese su Correo Electronico" required><br>
+
+              <br><label for="clave_Usuario"><b>Contraseña</b></label><br>
+              <input type="password" name="clave_Usuario" id="clave_Usuario" placeholder="Ingrese su Contraseña" required><br>
+
+              <br><button type="submit" value="Procesar">Suscribete</button>
             </div>
             <div class="container-sub">
               <h4>!Ya tienes una cuenta!</h4>
-              <button type="button" class="subbtn2">Login</button>
+              <button type="submit" class="subbtn2">Login</button>
             </div>
           </form>
         </div>

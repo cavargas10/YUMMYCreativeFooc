@@ -21,11 +21,11 @@
             </a>
             <ul>
                 <li><a href="index.php">Inicio</a></li>
-                <li><a href="gruposEtarios.php">Grupos Etarios</a></li>
-                <li><a class="active" href="recetas.php">Recetas</a></li>
-                <li><a href="tips.php">Tips</a></li>
-                <li><a href="videos.php">Videos</a></li>
-                <li><a href="acerca.php">Acerca de</a></li>
+                <li><a href="vistas_normal/gruposEtarios.php">Grupos Etarios</a></li>
+                <li><a class="active" href="vistas_normal/recetas.php">Recetas</a></li>
+                <li><a href="vistas_normal/tips.php">Tips</a></li>
+                <li><a href="vistas_normal/videos.php">Videos</a></li>
+                <li><a href="vistas_normal/acerca.php">Acerca de</a></li>
                 <!-- Boton Login -->
                 <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
             </ul>
