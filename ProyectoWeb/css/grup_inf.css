@@ -64,20 +64,30 @@ nav {
 .parrafo p{
   margin-top: 2%;
   width: 60%;
-  height: 500px;
   text-align: justify;
   margin-left: 20%;
 }
 
+.parrafo h3{
+  text-align: center;
+}
 .parrafo .tips{
   margin-top: 7%;
   text-align: center;
 }
-.img_tip{
-  width: 45%;
-  height: 380px;
-  margin-left: 27%;
+.parrafo .recom{
+  height: 280px;
+  text-align: justify;
+  width: 60%;
+  margin-left: 20%;
 }
+.img_emb{
+  width: 40%;
+  height: 280px;
+  margin-left: 30%;
+  margin-top: 1%;
+}
+
 
 /**/
 /*
