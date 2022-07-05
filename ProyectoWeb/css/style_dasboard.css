@@ -73,11 +73,7 @@ nav .menu-items {
   justify-content: center;
   color: #2e3532;
 }
-.menu-items li a .link-name {
-  font-size: 18px;
-  font-weight: 400;
-  color: #2e3532;
-}
+
 
 .nav-links li a:hover i,
 .nav-links li a:hover .link-name {
@@ -98,7 +94,7 @@ nav .menu-items {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 20px;
-  color: #818181;
+  color: #2e3532;
   display: block;
   border: none;
   background: none;
@@ -106,12 +102,13 @@ nav .menu-items {
   text-align: left;
   cursor: pointer;
   outline: none;
+  margin-top: 3%;
 }
 
 /* On mouse-over */
 .sidenav a:hover,
 .dropdown-btn:hover {
-  color: #f1f1f1;
+  color: #e5872f;
 }
 
 /* Main content */
@@ -123,14 +120,14 @@ nav .menu-items {
 
 /* Add an active class to the active dropdown button */
 .active {
-  background-color: rgb(195, 150, 46);
-  color: white;
+  background-color: #fcf7e4;
+  color: #e5872f;
 }
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
   display: none;
-  background-color: #262626;
+  background-color: white;
   padding-left: 8px;
 }
 
