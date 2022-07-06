@@ -1,5 +1,14 @@
 <?php
-include("../seguridad/seguridad.php");
+include("../../seguridad/seguridad.php");
+include_once "../controlador/usuario_controlador.php";
+include_once "../modelo/usuario_modelo.php";
+extract($_GET);
+
+$control2 = new usuario_modelo();
+$lista = $control2->EncontrarUser($idUsuario);
+
+$control = new usuario_controlador();
+$control->UpdateUser($idUsuario);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -9,8 +18,8 @@ include("../seguridad/seguridad.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yummi Creative Food</title>
-    <link rel="stylesheet" href="../css/style_perfil_user.css" />
-    <link rel="stylesheet" href="../css/dropdown_User.css" />
+    <link rel="stylesheet" href="../../css/style_perfil_user.css" />
+    <link rel="stylesheet" href="../../css/dropdown_User.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="js/main.js"></script>
 </head>
@@ -21,7 +30,7 @@ include("../seguridad/seguridad.php");
     <div class="menu">
         <nav>
             <a href="index_user.php" class="enlace">
-                <img src="../img/logo.png" alt="" class="logo">
+                <img src="../../img/logo.png" alt="" class="logo">
                 <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
             </a>
             <ul>
@@ -35,7 +44,7 @@ include("../seguridad/seguridad.php");
                 <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username']; ?></button></li>
                 <div id="myDropdown" class="dropdown-content">
                     <a href="perfil_user.php">Perfil</a>
-                    <a href="../seguridad/exit.php?salir=true">Salir</a>
+                    <a href="../../seguridad/exit.php?salir=true">Salir</a>
                 </div>
             </ul>
         </nav>
@@ -59,16 +68,16 @@ include("../seguridad/seguridad.php");
         <div class="contenedorFormUser">
 
             <label for="nombre_Usuario"><b>Nombre</b></label><br>
-            <input type="text" name="nombre_Usuario" id="nombre_Usuario" placeholder="Ingrese su Nombre" required><br>
+            <input type="text" name="nombre_Usuario" id="nombre_Usuario" value="<?php echo $lista[1]?>" placeholder="Ingrese su Nombre"><br>
 
             <br><label for="apellido_Usuario"><b>Apellido</b></label><br>
-            <input type="text" name="apellido_Usuario" id="apellido_Usuario" placeholder="Ingrese su Apellido" required><br>
+            <input type="text" name="apellido_Usuario" id="apellido_Usuario" value="<?php echo $lista[2]?>" placeholder="Ingrese su Apellido"><br>
 
             <br><label for="correo_Usuario"><b>E-mail</b></label><br>
-            <input type="email" name="correo_Usuario" id="correo_Usuario" placeholder="Ingrese su Correo Electronico" required><br>
+            <input type="email" name="correo_Usuario" id="correo_Usuario" value="<?php echo $lista[3]?>" placeholder="Ingrese su Correo Electronico"><br>
 
             <br><label for="clave_Usuario"><b>Contraseña</b></label><br>
-            <input type="password" name="clave_Usuario" id="clave_Usuario" placeholder="Ingrese su Contraseña" required><br>
+            <input type="password" name="clave_Usuario" id="clave_Usuario" value="<?php echo $lista[4]?>" placeholder="Ingrese su Contraseña"><br>
 
             <br><button type="submit" class="subbtn">Guardar</button>
         </div>
@@ -79,7 +88,7 @@ include("../seguridad/seguridad.php");
     <div class="content">
         <div class="top">
             <div class="logo-details">
-                <img src="../img/logo.png" alt="" class="logo">
+                <img src="../../img/logo.png" alt="" class="logo">
                 <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
             </div>
             <div class="media-icons">
