@@ -73,7 +73,7 @@
         <p>
           Los hábitos de alimentación siempre han sido una preocupación constante de los ...
         </p>
-        <button class="btnTips"><a href="tips_info.html">Leer más..</a></button>
+        <button class="btnTips"><a href="tips_info.php">Leer más..</a></button>
       </div>
     </section>
 

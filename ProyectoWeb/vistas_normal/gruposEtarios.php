@@ -68,7 +68,7 @@
     </div>
     <section class="container-card-recet">
       <div class="card-recet">
-        <a href="grup_inf.html">
+        <a href="grupoEta_info.php">
           <img src="../img/Embarazada.jpg" />
           <h1 class="card-title text-medium">Madre en estado de gestación </h1>
         </a>

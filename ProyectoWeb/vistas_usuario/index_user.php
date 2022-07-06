@@ -19,24 +19,23 @@ include("../seguridad/seguridad.php");
 
     <div class="menu">
         <nav>
-            <a href="../index.php" class="enlace">
+            <a href="index_user.php" class="enlace">
                 <img src="../img/logo.png" alt="" class="logo">
                 <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
             </a>
             <ul>
-                <li><a class="active" href="../index.php">Inicio</a></li>
+                <li><a class="active" href="index_user.php">Inicio</a></li>
                 <li><a href="#">Grupos Etarios</a></li>
                 <li><a href="#">Recetas</a></li>
                 <li><a href="#">Tips</a></li>
                 <li><a href="#">Videos</a></li>
-                <li><a href="#">Acerca de</a></li>
+                <li><a href="acerca_user.php">Acerca de</a></li>
                 <!-- Dropdown Uuario-->
                 <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username'];?></button></li>
                 <div id="myDropdown" class="dropdown-content">
                     <a href="perfil_user.php">Perfil</a>
                     <a href="../seguridad/exit.php?salir=true">Salir</a>
                 </div>
-
             </ul>
         </nav>
     </div>
