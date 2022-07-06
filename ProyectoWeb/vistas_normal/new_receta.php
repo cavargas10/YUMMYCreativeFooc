@@ -12,49 +12,49 @@
 </head>
 
 <body>
-<header>
+    <header>
 
-<div class="menu">
-    <nav>
-        <a href="index.php" class="enlace">
-            <img src="img/logo.png" alt="" class="logo">
-            <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
-        </a>
-        <ul>
-            <li><a href="index.php">Inicio</a></li>
-            <li><a href="vistas_normal/gruposEtarios.php">Grupos Etarios</a></li>
-            <li><a class="active" href="vistas_normal/recetas.php">Recetas</a></li>
-            <li><a href="vistas_normal/tips.php">Tips</a></li>
-            <li><a href="vistas_normal/videos.php">Videos</a></li>
-            <li><a href="vistas_normal/acerca.php">Acerca de</a></li>
-            <!-- Boton Login -->
-            <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
-        </ul>
-    </nav>
-</div>
-<!-- Modal LOGIN-->
-<div id="id01" class="modal">
-    <form class="modal-content animate" action="">
-        <div class="tittle">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <p>Inicio de Sesión</p>
+        <div class="menu">
+            <nav>
+                <a href="index.php" class="enlace">
+                    <img src="img/logo.png" alt="" class="logo">
+                    <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
+                </a>
+                <ul>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="vistas_normal/gruposEtarios.php">Grupos Etarios</a></li>
+                    <li><a class="active" href="vistas_normal/recetas.php">Recetas</a></li>
+                    <li><a href="vistas_normal/tips.php">Tips</a></li>
+                    <li><a href="vistas_normal/videos.php">Videos</a></li>
+                    <li><a href="vistas_normal/acerca.php">Acerca de</a></li>
+                    <!-- Boton Login -->
+                    <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
+                </ul>
+            </nav>
         </div>
-        <div class="container-form">
-            <label for="correo"><b>E-mail</b></label><br>
-            <input type="text" placeholder="  Ingrese su Correo Electronico" name="correo" required><br>
+        <!-- Modal LOGIN-->
+        <div id="id01" class="modal">
+            <form class="modal-content animate" action="">
+                <div class="tittle">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <p>Inicio de Sesión</p>
+                </div>
+                <div class="container-form">
+                    <label for="correo"><b>E-mail</b></label><br>
+                    <input type="text" placeholder="  Ingrese su Correo Electronico" name="correo" required><br>
 
-            <br><label for="clave"><b>Contraseña</b></label><br>
-            <input type="password" placeholder="  Ingrese su Contraseña" name="clave" required><br>
-            <span class="psw"><a href="#">Olvido su contraseña?</a></span>
-            <br><br><button type="submit">Login</button>
+                    <br><label for="clave"><b>Contraseña</b></label><br>
+                    <input type="password" placeholder="  Ingrese su Contraseña" name="clave" required><br>
+                    <span class="psw"><a href="#">Olvido su contraseña?</a></span>
+                    <br><br><button type="submit">Login</button>
+                </div>
+                <div class="container-sub">
+                    <h4>!Aún no tienes una cuenta!</h4>
+                    <button type="button" class="subbtn">Suscribete</button>
+                </div>
+            </form>
         </div>
-        <div class="container-sub">
-            <h4>!Aún no tienes una cuenta!</h4>
-            <button type="button" class="subbtn">Suscribete</button>
-        </div>
-    </form>
-</div>
-</header>
+    </header>
 
 
     <main class="container-main">
@@ -224,6 +224,35 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="comentarios">
+            <div class="new-recetas">
+                <h2>Comentarios</h2>
+            </div>
+
+            <div class="center">
+                <p>Valoracion:</p>
+                <div class="stars">
+                    <input type="radio" id="five" name="rate" value="5">
+                    <label for="five"></label>
+                    <input type="radio" id="four" name="rate" value="4">
+                    <label for="four"></label>
+                    <input type="radio" id="three" name="rate" value="3">
+                    <label for="three"></label>
+                    <input type="radio" id="two" name="rate" value="2">
+                    <label for="two"></label>
+                    <input type="radio" id="one" name="rate" value="1">
+                    <label for="one"></label>
+                    <span class="result"></span>
+                </div>
+                <p>Comentario: </p>
+                <input class="comentario" type="text" placeholder="  Ingrese su Comentario aqui..." name="comentario" readonly=»readonly»><br>
+            </div>
+
+            <div class="boton-comentario">
+                <button onclick="document.getElementById('id01').style.display='block'">Envia tu comentario</button>
             </div>
         </div>
     </main>
