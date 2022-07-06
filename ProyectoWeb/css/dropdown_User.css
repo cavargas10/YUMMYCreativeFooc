@@ -1,0 +1,24 @@
+/*Dropdown*/
+.dropdown-content {
+    margin-top: -2.6%;
+    margin-left: 79.8%;
+    width: 15%;
+    display: none;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown-content a {
+    color: rgb(88, 32, 32);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: rgb(22, 112, 49);}
+  
+  .show {
+    display: block;
+  }
