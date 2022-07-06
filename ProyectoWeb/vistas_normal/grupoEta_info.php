@@ -30,6 +30,10 @@
                     <li><a href="acerca.php">Acerca de</a></li>
                     <!-- Boton Login -->
                     <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
+                    <div id="myDropdown" class="dropdown-content">
+                    <a href="perfil_user.php">Perfil</a>
+                    <a href="../seguridad/exit.php?salir=true">Salir</a>
+                </div>
                 </ul>
             </nav>
         </div>

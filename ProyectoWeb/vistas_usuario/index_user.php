@@ -25,10 +25,10 @@ include("../seguridad/seguridad.php");
             </a>
             <ul>
                 <li><a class="active" href="index_user.php">Inicio</a></li>
-                <li><a href="#">Grupos Etarios</a></li>
-                <li><a href="#">Recetas</a></li>
-                <li><a href="#">Tips</a></li>
-                <li><a href="#">Videos</a></li>
+                <li><a href="gruposEtarios_user.php">Grupos Etarios</a></li>
+                <li><a href="recetas_user.php">Recetas</a></li>
+                <li><a href="tips_user.php">Tips</a></li>
+                <li><a href="videos_user.php">Videos</a></li>
                 <li><a href="acerca_user.php">Acerca de</a></li>
                 <!-- Dropdown Uuario-->
                 <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username'];?></button></li>

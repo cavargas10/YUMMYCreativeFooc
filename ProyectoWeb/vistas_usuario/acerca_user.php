@@ -5,52 +5,51 @@ include("../seguridad/seguridad.php");
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yummi Creative Food</title>
-    <link rel="stylesheet" href="../css/style_acerca.css"/>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <script src="js/main.js"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yummi Creative Food</title>
+  <link rel="stylesheet" href="../css/style_acerca.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <script src="js/main.js"></script>
 </head>
-
-<header>
-
-<div class="menu">
-        <nav>
-            <a href="index_user.php" class="enlace">
-                <img src="../img/logo.png" alt="" class="logo">
-                <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
-            </a>
-            <ul>
-                <li><a href="index_user.php">Inicio</a></li>
-                <li><a href="#">Grupos Etarios</a></li>
-                <li><a href="#">Recetas</a></li>
-                <li><a href="#">Tips</a></li>
-                <li><a href="#">Videos</a></li>
-                <li><a class="active" href="acerca_user.php">Acerca de</a></li>
-                <!-- Dropdown Uuario-->
-                <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username'];?></button></li>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="perfil_user.php">Perfil</a>
-                    <a href="../seguridad/exit.php?salir=true">Salir</a>
-                </div>
-            </ul>
-        </nav>
-    </div>
-    
-    <!-- Script Dropdown Uuario-->
-    <script>
-        /* Cuando el usuario hace clic en el botón, se alterna 
-        entre ocultar y mostrar el contenido desplegable */
-        function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
-        }
-    </script>
-</header>
 
 <body>
 
+  <header>
+
+    <div class="menu">
+      <nav>
+        <a href="index_user.php" class="enlace">
+          <img src="../img/logo.png" alt="" class="logo">
+          <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
+        </a>
+        <ul>
+          <li><a href="index_user.php">Inicio</a></li>
+          <li><a href="gruposEtarios_user.php">Grupos Etarios</a></li>
+          <li><a href="recetas_user.php">Recetas</a></li>
+          <li><a href="tips_user.php">Tips</a></li>
+          <li><a href="videos_user.php">Videos</a></li>
+          <li><a class="active" href="acerca_user.php">Acerca de</a></li>
+          <!-- Dropdown Uuario-->
+          <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username']; ?></button></li>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="perfil_user.php">Perfil</a>
+            <a href="../seguridad/exit.php?salir=true">Salir</a>
+          </div>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Script Dropdown Uuario-->
+    <script>
+      /* Cuando el usuario hace clic en el botón, se alterna 
+      entre ocultar y mostrar el contenido desplegable */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+    </script>
+  </header>
 
   <div class="menu-history">
     <h3 class="heading-cards"><span>Nuestra </span>Historia</h3>

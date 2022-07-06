@@ -648,9 +648,8 @@ footer .bottom-details .bottom_text {
 .bottom-details .bottom_text a {
   margin-right: 10px;
 }
-
- /*Dropdown*/
- .dropdown-content {
+/*Dropdown*/
+.dropdown-content {
   margin-top: -2.6%;
   margin-left: 79.8%;
   width: 15%;
@@ -670,4 +669,6 @@ footer .bottom-details .bottom_text {
 
 .dropdown a:hover {background-color: #ddd;}
 
-.show {display: block;}
+.show {
+  display: block;
+}
