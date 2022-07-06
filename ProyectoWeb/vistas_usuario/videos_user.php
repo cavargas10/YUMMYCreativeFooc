@@ -10,6 +10,7 @@ include("../seguridad/seguridad.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yummi Creative Food</title>
     <link rel="stylesheet" href="../css/videos.css " />
+    <link rel="stylesheet" href="../css/dropdown_User.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="js/main.js"></script>
 </head>
@@ -27,8 +28,8 @@ include("../seguridad/seguridad.php");
                     <li><a href="index_user.php">Inicio</a></li>
                     <li><a href="gruposEtarios_user.php">Grupos Etarios</a></li>
                     <li><a href="recetas_user.php">Recetas</a></li>
-                    <li><a class="active" href="tips_user.php">Tips</a></li>
-                    <li><a href="videos_user.php">Videos</a></li>
+                    <li><a href="tips_user.php">Tips</a></li>
+                    <li><a class="active" href="videos_user.php">Videos</a></li>
                     <li><a href="acerca_user.php">Acerca de</a></li>
                     <!-- Dropdown Uuario-->
                     <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username']; ?></button></li>

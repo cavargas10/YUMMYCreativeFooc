@@ -130,7 +130,7 @@
             <img src="../img/plato4.jpg" alt="">
           </div>
           <div class="card-content">
-            <a href="../html/new_receta.html">
+            <a href="new_receta.php">
               <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
             </a>
             <div class="card-inf">

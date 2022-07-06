@@ -86,7 +86,7 @@
 
         <ul class="logout-mode">
           <li>
-            <a href="index.html">
+            <a href="../index.php">
               <i class="uil uil-signout"></i>
               <span class="link-name">SALIR</span>
             </a>
