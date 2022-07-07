@@ -48,7 +48,7 @@
       </div>
 
       <div class="panel">
-        <img src="../../img/Presentación sin título.jpg" alt="" />
+       
       </div>
     </section>
 
