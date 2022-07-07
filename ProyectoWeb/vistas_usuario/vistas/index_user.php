@@ -1,5 +1,13 @@
 <?php
 include("../../seguridad/seguridad.php");
+include_once "../controlador/usuario_controlador.php";
+include_once "../modelo/usuario_modelo.php";
+extract($_GET);
+
+$control2 = new usuario_modelo();
+
+$control = new usuario_controlador();
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -32,21 +40,23 @@ include("../../seguridad/seguridad.php");
                 <li><a href="videos_user.php">Videos</a></li>
                 <li><a href="acerca_user.php">Acerca de</a></li>
                 <!-- Dropdown Uuario-->
-                <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username'];?></button></li>
+                <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username']; ?></button></li>
                 <div id="myDropdown" class="dropdown-content">
-                    <a href='perfil_user.php?idUsuario=$row[0]'>Actualizar</a>
+                    <?php
+                    echo "<a href='perfil_user.php?idUsuario=".$_SESSION['idUsuario']."'>Perfil</a>";
+                    ?>
                     <a href="../../seguridad/exit.php?salir=true">Salir</a>
                 </div>
             </ul>
         </nav>
     </div>
-    
+
     <!-- Script Dropdown Uuario-->
     <script>
         /* Cuando el usuario hace clic en el botón, se alterna 
         entre ocultar y mostrar el contenido desplegable */
         function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
+            document.getElementById("myDropdown").classList.toggle("show");
         }
     </script>
 </header>

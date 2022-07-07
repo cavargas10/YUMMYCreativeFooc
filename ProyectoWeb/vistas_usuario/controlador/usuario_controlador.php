@@ -23,15 +23,15 @@ class usuario_controlador{
 			$user->setNombre_Usuario($_POST['nombre_Usuario']);
 	        $user->setApellido_Usuario($_POST['apellido_Usuario']);
 	        $user->setCorreo_Usuario($_POST['correo_Usuario']);
-			$user->setClave_Usuario(md5($_POST['clave_Usuario']));
+			$user->setClave_Usuario($_POST['clave_Usuario']);
         	$userResponse = $user->UpdateUser();
 			if ($userResponse == 1)
 	        {
 	            echo '<script>alert("SQL correctos :)...");</script>';
-				echo "HECHO";
+				echo "<script>location.href='index_user.php'</script>";
 	        } else {
 	            echo '<script>alert("SQL Incorrectos...");</script>';
-				echo "FALLO";
+				echo "<script>location.href='prefil_user.php'</script>";
 	        }
 		}
     }
