@@ -22,11 +22,11 @@ if (($_POST['correo_Usuario']) && ($_POST['clave_Usuario'])) {
             }elseif ($list[5]==2){
                 //$_SESSION['local_path']=$local_path;
                 echo '<script>alert("Acceso Correcto USUARIO");</script>';
-                echo "<script>location.href='../vistas_usuario/index_user.php'</script>";
+                echo "<script>location.href='../vistas_usuario/vistas/index_user.php'</script>";
             } 
     } else {
         $miconexion->consulta("select * from usuarios");
         echo '<script>alert("Datos Incorrectos...");</script>';
-        echo "<script>location.href='../index.php'</script>";
+        echo "<script>location.href='../../index.php'</script>";
     }
 }

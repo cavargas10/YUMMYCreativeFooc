@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yummi Creative Food</title>
-  <link rel="stylesheet" href="../css/style_GruposEtarios.css " />
+  <link rel="stylesheet" href="../css/style_gruposEta.css " />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <script src="js/main.js"></script>
 </head>
@@ -17,7 +17,7 @@
 
     <div class="menu">
       <nav>
-        <a href="index.php" class="enlace">
+        <a href="../index.php" class="enlace">
           <img src="../img/logo.png" alt="" class="logo">
           <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
         </a>
@@ -35,25 +35,22 @@
     </div>
     <!-- Modal LOGIN-->
     <div id="id01" class="modal">
-      <form class="modal-content animate" method="post" action="../dll/validar.php">
+      <form class="modal-content animate" action="">
         <div class="tittle">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
           <p>Inicio de Sesión</p>
         </div>
         <div class="container-form">
+          <label for="correo"><b>E-mail</b></label><br>
+          <input type="text" placeholder="  Ingrese su Correo Electronico" name="correo" required><br>
 
-          <label for="correo_Usuario"><b>E-mail</b></label><br>
-          <input type="email" name="correo_Usuario" id="correo_Usuario" placeholder="Ingrese su Correo Electronico" required><br>
-
-          <br><label for="clave_Usuario"><b>Contraseña</b></label><br>
-          <input type="password" name="clave_Usuario" id="clave_Usuario" placeholder="Ingrese su Contraseña" required><br>
-          <br><span class="psw"><a href="#">Olvido su contraseña?</a></span><br>
-          <br><button type="submit" value="Procesar">Login</button>
-
+          <br><label for="clave"><b>Contraseña</b></label><br>
+          <input type="password" placeholder="  Ingrese su Contraseña" name="clave" required><br>
+          <span class="psw"><a href="#">Olvido su contraseña?</a></span>
+          <br><br><button type="submit">Login</button>
         </div>
         <div class="container-sub">
           <h4>!Aún no tienes una cuenta!</h4>
-          <!-- <button onclick="document.getElementById('id02').style.display='block'" class="subbtn">Suscribete</button>  -->
           <button type="button" class="subbtn">Suscribete</button>
         </div>
       </form>

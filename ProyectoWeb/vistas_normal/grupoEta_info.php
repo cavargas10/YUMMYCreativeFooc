@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
@@ -31,9 +31,9 @@
                     <!-- Boton Login -->
                     <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
                     <div id="myDropdown" class="dropdown-content">
-                    <a href="perfil_user.php">Perfil</a>
-                    <a href="../seguridad/exit.php?salir=true">Salir</a>
-                </div>
+                        <a href="perfil_user.php">Perfil</a>
+                        <a href="../seguridad/exit.php?salir=true">Salir</a>
+                    </div>
                 </ul>
             </nav>
         </div>

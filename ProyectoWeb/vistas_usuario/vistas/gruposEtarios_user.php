@@ -2,21 +2,20 @@
 include("../seguridad/seguridad.php");
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yummi Creative Food</title>
-    <link rel="stylesheet" href="../css/videos.css " />
+    <link rel="stylesheet" href="../css/style_gruposEta.css" />
     <link rel="stylesheet" href="../css/dropdown_User.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="js/main.js"></script>
 </head>
 
 <body>
-
     <header>
         <div class="menu">
             <nav>
@@ -26,10 +25,10 @@ include("../seguridad/seguridad.php");
                 </a>
                 <ul>
                     <li><a href="index_user.php">Inicio</a></li>
-                    <li><a href="gruposEtarios_user.php">Grupos Etarios</a></li>
+                    <li><a class="active" href="gruposEtarios_user.php">Grupos Etarios</a></li>
                     <li><a href="recetas_user.php">Recetas</a></li>
                     <li><a href="tips_user.php">Tips</a></li>
-                    <li><a class="active" href="videos_user.php">Videos</a></li>
+                    <li><a href="videos_user.php">Videos</a></li>
                     <li><a href="acerca_user.php">Acerca de</a></li>
                     <!-- Dropdown Uuario-->
                     <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username']; ?></button></li>
@@ -40,6 +39,7 @@ include("../seguridad/seguridad.php");
                 </ul>
             </nav>
         </div>
+
         <!-- Script Dropdown Uuario-->
         <script>
             /* Cuando el usuario hace clic en el botón, se alterna 
@@ -52,65 +52,67 @@ include("../seguridad/seguridad.php");
 
     <div class="grid">
         <div class="new-recetas">
-            <h1 class="videos"><span>Videos
-                    <hr>
-                </span></h1><br>
+            <h1 class="grup_et"><span>Grupos</span> Etarios
+                <hr>
+            </h1><br>
         </div>
         <section class="container-card-recet">
             <div class="card-recet">
-                <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h1 class="card-title text-medium">Salud</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
-                    iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
+                <a href="grupoEta_info_user.php">
+                    <img src="../img/Embarazada.jpg" />
+                    <h1 class="card-title text-medium">Madre en estado de gestación </h1>
+                </a>
             </div>
         </section>
 
         <section class="container-card-recet">
             <div class="card-recet">
-                <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h1 class="card-title text-medium">Salud</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
-                    iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
+                <img src="../img/PrimeraInfancia.jpg" />
+                <h1 class="card-title text-medium">Primera Infancia</h1>
+
             </div>
         </section>
 
         <section class="container-card-recet">
             <div class="card-recet">
-                <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h1 class="card-title text-medium">Salud</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
-                    iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
+                <img src="../img/SegundaInfancia.jpg" />
+                <h1 class="card-title text-medium">Segunda Infancia</h1>
+
             </div>
         </section>
 
         <section class="container-card-recet">
             <div class="card-recet">
-                <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h1 class="card-title text-medium">Salud</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
-                    iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
+                <img src="../img/Adolecencia.jpg" />
+                <h1 class="card-title text-medium">Adolescencia</h1>
+
             </div>
         </section>
 
         <section class="container-card-recet">
             <div class="card-recet">
-                <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h1 class="card-title text-medium">Salud</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
-                    iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
+                <img src="../img/Juventud.jpg" />
+                <h1 class="card-title text-medium">Juventud</h1>
+
             </div>
         </section>
 
         <section class="container-card-recet">
             <div class="card-recet">
-                <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h1 class="card-title text-medium">Salud</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
-                    iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
+                <img src="../img/Adultez.jpg" />
+                <h1 class="card-title text-medium">Adultez</h1>
+            </div>
+        </section>
+
+        <section class="container-card-recet">
+            <div class="card-recet">
+                <img src="../img/Mayor.jpg" />
+                <h1 class="card-title text-medium">Vejez</h1>
             </div>
         </section>
     </div>
 </body>
+
 
 <footer>
     <div class="content">
@@ -160,7 +162,7 @@ include("../seguridad/seguridad.php");
                 <li><a href="#">Videos</a></li>
                 <li><a href="#">Acerca de</a></li>
             </ul>
-            
+
         </div>
         <div class="bottom-details">
             <div class="bottom_text">

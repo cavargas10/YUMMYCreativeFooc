@@ -2,14 +2,14 @@
 include("../seguridad/seguridad.php");
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yummi Creative Food</title>
-    <link rel="stylesheet" href="../css/style_gruposEta.css" />
+    <link rel="stylesheet" href="../css/grup_inf.css" />
     <link rel="stylesheet" href="../css/dropdown_User.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="js/main.js"></script>
@@ -33,13 +33,12 @@ include("../seguridad/seguridad.php");
                     <!-- Dropdown Uuario-->
                     <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username']; ?></button></li>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="perfil_user.php">Perfil</a>
-                        <a href="../seguridad/exit.php?salir=true">Salir</a>
-                    </div>
+                    <a href="perfil_user.php">Perfil</a>
+                    <a href="../seguridad/exit.php?salir=true">Salir</a>
+                </div>
                 </ul>
             </nav>
         </div>
-
         <!-- Script Dropdown Uuario-->
         <script>
             /* Cuando el usuario hace clic en el botón, se alterna 
@@ -50,69 +49,46 @@ include("../seguridad/seguridad.php");
         </script>
     </header>
 
-    <div class="grid">
-        <div class="new-recetas">
-            <h1 class="grup_et"><span>Grupos</span> Etarios
-                <hr>
-            </h1><br>
+    <div class="parrafo">
+        <h1 class="tips"><span>Mujer en </span>estado de gestación
+            <hr>
+        </h1><br>
+        <div class="parte">
+            <p>
+                Durante el embarazo, debes ser muy cuidadosa con tu alimentación ya que si es deficiente,
+                pudieras tener una hija o hijo de bajo peso y con mayor riesgo de sufrir enfermedades o
+                incluso de morir. <br>
+
+                Cuando tu alimentación es exagerada, aumentarás de peso más de lo esperado, lo que puede
+                ocasionar complicaciones en tú salud y la del bebé. <br>
+            </p>
+            <h3>RECOMENDACIONES</h3><br>
+            <ol class="recom">
+                <li>
+                    Consume verduras y frutas de temporada
+                </li>
+                <li>
+                    Incluye alimentos ricos en calcio, hierro y ácido fólico
+                </li>
+                <li>
+                    Disminuye el consumo de pan dulce, pastelitos, galletas, frituras, pizzas, hamburguesas,
+                    hot-dogs, refrescos y postres. Estos son alimentos con alto contenido de grasa y azúcares y
+                    con pocas vitaminas, minerales y fibra.
+                </li>
+                <li>
+                    Modera el consumo de la sal y de alimentos que la contengan, como: embutidos (jamón, salchichas,
+                    queso de puerco, mortadela, etc.), quesos, enlatados, cecina, cátsup, agua mineral, consomé en polvo,
+                    aceitunas y galletas saladas
+                </li>
+                <li>
+                    De preferencia realice cinco comidas durante el día: Desayune, almuerce, coma, meriende y cene.
+                    Incluye todos los grupos de alimentos
+                </li>
+            </ol>
         </div>
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <a href="grupoEta_info_user.php">
-                    <img src="../img/Embarazada.jpg" />
-                    <h1 class="card-title text-medium">Madre en estado de gestación </h1>
-                </a>
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <img src="../img/PrimeraInfancia.jpg" />
-                <h1 class="card-title text-medium">Primera Infancia</h1>
-
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <img src="../img/SegundaInfancia.jpg" />
-                <h1 class="card-title text-medium">Segunda Infancia</h1>
-
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <img src="../img/Adolecencia.jpg" />
-                <h1 class="card-title text-medium">Adolescencia</h1>
-
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <img src="../img/Juventud.jpg" />
-                <h1 class="card-title text-medium">Juventud</h1>
-
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <img src="../img/Adultez.jpg" />
-                <h1 class="card-title text-medium">Adultez</h1>
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <img src="../img/Mayor.jpg" />
-                <h1 class="card-title text-medium">Vejez</h1>
-            </div>
-        </section>
+        <img class="img_emb" src="../img/embarazo.jpg" alt="">
     </div>
 </body>
-
 
 <footer>
     <div class="content">
@@ -162,7 +138,6 @@ include("../seguridad/seguridad.php");
                 <li><a href="#">Videos</a></li>
                 <li><a href="#">Acerca de</a></li>
             </ul>
-
         </div>
         <div class="bottom-details">
             <div class="bottom_text">

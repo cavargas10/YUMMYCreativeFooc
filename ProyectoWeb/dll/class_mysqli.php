@@ -92,7 +92,7 @@ class clase_mysqli{
 				//echo "<td>".utf8_encode($row[$i])."</td>";
 				echo "<td>".$row[$i]."</td>";
 			}
-			echo  "<td><a href='user.php?idUser=$row[0]'>Borrar</a></td>";
+			echo  "<td><a href='perfil_user.php?idUser=$row[0]'>Borrar</a></td>";
 			echo  "<td><a href='user_update.php?idUser=$row[0]'>Actualizar</a></td>";
 			echo "</tr>";
 		}

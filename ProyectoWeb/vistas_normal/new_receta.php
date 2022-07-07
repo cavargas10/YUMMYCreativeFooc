@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
 
         <div class="menu">
             <nav>
-                <a href="index.php" class="enlace">
+                <a href="../index.php" class="enlace">
                     <img src="../img/logo.png" alt="" class="logo">
                     <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
                 </a>
