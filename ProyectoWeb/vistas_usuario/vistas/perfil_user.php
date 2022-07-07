@@ -10,6 +10,7 @@ $lista = $control2->EncontrarUser($idUsuario);
 $control = new usuario_controlador();
 $control->UpdateUser($idUsuario);
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -18,68 +19,72 @@ $control->UpdateUser($idUsuario);
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yummi Creative Food</title>
-    <link rel="stylesheet" href="../../css/style_perfil_user.css" />
-    <link rel="stylesheet" href="../../css/dropdown_User.css" />
+    <link rel="stylesheet" href="../../css/vista_perfil_user.css" />
+    <link rel="stylesheet" href="../../css/vista_dropdown_User.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="js/main.js"></script>
 </head>
 
-
-<header>
-
-    <div class="menu">
-        <nav>
-            <a href="index_user.php" class="enlace">
-                <img src="../../img/logo.png" alt="" class="logo">
-                <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
-            </a>
-            <ul>
-                <li><a class="active" href="index_user.php">Inicio</a></li>
-                <li><a href="gruposEtarios_user.php">Grupos Etarios</a></li>
-                <li><a href="recetas_user.php">Recetas</a></li>
-                <li><a href="tips_user.php">Tips</a></li>
-                <li><a href="videos_user.php">Videos</a></li>
-                <li><a href="acerca_user.php">Acerca de</a></li>
-                <!-- Dropdown Uuario-->
-                <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username']; ?></button></li>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="perfil_user.php">Perfil</a>
-                    <a href="../../seguridad/exit.php?salir=true">Salir</a>
-                </div>
-            </ul>
-        </nav>
-    </div>
-
-    <!-- Script Dropdown Uuario-->
-    <script>
-        /* Cuando el usuario hace clic en el botón, se alterna 
-        entre ocultar y mostrar el contenido desplegable */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-    </script>
-</header>
-
 <body>
-    <form class="formUser">
+    <header>
+
+        <div class="menu">
+            <nav>
+                <a href="index_user.php" class="enlace">
+                    <img src="../../img/logo.png" alt="" class="logo">
+                    <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
+                </a>
+                <ul>
+                    <li><a class="active" href="index_user.php">Inicio</a></li>
+                    <li><a href="gruposEtarios_user.php">Grupos Etarios</a></li>
+                    <li><a href="recetas_user.php">Recetas</a></li>
+                    <li><a href="tips_user.php">Tips</a></li>
+                    <li><a href="videos_user.php">Videos</a></li>
+                    <li><a href="acerca_user.php">Acerca de</a></li>
+                    <!-- Dropdown Uuario-->
+                    <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username']; ?></button></li>
+                    <div id="myDropdown" class="dropdown-content">
+                        <?php
+                        echo "<a href='perfil_user.php?idUsuario=" . $_SESSION['idUsuario'] . "'>Perfil</a>";
+                        ?>
+
+                        <a href="../../seguridad/exit.php?salir=true">Salir</a>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Script Dropdown Uuario-->
+        <script>
+            /* Cuando el usuario hace clic en el botón, se alterna 
+        entre ocultar y mostrar el contenido desplegable */
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+        </script>
+    </header>
+
+    <form class="formUser" method="post" action="">
         <div class="tituloUser">
             <h2 class="actualizarUser">Actualizar Datos</h2>
         </div>
         <div class="contenedorFormUser">
 
             <label for="nombre_Usuario"><b>Nombre</b></label><br>
-            <input type="text" name="nombre_Usuario" id="nombre_Usuario" value="<?php echo $lista[1]?>" placeholder="Ingrese su Nombre"><br>
+            <input type="text" name="nombre_Usuario" id="nombre_Usuario" value="<?php echo $lista[1] ?>"><br>
 
             <br><label for="apellido_Usuario"><b>Apellido</b></label><br>
-            <input type="text" name="apellido_Usuario" id="apellido_Usuario" value="<?php echo $lista[2]?>" placeholder="Ingrese su Apellido"><br>
+            <input type="text" name="apellido_Usuario" id="apellido_Usuario" value="<?php echo $lista[2] ?>"><br>
 
             <br><label for="correo_Usuario"><b>E-mail</b></label><br>
-            <input type="email" name="correo_Usuario" id="correo_Usuario" value="<?php echo $lista[3]?>" placeholder="Ingrese su Correo Electronico"><br>
+            <input type="email" name="correo_Usuario" id="correo_Usuario" value="<?php echo $lista[3] ?>"><br>
 
             <br><label for="clave_Usuario"><b>Contraseña</b></label><br>
-            <input type="password" name="clave_Usuario" id="clave_Usuario" value="<?php echo $lista[4]?>" placeholder="Ingrese su Contraseña"><br>
+            <input type="password" name="clave_Usuario" id="clave_Usuario" value="<?php echo $lista[4] ?>"><br>
 
-            <br><button type="submit" class="subbtn">Guardar</button>
+        </div>
+        <div>
+            <br><button type="submit" value="Procesar" class="subbtn">Guardar</button>
         </div>
     </form>
 </body>

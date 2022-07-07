@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yummi Creative Food</title>
-  <link rel="stylesheet" href="../css/style_acerca.css" />
+  <link rel="stylesheet" href="../css/vista_acerca.css" />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <script src="js/main.js"></script>
 </head>
@@ -24,10 +24,10 @@
         <ul>
           <li><a href="../index.php">Inicio</a></li>
           <li><a href="gruposEtarios.php">Grupos Etarios</a></li>
-          <li><a class="active" href="recetas.php">Recetas</a></li>
+          <li><a href="recetas.php">Recetas</a></li>
           <li><a href="tips.php">Tips</a></li>
           <li><a href="videos.php">Videos</a></li>
-          <li><a href="acerca.php">Acerca de</a></li>
+          <li><a class="active" href="acerca.php">Acerca de</a></li>
           <!-- Boton Login -->
           <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
         </ul>

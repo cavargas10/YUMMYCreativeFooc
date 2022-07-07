@@ -1,5 +1,13 @@
 <?php
-include("../seguridad/seguridad.php");
+include("../../seguridad/seguridad.php");
+include_once "../controlador/usuario_controlador.php";
+include_once "../modelo/usuario_modelo.php";
+extract($_GET);
+
+$control2 = new usuario_modelo();
+
+$control = new usuario_controlador();
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -9,18 +17,19 @@ include("../seguridad/seguridad.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yummi Creative Food</title>
-    <link rel="stylesheet" href="../css/style_gruposEta.css" />
-    <link rel="stylesheet" href="../css/dropdown_User.css" />
+    <link rel="stylesheet" href="../../css/vista_gruposEta.css" />
+    <link rel="stylesheet" href="../../css/vista_dropdown_User.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="js/main.js"></script>
 </head>
 
 <body>
     <header>
+
         <div class="menu">
             <nav>
                 <a href="index_user.php" class="enlace">
-                    <img src="../img/logo.png" alt="" class="logo">
+                    <img src="../../img/logo.png" alt="" class="logo">
                     <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
                 </a>
                 <ul>
@@ -33,8 +42,10 @@ include("../seguridad/seguridad.php");
                     <!-- Dropdown Uuario-->
                     <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username']; ?></button></li>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="perfil_user.php">Perfil</a>
-                        <a href="../seguridad/exit.php?salir=true">Salir</a>
+                        <?php
+                        echo "<a href='perfil_user.php?idUsuario=" . $_SESSION['idUsuario'] . "'>Perfil</a>";
+                        ?>
+                        <a href="../../seguridad/exit.php?salir=true">Salir</a>
                     </div>
                 </ul>
             </nav>
@@ -43,13 +54,12 @@ include("../seguridad/seguridad.php");
         <!-- Script Dropdown Uuario-->
         <script>
             /* Cuando el usuario hace clic en el botón, se alterna 
-            entre ocultar y mostrar el contenido desplegable */
+    entre ocultar y mostrar el contenido desplegable */
             function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
             }
         </script>
     </header>
-
     <div class="grid">
         <div class="new-recetas">
             <h1 class="grup_et"><span>Grupos</span> Etarios
@@ -59,7 +69,7 @@ include("../seguridad/seguridad.php");
         <section class="container-card-recet">
             <div class="card-recet">
                 <a href="grupoEta_info_user.php">
-                    <img src="../img/Embarazada.jpg" />
+                    <img src="../../img/Embarazada.jpg" />
                     <h1 class="card-title text-medium">Madre en estado de gestación </h1>
                 </a>
             </div>
@@ -67,7 +77,7 @@ include("../seguridad/seguridad.php");
 
         <section class="container-card-recet">
             <div class="card-recet">
-                <img src="../img/PrimeraInfancia.jpg" />
+                <img src="../../img/PrimeraInfancia.jpg" />
                 <h1 class="card-title text-medium">Primera Infancia</h1>
 
             </div>
@@ -75,7 +85,7 @@ include("../seguridad/seguridad.php");
 
         <section class="container-card-recet">
             <div class="card-recet">
-                <img src="../img/SegundaInfancia.jpg" />
+                <img src="../../img/SegundaInfancia.jpg" />
                 <h1 class="card-title text-medium">Segunda Infancia</h1>
 
             </div>
@@ -83,7 +93,7 @@ include("../seguridad/seguridad.php");
 
         <section class="container-card-recet">
             <div class="card-recet">
-                <img src="../img/Adolecencia.jpg" />
+                <img src="../../img/Adolecencia.jpg" />
                 <h1 class="card-title text-medium">Adolescencia</h1>
 
             </div>
@@ -91,7 +101,7 @@ include("../seguridad/seguridad.php");
 
         <section class="container-card-recet">
             <div class="card-recet">
-                <img src="../img/Juventud.jpg" />
+                <img src="../../img/Juventud.jpg" />
                 <h1 class="card-title text-medium">Juventud</h1>
 
             </div>
@@ -99,14 +109,14 @@ include("../seguridad/seguridad.php");
 
         <section class="container-card-recet">
             <div class="card-recet">
-                <img src="../img/Adultez.jpg" />
+                <img src="../../img/Adultez.jpg" />
                 <h1 class="card-title text-medium">Adultez</h1>
             </div>
         </section>
 
         <section class="container-card-recet">
             <div class="card-recet">
-                <img src="../img/Mayor.jpg" />
+                <img src="../../img/Mayor.jpg" />
                 <h1 class="card-title text-medium">Vejez</h1>
             </div>
         </section>
@@ -118,7 +128,7 @@ include("../seguridad/seguridad.php");
     <div class="content">
         <div class="top">
             <div class="logo-details">
-                <img src="../img/logo.png" alt="" class="logo">
+                <img src="../../img/logo.png" alt="" class="logo">
                 <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
             </div>
             <div class="media-icons">

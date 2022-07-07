@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yummi Creative Food</title>
-    <link rel="stylesheet" href="../css/grup_inf.css " />
+    <link rel="stylesheet" href="../css/vista_grup_inf.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="js/main.js"></script>
 </head>
@@ -30,10 +30,6 @@
                     <li><a href="acerca.php">Acerca de</a></li>
                     <!-- Boton Login -->
                     <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="perfil_user.php">Perfil</a>
-                        <a href="../seguridad/exit.php?salir=true">Salir</a>
-                    </div>
                 </ul>
             </nav>
         </div>

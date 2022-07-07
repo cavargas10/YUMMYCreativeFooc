@@ -1,6 +1,15 @@
 <?php
-include("../seguridad/seguridad.php");
+include("../../seguridad/seguridad.php");
+include_once "../controlador/usuario_controlador.php";
+include_once "../modelo/usuario_modelo.php";
+extract($_GET);
+
+$control2 = new usuario_modelo();
+
+$control = new usuario_controlador();
+
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,18 +18,19 @@ include("../seguridad/seguridad.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yummi Creative Food</title>
-    <link rel="stylesheet" href="../css/nueva_receta.css" />
-    <link rel="stylesheet" href="../css/dropdown.css" />
+    <link rel="stylesheet" href="../../css/vista_nueva_receta.css" />
+    <link rel="stylesheet" href="../../css/vista_dropdown_User.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="js/main.js"></script>
 </head>
 
 <body>
     <header>
+
         <div class="menu">
             <nav>
                 <a href="index_user.php" class="enlace">
-                    <img src="../img/logo.png" alt="" class="logo">
+                    <img src="../../img/logo.png" alt="" class="logo">
                     <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
                 </a>
                 <ul>
@@ -33,16 +43,20 @@ include("../seguridad/seguridad.php");
                     <!-- Dropdown Uuario-->
                     <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username']; ?></button></li>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="perfil_user.php">Perfil</a>
-                        <a href="../seguridad/exit.php?salir=true">Salir</a>
+                        <?php
+                        echo "<a href='perfil_user.php?idUsuario=" . $_SESSION['idUsuario'] . "'>Perfil</a>";
+                        ?>
+
+                        <a href="../../seguridad/exit.php?salir=true">Salir</a>
                     </div>
                 </ul>
             </nav>
         </div>
+
         <!-- Script Dropdown Uuario-->
         <script>
             /* Cuando el usuario hace clic en el botón, se alterna 
-            entre ocultar y mostrar el contenido desplegable */
+        entre ocultar y mostrar el contenido desplegable */
             function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
             }
@@ -56,7 +70,7 @@ include("../seguridad/seguridad.php");
                 <button class="im1">Imagen </button>
                 <button class="im2">Video</button>
                 <button class="im3">Diseño 3D</button>
-                <img class="img3d" src="../img/img3d.jpg" alt="">
+                <img class="img3d" src="../../img/img3d.jpg" alt="">
             </div>
 
             <aside class="der">
@@ -140,20 +154,20 @@ include("../seguridad/seguridad.php");
             <h2>Paso 1:</h2><br>
             <h5> Coloca la carne molida, cebolla, ajo y orégano molido en un recipiente
                 e integra todo formando una mezcla homogénea. Rectifica con sal y pimienta.</h5>
-            <img class="paso" src="../img/paso1.jpg" alt="">
+            <img class="paso" src="../../img/paso1.jpg" alt="">
             <h2>Paso 2:</h2><br>
             <h5>Mientras esta refrigerada la carne, prepara el guacamole aplastando en aguacate y
                 mezclándolo con la cebolla, cilantro y jugo de limón. Rectifica con sal y pimienta y reserva </h5>
-            <img class="paso" src="../img/paso2.jpg" alt="">
+            <img class="paso" src="../../img/paso2.jpg" alt="">
             <h2>Paso 3:</h2><br>
             <h5> Una vez reposadas las carnes cocínalas en un sartén caliente con un poquito de aceite,
                 dorándolas por 5 a 6 minutos por lado. </h5>
-            <img class="paso" src="../img/paso3.jfif" alt="">
+            <img class="paso" src="../../img/paso3.jfif" alt="">
             <h2>Paso 4:</h2><br>
             <h5> Arma las hamburguesas colocando el queso sobre la carne caliente, esta sobre el pan,
                 previamente cubierto con suficiente salsa de tomate de chipotle. Sobre el queso coloca un poco
                 de guacamole y acompaña con salsa de tomate adicional. </h5>
-            <img class="paso" src="../img/paso4.jpg" alt="">
+            <img class="paso" src="../../img/paso4.jpg" alt="">
         </div>
 
         <div class="grid">
@@ -165,7 +179,7 @@ include("../seguridad/seguridad.php");
             <div class="container-card-recet">
                 <div class="card-recet">
                     <div class="img-card-recet">
-                        <img src="../img/plato4.jpg" alt="">
+                        <img src="../../img/plato4.jpg" alt="">
                     </div>
                     <div class="card-content">
                         <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -182,7 +196,7 @@ include("../seguridad/seguridad.php");
             <div class="container-card-recet">
                 <div class="card-recet">
                     <div class="img-card-recet">
-                        <img src="../img/plato5.jpg" alt="">
+                        <img src="../../img/plato5.jpg" alt="">
                     </div>
                     <div class="card-content">
                         <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -201,7 +215,7 @@ include("../seguridad/seguridad.php");
             <div class="container-card-recet">
                 <div class="card-recet">
                     <div class="img-card-recet">
-                        <img src="../img/plato6.jpg" alt="">
+                        <img src="../../img/plato6.jpg" alt="">
                     </div>
                     <div class="card-content">
                         <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -255,7 +269,7 @@ include("../seguridad/seguridad.php");
     <div class="content">
         <div class="top">
             <div class="logo-details">
-                <img src="../img/logo.png" alt="" class="logo">
+                <img src="../../img/logo.png" alt="" class="logo">
                 <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
             </div>
             <div class="media-icons">
