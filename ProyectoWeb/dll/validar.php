@@ -35,7 +35,7 @@ if (($_POST['correo_Usuario']) && ($_POST['clave_Usuario'])) {
     } else {
         $miconexion->consulta("select * from usuarios");
         echo '<script>alert("Datos Incorrectos...");</script>';
-        echo "<script>location.href='../../index.php'</script>";
+        echo "<script>location.href='../index.php'</script>";
     }
 }
 ?>
