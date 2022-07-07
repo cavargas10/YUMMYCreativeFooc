@@ -34,7 +34,7 @@
         <a class="active" href="ayuda_dashboard.php"><i class="uil uil-question-circle"></i><span class="link-name">AYUDA</span></a>
 
         <ul class="logout-mode">
-          <li><a href="index.html"><i class="uil uil-signout"></i><span class="link-name">SALIR</span></a></li>
+          <li><a href="../../index.php"><i class="uil uil-signout"></i><span class="link-name">SALIR</span></a></li>
         </ul>
       </div>
     </nav>
