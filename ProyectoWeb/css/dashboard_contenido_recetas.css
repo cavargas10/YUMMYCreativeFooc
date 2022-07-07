@@ -16,7 +16,7 @@
   margin-bottom: 0;
   min-height: 100vh;
   width: 260px;
-  background: #11101d;
+  background: #b5a384;
   background-size: cover;
   z-index: 100;
   transition: all 0.5s ease;
@@ -32,7 +32,7 @@
 }
 .sidebar .logo-details i{
   font-size: 30px;
-  color: #fff;
+  color: #a56e20;
   height: 50px;
   min-width: 78px;
   text-align: center;
@@ -40,7 +40,7 @@
 }
 .sidebar .logo-details .logo_name{
   font-size: 22px;
-  color: #fff;
+  color: #a56e20;
   font-weight: 600;
   transition: 0.3s ease;
   transition-delay: 0.1s;
@@ -67,7 +67,7 @@
   transition: all 0.4s ease;
 }
 .sidebar .nav-links li:hover{
-  background: #1d1b31;
+  background: rgb(225, 146, 61);
 }
 .sidebar .nav-links li .icon-link{
   display: flex;
@@ -82,7 +82,7 @@
   min-width: 78px;
   text-align: center;
   line-height: 50px;
-  color: #fff;
+  color: #a56e20;
   font-size: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -111,16 +111,16 @@
 .sidebar .nav-links li .sub-menu{
   padding: 6px 6px 14px 80px;
   margin-top: -10px;
-  background: #1d1b31;
+  background: #d5d3cb;
   display: none;
 }
 .sidebar .nav-links li.showMenu .sub-menu{
   display: block;
 }
 .sidebar .nav-links li .sub-menu a{
-  color: #fff;
+  color: black;
   font-size: 15px;
-  padding: 5px 0;
+  padding: 4px 0;
   white-space: nowrap;
   opacity: 0.6;
   transition: all 0.3s ease;
@@ -172,7 +172,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #1d1b31;
+  background: #a56e20
   padding: 12px 0;
   transition: all 0.5s ease;
 }
@@ -232,7 +232,7 @@
 }
 .home-section .home-content .bx-menu,
 .home-section .home-content .text{
-  color: #11101d;
+  color: rgb(50, 25, 3);
   font-size: 35px;
 }
 .home-section .home-content .bx-menu{
@@ -243,6 +243,27 @@
   font-size: 26px;
   font-weight: 600;
 }
+
+.wrapper .home-section .post img{
+  width: 1236px;
+  height: 700px;
+  margin-top: -1%;
+  margin-left: 0%;
+}
+.wrapper .home-section .post h1{
+  margin-top: -1%;
+  margin-left: 12%;
+  margin-top: -40%;
+  font-size: 70px;
+}
+.wrapper .home-section .post h2{
+  margin-top: -1%;
+  margin-left: 14%;
+  font-size: 50px;
+}
+.wrapper .home-section .post h2 span{
+  color: rgb(243, 146, 61);
+}
 @media (max-width: 400px) {
 
   .sidebar.close.small-screen{
@@ -252,6 +273,6 @@
   .sidebar.close.small-screen ~ .home-section{
     width: 100%;
     left: 0;
-    z-index: 100;
+    z-index: 100; 
   }
 }

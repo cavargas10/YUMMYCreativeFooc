@@ -23,7 +23,7 @@
       </div>
       <ul class="nav-links">
         <li>
-          <a href="#">
+          <a href="index_dashboard.php">
             <i class="uil uil-estate"></i>
             <span class="link_name">Dashboard</span>
           </a>
@@ -32,7 +32,7 @@
           </ul>
         </li>
         <li>
-          <a href="#">
+          <a href="perfil_dashboard.php">
           <i class="uil uil-user-circle"></i>
             <span class="link_name">Perfil</span>
           </a>
@@ -50,14 +50,14 @@
           </div>
           <ul class="sub-menu">
             <li><a class="link_name" href="#">Contenido</a></li>
-            <li><a href="#">Recetas</a></li>
-            <li><a href="#">Ingredientes</a></li>
-            <li><a href="#">Tips</a></li>
-            <li><a href="#">Videos</a></li>
+            <li><a href="contenido_receta.php">Recetas</a></li>
+            <li><a href="contenido_ingredientes.php">Ingredientes</a></li>
+            <li><a href="contenido_tips.php">Tips</a></li>
+            <li><a href="contenido_videos.php">Videos</a></li>
           </ul>
         </li>
         <li>
-          <a href="#">
+          <a href="graficos_dashboard.php">
           <i class="uil uil-chart-line"></i>
             <span class="link_name">Gráficos</span>
           </a>
@@ -66,7 +66,7 @@
           </ul>
         </li>
         <li>
-          <a href="#">
+          <a href="clientes_dashboard.php">
           <i class="uil uil-users-alt"></i>
             <span class="link_name">Clientes</span>
           </a>
@@ -75,7 +75,7 @@
           </ul>
         </li>
         <li>
-          <a href="#">
+          <a href="ayuda_dashboard.php">
           <i class="uil uil-question-circle"></i>
             <span class="link_name">AYUDA</span>
           </a>
@@ -86,12 +86,14 @@
         <li>
           <div class="profile-details">
             <div class="profile-content">
-              
-            </div>
-            <div class="name-job">
+            </div>        
+             <div class="name-job">
               <div class="profile_name">Salir</div>
             </div>
+            <a href="../../index.php"> 
             <i class="uil uil-signout"></i>
+            </a>
+
           </div>
         </li>
       </ul>
@@ -102,7 +104,11 @@
         <span class="text">Drop Down Sidebar</span> <br />
       </div>
 
-
+      <div class="post">
+        <img src="../../img/post.png" alt="">
+        <H1>BIENVENIDOS <i class="uil uil-smile-beam"></i></H1><br>
+        <h2><span>Yummy</span> Creative Food</H2>
+      </div>
     </section>
   </div>
 
