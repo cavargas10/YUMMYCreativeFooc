@@ -109,9 +109,9 @@ $control = new usuario_controlador();
                         <span>Dificultad</span>
                         <select name="" id="" class="tipo-recet">
                             <option value="Dificultad" selected disabled>Dificultad</option>
-                            <option value="Dificultad1">Dificultad1</option>
-                            <option value="Dificultad2">Dificultad2</option>
-                            <option value="Dificultad3">Dificultad3</option>
+                            <option value="Dificultad1">Alta</option>
+                            <option value="Dificultad2">Media</option>
+                            <option value="Dificultad3">Baja</option>
                         </select>
                     </div>
 
@@ -120,9 +120,9 @@ $control = new usuario_controlador();
                         <span>Porciones</span>
                         <select name="" id="" class="tipo-recet">
                             <option value="Porcion" selected disabled>Porciones</option>
-                            <option value="Porcion1">Porcion1</option>
-                            <option value="Porcion2">Porcion2</option>
-                            <option value="Porcion3">Porcion3</option>
+                            <option value="Porcion1">1-3 porciones</option>
+                            <option value="Porcion2">4-7 porciones</option>
+                            <option value="Porcion3">Más de 5 porciones</option>
                         </select>
                     </div>
 
