@@ -25,7 +25,7 @@ if (($_POST['correo_Usuario']) && ($_POST['clave_Usuario'])) {
             
             //$_SESSION['local_path']=$local_path;
             echo '<script>alert("Acceso Correcto ADMIN");</script>';
-            echo "<script>location.href='../vistas_dashboard/agregar_receta.php'</script>";
+            echo "<script>location.href='../vistas_dashboard/vistas/index_dashboard.php'</script>";
         } else{
             
             //$_SESSION['local_path']=$local_path;

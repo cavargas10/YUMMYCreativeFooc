@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/dashboard_index.css" />
+    <link rel="stylesheet" href="../../css/dashboard_clientes.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <title>Admin Dashboard Panel</title>
   </head>
@@ -20,7 +20,7 @@
       </div>
 
       <div class="sidenav">
-        <a class="active" href="index_dashboard.php"><i class="uil uil-estate"></i><span class="link-name">Dashboard</span></a>
+        <a href="index_dashboard.php"><i class="uil uil-estate"></i><span class="link-name">Dashboard</span></a>
         <a href="perfil_dashboard.php">Perfil</a><button class="dropdown-btn">Contenido<i class="fa fa-caret-down"></i></button>
         <div class="dropdown-container">
           <a href="contenido_receta.php"><i class="uil uil-crockery"></i><span class="link-name">Recetas</span></a>
@@ -30,7 +30,7 @@
         </div>
 
         <a href="graficos_dashboard.php"><i class="uil uil-chart"></i><span class="link-name">Gráficos</span></a>
-        <a href="clientes_dashboard.php"><i class="uil uil-user"></i><span class="link-name">Clientes</span></a>
+        <a class="active" href="clientes_dashboard.php"><i class="uil uil-user"></i><span class="link-name">Clientes</span></a>
         <a href="ayuda_dashboard.php"><i class="uil uil-question-circle"></i><span class="link-name">AYUDA</span></a>
 
         <ul class="logout-mode">

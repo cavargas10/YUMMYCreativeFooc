@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style_dasboard.css" />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+    <link rel="stylesheet" href="../../css/dashboard_contenido_recetas.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <title>Admin Dashboard Panel</title>
   </head>
 
@@ -15,59 +14,27 @@
     <nav>
       <div class="logo-name">
         <div class="logo-image">
-          <img src="../img/logo.png" alt="" />
+          <img src="../../img/logo.png" alt="" />
         </div>
-
         <span class="logo_name">Yummi Food</span>
       </div>
 
       <div class="sidenav">
-        <a href="#about">
-          <i class="uil uil-estate"></i>
-          <span class="link-name">Dashboard</span>
-        </a>
-        <a href="#services">Perfil</a>
-
-        <button class="dropdown-btn">
-          Contenido
-          <i class="fa fa-caret-down"></i>
-        </button>
+        <a href="index_dashboard.php"><i class="uil uil-estate"></i><span class="link-name">Dashboard</span></a>
+        <a href="perfil_dashboard.php">Perfil</a><button class="dropdown-btn">Contenido<i class="fa fa-caret-down"></i></button>
         <div class="dropdown-container">
-          <a href="../html/recetas_dashboard.html">
-            <i class="uil uil-crockery"></i>
-            <span class="link-name">Recetas</span>
-          </a>
-          <a href="#">Ingredientes</a>
-          <a href="#">
-            <i class="uil uil-sun"></i>
-            <span class="link-name">Tips</span>
-          </a>
-          <a href="#">
-            <i class="uil uil-play-circle"></i>
-            <span class="link-name">Videos</span>
-          </a>
+          <a class="active" href="contenido_receta.php"><i class="uil uil-crockery"></i><span class="link-name">Recetas</span></a>
+          <a href="contenido_ingredientes.php"><i class="uil uil-favorite"></i><span class="link-name">Ingredientes</a>
+          <a href="contenido_tips.php"><i class="uil uil-sun"></i><span class="link-name">Tips</span></a>
+          <a href="contenido_videos.php"><i class="uil uil-play-circle"></i><span class="link-name">Videos</span></a>
         </div>
 
-        <a href="#">
-          <i class="uil uil-chart"></i>
-          <span class="link-name">Gráficos</span>
-        </a>
-        <a href="#">
-          <i class="uil uil-user"></i>
-          <span class="link-name">Clientes</span>
-        </a>
-        <a href="">
-          <i class="uil uil-question-circle"></i>
-          <span class="link-name">AYUDA</span>
-        </a>
+        <a href="graficos_dashboard.php"><i class="uil uil-chart"></i><span class="link-name">Gráficos</span></a>
+        <a href="clientes_dashboard.php"><i class="uil uil-user"></i><span class="link-name">Clientes</span></a>
+        <a href="ayuda_dashboard.php"><i class="uil uil-question-circle"></i><span class="link-name">AYUDA</span></a>
 
         <ul class="logout-mode">
-          <li>
-            <a href="index.html">
-              <i class="uil uil-signout"></i>
-              <span class="link-name">SALIR</span>
-            </a>
-          </li>
+          <li><a href="index.html"><i class="uil uil-signout"></i><span class="link-name">SALIR</span></a></li>
         </ul>
       </div>
     </nav>
@@ -77,10 +44,12 @@
         <i class="uil uil-bars sidebar-toggle"></i>
         <h3>Dashboard</h3>
         <h4 class="user">Arianna Vinueza</h4>
-        <img src="../img/Juventud.jpg" alt="" />
+        <img src="../../img/Juventud.jpg" alt="" />
       </div>
 
-      <div class="panel"></div>
+      <div class="panel">
+        <img src="../../img/Presentación sin título.jpg" alt="" />
+      </div>
     </section>
 
     <script>
@@ -89,7 +58,7 @@
       var i;
 
       for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function () {
+        dropdown[i].addEventListener("click", function() {
           this.classList.toggle("active");
           var dropdownContent = this.nextElementSibling;
           if (dropdownContent.style.display === "block") {
