@@ -30,7 +30,7 @@ $control->UpdateTips($idtips);
     <div class="sidebar">
       <div class="logo-details">
         <img src="../../img/logo.png" alt="">
-        <span class="logo_name">CodingLab</span>
+        <span class="logo_name">Yummy</span>
       </div>
       <ul class="nav-links">
         <li>

@@ -1,3 +1,16 @@
+<!-- <?php
+include("../../seguridad/seguridad.php");
+include_once "../controlador/controlador_admin.php";
+include_once "../modelo/modelo_admin.php";
+extract($_GET);
+
+$control2 = new modelo_admin();
+$lista = $control2->EncontrarAdmin($idUsuario);
+
+$control = new controlador_admin();
+$control->UpdateAdmin($idUsuario);
+?>  -->
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -5,7 +18,6 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../../css/dashboard_principal.css">
   <link rel="stylesheet" href="../../css/dashboard_perfil.css">
-  <link rel="stylesheet" href="../../css/dashboard_principal.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
@@ -18,7 +30,7 @@
     <div class="sidebar">
       <div class="logo-details">
         <img src="../../img/logo.png" alt="">
-        <span class="logo_name">CodingLab</span>
+        <span class="logo_name">Yummy</span>
       </div>
       <ul class="nav-links">
         <li>
@@ -32,7 +44,7 @@
         </li>
         <li>
           <a href="perfil_dashboard.php">
-          <i class="uil uil-user-circle"></i>
+            <i class="uil uil-user-circle"></i>
             <span class="link_name">Perfil</span>
           </a>
           <ul class="sub-menu blank">
@@ -42,7 +54,7 @@
         <li>
           <div class="icon-link">
             <a href="#">
-            <i class="uil uil-book-open"></i>
+              <i class="uil uil-book-open"></i>
               <span class="link_name">Contenido</span>
             </a>
             <i class='bx bxs-chevron-down arrow'></i>
@@ -57,7 +69,7 @@
         </li>
         <li>
           <a href="graficos_dashboard.php">
-          <i class="uil uil-chart-line"></i>
+            <i class="uil uil-chart-line"></i>
             <span class="link_name">Gráficos</span>
           </a>
           <ul class="sub-menu blank">
@@ -66,7 +78,7 @@
         </li>
         <li>
           <a href="clientes_dashboard.php">
-          <i class="uil uil-users-alt"></i>
+            <i class="uil uil-users-alt"></i>
             <span class="link_name">Clientes</span>
           </a>
           <ul class="sub-menu blank">
@@ -75,7 +87,7 @@
         </li>
         <li>
           <a href="ayuda_dashboard.php">
-          <i class="uil uil-question-circle"></i>
+            <i class="uil uil-question-circle"></i>
             <span class="link_name">AYUDA</span>
           </a>
           <ul class="sub-menu blank">
@@ -85,12 +97,12 @@
         <li>
           <div class="profile-details">
             <div class="profile-content">
-            </div>        
-             <div class="name-job">
+            </div>
+            <div class="name-job">
               <div class="profile_name">Salir</div>
             </div>
-            <a href="../../index.php"> 
-            <i class="uil uil-signout"></i>
+            <a href="../../index.php">
+              <i class="uil uil-signout"></i>
             </a>
 
           </div>
@@ -102,10 +114,30 @@
         <i class='bx bx-menu'></i>
         <span class="text">Dashboard</span> <br />
       </div>
-      <div class="post">
-        <img src="../../img/post.png" alt="">
-        <H1>BIENVENIDOS <i class="uil uil-smile-beam"></i></H1><br>
-        <h2><span>Yummy</span> Creative Food</H2>
+      <div>
+        <form class="formUser" method="post" action="">
+          <div class="tituloUser">
+            <h2 class="actualizarUser"><span>ACTUALIZAR DATOS</h2>
+          </div>
+
+          <div class="contenedorFormUser">
+
+            <label for="nombre_Usuario"><b>Nombre:</b></label>
+            <input type="text" name="nombre_Usuario" id="nombre_Usuario" value="<?php echo $lista[1] ?>"><br>
+
+            <br><label for="apellido_Usuario"><b>Apellido:</b></label>
+            <input type="text" name="apellido_Usuario" id="apellido_Usuario" value="<?php echo $lista[2] ?>"><br>
+
+            <br><label for="correo_Usuario"><b>E-mail:</b></label>
+            <input type="email" name="correo_Usuario" id="correo_Usuario" value="<?php echo $lista[3] ?>"><br>
+
+            <br><label for="clave_Usuario"><b>Contraseña:</b></label>
+            <input type="password" name="clave_Usuario" id="clave_Usuario" value="<?php echo $lista[4] ?>"><br>
+          </div>
+          <div>
+            <br><button type="submit" value="Procesar" class="subbtn">Guardar y Salir</button>
+          </div>
+        </form>
       </div>
 
     </section>
@@ -115,7 +147,7 @@
     let arrow = document.querySelectorAll(".arrow");
     for (var i = 0; i < arrow.length; i++) {
       arrow[i].addEventListener("click", (e) => {
-        let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+        let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
         arrowParent.classList.toggle("showMenu");
       });
     }
@@ -124,20 +156,20 @@
     /* sidebarBtn.addEventListener("click", () => {
       sidebar.classList.toggle("close");
     }); */
-    $(function () {
+    $(function() {
       /* console.log("width: "+ document.body.clientWidth); */
-      
+
       resizeScreen();
-      $(window).resize(function(){
+      $(window).resize(function() {
         resizeScreen();
       })
-  
-      
-      
+
+
+
       function resizeScreen() {
-        if(document.body.clientWidth < 400){
+        if (document.body.clientWidth < 400) {
           $('.sidebar').addClass('close');
-        }else{
+        } else {
           $('.sidebar').removeClass('close');
         }
       }

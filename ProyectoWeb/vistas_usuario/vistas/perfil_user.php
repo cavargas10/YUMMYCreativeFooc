@@ -48,7 +48,6 @@ $control->UpdateUser($idUsuario);
                         <?php
                         echo "<a href='perfil_user.php?idUsuario=" . $_SESSION['idUsuario'] . "'>Perfil</a>";
                         ?>
-
                         <a href="../../seguridad/exit.php?salir=true">Salir</a>
                     </div>
                 </ul>
