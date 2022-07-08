@@ -18,7 +18,7 @@ body {
 
 /* navbar */
 nav {
-    margin-top: -8%;
+  margin-top: -8%;
   position: fixed;
   z-index: 2;
   background: #b5a384;
@@ -74,6 +74,52 @@ li a:hover {
   background: rgb(225, 146, 61);
   transition: 0.5s;
 }
+
+.actualizarUser{
+  padding: 2%;
+  font-size: 30px;
+  font-weight: bold;
+}
+.actualizarUser span{
+  color: rgb(225, 146, 61);
+}
+/*Formulario*/
+ .formUser{
+    margin-top: 8%;
+    text-align: center;
+    margin-left: 1%;
+}
+
+.contenedorFormUser{
+  padding: 2%;
+  width: 36%;
+  margin-left: 28%;
+  margin-top: 2%;
+  border-radius:10px;
+  margin:auto;
+  background-color:rgb(213, 190, 150);
+}
+
+
+.contenedorFormUser label{
+	width:100px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+
+.contenedorFormUser input[type="text"],
+.contenedorFormUser input[type="email"],
+.contenedorFormUser input[type="password"]{
+	width:160px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 10;
+	display:inline-block;
+}
+
 
 /*MODAL LOGIN*/
 button {
@@ -185,6 +231,8 @@ span.close {
   animation: animatezoom 0.6s;
 }
 
+
+
 @-webkit-keyframes animatezoom {
   from {
     -webkit-transform: scale(0);
@@ -205,19 +253,14 @@ span.close {
   }
 }
 
-/*Formulario*/
-.formUser{
-    margin-top: 8%;
-    text-align: center;
-}
+
 
 /* footer */
 
 footer {
   background: #b5a384;
   width: 100%;
-  bottom: 0;
-  left: 0;
+  margin-top: 5%;
 }
 
 footer::before {

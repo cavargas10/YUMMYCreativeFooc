@@ -20,6 +20,7 @@ $control->UpdateUser($idUsuario);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yummi Creative Food</title>
     <link rel="stylesheet" href="../../css/vista_perfil_user.css" />
+     <!-- Script Dropdown Uuario-->
     <link rel="stylesheet" href="../../css/vista_dropdown_User.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="js/main.js"></script>
@@ -64,29 +65,30 @@ $control->UpdateUser($idUsuario);
         </script>
     </header>
 
-    <form class="formUser" method="post" action="">
-        <div class="tituloUser">
-            <h2 class="actualizarUser">Actualizar Datos</h2>
-        </div>
-        <div class="contenedorFormUser">
+        <form class="formUser" method="post" action="">
+            <div class="tituloUser">
+                <h2 class="actualizarUser"><span>ACTUALIZAR</span> DATOS</h2>
+            </div>
 
-            <label for="nombre_Usuario"><b>Nombre</b></label><br>
-            <input type="text" name="nombre_Usuario" id="nombre_Usuario" value="<?php echo $lista[1] ?>"><br>
+            <div class="contenedorFormUser">
 
-            <br><label for="apellido_Usuario"><b>Apellido</b></label><br>
-            <input type="text" name="apellido_Usuario" id="apellido_Usuario" value="<?php echo $lista[2] ?>"><br>
+                <label for="nombre_Usuario"><b>Nombre:</b></label>
+                <input type="text" name="nombre_Usuario" id="nombre_Usuario" value="<?php echo $lista[1] ?>"><br>
 
-            <br><label for="correo_Usuario"><b>E-mail</b></label><br>
-            <input type="email" name="correo_Usuario" id="correo_Usuario" value="<?php echo $lista[3] ?>"><br>
+                <br><label for="apellido_Usuario"><b>Apellido:</b></label>
+                <input type="text" name="apellido_Usuario" id="apellido_Usuario" value="<?php echo $lista[2] ?>"><br>
 
-            <br><label for="clave_Usuario"><b>Contraseña</b></label><br>
-            <input type="password" name="clave_Usuario" id="clave_Usuario" value="<?php echo $lista[4] ?>"><br>
+                <br><label for="correo_Usuario"><b>E-mail:</b></label>
+                <input type="email" name="correo_Usuario" id="correo_Usuario" value="<?php echo $lista[3] ?>"><br>
 
-        </div>
-        <div>
-            <br><button type="submit" value="Procesar" class="subbtn">Guardar</button>
-        </div>
-    </form>
+                <br><label for="clave_Usuario"><b>Contraseña:</b></label>
+                <input type="password" name="clave_Usuario" id="clave_Usuario" value="<?php echo $lista[4] ?>"><br>
+            </div>
+            <div>
+                <br><button type="submit" value="Procesar" class="subbtn">Guardar</button>
+            </div>
+        </form>
+
 </body>
 
 <footer>
