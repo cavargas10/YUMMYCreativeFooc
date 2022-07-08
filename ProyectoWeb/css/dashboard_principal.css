@@ -39,6 +39,7 @@
   line-height: 50px;
 }
 .sidebar .logo-details .logo_name{
+  margin-left: 5%;
   font-size: 22px;
   color: #a56e20;
   font-weight: 600;
@@ -215,7 +216,7 @@
 }
 .home-section{
   position: relative;
-  background: #E4E9F7;
+  background: whitesmoke;
   min-height: 100%;
   left: 0px;
   width: calc(100% - 260px);
@@ -263,6 +264,11 @@
 }
 .wrapper .home-section .post h2 span{
   color: rgb(243, 146, 61);
+}
+
+img{
+  width: 15%;
+  margin-left: 10%;
 }
 @media (max-width: 400px) {
 

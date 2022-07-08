@@ -18,7 +18,7 @@
   <div class="wrapper">
     <div class="sidebar">
       <div class="logo-details">
-        <i class='bx bxl-c-plus-plus'></i>
+        <img src="../../img/logo.png" alt="">
         <span class="logo_name">CodingLab</span>
       </div>
       <ul class="nav-links">
@@ -101,7 +101,7 @@
     <section class="home-section">
       <div class="home-content">
         <i class='bx bx-menu'></i>
-        <span class="text">Drop Down Sidebar</span> <br />
+        <span class="text">Dashboard</span> <br />
       </div>
 
       <div class="post">
@@ -121,7 +121,6 @@
       });
     }
     let sidebar = document.querySelector(".sidebar");
-    let sidebarBtn = document.querySelector(".bx-menu");
     console.log(sidebarBtn);
     /* sidebarBtn.addEventListener("click", () => {
       sidebar.classList.toggle("close");
@@ -132,16 +131,9 @@
       resizeScreen();
       $(window).resize(function(){
         resizeScreen();
-      });
-      $('.bx-menu').click(function(){
-
-        // 點選選單按鈕時，大螢幕為新增或移除.close，小螢幕新增或移除.small-screen預設有.close，
-        if(document.body.clientWidth > 400){
-          $('.sidebar').toggleClass('close');
-        }else{
-          $('.sidebar').toggleClass('small-screen');
-        }
-      });
+      })
+  
+      
       
       function resizeScreen() {
         // 大螢幕.sidebar預設為沒有.close，小螢幕.sidebar預設為有.close
