@@ -84,40 +84,40 @@ li a:hover {
   color: rgb(225, 146, 61);
 }
 /*Formulario*/
- .formUser{
-    margin-top: 8%;
-    text-align: center;
-    margin-left: 1%;
+.formUser{
+  margin-top: 8%;
+  text-align: center;
+  margin-left: 1%;
 }
 
 .contenedorFormUser{
-  padding: 2%;
-  width: 36%;
-  margin-left: 28%;
-  margin-top: 2%;
-  border-radius:10px;
-  margin:auto;
-  background-color:rgb(213, 190, 150);
+padding: 2%;
+width: 36%;
+margin-left: 28%;
+margin-top: 2%;
+border-radius:10px;
+margin:auto;
+background-color:rgb(213, 190, 150);
 }
 
 
 .contenedorFormUser label{
-	width:100px;
-	font-weight:bold;
-	display:inline-block;
+width:100px;
+font-weight:bold;
+display:inline-block;
 }
 
 
 .contenedorFormUser input[type="text"],
 .contenedorFormUser input[type="email"],
 .contenedorFormUser input[type="password"]{
-	width:160px;
-	padding:3px 10px;
-	border:1px solid #f6f6f6;
-	border-radius:3px;
-	background-color:#f6f6f6;
-	margin:8px 10;
-	display:inline-block;
+width:160px;
+padding:3px 10px;
+border:1px solid #f6f6f6;
+border-radius:3px;
+background-color:#f6f6f6;
+margin:8px 10;
+display:inline-block;
 }
 
 

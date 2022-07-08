@@ -101,7 +101,6 @@
         <i class='bx bx-menu'></i>
         <span class="text">Dashboard</span> <br />
       </div>
-
     </section>
   </div>
 
@@ -126,8 +125,6 @@
         resizeScreen();
       })
   
-      
-      
       function resizeScreen() {
         if(document.body.clientWidth < 400){
           $('.sidebar').addClass('close');
