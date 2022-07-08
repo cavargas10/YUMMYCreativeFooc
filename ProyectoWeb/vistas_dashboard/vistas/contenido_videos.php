@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8">
-  <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
   <link rel="stylesheet" href="../../css/dashboard_principal.css">
-  <!-- Boxiocns CDN Link -->
+  <link rel="stylesheet" href="../../css/dashboard_contenido_videos.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
@@ -104,11 +102,6 @@
         <span class="text">Dashboard</span> <br />
       </div>
 
-      <div class="post">
-        <img src="../../img/post.png" alt="">
-        <H1>BIENVENIDOS <i class="uil uil-smile-beam"></i></H1><br>
-        <h2><span>Yummy</span> Creative Food</H2>
-      </div>
     </section>
   </div>
 
@@ -136,7 +129,6 @@
       
       
       function resizeScreen() {
-        // 大螢幕.sidebar預設為沒有.close，小螢幕.sidebar預設為有.close
         if(document.body.clientWidth < 400){
           $('.sidebar').addClass('close');
         }else{

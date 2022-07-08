@@ -1,12 +1,19 @@
+<?php
+include("../../seguridad/seguridad.php");
+include_once "../controlador/controlador_ingredientes.php";
+include_once "../modelo/modelo_ingredientes.php";
+extract($_GET);
+$control= new controlador_ingredientes();
+$control->CreateIngrediente();
+?>
+
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8">
-  <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
   <link rel="stylesheet" href="../../css/dashboard_principal.css">
-  <!-- Boxiocns CDN Link -->
+  <link rel="stylesheet" href="../../css/dashboard_contenido_ingredientes.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
@@ -33,7 +40,7 @@
         </li>
         <li>
           <a href="perfil_dashboard.php">
-          <i class="uil uil-user-circle"></i>
+            <i class="uil uil-user-circle"></i>
             <span class="link_name">Perfil</span>
           </a>
           <ul class="sub-menu blank">
@@ -43,7 +50,7 @@
         <li>
           <div class="icon-link">
             <a href="#">
-            <i class="uil uil-book-open"></i>
+              <i class="uil uil-book-open"></i>
               <span class="link_name">Contenido</span>
             </a>
             <i class='bx bxs-chevron-down arrow'></i>
@@ -58,7 +65,7 @@
         </li>
         <li>
           <a href="graficos_dashboard.php">
-          <i class="uil uil-chart-line"></i>
+            <i class="uil uil-chart-line"></i>
             <span class="link_name">Gráficos</span>
           </a>
           <ul class="sub-menu blank">
@@ -67,7 +74,7 @@
         </li>
         <li>
           <a href="clientes_dashboard.php">
-          <i class="uil uil-users-alt"></i>
+            <i class="uil uil-users-alt"></i>
             <span class="link_name">Clientes</span>
           </a>
           <ul class="sub-menu blank">
@@ -76,7 +83,7 @@
         </li>
         <li>
           <a href="ayuda_dashboard.php">
-          <i class="uil uil-question-circle"></i>
+            <i class="uil uil-question-circle"></i>
             <span class="link_name">AYUDA</span>
           </a>
           <ul class="sub-menu blank">
@@ -86,12 +93,12 @@
         <li>
           <div class="profile-details">
             <div class="profile-content">
-            </div>        
-             <div class="name-job">
+            </div>
+            <div class="name-job">
               <div class="profile_name">Salir</div>
             </div>
-            <a href="../../index.php"> 
-            <i class="uil uil-signout"></i>
+            <a href="../../index.php">
+              <i class="uil uil-signout"></i>
             </a>
 
           </div>
@@ -101,7 +108,37 @@
     <section class="home-section">
       <div class="home-content">
         <i class='bx bx-menu'></i>
-        <span class="text">Dashboard</span> <br />
+        <span class="text">Contenido / Ingredientes</span> <br />
+      </div>
+
+      <div class="addIngrediente">
+        <form class="formIngrediente" method="post" action="">
+          <div class="tituloIngrediente">
+            <h2 class="agregarIngrediente">AGREGAR INGREDIENTE</h2>
+          </div>
+
+          <div class="contenedorFormIngrediente">
+
+            <label for="nombre_Ingredientes"><b>Nombre:</b></label>
+            <input type="text" name="nombre_Ingredientes" id="nombre_Ingredientes" placeholder="Ingrese el nuevo Ingrediente"><br>
+
+          </div>
+          <div>
+            <br><button type="submit" value="Procesar" class="subbtnIngrediente">Guardar</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="listaIngredientes">
+        <?php
+          $control = new controlador_ingredientes();
+          $control->ListaIngrediente();
+
+          if (isset($idingredientes)) {
+            $control1 = new controlador_ingredientes();
+            $control1->DeleteIngrediente($idingredientes);
+          }
+        ?>
       </div>
     </section>
   </div>
@@ -110,7 +147,7 @@
     let arrow = document.querySelectorAll(".arrow");
     for (var i = 0; i < arrow.length; i++) {
       arrow[i].addEventListener("click", (e) => {
-        let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+        let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
         arrowParent.classList.toggle("showMenu");
       });
     }
@@ -119,21 +156,20 @@
     /* sidebarBtn.addEventListener("click", () => {
       sidebar.classList.toggle("close");
     }); */
-    $(function () {
+    $(function() {
       /* console.log("width: "+ document.body.clientWidth); */
-      
+
       resizeScreen();
-      $(window).resize(function(){
+      $(window).resize(function() {
         resizeScreen();
       })
-  
-      
-      
+
+
+
       function resizeScreen() {
-        // 大螢幕.sidebar預設為沒有.close，小螢幕.sidebar預設為有.close
-        if(document.body.clientWidth < 400){
+        if (document.body.clientWidth < 400) {
           $('.sidebar').addClass('close');
-        }else{
+        } else {
           $('.sidebar').removeClass('close');
         }
       }

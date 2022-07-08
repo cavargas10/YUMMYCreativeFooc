@@ -31,7 +31,7 @@ class usuario_controlador{
 				echo "<script>location.href='index_user.php'</script>";
 	        } else {
 	            echo '<script>alert("SQL Incorrectos...");</script>';
-				echo "<script>location.href='prefil_user.php'</script>";
+				echo "<script>location.href='perfil_user.php'</script>";
 	        }
 		}
     }

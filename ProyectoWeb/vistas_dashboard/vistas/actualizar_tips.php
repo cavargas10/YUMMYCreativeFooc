@@ -1,10 +1,23 @@
+<?php
+include("../../seguridad/seguridad.php");
+include_once "../controlador/controlador_tips.php";
+include_once "../modelo/modelo_tips";
+extract($_GET);
+
+$control2 = new modelo_tips();
+$lista = $control2->EncontrarTips($idtips);
+
+$control = new controlador_tips();
+$control->UpdateTips($idtips);
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../../css/dashboard_principal.css">
-  <link rel="stylesheet" href="../../css/dashboard_ayuda.css">
+  <link rel="stylesheet" href="../../css/dashboard_actualizarTip.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
@@ -31,7 +44,7 @@
         </li>
         <li>
           <a href="perfil_dashboard.php">
-          <i class="uil uil-user-circle"></i>
+            <i class="uil uil-user-circle"></i>
             <span class="link_name">Perfil</span>
           </a>
           <ul class="sub-menu blank">
@@ -41,7 +54,7 @@
         <li>
           <div class="icon-link">
             <a href="#">
-            <i class="uil uil-book-open"></i>
+              <i class="uil uil-book-open"></i>
               <span class="link_name">Contenido</span>
             </a>
             <i class='bx bxs-chevron-down arrow'></i>
@@ -56,7 +69,7 @@
         </li>
         <li>
           <a href="graficos_dashboard.php">
-          <i class="uil uil-chart-line"></i>
+            <i class="uil uil-chart-line"></i>
             <span class="link_name">Gráficos</span>
           </a>
           <ul class="sub-menu blank">
@@ -65,7 +78,7 @@
         </li>
         <li>
           <a href="clientes_dashboard.php">
-          <i class="uil uil-users-alt"></i>
+            <i class="uil uil-users-alt"></i>
             <span class="link_name">Clientes</span>
           </a>
           <ul class="sub-menu blank">
@@ -74,7 +87,7 @@
         </li>
         <li>
           <a href="ayuda_dashboard.php">
-          <i class="uil uil-question-circle"></i>
+            <i class="uil uil-question-circle"></i>
             <span class="link_name">AYUDA</span>
           </a>
           <ul class="sub-menu blank">
@@ -84,12 +97,12 @@
         <li>
           <div class="profile-details">
             <div class="profile-content">
-            </div>        
-             <div class="name-job">
+            </div>
+            <div class="name-job">
               <div class="profile_name">Salir</div>
             </div>
-            <a href="../../index.php"> 
-            <i class="uil uil-signout"></i>
+            <a href="../../index.php">
+              <i class="uil uil-signout"></i>
             </a>
 
           </div>
@@ -99,9 +112,32 @@
     <section class="home-section">
       <div class="home-content">
         <i class='bx bx-menu'></i>
-        <span class="text">Ayuda</span> <br />
+        <span class="text">Contenido / Tips</span> <br />
       </div>
 
+      <div class="addTips">
+        <form class="formTips" method="post" action="">
+          <div class="tituloTips">
+            <h2 class="agregarTips">ACTUALIZAR TIP</h2>
+          </div>
+
+          <div class="contenedorFormTips">
+
+            <label for="titulo_Tips"><b>Nombre:</b></label>
+            <input type="text" name="titulo_Tips" id="titulo_Tips" value="<?php echo $lista[1] ?>"><br>
+
+            <label for="descripcion_Tips"><b>Nombre:</b></label>
+            <input type="text" name="descripcion_Tips" id="descripcion_Tips" value="<?php echo $lista[2] ?>"><br>
+
+            <label for="imagen_Tips"><b>Nombre:</b></label>
+            <input type="file" name="imagen_Tips" id="imagen_Tips" value="<?php echo $lista[3] ?>"><br>
+
+          </div>
+          <div>
+            <br><button type="submit" value="Procesar" class="subbtnTips">Guardar</button>
+          </div>
+        </form>
+      </div>
     </section>
   </div>
 
@@ -109,7 +145,7 @@
     let arrow = document.querySelectorAll(".arrow");
     for (var i = 0; i < arrow.length; i++) {
       arrow[i].addEventListener("click", (e) => {
-        let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+        let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
         arrowParent.classList.toggle("showMenu");
       });
     }
@@ -118,20 +154,20 @@
     /* sidebarBtn.addEventListener("click", () => {
       sidebar.classList.toggle("close");
     }); */
-    $(function () {
+    $(function() {
       /* console.log("width: "+ document.body.clientWidth); */
-      
+
       resizeScreen();
-      $(window).resize(function(){
+      $(window).resize(function() {
         resizeScreen();
       })
-  
-      
-      
+
+
+
       function resizeScreen() {
-        if(document.body.clientWidth < 400){
+        if (document.body.clientWidth < 400) {
           $('.sidebar').addClass('close');
-        }else{
+        } else {
           $('.sidebar').removeClass('close');
         }
       }
