@@ -34,15 +34,15 @@ extract($_GET);
             <li><a class="link_name" href="#">Dashboard</a></li>
           </ul>
         </li>
-        <li>
-          
-          <span class="link_name">
-            <?php
-            echo "<a href='perfil_dashboard.php?idUsuario=" . $_SESSION['idUsuario'] . "'>Perfil</a>";
-            ?>
-          </span>
-          <i class="uil uil-user-circle"></i>
+        <li> 
+        <a href="perfil_dashboard.php">
+        <i class="uil uil-user-circle"></i>
+            <span class="link_name">Perfil</span>
           </a>
+              <?php
+              echo "<a href='perfil_dashboard.php?idUsuario=" . $_SESSION['idUsuario'] . "'>Perfil</a>";
+              ?>
+          
           <ul class="sub-menu blank">
             <li><a class="link_name" href="#">Perfil</a></li>
           </ul>

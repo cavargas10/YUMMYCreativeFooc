@@ -64,7 +64,7 @@
     <img src="img/plato1.jpg" alt="" class="i1" />
     <div class="text-main">
       <h1>
-        OLVIDATE DE LA COCINA TRADICIONAL Y EMPEZEMOS CON LA COCINA
+        "OLVIDATE DE LA COCINA TRADICIONAL Y EMPEZEMOS CON LA COCINA
         <span>CREATIVA </span>”
       </h1>
     </div>

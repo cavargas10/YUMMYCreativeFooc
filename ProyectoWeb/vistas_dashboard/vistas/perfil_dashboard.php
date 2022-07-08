@@ -5,6 +5,7 @@
   extract($_GET);
 
   $control2 = new modelo_admin();
+  $idUsuario = $_SESSION['idUsuario'];
   $lista = $control2->EncontrarAdmin($idUsuario);
 
   $control = new controlador_admin();
@@ -16,7 +17,6 @@
 
  <head>
    <meta charset="UTF-8">
-   <link rel="stylesheet" href="../../css/dashboard_principal.css">
    <link rel="stylesheet" href="../../css/dashboard_perfil.css">
    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -122,21 +122,21 @@
 
            <div class="contenedorFormUser">
 
-             <label for="nombre_Usuario"><b>Nombre:</b></label>
-             <input type="text" name="nombre_Usuario" id="nombre_Usuario" value="<?php echo $lista[1] ?>"><br>
+              <label for="nombre_Usuario"><b>Nombre:</b></label>
+              <input type="text" name="nombre_Usuario" id="nombre_Usuario" value="<?php echo $lista[1] ?>"><br>
 
-             <br><label for="apellido_Usuario"><b>Apellido:</b></label>
-             <input type="text" name="apellido_Usuario" id="apellido_Usuario" value="<?php echo $lista[2] ?>"><br>
+              <br><label for="apellido_Usuario"><b>Apellido:</b></label>
+              <input type="text" name="apellido_Usuario" id="apellido_Usuario" value="<?php echo $lista[2] ?>"><br>
 
-             <br><label for="correo_Usuario"><b>E-mail:</b></label>
-             <input type="email" name="correo_Usuario" id="correo_Usuario" value="<?php echo $lista[3] ?>"><br>
+              <br><label for="correo_Usuario"><b>E-mail:</b></label>
+              <input type="email" name="correo_Usuario" id="correo_Usuario" value="<?php echo $lista[3] ?>"><br>
 
-             <br><label for="clave_Usuario"><b>Contraseña:</b></label>
-             <input type="password" name="clave_Usuario" id="clave_Usuario" value="<?php echo $lista[4] ?>"><br>
-           </div>
-           <div>
-             <br><button type="submit" value="Procesar" class="subbtn">Guardar y Salir</button>
-           </div>
+              <br><label for="clave_Usuario"><b>Contraseña:</b></label>
+              <input type="password" name="clave_Usuario" id="clave_Usuario" value="<?php echo $lista[4] ?>"><br>
+            </div>
+            <div class="boton">
+              <br><button type="submit" value="Procesar" class="subbtn">Guardar y Salir</button>
+            </div>
          </form>
        </div>
 
