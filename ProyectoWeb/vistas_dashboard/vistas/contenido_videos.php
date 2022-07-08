@@ -1,3 +1,9 @@
+<?php
+include("../../seguridad/seguridad.php");
+include_once "../controlador/controlador_videos.php";
+extract($_GET);
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -21,7 +27,7 @@
       </div>
       <ul class="nav-links">
         <li>
-          <a href="dashboard_principal.php">
+          <a href="perfil_dashboard.php">
             <i class="uil uil-estate"></i>
             <span class="link_name">Dashboard</span>
           </a>
@@ -99,7 +105,20 @@
     <section class="home-section">
       <div class="home-content">
         <i class='bx bx-menu'></i>
-        <span class="text">Dashboard</span> <br />
+        <span class="text">Contenido / Videos</span> <br />
+      </div>
+
+      <div class="listaVideos">
+        <button class="btnVideos"><a href="agregar_videos.php">Agregar</a></button>
+        <?php
+          $control = new controlador_videos();
+          $control->ListaVideo();
+
+          if (isset($idvideos)) {
+            $control1 = new controlador_videos();
+            $control1->DeleteVideo($idvideos);
+          }
+        ?>
       </div>
     </section>
   </div>
@@ -125,6 +144,8 @@
         resizeScreen();
       })
   
+      
+      
       function resizeScreen() {
         if(document.body.clientWidth < 400){
           $('.sidebar').addClass('close');
