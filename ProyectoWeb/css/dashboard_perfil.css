@@ -191,48 +191,39 @@ nav .menu-items {
   height: 35px;
   border-radius: 50%;
 }
-/*Form*/
-.formUser{
+/*Formulario*/
+ .formUser{
     margin-top: 8%;
     text-align: center;
+    margin-left: 1%;
+}
+
+.contenedorFormUser{
+  padding: 2%;
+  width: 36%;
+  margin-left: 28%;
+  margin-top: 2%;
+  border-radius:10px;
+  margin:auto;
+  background-color:rgb(213, 190, 150);
 }
 
 
-/*Footer*/
-footer .bottom-details {
-  margin-top: 3%;
-  width: 100%;
-  height: 100px;
-  background: #b5a384;
+.contenedorFormUser label{
+	width:100px;
+	font-weight:bold;
+	display:inline-block;
 }
 
-footer .bottom-details .bottom_text {
-  max-width: 1250px;
-  margin: auto;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-}
 
-.bottom-details .bottom_text span,
-.bottom-details .bottom_text a {
-  font-size: 14px;
-  font-weight: 300;
-  color: #fff;
-  opacity: 0.8;
-  text-decoration: none;
-}
-
-.bottom-details .bottom_text a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.bottom-details .bottom_text a {
-  margin-right: 10px;
-}
-
-.panel img{
-  width: 993px;
-  margin-left: 10%;
+.contenedorFormUser input[type="text"],
+.contenedorFormUser input[type="email"],
+.contenedorFormUser input[type="password"]{
+	width:160px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 10;
+	display:inline-block;
 }

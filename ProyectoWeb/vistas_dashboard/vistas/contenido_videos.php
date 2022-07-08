@@ -103,12 +103,6 @@
         <i class='bx bx-menu'></i>
         <span class="text">Dashboard</span> <br />
       </div>
-
-      <div class="post">
-        <img src="../../img/post.png" alt="">
-        <H1>BIENVENIDOS <i class="uil uil-smile-beam"></i></H1><br>
-        <h2><span>Yummy</span> Creative Food</H2>
-      </div>
     </section>
   </div>
 
