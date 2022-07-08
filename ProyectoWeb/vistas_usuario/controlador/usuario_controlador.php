@@ -28,7 +28,7 @@ class usuario_controlador{
 			if ($userResponse == 1)
 	        {
 	            echo '<script>alert("SQL correctos :)...");</script>';
-				echo "<script>location.href='index_user.php'</script>";
+				echo "<script>location.href='../../index.php'</script>";
 	        } else {
 	            echo '<script>alert("SQL Incorrectos...");</script>';
 				echo "<script>location.href='perfil_user.php'</script>";

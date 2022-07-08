@@ -35,22 +35,25 @@
     </div>
     <!-- Modal LOGIN-->
     <div id="id01" class="modal">
-      <form class="modal-content animate" action="">
+      <form class="modal-content animate" method="post" action="../dll/validar.php">
         <div class="tittle">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
           <p>Inicio de Sesión</p>
         </div>
         <div class="container-form">
-          <label for="correo"><b>E-mail</b></label><br>
-          <input type="text" placeholder="  Ingrese su Correo Electronico" name="correo" required><br>
 
-          <br><label for="clave"><b>Contraseña</b></label><br>
-          <input type="password" placeholder="  Ingrese su Contraseña" name="clave" required><br>
-          <span class="psw"><a href="#">Olvido su contraseña?</a></span>
-          <br><br><button type="submit">Login</button>
+          <label for="correo_Usuario"><b>E-mail</b></label><br>
+          <input type="email" name="correo_Usuario" id="correo_Usuario" placeholder="Ingrese su Correo Electronico" required><br>
+
+          <br><label for="clave_Usuario"><b>Contraseña</b></label><br>
+          <input type="password" name="clave_Usuario" id="clave_Usuario" placeholder="Ingrese su Contraseña" required><br>
+          <br><span class="psw"><a href="#">Olvido su contraseña?</a></span><br>
+          <br><button type="submit" value="Procesar">Login</button>
+
         </div>
         <div class="container-sub">
           <h4>!Aún no tienes una cuenta!</h4>
+          <!-- <button onclick="document.getElementById('id02').style.display='block'" class="subbtn">Suscribete</button>  -->
           <button type="button" class="subbtn">Suscribete</button>
         </div>
       </form>

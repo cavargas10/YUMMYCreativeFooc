@@ -85,7 +85,7 @@ $control->UpdateUser($idUsuario);
                 <input type="password" name="clave_Usuario" id="clave_Usuario" value="<?php echo $lista[4] ?>"><br>
             </div>
             <div>
-                <br><button type="submit" value="Procesar" class="subbtn">Guardar</button>
+                <br><button type="submit" value="Procesar" class="subbtn">Guardar y Salir</button>
             </div>
         </form>
 

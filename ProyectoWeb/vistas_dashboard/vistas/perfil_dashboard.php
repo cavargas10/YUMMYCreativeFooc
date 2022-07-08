@@ -102,10 +102,6 @@
         <i class='bx bx-menu'></i>
         <span class="text">Dashboard</span> <br />
       </div>
-
-<<<<<<< HEAD
-      
-
       <div class="post">
         <img src="../../img/post.png" alt="">
         <H1>BIENVENIDOS <i class="uil uil-smile-beam"></i></H1><br>
