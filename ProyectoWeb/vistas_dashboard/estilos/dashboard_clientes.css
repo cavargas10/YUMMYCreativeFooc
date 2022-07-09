@@ -1,0 +1,70 @@
+/*Estilos tabla tips*/
+.listaTips .btnTips{
+  background-color: rgb(217, 152, 83);
+  width: 12%;
+  padding: 0%;
+  height: 40px;
+  margin-left: 10%;
+  color: whitesmoke;
+  border: 1px solid #cebd9f;
+  font-size: 16px;
+  margin-top:4% ;
+}
+
+.listaTips .btnTips a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: 500;
+}
+
+.listaTips .btnTips:hover {
+  background-color: #d7a753;
+  cursor: pointer;
+}  
+
+.tablecudCliente {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 80%;
+    margin-left:10%;
+    margin-top: 3%;
+    padding: 2%;
+    border: 5px solid rgb(92, 69, 18);
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 16px;
+    border: 1px solid rgb(92, 69, 18);
+  }
+  th{
+    text-align: center;
+  }
+
+  td a{
+    text-decoration: none;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 7% 7%;
+    margin-left: 10%;
+  }
+
+  td .btnDelete{
+    background-color: rgb(226, 86, 86);
+  }
+
+  td .btnUpdate{
+    background-color: rgb(53, 166, 53);
+  }
+
+  td .btnDelete:hover{
+    background-color: rgb(225, 109, 109);
+  }
+  
+  td .btnUpdate:hover{
+    background-color: rgb(78, 177, 78);
+  }
+
+  tr:nth-child(even) {
+    background-color: rgb(216, 197, 171);
+  }
