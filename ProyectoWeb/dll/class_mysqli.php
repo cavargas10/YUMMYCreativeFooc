@@ -100,13 +100,13 @@ class clase_mysqli{
 	}
 
 	function verconsultacrudIngrediente(){
-		echo "<table class='tablecud'>";
+		echo "<table class='tablecudIngredientes'>";
 		echo "<tr>";
 		for ($i=0; $i < $this->numcampos() ; $i++) { 
 			//echo "<td>".$this->nombrecampo($i)."</td>";
-			echo  "<td>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</td>";
+			echo  "<th>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</th>";
 		}
-		echo  "<td>Borrar</td>";
+		echo  "<th>BORRAR</th>";
 		echo "</tr>";
 		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
 			echo "<tr>";
@@ -114,21 +114,21 @@ class clase_mysqli{
 				//echo "<td>".utf8_encode($row[$i])."</td>";
 				echo "<td>".$row[$i]."</td>";
 			}
-			echo  "<td><a href='contenido_ingredientes.php?idingredientes=$row[0]'>Borrar</a></td>";
+			echo  "<td><a class='btnDelete' href='contenido_ingredientes.php?idingredientes=$row[0]'>Borrar</a></td>";
 			echo "</tr>";
 		}
 		echo "</table>";
 	}
 
 	function verconsultacrudTips(){
-		echo "<table class='tablecud'>";
+		echo "<table class='tablecudTips'>";
 		echo "<tr>";
 		for ($i=0; $i < $this->numcampos() ; $i++) { 
 			//echo "<td>".$this->nombrecampo($i)."</td>";
-			echo  "<td>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</td>";
+			echo  "<th>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</th>";
 		}
-		echo  "<td>Borrar</td>";
-		echo  "<td>Actualizar</td>";
+		echo  "<th>BORRAR</th>";
+		echo  "<th>ACTUALIZAR</th>";
 		echo "</tr>";
 		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
 			echo "<tr>";
@@ -136,22 +136,22 @@ class clase_mysqli{
 				//echo "<td>".utf8_encode($row[$i])."</td>";
 				echo "<td>".$row[$i]."</td>";
 			}
-			echo  "<td><a href='contenido_tips.php?idtips=$row[0]'>Borrar</a></td>";
-			echo  "<td><a href='actualizar_tips.php?idtips=$row[0]'>Actualizar</a></td>";
+			echo  "<td><a class='btnDelete' href='contenido_tips.php?idtips=$row[0]'> Borrar </a></td>";
+			echo  "<td><a class='btnUpdate' href='actualizar_tips.php?idtips=$row[0]'>Actualizar</a></td>";
 			echo "</tr>";
 		}
 		echo "</table>";
 	}
 
 	function verconsultacrudVideos(){
-		echo "<table class='tablecud'>";
+		echo "<table class='tablecudVideos'>";
 		echo "<tr>";
 		for ($i=0; $i < $this->numcampos() ; $i++) { 
 			//echo "<td>".$this->nombrecampo($i)."</td>";
-			echo  "<td>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</td>";
+			echo  "<th>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</th>";
 		}
-		echo  "<td>Borrar</td>";
-		echo  "<td>Actualizar</td>";
+		echo  "<th>BORRAR</th>";
+		echo  "<th>ACTUALIZAR</th>";
 		echo "</tr>";
 		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
 			echo "<tr>";
@@ -159,8 +159,8 @@ class clase_mysqli{
 				//echo "<td>".utf8_encode($row[$i])."</td>";
 				echo "<td>".$row[$i]."</td>";
 			}
-			echo  "<td><a href='contenido_videos.php?idvideos=$row[0]'>Borrar</a></td>";
-			echo  "<td><a href='actualizar_videos.php?idvideos=$row[0]'>Actualizar</a></td>";
+			echo  "<td><a class='btnDelete' href='contenido_videos.php?idvideos=$row[0]'> Borrar </a></td>";
+			echo  "<td><a class='btnUpdate' href='actualizar_videos.php?idvideos=$row[0]'>Actualizar</a></td>";
 			echo "</tr>";
 		}
 		echo "</table>";
