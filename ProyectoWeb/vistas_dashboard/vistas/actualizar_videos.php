@@ -16,8 +16,8 @@ $control->UpdateVideo($idvideos);
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../../css/dashboard_principal.css">
-  <link rel="stylesheet" href="../../css/dashboard_actualizarTip.css">
+  <link rel="stylesheet" href="../estilos/dashboard_principal.css">
+  <link rel="stylesheet" href="../estilos/dashboard_actualizarVideos.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>

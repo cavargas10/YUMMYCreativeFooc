@@ -266,10 +266,6 @@
   color: rgb(243, 146, 61);
 }
 
-img{
-  width: 15%;
-  margin-left: 10%;
-}
 @media (max-width: 400px) {
 
   .sidebar.close.small-screen{
@@ -281,4 +277,9 @@ img{
     left: 0;
     z-index: 100; 
   }
+}
+
+.logo-details img{
+  width: 15%;
+  margin-left: 18%;
 }

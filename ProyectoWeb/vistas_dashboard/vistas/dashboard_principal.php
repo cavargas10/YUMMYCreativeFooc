@@ -9,7 +9,7 @@ extract($_GET);
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../../css/dashboard_principal.css">
+  <link rel="stylesheet" href="../estilos/dashboard_principal.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
@@ -34,15 +34,11 @@ extract($_GET);
             <li><a class="link_name" href="#">Dashboard</a></li>
           </ul>
         </li>
-        <li> 
-        <a href="perfil_dashboard.php">
-        <i class="uil uil-user-circle"></i>
+        <li>
+          <a href="perfil_dashboard.php">
+            <i class="uil uil-user-circle"></i>
             <span class="link_name">Perfil</span>
           </a>
-              <?php
-              echo "<a href='perfil_dashboard.php?idUsuario=" . $_SESSION['idUsuario'] . "'>Perfil</a>";
-              ?>
-          
           <ul class="sub-menu blank">
             <li><a class="link_name" href="#">Perfil</a></li>
           </ul>
