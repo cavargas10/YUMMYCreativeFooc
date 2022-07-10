@@ -2,12 +2,18 @@
 include("../../seguridad/seguridad.php");
 include_once "../controlador/usuario_controlador.php";
 include_once "../modelo/usuario_modelo.php";
+include_once "../modelo/modelo_video.php";
 extract($_GET);
 
 $control2 = new usuario_modelo();
 
 $control = new usuario_controlador();
 
+$control3 = new modelo_video();
+// $idvideos = ;
+$lista = $control3->EncontrarVideo($idvideos);
+
+$convertirURL = str_replace("watch?v=","embed/",$lista[3]);
 ?>
 
 <!DOCTYPE html>
@@ -71,55 +77,9 @@ $control = new usuario_controlador();
         </div>
         <section class="container-card-recet">
             <div class="card-recet">
-                <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h1 class="card-title text-medium">Salud</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
-                    iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h1 class="card-title text-medium">Salud</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
-                    iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h1 class="card-title text-medium">Salud</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
-                    iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h1 class="card-title text-medium">Salud</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
-                    iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h1 class="card-title text-medium">Salud</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
-                    iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <iframe width="360" height="215" src="https://www.youtube.com/embed/_JDOGSkVMNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h1 class="card-title text-medium">Salud</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt aut dolor? Aut et illo officiis sint
-                    iste, quae velit suscipit laboriosam labore consequatur, a aliquam? Quos numquam ratione voluptatum.</p>
+                <iframe width="360" height="215" src="<?php echo $lista[3]?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h1 class="card-title text-medium"><?php echo $lista[1]?></h1>
+                <p><?php echo $lista[2]?></p>
             </div>
         </section>
     </div>
