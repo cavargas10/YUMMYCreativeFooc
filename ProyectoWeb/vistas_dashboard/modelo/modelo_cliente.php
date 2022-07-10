@@ -22,7 +22,7 @@ class modelo_cliente
     {
         $miconexion = new clase_mysqli;
         $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-        $resSQL = $miconexion->consulta("select idUsuario 'ID', nombre_Usuario 'NOMBRE', apellido_Usuario 'APELLIDO',  correo_Usuario 'CORREO' from usuarios where Rol=0 ");
+        $resSQL = $miconexion->consulta("select idUsuario 'ID', nombre_Usuario 'NOMBRE', apellido_Usuario 'APELLIDO',  correo_Usuario 'CORREO' from usuarios where Rol=2 ");
         $resSQL = $miconexion->verconsultacrudCliente();
         //$this->Disconnect();
         return $resSQL;
@@ -32,7 +32,7 @@ class modelo_cliente
     {
         $miconexion = new clase_mysqli;
         $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-        $resSQL = $miconexion->consulta("delete from usuarios where idUsuarios ='$this->idUsuario'");
+        $resSQL = $miconexion->consulta("delete from usuarios where idUsuario ='$this->idUsuario'");
         //$this->Disconnect();
         return $resSQL;
     }
