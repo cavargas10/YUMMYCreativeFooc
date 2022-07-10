@@ -110,7 +110,7 @@
           </div>
 
           <div class="contenedorFormReceta">
-
+          <h2>TITULO</h2>
             <label for="tituloReceta"><b>Título:</b></label>
             <input type="text" name="tituloReceta" id="tituloReceta" placeholder="Ingrese el titulo de la receta"><br>
             <label for="descripcionReceta"><b>Descripción:</b></label>
@@ -123,7 +123,8 @@
               </datalist>
               <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
               <br><br>
-
+          
+          <h2>ESPECIFICACIONES</h2>
             <label for="tiempoReceta"><b>Tiempo Preparación:</b></label>
             <input type="text" name="tiempoReceta" id="tiempoReceta" placeholder="Ingrese el tiempo de preparación de la receta"><br>
             <label for="dificultadReceta"><b>Dificultad:</b></label>
@@ -142,23 +143,7 @@
               <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
               <br><br>
 
-            <label for="cantidadIngrediente"><b>Cantidad:</b></label>
-            <input type="text" name="cantidadIngrediente" id="cantidadIngrediente" placeholder="Ingrese la cantidad del ingrediente"><br>
-            <label for="umIngrediente"><b>Unidad de medida:</b></label>
-            <input type="text" name="example" list="exampleList3">
-              <datalist id="exampleList3">
-                <option value="gr">  
-                <option value="lb">
-              </datalist><br>
-            <label for="ingrediente"><b>Ingrediente:</b></label>
-            <input type="text" name="example" list="exampleList4">
-              <datalist id="exampleList4">
-                <option value="...">  
-                <option value="..">
-              </datalist>
-              <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
-              <br><br>
-
+          <h2>VALOR NUTRICIONAL</h2>
             <label for="cantidadIngrediente"><b>Cantidad:</b></label>
             <input type="text" name="cantidadIngrediente" id="cantidadIngrediente" placeholder="Ingrese la cantidad del ingrediente"><br>
             <label for="umIngrediente"><b>Unidad de medida:</b></label>
@@ -175,8 +160,9 @@
               </datalist>
               <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
               <br><br>
-
-            <label for="azucar"><b>Azúcar:</b></label>
+              
+              <h2>SEMÁFORO</h2>
+              <label for="azucar"><b>Azúcar:</b></label>
             <input type="text" name="example" list="exampleList5">
               <datalist id="exampleList5">
                 <option value="Alto">  
@@ -200,6 +186,25 @@
               <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
               <br><br>
 
+              <h2>INGREDIENTE</h2>
+            <label for="cantidadIngrediente"><b>Cantidad:</b></label>
+            <input type="text" name="cantidadIngrediente" id="cantidadIngrediente" placeholder="Ingrese la cantidad del ingrediente"><br>
+            <label for="umIngrediente"><b>Unidad de medida:</b></label>
+            <input type="text" name="example" list="exampleList3">
+              <datalist id="exampleList3">
+                <option value="gr">  
+                <option value="lb">
+              </datalist><br>
+            <label for="ingrediente"><b>Ingrediente:</b></label>
+            <input type="text" name="example" list="exampleList4">
+              <datalist id="exampleList4">
+                <option value="...">  
+                <option value="..">
+              </datalist>
+              <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
+              <br><br>
+
+            <h2>PASOS</h2>
             <label for="nroPaso"><b>Número de paso:</b></label>
             <input type="text" name="nroPaso" id="nroPaso" placeholder="Ingrese el número de paso"><br>
             <label for="desccripcionPaso"><b>Descripción de paso:</b></label>
@@ -209,6 +214,8 @@
             <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
             <br><br>
 
+            
+            <h2>MODELOS</h2>
             <label for="imagenReceta"><b>Imagen de la receta:</b></label>
             <input type="file" name="imagenReceta" id="imagenReceta"><br>
             <label for="videoReceta"><b>Video de la receta:</b></label>
