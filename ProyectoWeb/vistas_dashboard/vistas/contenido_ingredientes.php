@@ -108,23 +108,23 @@ $control->CreateIngrediente();
     <section class="home-section">
       <div class="home-content">
         <i class='bx bx-menu'></i>
-        <span class="text">Contenido / Ingredientes</span> <br />
+        <span class="text">Contenido / Ingredientes</span><br>
       </div>
 
       <div class="addIngrediente">
         <form class="formIngrediente" method="post" action="">
           <div class="tituloIngrediente">
-            <h2 class="agregarIngrediente">AGREGAR INGREDIENTE</h2>
+            <h2 class="agregarIngrediente">AGREGAR INGREDIENTE</h2><br>
           </div>
 
           <div class="contenedorFormIngrediente">
 
-            <label for="nombre_Ingredientes"><b>Nombre:</b></label>
+            <label for="nombre_Ingredientes"><b>NOMBRE:</b></label>
             <input type="text" name="nombre_Ingredientes" id="nombre_Ingredientes" placeholder="Ingrese el nuevo Ingrediente"><br>
 
           </div>
-          <div>
-            <br><button type="submit" value="Procesar" class="subbtnIngrediente">Guardar</button>
+          <div class="boton">
+            <br><button type="submit" value="Procesar" class="btnIngredientes">Guardar</button>
           </div>
         </form>
       </div>
