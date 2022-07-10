@@ -76,12 +76,8 @@
     margin-top: -1%;
   }
   .boton .btnIngredientes:hover {
-    background-color: #d7a753;
+    background-color: #d1a456;
     cursor: pointer;
   } 
-  
-  .boton .btnIngredientes:hover {
-    background-color: #cebd9f;
-    cursor: pointer;
-  }
+
   

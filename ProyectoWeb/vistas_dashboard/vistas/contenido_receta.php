@@ -101,7 +101,130 @@
         <i class='bx bx-menu'></i>
         <span class="text">Dashboard</span> <br />
       </div>
-    </section>
+    
+
+    <div class="addReceta">
+        <form class="formReceta" method="post" action="">
+          <div class="tituloReceta">
+            <h2 class="agregarReceta">AGREGAR RECETAS</h2><br>
+          </div>
+
+          <div class="contenedorFormReceta">
+
+            <label for="tituloReceta"><b>Título:</b></label>
+            <input type="text" name="tituloReceta" id="tituloReceta" placeholder="Ingrese el titulo de la receta"><br>
+            <label for="descripcionReceta"><b>Descripción:</b></label>
+            <input type="text" name="descripcionReceta" id="descripcion-Receta" placeholder="Ingrese la descripcion de la receta"><br>
+            <label for="grupoReceta"><b>Grupo Etario:</b></label>
+            <input type="text" name="example" list="exampleList">
+              <datalist id="exampleList">
+                <option value="Embarazo">  
+                <option value="Niñez">
+              </datalist>
+              <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
+              <br><br>
+
+            <label for="tiempoReceta"><b>Tiempo Preparación:</b></label>
+            <input type="text" name="tiempoReceta" id="tiempoReceta" placeholder="Ingrese el tiempo de preparación de la receta"><br>
+            <label for="dificultadReceta"><b>Dificultad:</b></label>
+            <input type="text" name="example" list="exampleList1">
+              <datalist id="exampleList1">
+                <option value="Alto">  
+                <option value="Medio">
+                <option value="Bajo">
+              </datalist><br>
+              <label for="porcionesReceta"><b>Porciones:</b></label>
+              <input type="text" name="example" list="exampleList2">
+              <datalist id="exampleList2">
+                <option value="3 - 5">  
+                <option value="5 - 7">
+              </datalist>
+              <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
+              <br><br>
+
+            <label for="cantidadIngrediente"><b>Cantidad:</b></label>
+            <input type="text" name="cantidadIngrediente" id="cantidadIngrediente" placeholder="Ingrese la cantidad del ingrediente"><br>
+            <label for="umIngrediente"><b>Unidad de medida:</b></label>
+            <input type="text" name="example" list="exampleList3">
+              <datalist id="exampleList3">
+                <option value="gr">  
+                <option value="lb">
+              </datalist><br>
+            <label for="ingrediente"><b>Ingrediente:</b></label>
+            <input type="text" name="example" list="exampleList4">
+              <datalist id="exampleList4">
+                <option value="...">  
+                <option value="..">
+              </datalist>
+              <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
+              <br><br>
+
+            <label for="cantidadIngrediente"><b>Cantidad:</b></label>
+            <input type="text" name="cantidadIngrediente" id="cantidadIngrediente" placeholder="Ingrese la cantidad del ingrediente"><br>
+            <label for="umIngrediente"><b>Unidad de medida:</b></label>
+            <input type="text" name="example" list="exampleList3">
+              <datalist id="exampleList3">
+                <option value="gr">  
+                <option value="lb">
+              </datalist><br>
+            <label for="valorNutricional"><b>Valor Nutricional:</b></label>
+            <input type="text" name="example" list="exampleList4">
+              <datalist id="exampleList4">
+                <option value="...">  
+                <option value="..">
+              </datalist>
+              <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
+              <br><br>
+
+            <label for="azucar"><b>Azúcar:</b></label>
+            <input type="text" name="example" list="exampleList5">
+              <datalist id="exampleList5">
+                <option value="Alto">  
+                <option value="Medio">
+                <option value="Bajo">
+              </datalist><br>
+              <label for="grasa"><b>Grasa:</b></label>
+            <input type="text" name="example" list="exampleList5">
+              <datalist id="exampleList5">
+                <option value="Alto">  
+                <option value="Medio">
+                <option value="Bajo">
+              </datalist><br>
+              <label for="sal"><b>Sal:</b></label>
+            <input type="text" name="example" list="exampleList5">
+              <datalist id="exampleList5">
+                <option value="Alto">  
+                <option value="Medio">
+                <option value="Bajo">
+              </datalist>
+              <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
+              <br><br>
+
+            <label for="nroPaso"><b>Número de paso:</b></label>
+            <input type="text" name="nroPaso" id="nroPaso" placeholder="Ingrese el número de paso"><br>
+            <label for="desccripcionPaso"><b>Descripción de paso:</b></label>
+            <input type="text" name="desccripcionPaso" id="desccripcionPaso" placeholder="Ingrese la descripción del paso"><br>
+            <label for="imagenPaso"><b>Imagen del paso:</b></label>
+            <input type="file" name="imagenPaso" id="imagenPaso">
+            <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
+            <br><br>
+
+            <label for="imagenReceta"><b>Imagen de la receta:</b></label>
+            <input type="file" name="imagenReceta" id="imagenReceta"><br>
+            <label for="videoReceta"><b>Video de la receta:</b></label>
+            <input type="url" name="videoReceta" id="videoReceta"><br>
+            <label for="modeloReceta"><b>Modelo 3D de la receta:</b></label>
+            <input type="url" name="modeloReceta" id="modeloReceta">
+            <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
+            <br><br>
+            
+          </div>
+          <div class="boton">
+            <br><button type="submit" value="Procesar" class="btnIngredientes">Guardar</button>
+          </div>
+        </form>
+      </div>
+      </section>
   </div>
 
   <script>

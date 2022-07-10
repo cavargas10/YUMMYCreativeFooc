@@ -1,0 +1,83 @@
+
+.tablecudIngredientes {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 65%;
+    margin-left: 15%;
+    margin-top: 3%;
+    padding: 2%;
+    border: 5px solid rgb(92, 69, 18);
+  }
+   td {
+    text-align: left;
+    padding: 15px;
+    border: 1px solid rgb(92, 69, 18);
+  }
+
+  th{
+    text-align: center;
+    padding: 15px;
+    border: 1px solid rgb(92, 69, 18);
+  }
+
+  td a{
+    text-decoration: none;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 5% 5%;
+    margin-left: 5%;
+  }
+
+  td .btnDelete{
+    background-color: rgb(226, 86, 86);
+    padding: 2%;
+    margin-left: 37.5%;
+  }
+
+  td .btnDelete:hover{
+    background-color: rgb(225, 109, 109);
+  }
+
+  tr:nth-child(even) {
+    background-color: rgb(216, 197, 171);
+  }
+
+  .addIngrediente{
+    text-align: center;
+    width: 45%;
+    margin-left: 25%;
+    padding: 1%;
+    margin-top: 2%;
+    background-color: rgb(216, 197, 171);
+  }
+
+  .formIngrediente .tituloIngrediente{
+    margin-top: 2%;
+  }
+
+  .formIngrediente .contenedorFormIngrediente input[type="text"]{
+    width: 220px;
+    padding: 5px 10px;
+    border: 1px solid #f6f6f6;
+    border-radius: 3px;
+    background-color: #f6f6f6;
+    margin: 8px 0;
+    margin-left: 3%;
+    display: inline-block;
+  }
+  .boton .btnIngredientes {
+    background-color: rgb(217, 152, 83);
+    width: 20%;
+    padding: 0.4%;
+    height: 50px;
+    color: white;
+    border: 1px solid #cebd9f;
+    font-size: 17px;
+    margin-top: -1%;
+  }
+  .boton .btnIngredientes:hover {
+    background-color: #d1a456;
+    cursor: pointer;
+  } 
+
+  
