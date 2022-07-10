@@ -112,7 +112,7 @@ $control->CreateTips();
       </div>
 
       <div class="addTips">
-        <form class="formTips" method="post" action="">
+        <form class="formTips" method="post" action="" enctype="multipart/form-data">
           <div class="tituloTips">
             <h2 class="agregarTips">AGREGAR TIP</h2>
           </div>

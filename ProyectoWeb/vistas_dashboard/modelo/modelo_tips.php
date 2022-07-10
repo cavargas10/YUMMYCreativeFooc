@@ -8,6 +8,8 @@ class modelo_tips
   private $titulo_Tips;
   private $descripcion_Tips;
   private $imagen_Tips;
+  private $folder;
+
  
 
   #region Set y Get
@@ -29,6 +31,10 @@ class modelo_tips
 
   public function setimagen_Tips($imagen_Tips){
     $this->imagen_Tips = $imagen_Tips;
+  }
+
+  public function setfolder($folder){
+    $this->folder = $folder;
   }
   
   public function ListaTips() {
@@ -52,7 +58,7 @@ class modelo_tips
   public function UpdateTips() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("update tips set titulo_Tips = '$this->titulo_Tips', descripcion_Tips = '$this->descripcion_Tips', imagen_Tips ='$this->imagen_Tips' where idtips = '$this->idtips'");
+    $resSQL=$miconexion->consulta("update tips set titulo_Tips = '$this->titulo_Tips', descripcion_Tips = '$this->descripcion_Tips', imagen_Tips ='$this->folder' where idtips = '$this->idtips'");
     //$this->Disconnect();
     return $resSQL;
   }
@@ -60,7 +66,7 @@ class modelo_tips
   public function CreateTips() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("insert into tips values('','$this->titulo_Tips', '$this->descripcion_Tips', '$this->imagen_Tips')");
+    $resSQL=$miconexion->consulta("insert into tips values('','$this->titulo_Tips', '$this->descripcion_Tips', '$this->folder')");
     //$this->Disconnect();
     return $resSQL;
   }

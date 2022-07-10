@@ -10,10 +10,7 @@ $control2 = new usuario_modelo();
 $control = new usuario_controlador();
 
 $control3 = new modelo_video();
-// $idvideos = ;
-$lista = $control3->EncontrarVideo($idvideos);
-
-$convertirURL = str_replace("watch?v=","embed/",$lista[3]);
+$lista = $control3->EncontrarVideo();
 ?>
 
 <!DOCTYPE html>
@@ -68,7 +65,7 @@ $convertirURL = str_replace("watch?v=","embed/",$lista[3]);
             }
         </script>
     </header>
-
+ 
     <div class="grid">
         <div class="new-recetas">
             <h1 class="videos"><span>Videos
@@ -83,6 +80,7 @@ $convertirURL = str_replace("watch?v=","embed/",$lista[3]);
             </div>
         </section>
     </div>
+    
 </body>
 
 <footer>

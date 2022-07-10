@@ -19,9 +19,11 @@ class controlador_videos{
         $user = new modelo_videos();
 
 		if (isset($_POST['titulo_Video'])&&isset($_POST['descripcion_Video'])){
-	        $user->settitulo_Video($_POST['titulo_Video']);
+	        $urlVideo = $_POST['url_Video'];
+			$user->settitulo_Video($_POST['titulo_Video']);
 	        $user->setdescripcion_Video($_POST['descripcion_Video']);
-			$user->seturl_Video($_POST['url_Video']);
+			$convertirURL = str_replace("watch?v=","embed/",$urlVideo);
+			$user->seturl_Video($convertirURL);
         	$userResponse = $user->CreateVideo();
 			if ($userResponse == 1)
 	        {
@@ -50,7 +52,9 @@ class controlador_videos{
             $user->setidvideos($idvideos);
 	        $user->settitulo_Video($_POST['titulo_Video']);
 	        $user->setdescripcion_Video($_POST['descripcion_Video']);
-			$user->seturl_Video($_POST['url_Video']);
+			$urlVideo = $_POST['url_Video'];
+			$convertirURL = str_replace("watch?v=","embed/",$urlVideo);
+			$user->seturl_Video($convertirURL);
         	$userResponse = $user->UpdateVideo();
 			if ($userResponse == 1)
 	        {

@@ -2,12 +2,15 @@
 include("../../seguridad/seguridad.php");
 include_once "../controlador/usuario_controlador.php";
 include_once "../modelo/usuario_modelo.php";
+include_once "../modelo/modelo_tips.php";
 extract($_GET);
 
 $control2 = new usuario_modelo();
 
 $control = new usuario_controlador();
 
+$control3 = new modelo_tips();
+$lista = $control3->EncontrarTips();
 ?>
 
 <!DOCTYPE html>
@@ -71,72 +74,12 @@ $control = new usuario_controlador();
         </div>
         <section class="container-card-recet">
             <div class="card-recet">
-                <img src="../../img/tip1.png" />
-                <h1 class="card-title text-medium">Alcanza una dieta equilibrada</h1>
+                <img src="<?php echo $lista[3]?>" />
+                <h1 class="card-title text-medium"><?php echo $lista[1]?></h1>
                 <p>
-                    Los hábitos de alimentación siempre han sido una preocupación constante de los ...
+                <?php echo $lista[2]?>
                 </p>
                 <button class="btnTips"><a href="tips_info_user.php">Leer más..</a></button>
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <img src="../../img/tip1.png" />
-                <h1 class="card-title text-medium">Comida</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
-                    excepturi unde?
-                </p>
-                <button class="btnTips"><a href="">Leer más..</a></button>
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <img src="../../img/tip1.png" />
-                <h1 class="card-title text-medium">Recetas</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
-                    excepturi unde?
-                </p>
-                <button class="btnTips"><a href="">Leer más..</a></button>
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <img src="../../img/tip1.png" />
-                <h1 class="card-title text-medium">Alimentación</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
-                    excepturi unde?
-                </p>
-                <button class="btnTips"><a href="">Leer más..</a></button>
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <img src="../../img/tip1.png" />
-                <h1 class="card-title text-medium">Cuidado Salud</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
-                    excepturi unde?
-                </p>
-                <button class="btnTips"><a href="">Leer más..</a></button>
-            </div>
-        </section>
-
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <img src="../../img/tip1.png" />
-                <h1 class="card-title text-medium">Comida</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
-                    excepturi unde?
-                </p>
-                <button class="btnTips"><a href="">Leer más..</a></button>
             </div>
         </section>
     </div>
