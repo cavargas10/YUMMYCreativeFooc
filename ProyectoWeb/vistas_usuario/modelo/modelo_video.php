@@ -15,11 +15,11 @@ class modelo_video
     $this->idvideos = $idvideos;
   }
   
-  public function EncontrarVideo() {
+  public function PresentarVideos() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
     $resSQL=$miconexion->consulta("select * from videos");
-    $resSQL=$miconexion->consulta_lista();
+    $resSQL=$miconexion->presentarconsultaVideo();
     //$this->Disconnect();
     return $resSQL;
   }

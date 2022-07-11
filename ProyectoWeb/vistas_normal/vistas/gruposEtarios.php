@@ -1,11 +1,3 @@
-<?php
-
-include_once "modelo/modelo_video.php";
-extract($_GET);
-
-$control = new modelo_video();
-$lista = $control->EncontrarVideo();
-?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,7 +6,7 @@ $lista = $control->EncontrarVideo();
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yummi Creative Food</title>
-  <link rel="stylesheet" href="../css/vista_videos.css" />
+  <link rel="stylesheet" href="../../css/vista_gruposEta.css " />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <script src="js/main.js"></script>
 </head>
@@ -25,16 +17,16 @@ $lista = $control->EncontrarVideo();
 
     <div class="menu">
       <nav>
-        <a href="../index.php" class="enlace">
-          <img src="../img/logo.png" alt="" class="logo">
+        <a href="../../index.php" class="enlace">
+          <img src="../../img/logo.png" alt="" class="logo">
           <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
         </a>
         <ul>
-          <li><a href="../index.php">Inicio</a></li>
-          <li><a href="gruposEtarios.php">Grupos Etarios</a></li>
+          <li><a href="../../index.php">Inicio</a></li>
+          <li><a class="active" href="gruposEtarios.php">Grupos Etarios</a></li>
           <li><a href="recetas.php">Recetas</a></li>
           <li><a href="tips.php">Tips</a></li>
-          <li><a class="active" href="videos.php">Videos</a></li>
+          <li><a href="videos.php">Videos</a></li>
           <li><a href="acerca.php">Acerca de</a></li>
           <!-- Boton Login -->
           <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
@@ -43,7 +35,7 @@ $lista = $control->EncontrarVideo();
     </div>
     <!-- Modal LOGIN-->
     <div id="id01" class="modal">
-      <form class="modal-content animate" method="post" action="../dll/validar.php">
+      <form class="modal-content animate" method="post" action="../../dll/validar.php">
         <div class="tittle">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
           <p>Inicio de Sesión</p>
@@ -70,17 +62,64 @@ $lista = $control->EncontrarVideo();
 
   <div class="grid">
     <div class="new-recetas">
-      <h1 class="videos"><span>Videos
-          <hr>
-        </span></h1><br>
+      <h1 class="grup_et"><span>Grupos</span> Etarios
+        <hr>
+      </h1><br>
     </div>
     <section class="container-card-recet">
-            <div class="card-recet">
-                <iframe width="360" height="215" src="<?php echo $lista[3]?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h1 class="card-title text-medium"><?php echo $lista[1]?></h1>
-                <p><?php echo $lista[2]?></p>
-            </div>
-        </section>
+      <div class="card-recet">
+        <a href="grupoEta_info.php">
+          <img src="../../img/Embarazada.jpg" />
+          <h1 class="card-title text-medium">Madre en estado de gestación </h1>
+        </a>
+      </div>
+    </section>
+
+    <section class="container-card-recet">
+      <div class="card-recet">
+        <img src="../../img/PrimeraInfancia.jpg" />
+        <h1 class="card-title text-medium">Primera Infancia</h1>
+
+      </div>
+    </section>
+
+    <section class="container-card-recet">
+      <div class="card-recet">
+        <img src="../../img/SegundaInfancia.jpg" />
+        <h1 class="card-title text-medium">Segunda Infancia</h1>
+
+      </div>
+    </section>
+
+    <section class="container-card-recet">
+      <div class="card-recet">
+        <img src="../../img/Adolecencia.jpg" />
+        <h1 class="card-title text-medium">Adolescencia</h1>
+
+      </div>
+    </section>
+
+    <section class="container-card-recet">
+      <div class="card-recet">
+        <img src="../../img/Juventud.jpg" />
+        <h1 class="card-title text-medium">Juventud</h1>
+
+      </div>
+    </section>
+
+    <section class="container-card-recet">
+      <div class="card-recet">
+        <img src="../../img/Adultez.jpg" />
+        <h1 class="card-title text-medium">Adultez</h1>
+      </div>
+    </section>
+
+    <section class="container-card-recet">
+      <div class="card-recet">
+        <img src="../../img/Mayor.jpg" />
+        <h1 class="card-title text-medium">Vejez</h1>
+      </div>
+    </section>
   </div>
 </body>
 
@@ -88,7 +127,7 @@ $lista = $control->EncontrarVideo();
   <div class="content">
     <div class="top">
       <div class="logo-details">
-        <img src="../img/logo.png" alt="" class="logo">
+        <img src="../../img/logo.png" alt="" class="logo">
         <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
       </div>
       <div class="media-icons">

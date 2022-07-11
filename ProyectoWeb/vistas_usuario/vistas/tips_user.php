@@ -8,10 +8,6 @@ extract($_GET);
 $control2 = new usuario_modelo();
 
 $control = new usuario_controlador();
-
-$control3 = new modelo_tips();
-$lista = $control3->EncontrarTips();
-
 ?>
 
 <!DOCTYPE html>
@@ -74,22 +70,8 @@ $lista = $control3->EncontrarTips();
                 </span></h1><br>
         </div>
         <?php
-        
-        for($i=0; $i < $lista[0]; $i++){
-        ?>
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <img src="<?php echo $lista[3]?>" />
-                <h1 class="card-title text-medium"><?php echo $lista[3]?></h1>
-                <p>
-                <?php echo $lista[2]?>
-                </p>
-                <button class="btnTips"><a href="tips_info_user.php">Leer más..</a></button>
-            </div>
-        </section>
-        <?php
-        }
-        $control3->EncontrarTips2();
+        $control3 = new modelo_tips();
+        $control3->PresentarTips();
         ?>
     </div>
 </body>

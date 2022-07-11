@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yummi Creative Food</title>
-  <link rel="stylesheet" href="../css/vista_recetas.css" />
+  <link rel="stylesheet" href="../../css/vista_recetas.css" />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <script src="js/main.js"></script>
 </head>
@@ -17,8 +17,8 @@
 
     <div class="menu">
       <nav>
-        <a href="../index.php" class="enlace">
-          <img src="../img/logo.png" alt="" class="logo">
+        <a href="../../index.php" class="enlace">
+          <img src="../../img/logo.png" alt="" class="logo">
           <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
         </a>
         <ul>
@@ -36,7 +36,7 @@
 
     <!-- Modal LOGIN-->
     <div id="id01" class="modal">
-      <form class="modal-content animate" method="post" action="../dll/validar.php">
+      <form class="modal-content animate" method="post" action="../../dll/validar.php">
         <div class="tittle">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
           <p>Inicio de Sesión</p>
@@ -127,7 +127,7 @@
       <div class="container-card-recet">
         <div class="card-recet">
           <div class="img-card-recet">
-            <img src="../img/plato4.jpg" alt="">
+            <img src="../../img/plato4.jpg" alt="">
           </div>
           <div class="card-content">
             <a href="new_receta.php">
@@ -146,7 +146,7 @@
       <div class="container-card-recet">
         <div class="card-recet">
           <div class="img-card-recet">
-            <img src="../img/plato5.jpg" alt="">
+            <img src="../../img/plato5.jpg" alt="">
           </div>
           <div class="card-content">
             <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -165,7 +165,7 @@
       <div class="container-card-recet">
         <div class="card-recet">
           <div class="img-card-recet">
-            <img src="../img/plato6.jpg" alt="">
+            <img src="../../img/plato6.jpg" alt="">
           </div>
           <div class="card-content">
             <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -185,7 +185,7 @@
       <div class="container-card-recet">
         <div class="card-recet">
           <div class="img-card-recet">
-            <img src="../img/fot2.jpg" alt="">
+            <img src="../../img/fot2.jpg" alt="">
           </div>
           <div class="card-content">
             <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -205,7 +205,7 @@
       <div class="container-card-recet">
         <div class="card-recet">
           <div class="img-card-recet">
-            <img src="../img/img3d.jpg" alt="">
+            <img src="../../img/img3d.jpg" alt="">
           </div>
           <div class="card-content">
             <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -225,7 +225,7 @@
       <div class="container-card-recet">
         <div class="card-recet">
           <div class="img-card-recet">
-            <img src="../img/paso4.jpg" alt="">
+            <img src="../../img/paso4.jpg" alt="">
           </div>
           <div class="card-content">
             <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -245,7 +245,7 @@
       <div class="container-card-recet">
         <div class="card-recet">
           <div class="img-card-recet">
-            <img src="../img/fot.png" alt="">
+            <img src="../../img/fot.png" alt="">
           </div>
           <div class="card-content">
             <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -265,7 +265,7 @@
       <div class="container-card-recet">
         <div class="card-recet">
           <div class="img-card-recet">
-            <img src="../img/plato6.jpg" alt="">
+            <img src="../../img/plato6.jpg" alt="">
           </div>
           <div class="card-content">
             <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -285,7 +285,7 @@
       <div class="container-card-recet">
         <div class="card-recet">
           <div class="img-card-recet">
-            <img src="../img/card1.png" alt="">
+            <img src="../../img/card1.png" alt="">
           </div>
           <div class="card-content">
             <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
@@ -309,7 +309,7 @@
   <div class="content">
     <div class="top">
       <div class="logo-details">
-        <img src="../img/logo.png" alt="" class="logo">
+        <img src="../../img/logo.png" alt="" class="logo">
         <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
       </div>
       <div class="media-icons">

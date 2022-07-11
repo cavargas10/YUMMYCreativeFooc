@@ -15,20 +15,11 @@ class modelo_tips
     $this->idtips = $idtips;
   }
   
-  public function EncontrarTips() {
+  public function PresentarTips() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
     $resSQL=$miconexion->consulta("select * from tips");
-    $resSQL=$miconexion->consulta_lista();
-    //$this->Disconnect();
-    return $resSQL;
-  }
-
-  public function EncontrarTips2() {
-    $miconexion = new clase_mysqli;
-    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from tips");
-    $resSQL=$miconexion->verconsulta2();
+    $resSQL=$miconexion->presentarconsultaTips();
     //$this->Disconnect();
     return $resSQL;
   }

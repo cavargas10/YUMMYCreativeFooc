@@ -1,9 +1,6 @@
 <?php
-include_once "modelo/modelo_tips.php";
+include_once "../modelo/modelo_tips.php";
 extract($_GET);
-
-$control = new modelo_tips();
-$lista = $control->EncontrarTips();
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +11,7 @@ $lista = $control->EncontrarTips();
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yummi Creative Food</title>
-  <link rel="stylesheet" href="../css/vista_tips.css" />
+  <link rel="stylesheet" href="../../css/vista_tips.css" />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <script src="js/main.js"></script>
 </head>
@@ -43,7 +40,7 @@ $lista = $control->EncontrarTips();
     </div>
     <!-- Modal LOGIN-->
     <div id="id01" class="modal">
-      <form class="modal-content animate" method="post" action="../dll/validar.php">
+      <form class="modal-content animate" method="post" action="../../dll/validar.php">
         <div class="tittle">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
           <p>Inicio de Sesión</p>
@@ -75,20 +72,8 @@ $lista = $control->EncontrarTips();
         </span></h1><br>
     </div>
     <?php
-    foreach($lista as $datos){
-    ?>
-    <section class="container-card-recet">
-      <div class="card-recet">
-        <img src="<?php echo $datos[3]?>" />
-        <h1 class="card-title text-medium"><?php echo $datos[1]?></h1>
-        <p>
-        <?php echo $datos[2]?>
-        </p>
-        <button class="btnTips"><a href="tips_info.php">Leer más..</a></button>
-      </div>
-    </section>
-    <?php
-    }
+    $control3 = new modelo_tips();
+    $control3->PresentarTips();
     ?>
   </div>
 </body>

@@ -58,7 +58,7 @@ class modelo_tips
   public function UpdateTips() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("update tips set titulo_Tips = '$this->titulo_Tips', descripcion_Tips = '$this->descripcion_Tips', imagen_Tips ='$this->image_name' where idtips = '$this->idtips'");
+    $resSQL=$miconexion->consulta("update tips set titulo_Tips = '$this->titulo_Tips', descripcion_Tips = '$this->descripcion_Tips', imagen_Tips ='$this->folder' where idtips = '$this->idtips'");
     //$this->Disconnect();
     return $resSQL;
   }

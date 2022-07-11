@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yummi Creative Food</title>
-    <link rel="stylesheet" href="../css/vista_tips_info.css" />
+    <link rel="stylesheet" href="../../css/vista_tips_info.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="js/main.js"></script>
 </head>
@@ -15,8 +15,8 @@
     <header>
         <div class="menu">
             <nav>
-                <a href="../index.php" class="enlace">
-                    <img src="../img/logo.png" alt="" class="logo">
+                <a href="../../index.php" class="enlace">
+                    <img src="../../img/logo.png" alt="" class="logo">
                     <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
                 </a>
                 <ul>
@@ -33,7 +33,7 @@
         </div>
         <!-- Modal LOGIN-->
         <div id="id01" class="modal">
-            <form class="modal-content animate" method="post" action="../dll/validar.php">
+            <form class="modal-content animate" method="post" action="../../dll/validar.php">
                 <div class="tittle">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                     <p>Inicio de Sesión</p>
@@ -84,7 +84,7 @@
                 si una persona requiere de un aporte calórico más frecuente, se pueden fraccionar los momentos de alimentación en cinco tiempos.
             </p>
         </div>
-        <img class="img_tip" src="../img/inf_tips.png" alt="">
+        <img class="img_tip" src="../../img/inf_tips.png" alt="">
     </div>
 </body>
 
@@ -92,7 +92,7 @@
     <div class="content">
         <div class="top">
             <div class="logo-details">
-                <img src="../img/logo.png" alt="" class="logo">
+                <img src="../../img/logo.png" alt="" class="logo">
                 <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
             </div>
             <div class="media-icons">

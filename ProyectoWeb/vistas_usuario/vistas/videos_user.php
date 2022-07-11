@@ -9,8 +9,6 @@ $control2 = new usuario_modelo();
 
 $control = new usuario_controlador();
 
-$control3 = new modelo_video();
-$lista = $control3->EncontrarVideo();
 ?>
 
 <!DOCTYPE html>
@@ -68,17 +66,12 @@ $lista = $control3->EncontrarVideo();
  
     <div class="grid">
         <div class="new-recetas">
-            <h1 class="videos"><span>Videos
-                    <hr>
-                </span></h1><br>
+            <h1 class="videos"><span>Videos<hr></span></h1><br>
         </div>
-        <section class="container-card-recet">
-            <div class="card-recet">
-                <iframe width="360" height="215" src="<?php echo $lista[3]?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h1 class="card-title text-medium"><?php echo $lista[1]?></h1>
-                <p><?php echo $lista[2]?></p>
-            </div>
-        </section>
+        <?php
+        $control3 = new modelo_video();
+        $control3->PresentarVideos();
+        ?>
     </div>
     
 </body>

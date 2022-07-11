@@ -1,6 +1,6 @@
 <?php
-require_once "../dll/config.php";
-require_once "../dll/class_mysqli.php";
+require_once "../../dll/config.php";
+require_once "../../dll/class_mysqli.php";
 
 class modelo_tips
 {
@@ -15,11 +15,11 @@ class modelo_tips
     $this->idtips = $idtips;
   }
   
-  public function EncontrarTips() {
+  public function PresentarTips() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
     $resSQL=$miconexion->consulta("select * from tips");
-    $resSQL=$miconexion->consulta_lista();
+    $resSQL=$miconexion->presentarconsultaTipsIndex();
     //$this->Disconnect();
     return $resSQL;
   }

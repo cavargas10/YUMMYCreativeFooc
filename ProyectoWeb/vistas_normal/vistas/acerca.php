@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yummi Creative Food</title>
-  <link rel="stylesheet" href="../css/vista_acerca.css" />
+  <link rel="stylesheet" href="../../css/vista_acerca.css" />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <script src="js/main.js"></script>
 </head>
@@ -17,12 +17,12 @@
 
     <div class="menu">
       <nav>
-        <a href="../index.php" class="enlace">
-          <img src="../img/logo.png" alt="" class="logo">
+        <a href="../../index.php" class="enlace">
+          <img src="../../img/logo.png" alt="" class="logo">
           <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
         </a>
         <ul>
-          <li><a href="../index.php">Inicio</a></li>
+          <li><a href="../../index.php">Inicio</a></li>
           <li><a href="gruposEtarios.php">Grupos Etarios</a></li>
           <li><a href="recetas.php">Recetas</a></li>
           <li><a href="tips.php">Tips</a></li>
@@ -35,7 +35,7 @@
     </div>
     <!-- Modal LOGIN-->
     <div id="id01" class="modal">
-      <form class="modal-content animate" method="post" action="../dll/validar.php">
+      <form class="modal-content animate" method="post" action="../../dll/validar.php">
         <div class="tittle">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
           <p>Inicio de Sesión</p>
@@ -109,7 +109,7 @@
     <h3 class="heading-cards"><span>Directores </span>Proyecto</h3>
     <div class="container-cards">
       <div class="card-about">
-        <img src="../img/Norma Verónica Cárdenas.jpg">
+        <img src="../../img/Norma Verónica Cárdenas.jpg">
         <div class="details-cards">
           <h3>Mgtr. Norma Cárdenas Mazón</h3>
           <p>Directora de la Carrera de Nutrición y Dietética</p>
@@ -122,7 +122,7 @@
         </div>
       </div>
       <div class="card-about">
-        <img src="../img/chef2.jpg">
+        <img src="../../img/chef2.jpg">
         <div class="details-cards">
           <h3>Mgtr. Norma Cárdenas Mazón</h3>
           <p>Directora de la Carrera de Nutrición y Dietética</p>
@@ -141,7 +141,7 @@
     <h3 class="heading-cards"><span>Personalidades </span>Importantes</h3>
     <div class="container-cards">
       <div class="card-about">
-        <img src="../img/chef3.jpg">
+        <img src="../../img/chef3.jpg">
         <div class="details-cards">
           <h3>Mgtr. Norma Cárdenas Mazón</h3>
           <p>Directora de la Carrera de Nutrición y Dietética</p>
@@ -154,7 +154,7 @@
         </div>
       </div>
       <div class="card-about">
-        <img src="../img/chef1.jpg">
+        <img src="../../img/chef1.jpg">
         <div class="details-cards">
           <h3>Mgtr. Norma Cárdenas Mazón</h3>
           <p>Directora de la Carrera de Nutrición y Dietética</p>
@@ -167,7 +167,7 @@
         </div>
       </div>
       <div class="card-about">
-        <img src="../img/chef4.jpg">
+        <img src="../../img/chef4.jpg">
         <div class="details-cards">
           <h3>Mgtr. Norma Cárdenas Mazón</h3>
           <p>Directora de la Carrera de Nutrición y Dietética</p>
@@ -186,7 +186,7 @@
     <h3 class="heading-cards"><span>Jovenes </span>Desarrolladores</h3>
     <div class="container-cards">
       <div class="card-about">
-        <img src="../img/carlos.jpeg">
+        <img src="../../img/carlos.jpeg">
         <div class="details-cards">
           <h3>Carlos Andres Vargas Ramirez</h3>
           <p>Estudiante Ing. Sistemas Computacionales y Computacion UTPL</p>
@@ -199,7 +199,7 @@
         </div>
       </div>
       <div class="card-about">
-        <img src="../img/arianna.jpeg">
+        <img src="../../img/arianna.jpeg">
         <div class="details-cards">
           <h3>Arianna Michelle Vinueza Ortega</h3>
           <p>Estudiante Ing. Sistemas Computacionales y Computacion UTPL</p>
@@ -212,7 +212,7 @@
         </div>
       </div>
       <div class="card-about">
-        <img src="../img/luis.jpg">
+        <img src="../../img/luis.jpg">
         <div class="details-cards">
           <h3>Luis Angel Celi Montaño</h3>
           <p>Estudiante Ing. Sistemas Computacionales y Computacion UTPL</p>
@@ -232,7 +232,7 @@
   <div class="content">
     <div class="top">
       <div class="logo-details">
-        <img src="../img/logo.png" alt="" class="logo">
+        <img src="../../img/logo.png" alt="" class="logo">
         <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
       </div>
       <div class="media-icons">

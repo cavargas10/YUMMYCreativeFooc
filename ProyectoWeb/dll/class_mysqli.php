@@ -187,29 +187,50 @@ class clase_mysqli{
 		echo "</table>";
 	}
 
-	function verconsulta2(){
-		echo "<table class='tablecud'>";
-		echo "<tr>";
-		for ($i=0; $i < $this->numcampos() ; $i++) { 
-			//echo "<td>".$this->nombrecampo($i)."</td>";
-			echo  "<td>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</td>";
-		}
-		echo "</tr>";
+	function presentarconsultaTips(){
 		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
-			echo "<tr>";
-			for ($i=0; $i < $this->numcampos(); $i++) { 
-				//echo "<td>".utf8_encode($row[$i])."</td>";
-				
-				if($i == 3){
-					echo "<td><img src = '".$row[$i]."'></td>";
-
-				}else {
-					echo "<td>".$row[$i]."</td>";
-				}
+			for ($i=0; $i < 1; $i++) {
+				echo " <section class='container-card-recet'>
+					<div class='card-recet'>
+					<img src = '".$row[3]."'>
+					<h1 class='card-title text-medium'>$row[1]</h1>
+					<p>$row[2]</p>
+					<button class='btnTips'><a href='tips_info_user.php'>
+					Leer más..</a></button>
+					</div>
+					</section>";
 			}
-			echo "</tr>";
 		}
-		echo "</table>";
+	}
+
+	function presentarconsultaTipsIndex(){
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			for ($i=0; $i < 1; $i++) {
+				echo " <section class='container-card-recet'>
+					<div class='card-recet'>
+					<img src = '".$row[3]."'>
+					<h1 class='card-title text-medium'>$row[1]</h1>
+					<p>$row[2]</p>
+					<button class='btnTips'><a href='tips_info.php'>
+					Leer más..</a></button>
+					</div>
+					</section>";
+			}
+		}
+	}
+
+	function presentarconsultaVideo(){
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			for ($i=0; $i < 1; $i++) {
+				echo "<section class='container-card-recet'>
+				<div class='card-recet'>
+				<iframe width='360' height='215' src='".$row[3]."' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+				<h1 class='card-title text-medium'>$row[1]</h1>
+				<p>$row[2]</p>
+				</div>
+				</section>";
+			}
+		}
 	}
 
 	function consulta_lista(){
