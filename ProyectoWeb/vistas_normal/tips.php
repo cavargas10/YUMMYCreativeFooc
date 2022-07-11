@@ -75,16 +75,22 @@ $lista = $control->EncontrarTips();
           <hr>
         </span></h1><br>
     </div>
+    <?php
+    foreach($lista as $datos){
+    ?>
     <section class="container-card-recet">
       <div class="card-recet">
-        <img src="<?php echo $lista[3]?>" />
-        <h1 class="card-title text-medium"><?php echo $lista[1]?></h1>
+        <img src="<?php echo $datos[3]?>" />
+        <h1 class="card-title text-medium"><?php echo $datos[1]?></h1>
         <p>
-        <?php echo $lista[2]?>
+        <?php echo $datos[2]?>
         </p>
         <button class="btnTips"><a href="tips_info.php">Leer más..</a></button>
       </div>
     </section>
+    <?php
+    }
+    ?>
   </div>
 </body>
 

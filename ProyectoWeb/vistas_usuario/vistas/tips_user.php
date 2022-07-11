@@ -11,6 +11,7 @@ $control = new usuario_controlador();
 
 $control3 = new modelo_tips();
 $lista = $control3->EncontrarTips();
+
 ?>
 
 <!DOCTYPE html>
@@ -72,6 +73,10 @@ $lista = $control3->EncontrarTips();
                     <hr>
                 </span></h1><br>
         </div>
+        <?php
+        
+        for($i=0; $i < $lista[$i]; $i++){
+        ?>
         <section class="container-card-recet">
             <div class="card-recet">
                 <img src="<?php echo $lista[3]?>" />
@@ -82,6 +87,9 @@ $lista = $control3->EncontrarTips();
                 <button class="btnTips"><a href="tips_info_user.php">Leer más..</a></button>
             </div>
         </section>
+        <?php
+        }
+        ?>
     </div>
 </body>
 
