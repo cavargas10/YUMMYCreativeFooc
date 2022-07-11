@@ -1,5 +1,4 @@
 <?php
-include("../seguridad/seguridad.php");
 include_once "modelo/modelo_tips.php";
 extract($_GET);
 

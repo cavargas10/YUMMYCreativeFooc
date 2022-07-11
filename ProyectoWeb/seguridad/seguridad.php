@@ -6,6 +6,6 @@
 		$miconexion = new clase_mysqli;
 		$miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
 	}else{
-		header('Location: ../../../');
+		header('Location: http://127.0.0.1/YUMMYCreativeFooc/ProyectoWeb/');
 	}
 ?>

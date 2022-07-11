@@ -187,6 +187,31 @@ class clase_mysqli{
 		echo "</table>";
 	}
 
+	function verconsulta2(){
+		echo "<table class='tablecud'>";
+		echo "<tr>";
+		for ($i=0; $i < $this->numcampos() ; $i++) { 
+			//echo "<td>".$this->nombrecampo($i)."</td>";
+			echo  "<td>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</td>";
+		}
+		echo "</tr>";
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo "<tr>";
+			for ($i=0; $i < $this->numcampos(); $i++) { 
+				//echo "<td>".utf8_encode($row[$i])."</td>";
+				
+				if($i == 3){
+					echo "<td><img src = '".$row[$i]."'></td>";
+
+				}else {
+					echo "<td>".$row[$i]."</td>";
+				}
+			}
+			echo "</tr>";
+		}
+		echo "</table>";
+	}
+
 	function consulta_lista(){
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
 			for ($i=0; $i < $this->numcampos(); $i++) { 

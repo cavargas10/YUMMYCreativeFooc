@@ -1,6 +1,6 @@
 <?php
-require_once "../../dll/config.php";
-require_once "../../dll/class_mysqli.php";
+require_once "../dll/config.php";
+require_once "../dll/class_mysqli.php";
 
 class modelo_video
 {

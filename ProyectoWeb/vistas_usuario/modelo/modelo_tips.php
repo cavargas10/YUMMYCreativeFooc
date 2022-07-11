@@ -23,4 +23,13 @@ class modelo_tips
     //$this->Disconnect();
     return $resSQL;
   }
+
+  public function EncontrarTips2() {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $resSQL=$miconexion->consulta("select * from tips");
+    $resSQL=$miconexion->verconsulta2();
+    //$this->Disconnect();
+    return $resSQL;
+  }
 }

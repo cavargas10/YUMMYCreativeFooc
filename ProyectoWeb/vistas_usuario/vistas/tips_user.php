@@ -75,12 +75,12 @@ $lista = $control3->EncontrarTips();
         </div>
         <?php
         
-        for($i=0; $i < $lista[$i]; $i++){
+        for($i=0; $i < $lista[0]; $i++){
         ?>
         <section class="container-card-recet">
             <div class="card-recet">
                 <img src="<?php echo $lista[3]?>" />
-                <h1 class="card-title text-medium"><?php echo $lista[1]?></h1>
+                <h1 class="card-title text-medium"><?php echo $lista[3]?></h1>
                 <p>
                 <?php echo $lista[2]?>
                 </p>
@@ -89,6 +89,7 @@ $lista = $control3->EncontrarTips();
         </section>
         <?php
         }
+        $control3->EncontrarTips2();
         ?>
     </div>
 </body>

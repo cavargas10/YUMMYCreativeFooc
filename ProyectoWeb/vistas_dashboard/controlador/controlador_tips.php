@@ -29,7 +29,7 @@ class controlador_tips
 			$folder = "../../imagenesTips/" . $image_name;
 			move_uploaded_file($tmp_name, $folder);
 
-			$user->setfolder($folder);
+			$user->setfolder($image_name);
 
 			$userResponse = $user->CreateTips();
 			if ($userResponse == 1) {
