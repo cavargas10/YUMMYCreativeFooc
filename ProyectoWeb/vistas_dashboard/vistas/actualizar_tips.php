@@ -126,8 +126,13 @@ $control->UpdateTips($idtips);
             <label for="titulo_Tips"><b>Titulo:</b></label>
             <input type="text" name="titulo_Tips" id="titulo_Tips" required placeholder="Ingrese el titulo" value="<?php echo $lista[1] ?>"><br>
 
-            <label for="descripcion_Tips"><b>Contenido:</b></label><br>
-            <textarea name="descripcion_Tips" id="descripcion_Tips" maxlength="75" required cols="30" rows="10" placeholder="Ingrese el contenido"><?php echo $lista[2] ?></textarea><br>
+            <label for="descripcion_Tips"><b>Descripcion:</b></label><br>
+            <textarea name="descripcion_Tips" id="descripcion_Tips" maxlength="75" required cols="30" rows="10" placeholder="Ingrese la descripcion"><?php echo $lista[2] ?></textarea><br>
+
+            <label for="contenido_Tips"><b>Contenido:</b></label><br>
+            <div class="ck-content">
+              <textarea name="contenido_Tips" id="contenido_Tips"><?php echo $lista[3] ?></textarea><br>
+            </div>
 
             <label for="imagen_Tips"><b>Imagen:</b></label>
             <input type="file" name="imagen_Tips" id="imagen_Tips" required accept="image/*"><br>

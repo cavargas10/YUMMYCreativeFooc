@@ -192,7 +192,7 @@ class clase_mysqli{
 			for ($i=0; $i < 1; $i++) {
 				echo " <section class='container-card-recet'>
 					<div class='card-recet'>
-					<img src = '".$row[3]."'>
+					<img src = '".$row[4]."'>
 					<h1 class='card-title text-medium'>$row[1]</h1>
 					<p>$row[2]</p>
 					<button class='btnTips'><a href='tips_info_user.php'>
@@ -208,7 +208,7 @@ class clase_mysqli{
 			for ($i=0; $i < 1; $i++) {
 				echo " <section class='container-card-recet'>
 					<div class='card-recet'>
-					<img src = '".$row[3]."'>
+					<img src = '".$row[4]."'>
 					<h1 class='card-title text-medium'>$row[1]</h1>
 					<p>$row[2]</p>
 					<button class='btnTips'><a href='tips_info.php'>

@@ -29,6 +29,10 @@ class modelo_tips
     $this->descripcion_Tips = $descripcion_Tips;
   }
 
+  public function setcontenido_Tips($contenido_Tips){
+    $this->contenido_Tips = $contenido_Tips;
+  }
+
   public function setimagen_Tips($imagen_Tips){
     $this->imagen_Tips = $imagen_Tips;
   }
@@ -58,7 +62,7 @@ class modelo_tips
   public function UpdateTips() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("update tips set titulo_Tips = '$this->titulo_Tips', descripcion_Tips = '$this->descripcion_Tips', imagen_Tips ='$this->folder' where idtips = '$this->idtips'");
+    $resSQL=$miconexion->consulta("update tips set titulo_Tips = '$this->titulo_Tips', descripcion_Tips = '$this->descripcion_Tips', contenido_Tips = '$this->contenido_Tips', imagen_Tips ='$this->folder' where idtips = '$this->idtips'");
     //$this->Disconnect();
     return $resSQL;
   }
@@ -67,7 +71,7 @@ class modelo_tips
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
     $resSQL=$miconexion->consulta("insert into tips values
-    ('','$this->titulo_Tips', '$this->descripcion_Tips', '$this->folder')");
+    ('','$this->titulo_Tips', '$this->descripcion_Tips', '$this->contenido_Tips', '$this->folder')");
     //$this->Disconnect();
     return $resSQL;
   }

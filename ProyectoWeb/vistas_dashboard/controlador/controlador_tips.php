@@ -23,6 +23,7 @@ class controlador_tips
 		if (isset($_POST['titulo_Tips']) && isset($_POST['descripcion_Tips'])) {
 			$user->settitulo_Tips($_POST['titulo_Tips']);
 			$user->setdescripcion_Tips($_POST['descripcion_Tips']);
+			$user->setcontenido_Tips($_POST['contenido_Tips']);
 
 			$image_name = $_FILES['imagen_Tips']['name'];
 			$tmp_name = $_FILES['imagen_Tips']['tmp_name'];
@@ -56,6 +57,7 @@ class controlador_tips
 			$user->setidtips($idtips);
 			$user->settitulo_Tips($_POST['titulo_Tips']);
 			$user->setdescripcion_Tips($_POST['descripcion_Tips']);
+			$user->setcontenido_Tips($_POST['contenido_Tips']);
 
 			$image_name = $_FILES['imagen_Tips']['name'];
 			$tmp_name = $_FILES['imagen_Tips']['tmp_name'];
