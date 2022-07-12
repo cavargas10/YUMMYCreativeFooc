@@ -120,13 +120,13 @@ $control->CreateTips();
           <div class="contenedorFormTips">
 
             <label for="titulo_Tips"><b>Titulo:</b></label>
-            <input type="text" name="titulo_Tips" id="titulo_Tips" placeholder="Ingrese el titulo"><br>
+            <input type="text" name="titulo_Tips" id="titulo_Tips" placeholder="Ingrese el titulo" required><br>
 
-            <label for="descripcion_Tips"><b>Contenido:</b></label>
-            <input type="text" name="descripcion_Tips" id="descripcion_Tips" placeholder="Ingrese el contenido"><br>
+            <label for="descripcion_Tips"><b>Contenido:</b></label><br>
+            <textarea name="descripcion_Tips" id="descripcion_Tips" placeholder="Ingrese el contenido" autofocus maxlength="75" required cols="30" rows="10"></textarea><br>
 
             <label for="imagen_Tips"><b>Imagen:</b></label>
-            <input type="file" name="imagen_Tips" id="imagen_Tips" accept="image/*"><br>
+            <input type="file" name="imagen_Tips" id="imagen_Tips" accept="image/*" required><br>
 
           </div>
           <div>

@@ -120,13 +120,13 @@ $control->CreateVideo();
           <div class="contenedorFormVideos">
 
             <label for="titulo_Video"><b>Titulo:</b></label>
-            <input type="text" name="titulo_Video" id="titulo_Video" placeholder="Ingrese el titulo"><br>
+            <input type="text" name="titulo_Video" id="titulo_Video" placeholder="Ingrese el titulo" required><br>
 
-            <label for="descripcion_Video"><b>Contenido:</b></label>
-            <input type="text" name="descripcion_Video" id="descripcion_Video" placeholder="Ingrese el contenido"><br>
+            <label for="descripcion_Tips"><b>Contenido:</b></label><br>
+            <textarea name="descripcion_Video" id="descripcion_Video" placeholder="Ingrese el contenido" autofocus maxlength="150" required cols="30" rows="10"></textarea><br>
 
             <label for="url_Video"><b>Video:</b></label>
-            <input type="url" name="url_Video" id="url_Video"><br>
+            <input type="url" name="url_Video" id="url_Video" placeholder="Ingrese el link de youtube" required><br>
 
           </div>
           <div>

@@ -120,7 +120,7 @@ $control->CreateIngrediente();
           <div class="contenedorFormIngrediente">
 
             <label for="nombre_Ingredientes"><b>NOMBRE:</b></label>
-            <input type="text" name="nombre_Ingredientes" id="nombre_Ingredientes" placeholder="Ingrese el nuevo Ingrediente"><br>
+            <input type="text" name="nombre_Ingredientes" id="nombre_Ingredientes" placeholder="Ingrese el nuevo Ingrediente" required><br>
 
           </div>
           <div class="boton">

@@ -123,14 +123,14 @@ $control->UpdateTips($idtips);
 
           <div class="contenedorFormTips">
 
-            <label for="titulo_Tips"><b>Nombre:</b></label>
-            <input type="text" name="titulo_Tips" id="titulo_Tips" value="<?php echo $lista[1] ?>"><br>
+            <label for="titulo_Tips"><b>Titulo:</b></label>
+            <input type="text" name="titulo_Tips" id="titulo_Tips" required placeholder="Ingrese el titulo" value="<?php echo $lista[1] ?>"><br>
 
-            <label for="descripcion_Tips"><b>Nombre:</b></label>
-            <input type="text" name="descripcion_Tips" id="descripcion_Tips" value="<?php echo $lista[2] ?>"><br>
+            <label for="descripcion_Tips"><b>Contenido:</b></label><br>
+            <textarea name="descripcion_Tips" id="descripcion_Tips" maxlength="75" required cols="30" rows="10" placeholder="Ingrese el contenido"><?php echo $lista[2] ?></textarea><br>
 
-            <label for="imagen_Tips"><b>Nombre:</b></label>
-            <input type="file" name="imagen_Tips" id="imagen_Tips" value="<?php echo $lista[3] ?>"><br>
+            <label for="imagen_Tips"><b>Imagen:</b></label>
+            <input type="file" name="imagen_Tips" id="imagen_Tips" required accept="image/*"><br>
 
           </div>
           <div>

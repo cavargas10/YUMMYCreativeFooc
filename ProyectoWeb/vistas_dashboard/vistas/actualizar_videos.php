@@ -123,14 +123,14 @@ $control->UpdateVideo($idvideos);
 
           <div class="contenedorFormVideos">
 
-            <label for="titulo_Video"><b>Nombre:</b></label>
-            <input type="text" name="titulo_Video" id="titulo_Video" value="<?php echo $lista[1] ?>"><br>
+            <label for="titulo_Video"><b>Titulo:</b></label>
+            <input type="text" name="titulo_Video" id="titulo_Video" required placeholder="Ingrese el titulo" value="<?php echo $lista[1] ?>"><br>
 
-            <label for="descripcion_Video"><b>Nombre:</b></label>
-            <input type="text" name="descripcion_Video" id="descripcion_Video" value="<?php echo $lista[2] ?>"><br>
-
-            <label for="url_Video"><b>Nombre:</b></label>
-            <input type="url" name="url_Video" id="url_Video" value="<?php echo $lista[3] ?>"><br>
+            <label for="descripcion_Tips"><b>Contenido:</b></label><br>
+            <textarea name="descripcion_Video" id="descripcion_Video" placeholder="Ingrese el contenido" autofocus maxlength="150" required cols="30" rows="10"><?php echo $lista[2] ?></textarea><br>
+            
+            <label for="url_Video"><b>Video:</b></label>
+            <input type="url" name="url_Video" id="url_Video" required placeholder="Ingrese el link de youtube" value="<?php echo $lista[3] ?>"><br>
 
           </div>
           <div>
