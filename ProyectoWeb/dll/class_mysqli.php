@@ -195,7 +195,7 @@ class clase_mysqli{
 					<img src = '".$row[4]."'>
 					<h1 class='card-title text-medium'>$row[1]</h1>
 					<p>$row[2]</p>
-					<button class='btnTips'><a href='tips_info_user.php'>
+					<button class='btnTips'><a href='tips_info_user.php?idtips=$row[0]'>
 					Leer más..</a></button>
 					</div>
 					</section>";

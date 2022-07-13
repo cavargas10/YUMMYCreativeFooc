@@ -60,23 +60,8 @@ nav {
   color: #000;
 }
 
-
-.parrafo p{
-  margin-top: 2%;
-  width: 60%;
-  height: 500px;
-  text-align: justify;
-  margin-left: 20%;
-}
-
-.parrafo .tips{
-  margin-top: 7%;
-  text-align: center;
-}
-.img_tip{
-  width: 45%;
-  height: 380px;
-  margin-left: 27%;
+image .image_resized{
+  width: 25%;
 }
 
 /**/

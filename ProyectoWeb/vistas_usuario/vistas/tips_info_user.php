@@ -2,11 +2,15 @@
 include("../../seguridad/seguridad.php");
 include_once "../controlador/usuario_controlador.php";
 include_once "../modelo/usuario_modelo.php";
+include_once "../modelo/modelo_tips.php";
 extract($_GET);
 
 $control2 = new usuario_modelo();
 
 $control = new usuario_controlador();
+
+$control2 = new modelo_tips();
+$lista = $control2->EncontrarTips($idtips);
 
 ?>
 
@@ -18,9 +22,12 @@ $control = new usuario_controlador();
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yummi Creative Food</title>
+    <link rel="stylesheet" href="../../css/abc.css" />
     <link rel="stylesheet" href="../../css/vista_tips_info.css" />
     <link rel="stylesheet" href="../../css/vista_dropdown_User.css" />
+    
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/super-build/ckeditor.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -64,33 +71,12 @@ $control = new usuario_controlador();
     </header>
 
 
-    <div class="parrafo">
-        <h1 class="tips"><span>Alcanza una </span>dieta equilibrada
-            <hr>
+    <div class="contenido">
+        <h1 class="tips"><span><?php echo $lista[1] ?></span>
         </h1><br>
-        <div class="parte">
-            <p>
-                Los hábitos de alimentación siempre han sido una preocupación constante de los gobiernos y los organismos internacionales.
-                Como consecuencia de una ingesta indiscriminada de alimentos hipercalóricos o la falta de acceso a vitaminas y nutrientes,
-                la población mundial actualmente afronta varios problemas como malnutrición, sobrepeso y obesidad. <br>
-
-                Desde 1975, la obesidad casi ha triplicado en todo el mundo. Según datos de la Organización Mundial de la Salud (OMS), desde
-                2016 se calcula que más de 1900 millones de adultos, de 18 años en adelante tienen sobrepeso. Además, se registra que 52 millones
-                de niños, menores de 5 años sufren problemas de malnutrición, como delgadez extrema y problemas de crecimiento, y 41 millones de
-                infantes padecen sobrepeso y obesidad. <br>
-
-                Por este motivo, Sofía Vivanco Zárate, docente de la carrera de Nutrición y Dietética de la UTPL resalta la importancia de cuidar
-                la alimentación, y seguir algunas reglas para elaborar un menú saludable. La catedrática señala que ante todo, un plan alimenticio
-                debe ser equilibrado, completo, suficiente, adecuado e inocuo. <br>
-                Zárate explica que estas cualidades permitirán que una dieta mantenga una proporción correcta entre frutas, verduras y proteínas
-                en el consumo diario, cuide la cantidad y calidad de los alimentos, se ajuste a la edad, sexo y condiciones específicas de cada
-                persona. Adicionalmente, también ayudará a que sea apta para la ingesta, es decir, que estará libre de microorganismos y contaminantes. <br>
-
-                Por lo general, la distribución de la alimentación debe centrarse en tres tiempos principales (desayuno, almuerzo, cena). Sin embargo,
-                si una persona requiere de un aporte calórico más frecuente, se pueden fraccionar los momentos de alimentación en cinco tiempos.
-            </p>
+        <div class="ck-content">
+            <?php echo $lista[3] ?>
         </div>
-        <img class="img_tip" src="../../img/inf_tips.png" alt="">
     </div>
 </body>
 
@@ -189,5 +175,174 @@ $control = new usuario_controlador();
             </div>
         </div>
 </footer>
+<script>
+CKEDITOR.ClassicEditor.create(document.querySelector('$lista'), {
+        // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
+        toolbar: {
+          items: [
+            'selectAll', '|',
+            'heading', '|',
+            'bold', 'italic', 'strikethrough', 'underline', 'code', 'subscript', 'superscript', 'removeFormat', '|',
+            'bulletedList', 'numberedList', 'todoList', '|',
+            'outdent', 'indent', '|',
+            'undo', 'redo',
+            '-',
+            'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'highlight', '|',
+            'alignment', '|',
+            'link', 'insertImage', 'blockQuote', 'insertTable', 'mediaEmbed', '|',
+            'specialCharacters', 'horizontalLine', '|',
+            'sourceEditing'
+          ],
+          shouldNotGroupWhenFull: true
+        },
+        // Changing the language of the interface requires loading the language file using the <script> tag.
+        // language: 'es',
+        list: {
+          properties: {
+            styles: true,
+            startIndex: true,
+            reversed: true
+          }
+        },
+        // https://ckeditor.com/docs/ckeditor5/latest/features/headings.html#configuration
+        heading: {
+          options: [{
+              model: 'paragraph',
+              title: 'Paragraph',
+              class: 'ck-heading_paragraph'
+            },
+            {
+              model: 'heading1',
+              view: 'h1',
+              title: 'Heading 1',
+              class: 'ck-heading_heading1'
+            },
+            {
+              model: 'heading2',
+              view: 'h2',
+              title: 'Heading 2',
+              class: 'ck-heading_heading2'
+            },
+            {
+              model: 'heading3',
+              view: 'h3',
+              title: 'Heading 3',
+              class: 'ck-heading_heading3'
+            },
+            {
+              model: 'heading4',
+              view: 'h4',
+              title: 'Heading 4',
+              class: 'ck-heading_heading4'
+            },
+            {
+              model: 'heading5',
+              view: 'h5',
+              title: 'Heading 5',
+              class: 'ck-heading_heading5'
+            },
+            {
+              model: 'heading6',
+              view: 'h6',
+              title: 'Heading 6',
+              class: 'ck-heading_heading6'
+            }
+          ]
+        },
+        // https://ckeditor.com/docs/ckeditor5/latest/features/editor-placeholder.html#using-the-editor-configuration
+        placeholder: 'Welcome to CKEditor 5!',
+        // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-family-feature
+        fontFamily: {
+          options: [
+            'default',
+            'Arial, Helvetica, sans-serif',
+            'Courier New, Courier, monospace',
+            'Georgia, serif',
+            'Lucida Sans Unicode, Lucida Grande, sans-serif',
+            'Tahoma, Geneva, sans-serif',
+            'Times New Roman, Times, serif',
+            'Trebuchet MS, Helvetica, sans-serif',
+            'Verdana, Geneva, sans-serif'
+          ],
+          supportAllValues: true
+        },
+        // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-size-feature
+        fontSize: {
+          options: [10, 12, 14, 'default', 18, 20, 22],
+          supportAllValues: true
+        },
+        // Be careful with the setting below. It instructs CKEditor to accept ALL HTML markup.
+        // https://ckeditor.com/docs/ckeditor5/latest/features/general-html-support.html#enabling-all-html-features
+        htmlSupport: {
+          allow: [{
+            name: /.*/,
+            attributes: true,
+            classes: true,
+            styles: true
+          }]
+        },
+        // Be careful with enabling previews
+        // https://ckeditor.com/docs/ckeditor5/latest/features/html-embed.html#content-previews
+        htmlEmbed: {
+          showPreviews: true
+        },
+        // https://ckeditor.com/docs/ckeditor5/latest/features/link.html#custom-link-attributes-decorators
+        link: {
+          decorators: {
+            addTargetToExternalLinks: true,
+            defaultProtocol: 'https://',
+            toggleDownloadable: {
+              mode: 'manual',
+              label: 'Downloadable',
+              attributes: {
+                download: 'file'
+              }
+            }
+          }
+        },
+        // https://ckeditor.com/docs/ckeditor5/latest/features/mentions.html#configuration
+        mention: {
+          feeds: [{
+            marker: '@',
+            feed: [
+              '@apple', '@bears', '@brownie', '@cake', '@cake', '@candy', '@canes', '@chocolate', '@cookie', '@cotton', '@cream',
+              '@cupcake', '@danish', '@donut', '@dragée', '@fruitcake', '@gingerbread', '@gummi', '@ice', '@jelly-o',
+              '@liquorice', '@macaroon', '@marzipan', '@oat', '@pie', '@plum', '@pudding', '@sesame', '@snaps', '@soufflé',
+              '@sugar', '@sweet', '@topping', '@wafer'
+            ],
+            minimumCharacters: 1
+          }]
+        },
+        // The "super-build" contains more premium features that require additional configuration, disable them below.
+        // Do not turn them on unless you read the documentation and know how to configure them and setup the editor.
+        removePlugins: [
+          // These two are commercial, but you can try them out without registering to a trial.
+          // 'ExportPdf',
+          // 'ExportWord',
+          'CKBox',
+          'CKFinder',
+          'EasyImage',
+          // This sample uses the Base64UploadAdapter to handle image uploads as it requires no configuration.
+          // https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/base64-upload-adapter.html
+          // Storing images as Base64 is usually a very bad idea.
+          // Replace it on production website with other solutions:
+          // https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/image-upload.html
+          // 'Base64UploadAdapter',
+          'RealTimeCollaborativeComments',
+          'RealTimeCollaborativeTrackChanges',
+          'RealTimeCollaborativeRevisionHistory',
+          'PresenceList',
+          'Comments',
+          'TrackChanges',
+          'TrackChangesData',
+          'RevisionHistory',
+          'Pagination',
+          'WProofreader',
+          // Careful, with the Mathtype plugin CKEditor will not load when loading this sample
+          // from a local file system (file://) - load this site via HTTP server if you enable MathType
+          'MathType'
+        ]
+      });
+  </script>
 
 </html>
