@@ -1,0 +1,85 @@
+.home-section  {
+    text-align: center;
+    padding: 1%;
+    background-color: #faf0ca;
+}
+.contenedorFormTips{
+    padding: 2%;
+    width: 90%;
+    margin-left: 28%;
+    margin-top: 2%;
+    border-radius:10px;
+    margin:auto;
+    background-color:rgb(213, 190, 150);
+}
+
+.contenedorFormTips label{
+    font-size: 20px;
+}
+
+/*Formulario*/
+/*
+.formUser{
+    margin-top: 8%;
+    text-align: center;
+    margin-left: 1%;
+  }
+  .contenedorFormTips label{
+    width:100px;
+    font-weight:bold;
+    display:inline-block;
+    }*/
+
+  h2{
+    font-size: 30px;
+  }
+  h2 span{
+    color: rgb(231, 143, 56);
+  }
+  
+  
+  
+  .contenedorFormTips input[type="text"],
+  .contenedorFormTips input[type="file"]{
+  width:200px;
+  padding:3px 10px;
+  border:1px solid #f6f6f6;
+  border-radius:3px;
+  background-color:#f6f6f6;
+  margin:8px 10;
+  display:inline-block;
+  }
+
+  .contenedorFormTips .ck-content{
+    width:100%;
+    padding:5px 6px;
+    border:1px solid #f6f6f6;
+    border-radius:3px;
+    background-color:#f6f6f6;
+    margin:8px 10;
+    display:inline-block;
+    border-radius: 10px;
+    }
+    .contenedorFormTips .ck-desc textarea{
+        width: 30%;
+        height: 50px;
+    }
+    .subbtnTips {
+        width: 200px;
+        background-color: rgb(225, 146, 61);
+    }
+    button {
+        font-weight: bold;
+        font-size: 18px;
+        background-color: #eab354;
+        color: white;
+        padding: 8px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+    button:hover{
+        background-color: #e8b55e;
+    }
+  

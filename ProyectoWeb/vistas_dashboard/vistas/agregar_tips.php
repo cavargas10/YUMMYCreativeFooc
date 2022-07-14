@@ -117,23 +117,24 @@ $control->CreateTips();
       <div class="addTips">
         <form class="formTips" method="post" action="" enctype="multipart/form-data">
           <div class="tituloTips">
-            <h2 class="agregarTips">AGREGAR TIP</h2>
+            <h2 class="agregarTips"><span> AGREGAR</span> TIP</h2><br>
           </div>
 
           <div class="contenedorFormTips">
 
-            <label for="titulo_Tips"><b>Titulo:</b></label>
+            <label for="titulo_Tips"><b>Titulo:</b></label><br>
             <input type="text" name="titulo_Tips" id="titulo_Tips" placeholder="Ingrese el titulo" required><br>
 
             <label for="descripcion_Tips"><b>Descripcion:</b></label><br>
+            <div class="ck-desc">
             <textarea name="descripcion_Tips" id="descripcion_Tips" maxlength="75" required cols="30" rows="10" placeholder="Ingrese el contenido"></textarea><br>
-
+            </div>
             <label for="contenido_Tips"><b>Contenido:</b></label><br>
             <div class="ck-content">
               <textarea name="contenido_Tips" id="contenido_Tips"></textarea><br>
             </div>
 
-            <label for="imagen_Tips"><b>Imagen:</b></label>
+            <label for="imagen_Tips"><b>Imagen:</b></label><br>
             <input type="file" name="imagen_Tips" id="imagen_Tips" accept="image/*" required><br>
 
           </div>

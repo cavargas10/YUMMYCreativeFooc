@@ -242,7 +242,7 @@
     left: -25px;
     margin-right: -15px;
     right: 0;
-    margin-left: 0%;
+    margin-left: 25%;
 }
 /* ckeditor5-list/theme/todolist.css */
 .ck-content .todo-list .todo-list__label > input::before {
