@@ -1,0 +1,74 @@
+.addVideos{
+    margin-top: 3%;
+}
+
+.home-section {
+  text-align: center;
+  padding: 1%;
+  background-color: #faf0ca;
+}
+.contenedorFormVideos {
+  padding: 2%;
+  width: 50%;
+  margin-left: 28%;
+  margin-top: 2%;
+  border-radius: 10px;
+  margin: auto;
+  background-color: rgb(213, 190, 150);
+}
+
+.contenedorFormVideos label {
+  font-size: 20px;
+}
+
+/*Formulario*/
+
+h2 {
+  font-size: 30px;
+}
+h2 span {
+  color: rgb(231, 143, 56);
+}
+
+.contenedorFormVideos input[type="text"],
+.contenedorFormVideos input[type="url"] {
+  width: 270px;
+  padding: 3px 10px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 2px 10;
+  margin-left: 4%;
+  display: inline-block;
+  margin-top: 2%;
+}
+
+.contenedorFormVideos textarea {
+  width: 70%;
+  padding: 5px 6px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 8px 10;
+  display: inline-block;
+  border-radius: 10px;
+  height: 100px;
+}
+.subbtnTips {
+  width: 20%;
+  background-color: rgb(225, 146, 61);
+}
+button {
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #eab354;
+  color: white;
+  padding: 8px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+}
+button:hover {
+  background-color: #edbe6c;
+}

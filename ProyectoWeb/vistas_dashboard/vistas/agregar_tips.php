@@ -122,21 +122,20 @@ $control->CreateTips();
 
           <div class="contenedorFormTips">
 
-            <label for="titulo_Tips"><b>Titulo:</b></label><br>
-            <input type="text" name="titulo_Tips" id="titulo_Tips" placeholder="Ingrese el titulo" required><br>
+            <label for="titulo_Tips"><b>Titulo:</b></label>
+            <input type="text" name="titulo_Tips" id="titulo_Tips" placeholder="Ingrese el titulo" required><br><br>
+            <label for="imagen_Tips"><b>Imagen:</b></label>
+            <input type="file" name="imagen_Tips" id="imagen_Tips" accept="image/*" required><br><br>
 
-            <label for="descripcion_Tips"><b>Descripcion:</b></label><br>
             <div class="ck-desc">
-            <textarea name="descripcion_Tips" id="descripcion_Tips" maxlength="75" required cols="30" rows="10" placeholder="Ingrese el contenido"></textarea><br>
-            </div>
+            <label for="descripcion_Tips"><b>Descripcion:</b></label><br>
+            <textarea name="descripcion_Tips" id="descripcion_Tips" maxlength="75" required cols="30" rows="10" placeholder="Ingrese el contenido"></textarea>
+            </div><br>
+
             <label for="contenido_Tips"><b>Contenido:</b></label><br>
             <div class="ck-content">
               <textarea name="contenido_Tips" id="contenido_Tips"></textarea><br>
             </div>
-
-            <label for="imagen_Tips"><b>Imagen:</b></label><br>
-            <input type="file" name="imagen_Tips" id="imagen_Tips" accept="image/*" required><br>
-
           </div>
           <div>
             <br><button type="submit" value="Procesar" class="subbtnTips">Guardar</button>

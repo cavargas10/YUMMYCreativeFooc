@@ -118,7 +118,7 @@ $control->UpdateVideo($idvideos);
       <div class="addVideos">
         <form class="formVideos" method="post" action="">
           <div class="tituloVideos">
-            <h2 class="agregarVideos">ACTUALIZAR TIP</h2>
+            <h2 class="agregarVideos">ACTUALIZAR VIDEOS</h2><br>
           </div>
 
           <div class="contenedorFormVideos">
@@ -126,12 +126,13 @@ $control->UpdateVideo($idvideos);
             <label for="titulo_Video"><b>Titulo:</b></label>
             <input type="text" name="titulo_Video" id="titulo_Video" required placeholder="Ingrese el titulo" value="<?php echo $lista[1] ?>"><br>
 
-            <label for="descripcion_Tips"><b>Contenido:</b></label><br>
-            <textarea name="descripcion_Video" id="descripcion_Video" placeholder="Ingrese el contenido" autofocus maxlength="150" required cols="30" rows="10"><?php echo $lista[2] ?></textarea><br>
-            
             <label for="url_Video"><b>Video:</b></label>
-            <input type="url" name="url_Video" id="url_Video" required placeholder="Ingrese el link de youtube" value="<?php echo $lista[3] ?>"><br>
+            <input type="url" name="url_Video" id="url_Video" required placeholder="Ingrese el link de youtube" value="<?php echo $lista[3] ?>"><br><br>
 
+            <div class="ck-content">
+              <label for="descripcion_Video"><b>Contenido:</b></label><br>
+              <textarea name="descripcion_Video" id="descripcion_Video" placeholder="Ingrese el contenido" autofocus maxlength="150" required cols="30" rows="10"><?php echo $lista[2] ?></textarea><br>
+            </div>
           </div>
           <div>
             <br><button type="submit" value="Procesar" class="subbtnVideos">Guardar</button>

@@ -114,7 +114,7 @@ $control->CreateVideo();
       <div class="addVideos">
         <form class="formVideos" method="post" action="">
           <div class="tituloVideos">
-            <h2 class="agregarVideos">AGREGAR VIDEOS</h2>
+            <h2 class="agregarVideos"><span>AGREGAR</span> VIDEOS</h2>
           </div>
 
           <div class="contenedorFormVideos">
@@ -122,12 +122,13 @@ $control->CreateVideo();
             <label for="titulo_Video"><b>Titulo:</b></label>
             <input type="text" name="titulo_Video" id="titulo_Video" placeholder="Ingrese el titulo" required><br>
 
-            <label for="descripcion_Tips"><b>Contenido:</b></label><br>
-            <textarea name="descripcion_Video" id="descripcion_Video" placeholder="Ingrese el contenido" autofocus maxlength="150" required cols="30" rows="10"></textarea><br>
-
             <label for="url_Video"><b>Video:</b></label>
             <input type="url" name="url_Video" id="url_Video" placeholder="Ingrese el link de youtube" required><br>
 
+            <div class="ck-desc">
+            <br><label for="descripcion_Tips"><b>Contenido:</b></label><br>
+            <textarea name="descripcion_Video" id="descripcion_Video" placeholder="Ingrese el contenido" autofocus maxlength="150" required cols="30" rows="10"></textarea><br>
+            </div>
           </div>
           <div>
             <br><button type="submit" value="Procesar" class="subbtnVideos">Guardar</button>

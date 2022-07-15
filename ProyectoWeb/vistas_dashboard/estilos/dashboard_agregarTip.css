@@ -39,14 +39,24 @@
   
   
   
-  .contenedorFormTips input[type="text"],
-  .contenedorFormTips input[type="file"]{
-  width:200px;
+  .contenedorFormTips input[type="text"]{
+  width:300px;
+  height: 30px;
   padding:3px 10px;
   border:1px solid #f6f6f6;
   border-radius:3px;
   background-color:#f6f6f6;
-  margin:8px 10;
+  margin-left: 5%;
+  display:inline-block;
+  }
+  .contenedorFormTips input[type="file"]{
+  width:300px;
+  height: 30px;
+  padding:3px 10px;
+  border:1px solid #f6f6f6;
+  border-radius:3px;
+  background-color:#f6f6f6;
+  margin-left: 3%;
   display:inline-block;
   }
 
@@ -61,8 +71,12 @@
     border-radius: 10px;
     }
     .contenedorFormTips .ck-desc textarea{
-        width: 30%;
-        height: 50px;
+    width: 40%;
+    height: 58px;
+    border:1px solid #f6f6f6;
+    border-radius:3px;
+    background-color:#f6f6f6;
+    display: inline-block;
     }
     .subbtnTips {
         width: 200px;
