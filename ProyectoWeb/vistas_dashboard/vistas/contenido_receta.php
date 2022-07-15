@@ -1,3 +1,9 @@
+<?php
+include("../../seguridad/seguridad.php");
+include_once "../controlador/controlador_tips.php";
+extract($_GET);
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -21,7 +27,7 @@
       </div>
       <ul class="nav-links">
         <li>
-          <a href="dashboard_principal.php">
+          <a href="perfil_dashboard.php">
             <i class="uil uil-estate"></i>
             <span class="link_name">Dashboard</span>
           </a>
@@ -99,139 +105,22 @@
     <section class="home-section">
       <div class="home-content">
         <i class='bx bx-menu'></i>
-        <span class="text">Dashboard</span> <br />
+        <span class="text">Contenido / Recetas</span> <br />
       </div>
-    
 
-    <div class="addReceta">
-        <form class="formReceta" method="post" action="">
-          <div class="tituloReceta">
-            <h2 class="agregarReceta">AGREGAR RECETAS</h2><br>
-          </div>
+      <div class="listaReceta">
+        <button class="btnTips"><a href="agregar_receta.php">Agregar</a></button>
+        <?php
+          // $control = new controlador_tips();
+          // $control->ListaTips();
 
-          <div class="contenedorFormReceta">
-          <h2>TITULO</h2>
-            <label for="tituloReceta"><b>Título:</b></label>
-            <input type="text" name="tituloReceta" id="tituloReceta" placeholder="Ingrese el titulo de la receta"><br>
-            <label for="descripcionReceta"><b>Descripción:</b></label>
-            <input type="text" name="descripcionReceta" id="descripcion-Receta" placeholder="Ingrese la descripcion de la receta"><br>
-            <label for="grupoReceta"><b>Grupo Etario:</b></label>
-            <input type="text" name="example" list="exampleList">
-              <datalist id="exampleList">
-                <option value="Embarazo">  
-                <option value="Niñez">
-              </datalist>
-              <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
-              <br><br>
-          
-          <h2>ESPECIFICACIONES</h2>
-            <label for="tiempoReceta"><b>Tiempo Preparación:</b></label>
-            <input type="text" name="tiempoReceta" id="tiempoReceta" placeholder="Ingrese el tiempo de preparación de la receta"><br>
-            <label for="dificultadReceta"><b>Dificultad:</b></label>
-            <input type="text" name="example" list="exampleList1">
-              <datalist id="exampleList1">
-                <option value="Alto">  
-                <option value="Medio">
-                <option value="Bajo">
-              </datalist><br>
-              <label for="porcionesReceta"><b>Porciones:</b></label>
-              <input type="text" name="example" list="exampleList2">
-              <datalist id="exampleList2">
-                <option value="3 - 5">  
-                <option value="5 - 7">
-              </datalist>
-              <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
-              <br><br>
-
-          <h2>VALOR NUTRICIONAL</h2>
-            <label for="cantidadIngrediente"><b>Cantidad:</b></label>
-            <input type="text" name="cantidadIngrediente" id="cantidadIngrediente" placeholder="Ingrese la cantidad del ingrediente"><br>
-            <label for="umIngrediente"><b>Unidad de medida:</b></label>
-            <input type="text" name="example" list="exampleList3">
-              <datalist id="exampleList3">
-                <option value="gr">  
-                <option value="lb">
-              </datalist><br>
-            <label for="valorNutricional"><b>Valor Nutricional:</b></label>
-            <input type="text" name="example" list="exampleList4">
-              <datalist id="exampleList4">
-                <option value="...">  
-                <option value="..">
-              </datalist>
-              <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
-              <br><br>
-              
-              <h2>SEMÁFORO</h2>
-              <label for="azucar"><b>Azúcar:</b></label>
-            <input type="text" name="example" list="exampleList5">
-              <datalist id="exampleList5">
-                <option value="Alto">  
-                <option value="Medio">
-                <option value="Bajo">
-              </datalist><br>
-              <label for="grasa"><b>Grasa:</b></label>
-            <input type="text" name="example" list="exampleList5">
-              <datalist id="exampleList5">
-                <option value="Alto">  
-                <option value="Medio">
-                <option value="Bajo">
-              </datalist><br>
-              <label for="sal"><b>Sal:</b></label>
-            <input type="text" name="example" list="exampleList5">
-              <datalist id="exampleList5">
-                <option value="Alto">  
-                <option value="Medio">
-                <option value="Bajo">
-              </datalist>
-              <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
-              <br><br>
-
-              <h2>INGREDIENTE</h2>
-            <label for="cantidadIngrediente"><b>Cantidad:</b></label>
-            <input type="text" name="cantidadIngrediente" id="cantidadIngrediente" placeholder="Ingrese la cantidad del ingrediente"><br>
-            <label for="umIngrediente"><b>Unidad de medida:</b></label>
-            <input type="text" name="example" list="exampleList3">
-              <datalist id="exampleList3">
-                <option value="gr">  
-                <option value="lb">
-              </datalist><br>
-            <label for="ingrediente"><b>Ingrediente:</b></label>
-            <input type="text" name="example" list="exampleList4">
-              <datalist id="exampleList4">
-                <option value="...">  
-                <option value="..">
-              </datalist>
-              <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
-              <br><br>
-
-            <h2>PASOS</h2>
-            <label for="nroPaso"><b>Número de paso:</b></label>
-            <input type="text" name="nroPaso" id="nroPaso" placeholder="Ingrese el número de paso"><br>
-            <label for="desccripcionPaso"><b>Descripción de paso:</b></label>
-            <input type="text" name="desccripcionPaso" id="desccripcionPaso" placeholder="Ingrese la descripción del paso"><br>
-            <label for="imagenPaso"><b>Imagen del paso:</b></label>
-            <input type="file" name="imagenPaso" id="imagenPaso">
-            <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
-            <br><br>
-
-            
-            <h2>MODELOS</h2>
-            <label for="imagenReceta"><b>Imagen de la receta:</b></label>
-            <input type="file" name="imagenReceta" id="imagenReceta"><br>
-            <label for="videoReceta"><b>Video de la receta:</b></label>
-            <input type="url" name="videoReceta" id="videoReceta"><br>
-            <label for="modeloReceta"><b>Modelo 3D de la receta:</b></label>
-            <input type="url" name="modeloReceta" id="modeloReceta">
-            <br><button type="submit" value="Procesar" class="btnIngredientes">NEXT</button>
-            <br><br>
-            
-          </div>
-          <div class="boton">
-            <br><button type="submit" value="Procesar" class="btnIngredientes">Guardar</button>
-          </div>
-        </form>
+          // if (isset($idtips)) {
+          //   $control1 = new controlador_tips();
+          //   $control1->DeleteTips($idtips);
+          // }
+        ?>
       </div>
-      </section>
+    </section>
   </div>
 
   <script>
