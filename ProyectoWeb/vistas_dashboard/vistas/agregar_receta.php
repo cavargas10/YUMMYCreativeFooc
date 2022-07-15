@@ -113,7 +113,7 @@ $control->CreateReceta();
     
 
     <div class="addReceta">
-        <form class="formReceta" method="post" action="">
+        <form class="formReceta" method="post" action="" enctype="multipart/form-data">
           <div class="tituloReceta">
             <h2 class="agregarReceta">AGREGAR RECETAS</h2><br>
           </div>
