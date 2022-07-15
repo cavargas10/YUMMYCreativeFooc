@@ -28,7 +28,7 @@ $lista = $control2->EncontrarTips($idtips);
                     <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
                 </a>
                 <ul>
-                    <li><a href="../index.php">Inicio</a></li>
+                    <li><a href="../../index.php">Inicio</a></li>
                     <li><a href="gruposEtarios.php">Grupos Etarios</a></li>
                     <li><a href="recetas.php">Recetas</a></li>
                     <li><a class="active" href="tips.php">Tips</a></li>
