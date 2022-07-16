@@ -21,8 +21,6 @@ class controlador_receta
 		$user = new modelo_receta();
 
 		if (isset($_POST['titulo_Receta'])) {
-            $urlVideo = $_POST['url_Receta'];
-            $urlVideo2 = $_POST['tresD_Receta'];
 			$user->settitulo_Receta($_POST['titulo_Receta']);
 			$user->setdescripcion_Receta($_POST['descripcion_Receta']);
 			$user->setidcategoria_Receta($_POST['idcategoria_Receta']);
@@ -33,11 +31,13 @@ class controlador_receta
 			move_uploaded_file($tmp_name, $folder);
 			$user->setfolder($folder);
 
-            $convertirURL = str_replace("watch?v=","embed/",$urlVideo);
+			$urlVideo = $_POST['url_Receta'];
+			$convertirURL = str_replace("watch?v=","embed/",$urlVideo);
 			$user->seturl_Receta($convertirURL);
 
-            $convertirURL2 = str_replace("watch?v=","embed/",$urlVideo2);
-			$user->settresD_Receta($convertirURL2);
+            //$urlVideo2 = $_POST['tresD_Receta'];
+            //$convertirURL2 = str_replace("watch?v=","embed/",$urlVideo2);
+			//$user->settresD_Receta($convertirURL2);
 
             //$user->setinfoGeneral_Receta($_POST['infoGeneral_Receta']);
             
