@@ -236,65 +236,65 @@ class modelo_receta
     return $resSQL;
   }
 
-  public function EncontrarCategoria($idcategoria_Receta) {
+  public function EncontrarCategoriaReceta() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from categoria_receta where idcategoria_Receta = $idcategoria_Receta");
-    $resSQL=$miconexion->consulta_lista();
+    $resSQL=$miconexion->consulta("select * from categoria_Receta");
+    $resSQL=$miconexion->comboBox();
     //$this->Disconnect();
     return $resSQL;
   }
 
-  public function EncontrarPorciones($idporciones_Receta) {
+  public function EncontrarPorciones() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from porciones_receta where idporciones_Receta = $idporciones_Receta");
-    $resSQL=$miconexion->consulta_lista();
+    $resSQL=$miconexion->consulta("select * from  porciones_Receta");
+    $resSQL=$miconexion->comboBox();
     //$this->Disconnect();
     return $resSQL;
   }
 
-  public function EncontrarDificultad($iddificultad_Receta) {
+  public function EncontrarDificultad() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from dificultad_receta where iddificultad_Receta = $iddificultad_Receta");
-    $resSQL=$miconexion->consulta_lista();
+    $resSQL=$miconexion->consulta("select * from dificultad_receta");
+    $resSQL=$miconexion->comboBox();
     //$this->Disconnect();
     return $resSQL;
   }
 
-  public function EncontrarAzucar($idazucar) {
+  public function EncontrarAzucar() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from azucar where idazucar = $idazucar");
-    $resSQL=$miconexion->consulta_lista();
+    $resSQL=$miconexion->consulta("select * from azucar");
+    $resSQL=$miconexion->comboBox();
     //$this->Disconnect();
     return $resSQL;
   }
 
-  public function EncontrarSal($idsal) {
+  public function EncontrarSal() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from sal where idsal = $idsal");
-    $resSQL=$miconexion->consulta_lista();
+    $resSQL=$miconexion->consulta("select * from sal");
+    $resSQL=$miconexion->comboBox();
     //$this->Disconnect();
     return $resSQL;
   }
 
-  public function EncontrarGrasa($idgrasa) {
+  public function EncontrarGrasa() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from grasa where idgrasa = $idgrasa");
-    $resSQL=$miconexion->consulta_lista();
+    $resSQL=$miconexion->consulta("select * from grasa");
+    $resSQL=$miconexion->comboBox();
     //$this->Disconnect();
     return $resSQL;
   }
 
-  public function EncontrarGrupoEtario($idgrupoEtario) {
+  public function EncontrarGrupoEtario() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from grupoetario where idgrupoEtario = $idgrupoEtario");
-    $resSQL=$miconexion->consulta_lista();
+    $resSQL=$miconexion->consulta("select * from grupoetario");
+    $resSQL=$miconexion->comboBox();
     //$this->Disconnect();
     return $resSQL;
   }

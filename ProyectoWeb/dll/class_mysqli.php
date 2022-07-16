@@ -233,6 +233,12 @@ class clase_mysqli{
 		}
 	}
 
+	function comboBox(){
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			echo "<option value='".$row[0]."'>$row[1]</option>";
+		}
+	}
+
 	function consulta_lista(){
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
 			for ($i=0; $i < $this->numcampos(); $i++) { 

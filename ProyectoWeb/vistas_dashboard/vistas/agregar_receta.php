@@ -5,6 +5,8 @@ include_once "../modelo/modelo_receta.php";
 extract($_GET);
 $control = new controlador_receta();
 $control->CreateReceta();
+
+$control3 = new modelo_receta();
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
@@ -40,7 +42,7 @@ $control->CreateReceta();
         </li>
         <li>
           <a href="perfil_dashboard.php">
-          <i class="uil uil-user-circle"></i>
+            <i class="uil uil-user-circle"></i>
             <span class="link_name">Perfil</span>
           </a>
           <ul class="sub-menu blank">
@@ -50,7 +52,7 @@ $control->CreateReceta();
         <li>
           <div class="icon-link">
             <a href="#">
-            <i class="uil uil-book-open"></i>
+              <i class="uil uil-book-open"></i>
               <span class="link_name">Contenido</span>
             </a>
             <i class='bx bxs-chevron-down arrow'></i>
@@ -65,7 +67,7 @@ $control->CreateReceta();
         </li>
         <li>
           <a href="graficos_dashboard.php">
-          <i class="uil uil-chart-line"></i>
+            <i class="uil uil-chart-line"></i>
             <span class="link_name">Gráficos</span>
           </a>
           <ul class="sub-menu blank">
@@ -74,7 +76,7 @@ $control->CreateReceta();
         </li>
         <li>
           <a href="clientes_dashboard.php">
-          <i class="uil uil-users-alt"></i>
+            <i class="uil uil-users-alt"></i>
             <span class="link_name">Clientes</span>
           </a>
           <ul class="sub-menu blank">
@@ -83,7 +85,7 @@ $control->CreateReceta();
         </li>
         <li>
           <a href="ayuda_dashboard.php">
-          <i class="uil uil-question-circle"></i>
+            <i class="uil uil-question-circle"></i>
             <span class="link_name">AYUDA</span>
           </a>
           <ul class="sub-menu blank">
@@ -93,12 +95,12 @@ $control->CreateReceta();
         <li>
           <div class="profile-details">
             <div class="profile-content">
-            </div>        
-             <div class="name-job">
+            </div>
+            <div class="name-job">
               <div class="profile_name">Salir</div>
             </div>
-            <a href="../../index.php"> 
-            <i class="uil uil-signout"></i>
+            <a href="../../index.php">
+              <i class="uil uil-signout"></i>
             </a>
 
           </div>
@@ -110,9 +112,9 @@ $control->CreateReceta();
         <i class='bx bx-menu'></i>
         <span class="text">Dashboard</span> <br />
       </div>
-    
 
-    <div class="addReceta">
+
+      <div class="addReceta">
         <form class="formReceta" method="post" action="" enctype="multipart/form-data">
           <div class="tituloReceta">
             <h2 class="agregarReceta">AGREGAR RECETAS</h2><br>
@@ -125,9 +127,11 @@ $control->CreateReceta();
             <label for="descripcion_Receta"><b>Descripción:</b></label>
             <input type="text" name="descripcion_Receta" id="descripcion_Receta" placeholder="Ingrese la descripcion de la receta" required>
             <br><label for="idcategoria_Receta"><b>Categoria Receta:</b></label>
-            <select name="idcategoria_Receta" id="idcategoria_Receta" required><br>
-              <option value="idcategoria_Receta">Seleccione...</option>
-              <option value="<?php echo $lista[1]?>"></option>
+            <select name='idcategoria_Receta' id='idcategoria_Receta' required><br>
+              <option value='0'>Seleccione...</option>
+              <?php
+              $control3->EncontrarCategoriaReceta();
+              ?>
             </select>
             <br><label for="imagen_Receta"><b>Imagen:</b></label>
             <input type="file" name="imagen_Receta" id="imagen_Receta" accept="image/*" required><br>
@@ -137,8 +141,10 @@ $control->CreateReceta();
             <input type="url" name="3d_Receta" id="3d_Receta" placeholder="Ingrese el link de sketchfab" required><br>
             <label for="grupoEtario"><b>Grupo Etario:</b></label>
             <select name="grupoEtario" id="grupoEtario" required><br>
-              <option value="grupoEtario">Seleccione...</option>
-              <option value="grupoEtario"></option>
+              <option value='0'>Seleccione...</option>
+              <?php
+              $control3->EncontrarGrupoEtario();
+              ?>
             </select><br>
 
             <b>TABLA NUTRICIONAL</b><br>
@@ -170,32 +176,43 @@ $control->CreateReceta();
             <b>SEMAFORO NUTRICIONAL</b>
             <br><label for="azucar"><b>Azucar:</b></label>
             <select name="azucar" id="azucar" required><br>
-              <option value="azucar">Seleccione...</option>
-              <option value="azucar"></option>
+              <option value='0'>Seleccione...</option>
+              <?php
+              $control3->EncontrarAzucar();
+              ?>
             </select>
             <br><label for="sal"><b>Sal:</b></label>
             <select name="sal" id="sal" required><br>
-              <option value="sal">Seleccione...</option>
-              <option value="sal"></option>
+              <option value='0'>Seleccione...</option>
+              <?php
+              $control3->EncontrarSal();
+              ?>
             </select>
             <br><label for="grasa"><b>Grasa:</b></label>
             <select name="grasa" id="grasa" required><br>
-              <option value="grasa">Seleccione...</option>
-              <option value="grasa"></option>
+              <option value='0'>Seleccione...</option>
+              <?php
+              $control3->EncontrarGrasa();
+              ?>
             </select>
 
             <br><b>OPCIONES</b>
             <br><label for="tiempo_Receta"><b>Título:</b></label>
             <input type="numer" name="tiempo_Receta" id="tiempo_Receta" placeholder="Ingrese el tiempo de la receta" required> min<br>
+
             <label for="porciones_Receta"><b>Porciones:</b></label>
             <select name="porciones_Receta" id="porciones_Receta" required><br>
-              <option value="porciones_Receta">Seleccione...</option>
-              <option value="porciones_Receta"></option>
+              <option value='0'>Seleccione...</option>
+              <?php
+              $control3->EncontrarPorciones();
+              ?>
             </select>
             <br><label for="dificultad_Receta"><b>Dificultad:</b></label>
             <select name="dificultad_Receta" id="dificultad_Receta" required><br>
-              <option value="dificultad_Receta">Seleccione...</option>
-              <option value="dificultad_Receta"></option>
+              <option value='0'>Seleccione...</option>
+              <?php
+              $control3->EncontrarDificultad();
+              ?>
             </select>
 
             <br><b>INGREDIENTES</b>
@@ -216,14 +233,14 @@ $control->CreateReceta();
           </div>
         </form>
       </div>
-      </section>
+    </section>
   </div>
 
   <script>
     let arrow = document.querySelectorAll(".arrow");
     for (var i = 0; i < arrow.length; i++) {
       arrow[i].addEventListener("click", (e) => {
-        let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+        let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
         arrowParent.classList.toggle("showMenu");
       });
     }
@@ -232,310 +249,309 @@ $control->CreateReceta();
     /* sidebarBtn.addEventListener("click", () => {
       sidebar.classList.toggle("close");
     }); */
-    $(function () {
+    $(function() {
       /* console.log("width: "+ document.body.clientWidth); */
-      
+
       resizeScreen();
-      $(window).resize(function(){
+      $(window).resize(function() {
         resizeScreen();
       })
-  
-      
-      
+
+
+
       function resizeScreen() {
-        if(document.body.clientWidth < 400){
+        if (document.body.clientWidth < 400) {
           $('.sidebar').addClass('close');
-        }else{
+        } else {
           $('.sidebar').removeClass('close');
         }
       }
     });
   </script>
 
-<script>
+  <script>
     // This sample still does not showcase all CKEditor 5 features (!)
     // Visit https://ckeditor.com/docs/ckeditor5/latest/features/index.html to browse all the features.
-    CKEDITOR.ClassicEditor.create(document.querySelector('#ingredientes_Receta'),  {
-        // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
-        toolbar: {
-          items: [
-            'selectAll', '|',
-            'heading', '|',
-            'bold', 'italic', 'strikethrough', 'underline', 'removeFormat', '|',
-            'bulletedList', 'numberedList', '|',
-            'outdent', 'indent', '|',
-            'undo', 'redo',
-            '-',
-            'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'highlight', '|',
-            'alignment', '|',
-          ],
-          shouldNotGroupWhenFull: true
-        },
-        // Changing the language of the interface requires loading the language file using the <script> tag.
-        // language: 'es',
-        list: {
-          properties: {
-            styles: true,
-            startIndex: true,
-            reversed: true
-          }
-        },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/headings.html#configuration
-        heading: {
-          options: [{
-              model: 'paragraph',
-              title: 'Paragraph',
-              class: 'ck-heading_paragraph'
-            },
-          ]
-        },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/editor-placeholder.html#using-the-editor-configuration
-        placeholder: 'Welcome to CKEditor 5!',
-        // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-family-feature
-        fontFamily: {
-          options: [
-            'default',
-            'Arial, Helvetica, sans-serif',
-            'Courier New, Courier, monospace',
-            'Georgia, serif',
-            'Lucida Sans Unicode, Lucida Grande, sans-serif',
-            'Tahoma, Geneva, sans-serif',
-            'Times New Roman, Times, serif',
-            'Trebuchet MS, Helvetica, sans-serif',
-            'Verdana, Geneva, sans-serif'
-          ],
-          supportAllValues: true
-        },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-size-feature
-        fontSize: {
-          options: [10, 12, 14, 'default', 18, 20, 22],
-          supportAllValues: true
-        },
-        // Be careful with the setting below. It instructs CKEditor to accept ALL HTML markup.
-        // https://ckeditor.com/docs/ckeditor5/latest/features/general-html-support.html#enabling-all-html-features
-        htmlSupport: {
-          allow: [{
-            name: /.*/,
-            attributes: true,
-            classes: true,
-            styles: true
-          }]
-        },
-        // Be careful with enabling previews
-        // https://ckeditor.com/docs/ckeditor5/latest/features/html-embed.html#content-previews
-        htmlEmbed: {
-          showPreviews: true
-        },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/link.html#custom-link-attributes-decorators
-        link: {
-          decorators: {
-            addTargetToExternalLinks: true,
-            defaultProtocol: 'https://',
-            toggleDownloadable: {
-              mode: 'manual',
-              label: 'Downloadable',
-              attributes: {
-                download: 'file'
-              }
+    CKEDITOR.ClassicEditor.create(document.querySelector('#ingredientes_Receta'), {
+      // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
+      toolbar: {
+        items: [
+          'selectAll', '|',
+          'heading', '|',
+          'bold', 'italic', 'strikethrough', 'underline', 'removeFormat', '|',
+          'bulletedList', 'numberedList', '|',
+          'outdent', 'indent', '|',
+          'undo', 'redo',
+          '-',
+          'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'highlight', '|',
+          'alignment', '|',
+        ],
+        shouldNotGroupWhenFull: true
+      },
+      // Changing the language of the interface requires loading the language file using the <script> tag.
+      // language: 'es',
+      list: {
+        properties: {
+          styles: true,
+          startIndex: true,
+          reversed: true
+        }
+      },
+      // https://ckeditor.com/docs/ckeditor5/latest/features/headings.html#configuration
+      heading: {
+        options: [{
+          model: 'paragraph',
+          title: 'Paragraph',
+          class: 'ck-heading_paragraph'
+        }, ]
+      },
+      // https://ckeditor.com/docs/ckeditor5/latest/features/editor-placeholder.html#using-the-editor-configuration
+      placeholder: 'Welcome to CKEditor 5!',
+      // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-family-feature
+      fontFamily: {
+        options: [
+          'default',
+          'Arial, Helvetica, sans-serif',
+          'Courier New, Courier, monospace',
+          'Georgia, serif',
+          'Lucida Sans Unicode, Lucida Grande, sans-serif',
+          'Tahoma, Geneva, sans-serif',
+          'Times New Roman, Times, serif',
+          'Trebuchet MS, Helvetica, sans-serif',
+          'Verdana, Geneva, sans-serif'
+        ],
+        supportAllValues: true
+      },
+      // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-size-feature
+      fontSize: {
+        options: [10, 12, 14, 'default', 18, 20, 22],
+        supportAllValues: true
+      },
+      // Be careful with the setting below. It instructs CKEditor to accept ALL HTML markup.
+      // https://ckeditor.com/docs/ckeditor5/latest/features/general-html-support.html#enabling-all-html-features
+      htmlSupport: {
+        allow: [{
+          name: /.*/,
+          attributes: true,
+          classes: true,
+          styles: true
+        }]
+      },
+      // Be careful with enabling previews
+      // https://ckeditor.com/docs/ckeditor5/latest/features/html-embed.html#content-previews
+      htmlEmbed: {
+        showPreviews: true
+      },
+      // https://ckeditor.com/docs/ckeditor5/latest/features/link.html#custom-link-attributes-decorators
+      link: {
+        decorators: {
+          addTargetToExternalLinks: true,
+          defaultProtocol: 'https://',
+          toggleDownloadable: {
+            mode: 'manual',
+            label: 'Downloadable',
+            attributes: {
+              download: 'file'
             }
           }
-        },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/mentions.html#configuration
-        mention: {
-          feeds: [{
-            marker: '@',
-            feed: [
-              '@apple', '@bears', '@brownie', '@cake', '@cake', '@candy', '@canes', '@chocolate', '@cookie', '@cotton', '@cream',
-              '@cupcake', '@danish', '@donut', '@dragée', '@fruitcake', '@gingerbread', '@gummi', '@ice', '@jelly-o',
-              '@liquorice', '@macaroon', '@marzipan', '@oat', '@pie', '@plum', '@pudding', '@sesame', '@snaps', '@soufflé',
-              '@sugar', '@sweet', '@topping', '@wafer'
-            ],
-            minimumCharacters: 1
-          }]
-        },
-        // The "super-build" contains more premium features that require additional configuration, disable them below.
-        // Do not turn them on unless you read the documentation and know how to configure them and setup the editor.
-        removePlugins: [
-          // These two are commercial, but you can try them out without registering to a trial.
-          // 'ExportPdf',
-          // 'ExportWord',
-          'CKBox',
-          'CKFinder',
-          'EasyImage',
-          // This sample uses the Base64UploadAdapter to handle image uploads as it requires no configuration.
-          // https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/base64-upload-adapter.html
-          // Storing images as Base64 is usually a very bad idea.
-          // Replace it on production website with other solutions:
-          // https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/image-upload.html
-          // 'Base64UploadAdapter',
-          'RealTimeCollaborativeComments',
-          'RealTimeCollaborativeTrackChanges',
-          'RealTimeCollaborativeRevisionHistory',
-          'PresenceList',
-          'Comments',
-          'TrackChanges',
-          'TrackChangesData',
-          'RevisionHistory',
-          'Pagination',
-          'WProofreader',
-          // Careful, with the Mathtype plugin CKEditor will not load when loading this sample
-          // from a local file system (file://) - load this site via HTTP server if you enable MathType
-          'MathType'
-        ]
-      });
+        }
+      },
+      // https://ckeditor.com/docs/ckeditor5/latest/features/mentions.html#configuration
+      mention: {
+        feeds: [{
+          marker: '@',
+          feed: [
+            '@apple', '@bears', '@brownie', '@cake', '@cake', '@candy', '@canes', '@chocolate', '@cookie', '@cotton', '@cream',
+            '@cupcake', '@danish', '@donut', '@dragée', '@fruitcake', '@gingerbread', '@gummi', '@ice', '@jelly-o',
+            '@liquorice', '@macaroon', '@marzipan', '@oat', '@pie', '@plum', '@pudding', '@sesame', '@snaps', '@soufflé',
+            '@sugar', '@sweet', '@topping', '@wafer'
+          ],
+          minimumCharacters: 1
+        }]
+      },
+      // The "super-build" contains more premium features that require additional configuration, disable them below.
+      // Do not turn them on unless you read the documentation and know how to configure them and setup the editor.
+      removePlugins: [
+        // These two are commercial, but you can try them out without registering to a trial.
+        // 'ExportPdf',
+        // 'ExportWord',
+        'CKBox',
+        'CKFinder',
+        'EasyImage',
+        // This sample uses the Base64UploadAdapter to handle image uploads as it requires no configuration.
+        // https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/base64-upload-adapter.html
+        // Storing images as Base64 is usually a very bad idea.
+        // Replace it on production website with other solutions:
+        // https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/image-upload.html
+        // 'Base64UploadAdapter',
+        'RealTimeCollaborativeComments',
+        'RealTimeCollaborativeTrackChanges',
+        'RealTimeCollaborativeRevisionHistory',
+        'PresenceList',
+        'Comments',
+        'TrackChanges',
+        'TrackChangesData',
+        'RevisionHistory',
+        'Pagination',
+        'WProofreader',
+        // Careful, with the Mathtype plugin CKEditor will not load when loading this sample
+        // from a local file system (file://) - load this site via HTTP server if you enable MathType
+        'MathType'
+      ]
+    });
   </script>
 
-<script>
+  <script>
     // This sample still does not showcase all CKEditor 5 features (!)
     // Visit https://ckeditor.com/docs/ckeditor5/latest/features/index.html to browse all the features.
-    CKEDITOR.ClassicEditor.create(document.querySelector('#pasos_Receta'),  {
-        // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
-        toolbar: {
-          items: [
-            'selectAll', '|',
-            'heading', '|',
-            'bold', 'italic', 'strikethrough', 'underline', 'removeFormat', '|',
-            'bulletedList', 'numberedList', '|',
-            'outdent', 'indent', '|',
-            'undo', 'redo',
-            '-',
-            'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'highlight', '|',
-            'alignment', '|',
-            'link', 'insertImage', 'blockQuote', 'insertTable', 'mediaEmbed', '|',
-            'specialCharacters', 'horizontalLine', '|',
-          ],
-          shouldNotGroupWhenFull: true
-        },
-        // Changing the language of the interface requires loading the language file using the <script> tag.
-        // language: 'es',
-        list: {
-          properties: {
-            styles: true,
-            startIndex: true,
-            reversed: true
-          }
-        },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/headings.html#configuration
-        heading: {
-          options: [{
-              model: 'paragraph',
-              title: 'Parrafo',
-              class: 'ck-heading_paragraph'
-            },
-            {
-              model: 'heading2',
-              view: 'h2',
-              title: 'Titulo 1',
-              class: 'ck-heading_heading2'
-            },
-            {
-              model: 'heading3',
-              view: 'h3',
-              title: 'Titulo 2',
-              class: 'ck-heading_heading3'
-            },
-            {
-              model: 'heading4',
-              view: 'h4',
-              title: 'Titulo 3',
-              class: 'ck-heading_heading4'
-            },
-          ]
-        },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/editor-placeholder.html#using-the-editor-configuration
-        placeholder: 'Welcome to CKEditor 5!',
-        // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-family-feature
-        fontFamily: {
-          options: [
-            'default',
-            'Arial, Helvetica, sans-serif',
-            'Courier New, Courier, monospace',
-            'Georgia, serif',
-            'Lucida Sans Unicode, Lucida Grande, sans-serif',
-            'Tahoma, Geneva, sans-serif',
-            'Times New Roman, Times, serif',
-            'Trebuchet MS, Helvetica, sans-serif',
-            'Verdana, Geneva, sans-serif'
-          ],
-          supportAllValues: true
-        },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-size-feature
-        fontSize: {
-          options: [10, 12, 14, 'default', 18, 20, 22],
-          supportAllValues: true
-        },
-        // Be careful with the setting below. It instructs CKEditor to accept ALL HTML markup.
-        // https://ckeditor.com/docs/ckeditor5/latest/features/general-html-support.html#enabling-all-html-features
-        htmlSupport: {
-          allow: [{
-            name: /.*/,
-            attributes: true,
-            classes: true,
-            styles: true
-          }]
-        },
-        // Be careful with enabling previews
-        // https://ckeditor.com/docs/ckeditor5/latest/features/html-embed.html#content-previews
-        htmlEmbed: {
-          showPreviews: true
-        },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/link.html#custom-link-attributes-decorators
-        link: {
-          decorators: {
-            addTargetToExternalLinks: true,
-            defaultProtocol: 'https://',
-            toggleDownloadable: {
-              mode: 'manual',
-              label: 'Downloadable',
-              attributes: {
-                download: 'file'
-              }
+    CKEDITOR.ClassicEditor.create(document.querySelector('#pasos_Receta'), {
+      // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
+      toolbar: {
+        items: [
+          'selectAll', '|',
+          'heading', '|',
+          'bold', 'italic', 'strikethrough', 'underline', 'removeFormat', '|',
+          'bulletedList', 'numberedList', '|',
+          'outdent', 'indent', '|',
+          'undo', 'redo',
+          '-',
+          'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'highlight', '|',
+          'alignment', '|',
+          'link', 'insertImage', 'blockQuote', 'insertTable', 'mediaEmbed', '|',
+          'specialCharacters', 'horizontalLine', '|',
+        ],
+        shouldNotGroupWhenFull: true
+      },
+      // Changing the language of the interface requires loading the language file using the <script> tag.
+      // language: 'es',
+      list: {
+        properties: {
+          styles: true,
+          startIndex: true,
+          reversed: true
+        }
+      },
+      // https://ckeditor.com/docs/ckeditor5/latest/features/headings.html#configuration
+      heading: {
+        options: [{
+            model: 'paragraph',
+            title: 'Parrafo',
+            class: 'ck-heading_paragraph'
+          },
+          {
+            model: 'heading2',
+            view: 'h2',
+            title: 'Titulo 1',
+            class: 'ck-heading_heading2'
+          },
+          {
+            model: 'heading3',
+            view: 'h3',
+            title: 'Titulo 2',
+            class: 'ck-heading_heading3'
+          },
+          {
+            model: 'heading4',
+            view: 'h4',
+            title: 'Titulo 3',
+            class: 'ck-heading_heading4'
+          },
+        ]
+      },
+      // https://ckeditor.com/docs/ckeditor5/latest/features/editor-placeholder.html#using-the-editor-configuration
+      placeholder: 'Welcome to CKEditor 5!',
+      // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-family-feature
+      fontFamily: {
+        options: [
+          'default',
+          'Arial, Helvetica, sans-serif',
+          'Courier New, Courier, monospace',
+          'Georgia, serif',
+          'Lucida Sans Unicode, Lucida Grande, sans-serif',
+          'Tahoma, Geneva, sans-serif',
+          'Times New Roman, Times, serif',
+          'Trebuchet MS, Helvetica, sans-serif',
+          'Verdana, Geneva, sans-serif'
+        ],
+        supportAllValues: true
+      },
+      // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-size-feature
+      fontSize: {
+        options: [10, 12, 14, 'default', 18, 20, 22],
+        supportAllValues: true
+      },
+      // Be careful with the setting below. It instructs CKEditor to accept ALL HTML markup.
+      // https://ckeditor.com/docs/ckeditor5/latest/features/general-html-support.html#enabling-all-html-features
+      htmlSupport: {
+        allow: [{
+          name: /.*/,
+          attributes: true,
+          classes: true,
+          styles: true
+        }]
+      },
+      // Be careful with enabling previews
+      // https://ckeditor.com/docs/ckeditor5/latest/features/html-embed.html#content-previews
+      htmlEmbed: {
+        showPreviews: true
+      },
+      // https://ckeditor.com/docs/ckeditor5/latest/features/link.html#custom-link-attributes-decorators
+      link: {
+        decorators: {
+          addTargetToExternalLinks: true,
+          defaultProtocol: 'https://',
+          toggleDownloadable: {
+            mode: 'manual',
+            label: 'Downloadable',
+            attributes: {
+              download: 'file'
             }
           }
-        },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/mentions.html#configuration
-        mention: {
-          feeds: [{
-            marker: '@',
-            feed: [
-              '@apple', '@bears', '@brownie', '@cake', '@cake', '@candy', '@canes', '@chocolate', '@cookie', '@cotton', '@cream',
-              '@cupcake', '@danish', '@donut', '@dragée', '@fruitcake', '@gingerbread', '@gummi', '@ice', '@jelly-o',
-              '@liquorice', '@macaroon', '@marzipan', '@oat', '@pie', '@plum', '@pudding', '@sesame', '@snaps', '@soufflé',
-              '@sugar', '@sweet', '@topping', '@wafer'
-            ],
-            minimumCharacters: 1
-          }]
-        },
-        // The "super-build" contains more premium features that require additional configuration, disable them below.
-        // Do not turn them on unless you read the documentation and know how to configure them and setup the editor.
-        removePlugins: [
-          // These two are commercial, but you can try them out without registering to a trial.
-          // 'ExportPdf',
-          // 'ExportWord',
-          'CKBox',
-          'CKFinder',
-          'EasyImage',
-          // This sample uses the Base64UploadAdapter to handle image uploads as it requires no configuration.
-          // https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/base64-upload-adapter.html
-          // Storing images as Base64 is usually a very bad idea.
-          // Replace it on production website with other solutions:
-          // https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/image-upload.html
-          // 'Base64UploadAdapter',
-          'RealTimeCollaborativeComments',
-          'RealTimeCollaborativeTrackChanges',
-          'RealTimeCollaborativeRevisionHistory',
-          'PresenceList',
-          'Comments',
-          'TrackChanges',
-          'TrackChangesData',
-          'RevisionHistory',
-          'Pagination',
-          'WProofreader',
-          // Careful, with the Mathtype plugin CKEditor will not load when loading this sample
-          // from a local file system (file://) - load this site via HTTP server if you enable MathType
-          'MathType'
-        ]
-      });
+        }
+      },
+      // https://ckeditor.com/docs/ckeditor5/latest/features/mentions.html#configuration
+      mention: {
+        feeds: [{
+          marker: '@',
+          feed: [
+            '@apple', '@bears', '@brownie', '@cake', '@cake', '@candy', '@canes', '@chocolate', '@cookie', '@cotton', '@cream',
+            '@cupcake', '@danish', '@donut', '@dragée', '@fruitcake', '@gingerbread', '@gummi', '@ice', '@jelly-o',
+            '@liquorice', '@macaroon', '@marzipan', '@oat', '@pie', '@plum', '@pudding', '@sesame', '@snaps', '@soufflé',
+            '@sugar', '@sweet', '@topping', '@wafer'
+          ],
+          minimumCharacters: 1
+        }]
+      },
+      // The "super-build" contains more premium features that require additional configuration, disable them below.
+      // Do not turn them on unless you read the documentation and know how to configure them and setup the editor.
+      removePlugins: [
+        // These two are commercial, but you can try them out without registering to a trial.
+        // 'ExportPdf',
+        // 'ExportWord',
+        'CKBox',
+        'CKFinder',
+        'EasyImage',
+        // This sample uses the Base64UploadAdapter to handle image uploads as it requires no configuration.
+        // https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/base64-upload-adapter.html
+        // Storing images as Base64 is usually a very bad idea.
+        // Replace it on production website with other solutions:
+        // https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/image-upload.html
+        // 'Base64UploadAdapter',
+        'RealTimeCollaborativeComments',
+        'RealTimeCollaborativeTrackChanges',
+        'RealTimeCollaborativeRevisionHistory',
+        'PresenceList',
+        'Comments',
+        'TrackChanges',
+        'TrackChangesData',
+        'RevisionHistory',
+        'Pagination',
+        'WProofreader',
+        // Careful, with the Mathtype plugin CKEditor will not load when loading this sample
+        // from a local file system (file://) - load this site via HTTP server if you enable MathType
+        'MathType'
+      ]
+    });
   </script>
 </body>
 
