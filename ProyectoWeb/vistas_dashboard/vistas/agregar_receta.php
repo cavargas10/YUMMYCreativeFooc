@@ -209,7 +209,7 @@ $control3 = new modelo_receta();
             </select>
 
             <br><b>OPCIONES</b>
-            <br><label for="tiempo_Receta"><b>Título:</b></label>
+            <br><label for="tiempo_Receta"><b>Tiempo:</b></label>
             <input type="numer" name="tiempo_Receta" id="tiempo_Receta" placeholder="Ingrese el tiempo de la receta" required> min<br>
 
             <label for="porciones_Receta"><b>Porciones:</b></label>

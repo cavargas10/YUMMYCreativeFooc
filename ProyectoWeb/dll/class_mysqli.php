@@ -166,6 +166,29 @@ class clase_mysqli{
 		echo "</table>";
 	}
 
+	function verconsultacrudReceta(){
+		echo "<table class='tablecudCliente'>";
+		echo "<tr>";
+		for ($i=0; $i < $this->numcampos() ; $i++) { 
+			//echo "<td>".$this->nombrecampo($i)."</td>";
+			echo  "<th>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</th>";
+		}
+		echo  "<th>BORRAR</th>";
+		echo  "<th>ACTUALIZAR</th>";
+		echo "</tr>";
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo "<tr>";
+			for ($i=0; $i < $this->numcampos(); $i++) { 
+				//echo "<td>".utf8_encode($row[$i])."</td>";
+				echo "<td>".$row[$i]."</td>";
+			}
+			echo  "<td><a class='btnDelete' href='contenido_receta.php?idReceta=$row[0]'> Borrar </a></td>";
+			echo  "<td><a class='btnUpdate' href='actualizar_receta.php?idReceta=$row[0]'>Actualizar</a></td>";
+			echo "</tr>";
+		}
+		echo "</table>";
+	}
+
 	function verconsultacrudCliente(){
 		echo "<table class='tablecudCliente'>";
 		echo "<tr>";
