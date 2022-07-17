@@ -7,7 +7,7 @@ class modelo_receta
   private $idReceta;
   private $titulo_Receta;
   private $descripcion_Receta;
-  private $idcategoria_Receta;
+  private $categoria_Receta;
   private $imagen_Receta;
   private $url_Receta;
   private $tresD_Receta;
@@ -27,12 +27,12 @@ class modelo_receta
   private $tiempo_Receta;
   private $ingredientes_Receta;
   private $pasos_Receta;
-  private $idporciones_Receta;
-  private $iddificultad_Receta;
-  private $idazucar;
-  private $idsal;
-  private $idgrasa;
-  private $idgrupoEtario;
+  private $porciones_Receta;
+  private $dificultad_Receta;
+  private $azucar;
+  private $sal;
+  private $grasa;
+  private $grupoEtario;
   private $folder;
 
   #region Set y Get
@@ -43,7 +43,14 @@ class modelo_receta
   public function setidReceta($idReceta){
     $this->idReceta = $idReceta;
   }
- 
+  
+  public function getidingredientes(){
+    return $this->idingredientes; 
+  }
+
+  public function setidingredientes($idingredientes){
+    $this->idingredientes = $idingredientes;
+  }
   public function settitulo_Receta($titulo_Receta){
     $this->titulo_Receta = $titulo_Receta;
   }
@@ -52,12 +59,8 @@ class modelo_receta
     $this->descripcion_Receta = $descripcion_Receta;
   }
 
-  public function getidcategoria_Receta(){
-    return $this->idcategoria_Receta; 
-  }
-
-  public function setidcategoria_Receta($idcategoria_Receta){
-    $this->idcategoria_Receta = $idcategoria_Receta;
+  public function setcategoria_Receta($categoria_Receta){
+    $this->categoria_Receta = $categoria_Receta;
   }
 
   public function setimagen_Receta($imagen_Receta){
@@ -140,162 +143,85 @@ class modelo_receta
     $this->pasos_Receta = $pasos_Receta;
   }
 
-  public function getidporciones_Receta(){
-    return $this->idporciones_Receta; 
+  public function setporciones_Receta($porciones_Receta){
+    $this->porciones_Receta = $porciones_Receta;
   }
 
-  public function setidporciones_Receta($idporciones_Receta){
-    $this->idporciones_Receta = $idporciones_Receta;
+  public function setdificultad_Receta($dificultad_Receta){
+    $this->dificultad_Receta = $dificultad_Receta;
   }
 
-  public function getiddificultad_Receta(){
-    return $this->iddificultad_Receta; 
+  public function setazucar($azucar){
+    $this->azucar = $azucar;
   }
 
-  public function setiddificultad_Receta($iddificultad_Receta){
-    $this->iddificultad_Receta = $iddificultad_Receta;
+  public function setsal($sal){
+    $this->sal = $sal;
   }
 
-  public function getidazucar(){
-    return $this->idazucar; 
+  public function setgrasa($grasa){
+    $this->grasa = $grasa;
   }
 
-  public function setidazucar($idazucar){
-    $this->idazucar = $idazucar;
+  public function setgrupoEtario($grupoEtario){
+    $this->grupoEtario = $grupoEtario;
   }
 
-  public function getidsal(){
-    return $this->idsal; 
-  }
+  // public function ListaReceta() {
+  //   $miconexion = new clase_mysqli;
+  //   $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+  //   $resSQL=$miconexion->consulta("select idtips 'ID', titulo_Tips 'TITULO', descripcion_Tips 'CONTENIDO', imagen_Tips 'IMAGEN' from tips");
+  //   $resSQL=$miconexion->verconsultacrud();
+  //   //$this->Disconnect();
+  //   return $resSQL;
+  // }
 
-  public function setidsal($idsal){
-    $this->idsal = $idsal;
-  }
+  // public function EncontrarReceta($idtips) {
+  //   $miconexion = new clase_mysqli;
+  //   $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+  //   $resSQL=$miconexion->consulta("select * from tips where idtips = $idtips");
+  //   $resSQL=$miconexion->consulta_lista();
+  //   //$this->Disconnect();
+  //   return $resSQL;
+  // }
 
-  public function getidgrasa(){
-    return $this->idgrasa; 
-  }
-
-  public function setidgrasa($idgrasa){
-    $this->idgrasa = $idgrasa;
-  }
-
-  public function getidgrupoEtario(){
-    return $this->idgrupoEtario; 
-  }
-
-  public function setidgrupoEtario($idgrupoEtario){
-    $this->idgrupoEtario = $idgrupoEtario;
-  }
-
-  public function ListaReceta() {
-    $miconexion = new clase_mysqli;
-    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select idtips 'ID', titulo_Tips 'TITULO', descripcion_Tips 'CONTENIDO', imagen_Tips 'IMAGEN' from tips");
-    $resSQL=$miconexion->verconsultacrud();
-    //$this->Disconnect();
-    return $resSQL;
-  }
-
-  public function EncontrarReceta($idtips) {
-    $miconexion = new clase_mysqli;
-    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from tips where idtips = $idtips");
-    $resSQL=$miconexion->consulta_lista();
-    //$this->Disconnect();
-    return $resSQL;
-  }
-
-  public function UpdateReceta() {
-    $miconexion = new clase_mysqli;
-    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("update tips set titulo_Tips = '$this->titulo_Tips', descripcion_Tips = '$this->descripcion_Tips', contenido_Tips = '$this->contenido_Tips', imagen_Tips ='$this->folder' where idtips = '$this->idtips'");
-    //$this->Disconnect();
-    return $resSQL;
-  }
+  // public function UpdateReceta() {
+  //   $miconexion = new clase_mysqli;
+  //   $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+  //   $resSQL=$miconexion->consulta("update tips set titulo_Tips = '$this->titulo_Tips', descripcion_Tips = '$this->descripcion_Tips', contenido_Tips = '$this->contenido_Tips', imagen_Tips ='$this->folder' where idtips = '$this->idtips'");
+  //   //$this->Disconnect();
+  //   return $resSQL;
+  // }
 
   public function CreateReceta() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("insert into nuevareceta values
-    ('','$this->titulo_Receta', '$this->descripcion_Receta', '$this->idcategoria_Receta', '$this->folder'
+    $resSQL=$miconexion->consulta("insert into receta values
+    ('','$this->titulo_Receta', '$this->descripcion_Receta', '$this->categoria_Receta', '$this->folder'
     , '$this->url_Receta', '$this->tresD_Receta', '$this->infoGeneral_Receta', '$this->energia', '$this->proteina'
     , '$this->fibra', '$this->calcio', '$this->hierro', '$this->carbohidratos', '$this->azucares'
     , '$this->azucarAnadido', '$this->potasio', '$this->sodio', '$this->grasas', '$this->grasasSaturadas'
-    , '$this->tiempo_Receta', '$this->idporciones_Receta', '$this->iddificultad_Receta', '$this->ingredientes_Receta'
-    , '$this->pasos_Receta', '$this->idazucar', '$this->idsal', '$this->idgrasa', '$this->idgrupoEtario')");
+    , '$this->tiempo_Receta', '$this->porciones_Receta', '$this->dificultad_Receta', '$this->ingredientes_Receta'
+    , '$this->pasos_Receta', '$this->azucar', '$this->sal', '$this->grasa', '$this->grupoEtario', '$this->idingredientes')");
     //$this->Disconnect();
     return $resSQL;
   }
 
-  public function DeleteReceta() {
+  public function EncontrarIngredienteTAG() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("delete from tips where idtips ='$this->idtips'");
-    //$this->Disconnect();
-    return $resSQL;
-  }
-
-  public function EncontrarCategoriaReceta() {
-    $miconexion = new clase_mysqli;
-    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from categoria_Receta");
+    $resSQL=$miconexion->consulta("select * from ingredientes");
     $resSQL=$miconexion->comboBox();
     //$this->Disconnect();
     return $resSQL;
   }
 
-  public function EncontrarPorciones() {
-    $miconexion = new clase_mysqli;
-    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from  porciones_Receta");
-    $resSQL=$miconexion->comboBox();
-    //$this->Disconnect();
-    return $resSQL;
-  }
+  // public function DeleteReceta() {
+  //   $miconexion = new clase_mysqli;
+  //   $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+  //   $resSQL=$miconexion->consulta("delete from tips where idtips ='$this->idtips'");
+  //   //$this->Disconnect();
+  //   return $resSQL;
+  // }
 
-  public function EncontrarDificultad() {
-    $miconexion = new clase_mysqli;
-    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from dificultad_receta");
-    $resSQL=$miconexion->comboBox();
-    //$this->Disconnect();
-    return $resSQL;
-  }
-
-  public function EncontrarAzucar() {
-    $miconexion = new clase_mysqli;
-    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from azucar");
-    $resSQL=$miconexion->comboBox();
-    //$this->Disconnect();
-    return $resSQL;
-  }
-
-  public function EncontrarSal() {
-    $miconexion = new clase_mysqli;
-    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from sal");
-    $resSQL=$miconexion->comboBox();
-    //$this->Disconnect();
-    return $resSQL;
-  }
-
-  public function EncontrarGrasa() {
-    $miconexion = new clase_mysqli;
-    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from grasa");
-    $resSQL=$miconexion->comboBox();
-    //$this->Disconnect();
-    return $resSQL;
-  }
-
-  public function EncontrarGrupoEtario() {
-    $miconexion = new clase_mysqli;
-    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from grupoetario");
-    $resSQL=$miconexion->comboBox();
-    //$this->Disconnect();
-    return $resSQL;
-  }
 }

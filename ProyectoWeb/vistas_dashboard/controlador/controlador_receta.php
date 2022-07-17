@@ -23,7 +23,7 @@ class controlador_receta
 		if (isset($_POST['titulo_Receta'])) {
 			$user->settitulo_Receta($_POST['titulo_Receta']);
 			$user->setdescripcion_Receta($_POST['descripcion_Receta']);
-			$user->setidcategoria_Receta($_POST['idcategoria_Receta']);
+			$user->setcategoria_Receta($_POST['categoria_Receta']);
 			
             $image_name = $_FILES['imagen_Receta']['name'];
 			$tmp_name = $_FILES['imagen_Receta']['tmp_name'];
@@ -35,13 +35,17 @@ class controlador_receta
 			$convertirURL = str_replace("watch?v=","embed/",$urlVideo);
 			$user->seturl_Receta($convertirURL);
 
-            //$urlVideo2 = $_POST['tresD_Receta'];
-            //$convertirURL2 = str_replace("watch?v=","embed/",$urlVideo2);
-			//$user->settresD_Receta($convertirURL2);
+			//https://sketchfab.com/3d-models/scan-of-chinese-food-rice-food-photogrammetry-9f56ae63c5f2483a99d6ecd2acbc2453
+			//https://sketchfab.com/                                                        9f56ae63c5f2483a99d6ecd2acbc2453/embed
 
-            //$user->setinfoGeneral_Receta($_POST['infoGeneral_Receta']);
-            
+            $urlVideo2 = $_POST['tresD_Receta'];
+            $convertirURL2 = str_replace("watch?v=","embed/",$urlVideo2);
+			$user->settresD_Receta($convertirURL2);
+
             $user->setenergia($_POST['energia']);
+			$_POST['infoGeneral_Receta'] = $_POST['energia'] * 4.1868;
+
+			$user->setinfoGeneral_Receta($_POST['infoGeneral_Receta']);
             $user->setproteina($_POST['proteina']);
             $user->setfibra($_POST['fibra']);
             $user->setcalcio($_POST['calcio']);
@@ -54,13 +58,17 @@ class controlador_receta
             $user->setgrasas($_POST['grasas']);
             $user->setgrasasSaturadas($_POST['grasasSaturadas']);
             $user->settiempo_Receta($_POST['tiempo_Receta']);
-            $user->setidporciones_Receta($_POST['idporciones_Receta']);
-            $user->setiddificultad_Receta($_POST['iddificultad_Receta']);
+
+            $user->setporciones_Receta($_POST['porciones_Receta']);
+            $user->setdificultad_Receta($_POST['dificultad_Receta']);
             $user->setingredientes_Receta($_POST['ingredientes_Receta']);
-            $user->setidazucar($_POST['idazucar']);
-            $user->setidsal($_POST['idsal']);
-            $user->setidgrasa($_POST['idgrasa']);
-            $user->setidgrupoEtario($_POST['idgrupoEtario']);
+			$user->setpasos_Receta($_POST['pasos_Receta']);
+            $user->setazucar($_POST['azucar']);
+            $user->setsal($_POST['sal']);
+            $user->setgrasa($_POST['grasa']);
+            $user->setgrupoEtario($_POST['grupoEtario']);
+
+			$user->setidingredientes($_POST['idingredientes']);
 
 			$userResponse = $user->CreateReceta();
 			if ($userResponse == 1) {

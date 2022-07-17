@@ -126,25 +126,34 @@ $control3 = new modelo_receta();
             <input type="text" name="titulo_Receta" id="titulo_Receta" placeholder="Ingrese el titulo de la receta" required><br>
             <label for="descripcion_Receta"><b>Descripción:</b></label>
             <input type="text" name="descripcion_Receta" id="descripcion_Receta" placeholder="Ingrese la descripcion de la receta" required>
-            <br><label for="idcategoria_Receta"><b>Categoria Receta:</b></label>
-            <select name='idcategoria_Receta' id='idcategoria_Receta' required><br>
-              <option value='0'>Seleccione...</option>
-              <?php
-              $control3->EncontrarCategoriaReceta();
-              ?>
+            <br><label for="categoria_Receta"><b>Categoria Receta:</b></label>
+            <select name='categoria_Receta' id='categoria_Receta' required><br>
+              <option>Seleccione...</option>
+              <option value='Desayunos'>Desayunos</option>
+              <option value='Almuerzos'>Almuerzos</option>
+              <option value='Meriendas'>Meriendas</option>
+              <option value='Cenas'>Cenas</option>
+              <option value='Postres'>Postres</option>
+              <!-- <?php
+                    //$control3->EncontrarCategoriaReceta();
+                    ?> -->
             </select>
             <br><label for="imagen_Receta"><b>Imagen:</b></label>
             <input type="file" name="imagen_Receta" id="imagen_Receta" accept="image/*" required><br>
             <label for="url_Receta"><b>Video:</b></label>
-            <input type="url" name="url_Video" id="url_Video" placeholder="Ingrese el link de youtube" required><br>
-            <label for="url_Receta"><b>3D:</b></label>
-            <input type="url" name="3d_Receta" id="3d_Receta" placeholder="Ingrese el link de sketchfab" required><br>
+            <input type="url" name="url_Receta" id="url_Receta" placeholder="Ingrese el link de youtube" required><br>
+            <label for="tresD_Receta"><b>3D:</b></label>
+            <input type="url" name="tresD_Receta" id="tresD_Receta" placeholder="Ingrese el link de sketchfab" required><br>
             <label for="grupoEtario"><b>Grupo Etario:</b></label>
             <select name="grupoEtario" id="grupoEtario" required><br>
-              <option value='0'>Seleccione...</option>
-              <?php
-              $control3->EncontrarGrupoEtario();
-              ?>
+              <option>Seleccione...</option>
+              <option value='Madre en estado de gestación'>Madre en estado de gestación</option>
+              <option value='Primera Infancia'>Primera Infancia</option>
+              <option value='Segunda Infancia'>Segunda Infancia</option>
+              <option value='Adolescencia'>Adolescencia</option>
+              <option value='Juventud'>Juventud</option>
+              <option value='Adultez'>Adultez</option>
+              <option value='Vejez'>Vejez</option>
             </select><br>
 
             <b>TABLA NUTRICIONAL</b><br>
@@ -160,40 +169,43 @@ $control3 = new modelo_receta();
             <input type="number" step=0.01 name="hierro" id="hierro" placeholder="Ingrese hierro" required> (mg)<br>
             <label for="carbohidratos"><b>Carbohidratos:</b></label>
             <input type="number" step=0.01 name="carbohidratos" id="carbohidratos" placeholder="Ingrese carbohidratos" required> (g)<br>
-            <label for="carbohidratos"><b>Azucares:</b></label>
+            <label for="azucares"><b>Azucares:</b></label>
             <input type="number" step=0.01 name="azucares" id="azucares" placeholder="Ingrese azucares" required> (g)<br>
-            <label for="carbohidratos"><b>Azucar Añadido:</b></label>
+            <label for="azucarAnadido"><b>Azucar Añadido:</b></label>
             <input type="number" step=0.01 name="azucarAnadido" id="azucarAnadido" placeholder="Ingrese Azucar Añadido" required> (g)<br>
-            <label for="carbohidratos"><b>Potasio:</b></label>
+            <label for="potasio"><b>Potasio:</b></label>
             <input type="number" step=0.01 name="potasio" id="potasio" placeholder="Ingrese potasio" required> (mg)<br>
-            <label for="carbohidratos"><b>Sodio:</b></label>
+            <label for="sodio"><b>Sodio:</b></label>
             <input type="number" step=0.01 name="sodio" id="sodio" placeholder="Ingrese sodio" required> (mg)<br>
-            <label for="carbohidratos"><b>Grasas:</b></label>
+            <label for="grasas"><b>Grasas:</b></label>
             <input type="number" step=0.01 name="grasas" id="grasas" placeholder="Ingrese grasas" required> (g)<br>
-            <label for="carbohidratos"><b>Grasas Saturadas:</b></label>
+            <label for="grasasSaturadas"><b>Grasas Saturadas:</b></label>
             <input type="number" step=0.01 name="grasasSaturadas" id="grasasSaturadas" placeholder="Ingrese Grasas Saturadas" required> (g)<br>
 
             <b>SEMAFORO NUTRICIONAL</b>
             <br><label for="azucar"><b>Azucar:</b></label>
             <select name="azucar" id="azucar" required><br>
-              <option value='0'>Seleccione...</option>
-              <?php
-              $control3->EncontrarAzucar();
-              ?>
+              <option>Seleccione...</option>
+              <option value='Alto'>Alto</option>
+              <option value='Medio'>Medio</option>
+              <option value='Bajo'>Bajo</option>
+              <option value='No contiene'>No contiene</option>
             </select>
             <br><label for="sal"><b>Sal:</b></label>
             <select name="sal" id="sal" required><br>
-              <option value='0'>Seleccione...</option>
-              <?php
-              $control3->EncontrarSal();
-              ?>
+              <option>Seleccione...</option>
+              <option value='Alto'>Alto</option>
+              <option value='Medio'>Medio</option>
+              <option value='Bajo'>Bajo</option>
+              <option value='No contiene'>No contiene</option>
             </select>
             <br><label for="grasa"><b>Grasa:</b></label>
             <select name="grasa" id="grasa" required><br>
-              <option value='0'>Seleccione...</option>
-              <?php
-              $control3->EncontrarGrasa();
-              ?>
+              <option>Seleccione...</option>
+              <option value='Alto'>Alto</option>
+              <option value='Medio'>Medio</option>
+              <option value='Bajo'>Bajo</option>
+              <option value='No contiene'>No contiene</option>
             </select>
 
             <br><b>OPCIONES</b>
@@ -202,16 +214,25 @@ $control3 = new modelo_receta();
 
             <label for="porciones_Receta"><b>Porciones:</b></label>
             <select name="porciones_Receta" id="porciones_Receta" required><br>
-              <option value='0'>Seleccione...</option>
-              <?php
-              $control3->EncontrarPorciones();
-              ?>
+              <option>Seleccione...</option>
+              <option value='1 a 3'>1 a 3</option>
+              <option value='4 a 6'>4 a 6</option>
+              <option value='7 a 9'>7 a 9</option>
+              <option value='10 o mas'>10 o mas</option>
             </select>
             <br><label for="dificultad_Receta"><b>Dificultad:</b></label>
             <select name="dificultad_Receta" id="dificultad_Receta" required><br>
-              <option value='0'>Seleccione...</option>
+              <option>Seleccione...</option>
+              <option value='Facil'>Facil</option>
+              <option value='Intermedio'>Intermedio</option>
+              <option value='Dificil'>Dificil</option>
+            </select>
+
+            <br><label for="idingredientes"><b>Ingrediente Principal:</b></label>
+            <select name="idingredientes" id="idingredientes" required><br>
+              <option>Seleccione...</option>
               <?php
-              $control3->EncontrarDificultad();
+              $control3->EncontrarIngredienteTAG();
               ?>
             </select>
 
