@@ -134,10 +134,8 @@ $control3 = new modelo_receta();
               <option value='Meriendas'>Meriendas</option>
               <option value='Cenas'>Cenas</option>
               <option value='Postres'>Postres</option>
-              <!-- <?php
-                    //$control3->EncontrarCategoriaReceta();
-                    ?> -->
             </select>
+            
             <br><label for="imagen_Receta"><b>Imagen:</b></label>
             <input type="file" name="imagen_Receta" id="imagen_Receta" accept="image/*" required><br>
             <label for="url_Receta"><b>Video:</b></label>
@@ -147,7 +145,7 @@ $control3 = new modelo_receta();
             <label for="grupoEtario"><b>Grupo Etario:</b></label>
             <select name="grupoEtario" id="grupoEtario" required><br>
               <option>Seleccione...</option>
-              <option value='Madre en estado de gestación'>Madre en estado de gestación</option>
+              <option value='Madre en gestación'>Madre en gestación</option>
               <option value='Primera Infancia'>Primera Infancia</option>
               <option value='Segunda Infancia'>Segunda Infancia</option>
               <option value='Adolescencia'>Adolescencia</option>

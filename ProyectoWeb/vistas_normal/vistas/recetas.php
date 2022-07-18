@@ -1,6 +1,7 @@
 <?php
 include_once "../modelo/modelo_recetas.php";
 extract($_GET);
+$control3 = new modelo_recetas();
 ?>
 
 <!DOCTYPE html>
@@ -77,42 +78,45 @@ extract($_GET);
 
           <div class="input-box">
             <span>Tipo receta</span>
-            <select name="" id="" class="tipo-receta">
-              <option value="Receta" selected disabled>Tipo Receta</option>
-              <option value="receta1">receta1</option>
-              <option value="receta2">receta2</option>
-              <option value="receta3">receta3</option>
+            <select name='categoria_Receta' id='categoria_Receta' class="tipo-receta">
+              <option value='Seleccione' selected disabled>Seleccione...</option>
+              <option value='Desayunos'>Desayunos</option>
+              <option value='Almuerzos'>Almuerzos</option>
+              <option value='Meriendas'>Meriendas</option>
+              <option value='Cenas'>Cenas</option>
+              <option value='Postres'>Postres</option>
             </select>
           </div>
 
           <div class="input-box">
             <span>Ingredientes</span>
             <select name="" id="" class="ingred">
-              <option value="Ingrediente" selected disabled>Ingredientes</option>
-              <option value="Ingrediente1">Ingrediente1</option>
-              <option value="Ingrediente2">Ingrediente2</option>
-              <option value="Ingrediente3">Ingrediente3</option>
+              <option value="Seleccione" selected disabled>Seleccione...</option>
+              <?php
+              $control3->EncontrarIngredienteTAG();
+              ?>
             </select>
           </div>
 
           <div class="input-box">
             <span>Dificultad</span>
-            <select name="" id="" class="tipo-recet">
-              <option value="Dificultad" selected disabled>Dificultad</option>
-              <option value="Dificultad1">Dificultad1</option>
-              <option value="Dificultad2">Dificultad2</option>
-              <option value="Dificultad3">Dificultad3</option>
+            <select name="dificultad_Receta" id="dificultad_Receta" class="tipo-recet">
+              <option value="Seleccione" selected disabled>Seleccione...</option>
+              <option value='Facil'>Facil</option>
+              <option value='Intermedio'>Intermedio</option>
+              <option value='Dificil'>Dificil</option>
             </select>
           </div>
 
 
           <div class="input-box">
             <span>Porciones</span>
-            <select name="" id="" class="tipo-recet">
-              <option value="Porcion" selected disabled>Porciones</option>
-              <option value="Porcion1">Porcion1</option>
-              <option value="Porcion2">Porcion2</option>
-              <option value="Porcion3">Porcion3</option>
+            <select name="porciones_Receta" id="porciones_Receta" class="tipo-recet">
+              <option value="Seleccione" selected disabled>Seleccione...</option>
+              <option value='1 a 3'>1 a 3</option>
+              <option value='4 a 6'>4 a 6</option>
+              <option value='7 a 9'>7 a 9</option>
+              <option value='10 o mas'>10 o mas</option>
             </select>
           </div>
 
@@ -129,10 +133,10 @@ extract($_GET);
         <h2>Explore nuestras Recetas</h2>
       </div>
 
-        <?php
-        $control3 = new modelo_recetas();
-        $control3->PresentarRecetas();
-        ?>
+      <?php
+      $control3 = new modelo_recetas();
+      $control3->PresentarRecetas();
+      ?>
     </div>
   </main>
 </body>

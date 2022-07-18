@@ -32,4 +32,14 @@ class modelo_recetas
     //$this->Disconnect();
     return $resSQL;
   }
+
+  public function EncontrarIngredienteTAG()
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $resSQL = $miconexion->consulta("select * from ingredientes");
+    $resSQL = $miconexion->comboBox();
+    //$this->Disconnect();
+    return $resSQL;
+  }
 }
