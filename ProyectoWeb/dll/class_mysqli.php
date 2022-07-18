@@ -256,6 +256,35 @@ class clase_mysqli{
 		}
 	}
 
+	function presentarconsultaRecetasIndex(){
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			for ($i=0; $i < 1; $i++) {
+				echo "  <div class='container-card-recet'>
+							<div class='card-recet'>
+								<div class='img-card-recet'>
+									<img src='".$row[4]."'>
+								</div>
+								<div class='card-content'>
+									<p class='cat'>$row[3]</p>
+									<a href='new_receta.php'>
+										<h1 class='card-title text-medium'>$row[1]</h1>
+									</a>
+									<div class='card-inf'>
+										<p class='text-medium'>$row[2]</p>
+										<h3><i class='uil uil-user-circle'></i> Grupo etario: $row[28]</h3>
+										<h3><i class='uil uil-graph-bar'></i> Dificultad: $row[22]</h3>
+										<h3><i class='uil uil-clock-eight'></i> Tiempo: $row[20] min.</h3>
+									</div>
+									<div class='val'>
+										<p class='valor'>★ <br> 4.5</p>
+									</div>
+								</div>
+							</div>
+						</div>";
+			}
+		}
+	}
+
 	function comboBox(){
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
 			echo "<option value='".$row[0]."'>$row[1]</option>";

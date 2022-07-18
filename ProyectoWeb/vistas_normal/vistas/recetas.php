@@ -1,3 +1,8 @@
+<?php
+include_once "../modelo/modelo_recetas.php";
+extract($_GET);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -124,34 +129,15 @@
         <h2>Explore nuestras Recetas</h2>
       </div>
 
-      <div class="container-card-recet">
-        <div class="card-recet">
-          <div class="img-card-recet">
-            <img src="../../img/plato4.jpg" alt="">
-          </div>
-          <div class="card-content">
-          <p class="cat">Categoría </p>
-            <a href="new_receta.php">
-              <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-            </a>
-            <div class="card-inf">
-              <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                officia ipsam architecto, deleniti nobis..</p>
-              <h3><i class="uil uil-user-circle"></i> Grupo etario: </h3>
-              <h3><i class="uil uil-graph-bar"></i> Dificultad: </h3>
-              <h3><i class="uil uil-clock-eight"></i> Tiempo: </h3>
-            </div>
-            <div class="val">
-              <p class="valor">★ <br> 4.5</p>
-            </div>
-          </div></a>
-        </div>
-      </div>
-      
+        <?php
+        $control3 = new modelo_recetas();
+        $control3->PresentarRecetas();
+        ?>
+  
     </div>
-
   </main>
 </body>
+
 <footer>
   <div class="content">
     <div class="top">
