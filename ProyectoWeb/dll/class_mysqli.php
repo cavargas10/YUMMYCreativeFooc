@@ -167,7 +167,7 @@ class clase_mysqli{
 	}
 
 	function verconsultacrudReceta(){
-		echo "<table class='tablecudCliente'>";
+		echo "<table class='tablecudReceta'>";
 		echo "<tr>";
 		for ($i=0; $i < $this->numcampos() ; $i++) { 
 			//echo "<td>".$this->nombrecampo($i)."</td>";

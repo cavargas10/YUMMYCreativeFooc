@@ -110,7 +110,7 @@ extract($_GET);
       </div>
 
       <div class="listaReceta">
-        <button class="btnTips"><a href="agregar_receta.php">Agregar</a></button>
+      <button class="btnReceta"><a href="agregar_receta.php">Agregar</a></button>
         <?php
         $control = new controlador_receta();
         $control->ListaReceta();
