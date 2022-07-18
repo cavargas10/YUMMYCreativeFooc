@@ -101,7 +101,7 @@ $lista = $control2->EncontrarRecetas($idReceta);
                 </div>
 
                 <div id="Paris" class="tabcontent">
-                    <h1>Semáforo Nutricional</h1><br>
+                    <h1>Semáforo Nutricional</h1><br><br>
                     <div class="sem">
                         <!-- AZUCAR -->
                         <?php if ($lista[25] == 'Alto') {
