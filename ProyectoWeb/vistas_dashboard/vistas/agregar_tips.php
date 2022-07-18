@@ -129,7 +129,7 @@ $control->CreateTips();
 
             <div class="ck-desc">
             <label for="descripcion_Tips"><b>Descripcion:</b></label><br>
-            <textarea name="descripcion_Tips" id="descripcion_Tips" maxlength="75" required cols="30" rows="10" placeholder="Ingrese el contenido"></textarea>
+            <textarea name="descripcion_Tips" id="descripcion_Tips" maxlength="75" required cols="30" rows="10" placeholder="Ingrese una descripción al Tip!"></textarea>
             </div><br>
 
             <label for="contenido_Tips"><b>Contenido:</b></label><br>
@@ -201,7 +201,7 @@ $control->CreateTips();
           shouldNotGroupWhenFull: true
         },
         // Changing the language of the interface requires loading the language file using the <script> tag.
-        // language: 'es',
+        language: 'es',
         list: {
           properties: {
             styles: true,
@@ -255,7 +255,7 @@ $control->CreateTips();
           ]
         },
         // https://ckeditor.com/docs/ckeditor5/latest/features/editor-placeholder.html#using-the-editor-configuration
-        placeholder: 'Welcome to CKEditor 5!',
+        placeholder: 'Ingrese el contenido!',
         // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-family-feature
         fontFamily: {
           options: [

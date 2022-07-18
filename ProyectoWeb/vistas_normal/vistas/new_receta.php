@@ -102,99 +102,99 @@ $lista = $control2->EncontrarRecetas($idReceta);
 
                 <div id="Paris" class="tabcontent">
                     <h1>Semáforo Nutricional</h1>
-                    <div class="sem"> 
+                    <div class="sem">
                         <!-- AZUCAR -->
-                        <?php if($lista[25] == 'Alto'){
+                        <?php if ($lista[25] == 'Alto') {
                             echo "  <div class='alto'>
                                         <p>ALTO</p>
                                     </div>
                                     <div class='az'>
                                         <p>en <b>AZÚCAR</b></p>
                                     </div>";
-                        } elseif ($lista[25] == 'Medio'){
+                        } elseif ($lista[25] == 'Medio') {
                             echo "  <div class='medio'>
                                         <p>MEDIO</p>
                                     </div>
                                     <div class='gr'>
                                         <p>en <b>AZÚCAR</b></p>
                                     </div>";
-                        } elseif ($lista[25] == 'Bajo'){
+                        } elseif ($lista[25] == 'Bajo') {
                             echo "  <div class='bajo'>
                                         <p>BAJO</p>
                                     </div>
                                     <div class='sal'>
                                         <p>en <b>AZÚCAR</b></p>
                                     </div>";
-                        } elseif ($lista[25] == 'No contiene'){
+                        } elseif ($lista[25] == 'No contiene') {
                             echo "  <div class='no'>
                                         <p>No contiene</p>
                                     </div>
                                     <div class='cont'>
                                         <p><b>AZÚCAR</b></p>
                                     </div>";
-                        } 
+                        }
 
                         // SAL
-                        if($lista[26] == 'Alto'){
+                        if ($lista[26] == 'Alto') {
                             echo "  <div class='alto'>
                                         <p>ALTO</p>
                                     </div>
                                     <div class='az'>
                                         <p>en <b>SAL</b></p>
                                     </div>";
-                        } elseif ($lista[26] == 'Medio'){
+                        } elseif ($lista[26] == 'Medio') {
                             echo "  <div class='medio'>
                                         <p>MEDIO</p>
                                     </div>
                                     <div class='gr'> 
                                         <p>en <b>SAL</b></p>
                                     </div>";
-                        } elseif ($lista[26] == 'Bajo'){
+                        } elseif ($lista[26] == 'Bajo') {
                             echo "  <div class='bajo'>
                                         <p>BAJO</p>
                                     </div>
                                     <div class='sal'>
                                         <p>en <b>SAL</b></p>
                                     </div>";
-                        } elseif ($lista[26] == 'No contiene'){
+                        } elseif ($lista[26] == 'No contiene') {
                             echo "  <div class='no'>
                                         <p>No contiene</p>
                                     </div>
                                     <div class='cont'>
                                         <p><b>SAL</b></p>
                                     </div>";
-                        } 
+                        }
 
                         // GRASA
-                        if($lista[27] == 'Alto'){
+                        if ($lista[27] == 'Alto') {
                             echo "  <div class='alto'>
                                         <p>ALTO</p>
                                     </div>
                                     <div class='az'>
                                         <p>en <b>GRASA</b></p>
                                     </div>";
-                        } elseif ($lista[27] == 'Medio'){
+                        } elseif ($lista[27] == 'Medio') {
                             echo "  <div class='medio'>
                                         <p>MEDIO</p>
                                     </div>
                                     <div class='gr'>
                                         <p>en <b>GRASA</b></p>
                                     </div>";
-                        } elseif ($lista[27] == 'Bajo'){
+                        } elseif ($lista[27] == 'Bajo') {
                             echo "  <div class='bajo'>
                                         <p>BAJO</p>
                                     </div>
                                     <div class='sal'>
                                         <p>en <b>GRASA</b></p>
                                     </div>";
-                        } elseif ($lista[27] == 'No contiene'){
+                        } elseif ($lista[27] == 'No contiene') {
                             echo "  <div class='no'>
                                         <p>No contiene</p>
                                     </div>
                                     <div class='cont'>
                                         <p><b>GRASA</b></p>
                                     </div>";
-                        } 
+                        }
                         ?>
                     </div>
                 </div>
@@ -240,9 +240,11 @@ $lista = $control2->EncontrarRecetas($idReceta);
                 <h5><i class="uil uil-crockery"></i> Porciones: <?php echo $lista[21] ?> porciones.</h5><br>
                 <h5><i class="uil uil-signal-alt-3"></i> Dificultad: <?php echo $lista[22] ?></h5><br>
                 <h5><i class="uil uil-share-alt"></i> Compartir Receta:
-                    <a href="#"><i class="uil uil-facebook-f"></a></i>
-                    <a href="#"><i class="uil uil-twitter"></a></i>
-                    <a href="#"><i class="uil uil-instagram"></i></a>
+                    <div class="media-icons">
+                        <a href="https://www.facebook.com"><i class="uil uil-facebook-f"></i></a>
+                        <a href="https://www.twitter.com"><i class="uil uil-twitter"></i></a>
+                        <a href="https://www.instagram.com"><i class="uil uil-instagram"></i></a>
+                    </div>
                 </h5>
 
             </div>
@@ -325,10 +327,10 @@ $lista = $control2->EncontrarRecetas($idReceta);
                 <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
             </div>
             <div class="media-icons">
-                <a href="#"><i class="uil uil-facebook-f"></i></a>
-                <a href="#"><i class="uil uil-twitter"></i></a>
-                <a href="#"><i class="uil uil-instagram"></i></a>
-                <a href="#"><i class="uil uil-youtube"></i></a>
+                <a href="https://www.facebook.com"><i class="uil uil-facebook-f"></i></a>
+                <a href="https://www.twitter.com"><i class="uil uil-twitter"></i></a>
+                <a href="https://www.instagram.com"><i class="uil uil-instagram"></i></a>
+                <a href="https://www.youtube.com"><i class="uil uil-youtube"></i></a>
 
             </div>
         </div>

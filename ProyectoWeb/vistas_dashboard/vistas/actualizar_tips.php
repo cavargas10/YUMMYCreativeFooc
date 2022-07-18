@@ -204,7 +204,7 @@ $control->UpdateTips($idtips);
           shouldNotGroupWhenFull: true
         },
         // Changing the language of the interface requires loading the language file using the <script> tag.
-        // language: 'es',
+        language: 'es',
         list: {
           properties: {
             styles: true,

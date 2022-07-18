@@ -436,6 +436,60 @@ color: rgb(0, 0, 0);
   margin-top: -19%;
 }
 
+.ingredientes .ing_der .media-icons {
+  margin-top: -8%;
+  margin-left: 45%;
+  display: flex;
+}
+
+.ingredientes .ing_der .media-icons a {
+  height: 30px;
+  width: 30px;
+  margin: 0 4px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.ing_der .media-icons a:nth-child(1) {
+  background: #0077B5;
+}
+
+.ing_der .media-icons a:nth-child(1):hover {
+  color: #0077B5;
+  background: #fff;
+}
+
+.ing_der .media-icons a:nth-child(2) {
+  background: #1DA1F2;
+}
+
+.ing_der .media-icons a:nth-child(2):hover {
+  color: #1DA1F2;
+  background: #fff;
+}
+
+.ing_der .media-icons a:nth-child(3) {
+  background: #E1306C;
+}
+
+.ing_der .media-icons a:nth-child(3):hover {
+  color: #E1306C;
+  background: #fff;
+}
+
+.ing_der .media-icons a:nth-child(4) {
+  background: #f00;
+}
+
+.ing_der .media-icons a:nth-child(4):hover {
+  color: #f00;
+  background: #fff;
+}
 
 /* Card recetas*/
 hr{
