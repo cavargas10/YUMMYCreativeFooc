@@ -72,7 +72,7 @@ $control3 = new modelo_recetas();
 
     <div class="card-search">
 
-      <form action="">
+      <form action="" method = "post">
 
         <div class="flex-box">
 

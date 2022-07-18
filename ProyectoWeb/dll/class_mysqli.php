@@ -134,7 +134,13 @@ class clase_mysqli{
 			echo "<tr>";
 			for ($i=0; $i < $this->numcampos(); $i++) { 
 				//echo "<td>".utf8_encode($row[$i])."</td>";
-				echo "<td>".$row[$i]."</td>";
+				
+				if($i == 3){
+					echo "<td><img src = '".$row[3]."' width = 80></td>";
+					//echo "<td>Hola</td>";
+				}else{
+					echo "<td>".$row[$i]."</td>";
+				}
 			}
 			echo  "<td><a class='btnDelete' href='contenido_tips.php?idtips=$row[0]'> Borrar </a></td>";
 			echo  "<td><a class='btnUpdate' href='actualizar_tips.php?idtips=$row[0]'>Actualizar</a></td>";
