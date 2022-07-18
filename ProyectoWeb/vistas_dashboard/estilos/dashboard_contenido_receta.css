@@ -1,83 +1,131 @@
+.contenedorFormUser {
+  background-color: rgb(213, 190, 150);
+  padding: 2%;
+  width: 45%;
+  text-align: center;
+  border-radius: 10px;
+  margin: auto;
+}
+.contenedorFormUser label {
+  width: 150px;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: left;
+  display: inline-block;
+}
 
-.tablecudIngredientes {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 65%;
-    margin-left: 15%;
-    margin-top: 3%;
-    padding: 2%;
-    border: 5px solid rgb(92, 69, 18);
-  }
-   td {
-    text-align: left;
-    padding: 15px;
-    border: 1px solid rgb(92, 69, 18);
-  }
+.contenedorFormUser input[type="text"],
+.contenedorFormUser input[type="email"],
+.contenedorFormUser input[type="password"] {
+  width: 220px;
+  padding: 5px 10px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 8px 0;
+  display: inline-block;
+}
+.boton .subbtn {
+  background-color: #b5a384;
+  width: 20%;
+  padding: 0.4%;
+  height: 50px;
+  margin-left: 40.5%;
+  color: whitesmoke;
+  border: 1px solid #cebd9f;
+  font-size: 17px;
+}
 
-  th{
-    text-align: center;
-    padding: 15px;
-    border: 1px solid rgb(92, 69, 18);
-  }
+.boton .subbtn:hover {
+  background-color: #cebd9f;
+  cursor: pointer;
+}
 
-  td a{
-    text-decoration: none;
-    color: whitesmoke;
-    border-radius: 5px;
-    padding: 5% 5%;
-    margin-left: 5%;
-  }
+.formUser .actualizarUser {
+  text-align: center;
+  margin-bottom: 2%;
+}
 
-  td .btnDelete{
-    background-color: rgb(226, 86, 86);
-    padding: 2%;
-    margin-left: 37.5%;
-  }
+textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 8px 0;
+  /*resize: vertical | horizontal | none | both*/
+  resize: none;
+  display: block;
+}
 
-  td .btnDelete:hover{
-    background-color: rgb(225, 109, 109);
-  }
+/*Estilos tabla tips*/
+.listaReceta .btnReceta{
+background-color: rgb(217, 152, 83);
+width: 12%;
+padding: 0%;
+height: 40px;
+margin-left: 10%;
+color: whitesmoke;
+border: 1px solid #cebd9f;
+font-size: 16px;
+margin-top:4% ;
+}
 
-  tr:nth-child(even) {
-    background-color: rgb(216, 197, 171);
-  }
+.listaReceta .btnReceta a {
+text-decoration: none;
+color: whitesmoke;
+font-weight: 500;
+}
 
-  .addIngrediente{
-    text-align: center;
-    width: 45%;
-    margin-left: 25%;
-    padding: 1%;
-    margin-top: 2%;
-    background-color: rgb(216, 197, 171);
-  }
+.listaReceta .btnReceta:hover {
+background-color: #d7a753;
+cursor: pointer;
+}  
 
-  .formIngrediente .tituloIngrediente{
-    margin-top: 2%;
-  }
+.tablecudReceta{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 80%;
+  margin-left:10%;
+  margin-top: 3%;
+  padding: 2%;
+  border: 5px solid rgb(92, 69, 18);
+}
 
-  .formIngrediente .contenedorFormIngrediente input[type="text"]{
-    width: 220px;
-    padding: 5px 10px;
-    border: 1px solid #f6f6f6;
-    border-radius: 3px;
-    background-color: #f6f6f6;
-    margin: 8px 0;
-    margin-left: 3%;
-    display: inline-block;
-  }
-  .boton .btnIngredientes {
-    background-color: rgb(217, 152, 83);
-    width: 20%;
-    padding: 0.4%;
-    height: 50px;
-    color: white;
-    border: 1px solid #cebd9f;
-    font-size: 17px;
-    margin-top: -1%;
-  }
-  .boton .btnIngredientes:hover {
-    background-color: #d1a456;
-    cursor: pointer;
-  } 
+th, td {
+  text-align: left;
+  padding: 16px;
+  border: 1px solid rgb(92, 69, 18);
+}
+th{
+  text-align: center;
+}
 
-  
+td a{
+  text-decoration: none;
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 7% 7%;
+  margin-left: 10%;
+}
+
+td .btnDelete{
+  background-color: rgb(226, 86, 86);
+}
+
+td .btnUpdate{
+  background-color: rgb(53, 166, 53);
+}
+
+td .btnDelete:hover{
+  background-color: rgb(225, 109, 109);
+}
+
+td .btnUpdate:hover{
+  background-color: rgb(78, 177, 78);
+}
+
+tr:nth-child(even) {
+  background-color: rgb(216, 197, 171);
+}
+
