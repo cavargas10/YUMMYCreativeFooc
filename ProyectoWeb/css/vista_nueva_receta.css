@@ -414,14 +414,17 @@ color: rgb(0, 0, 0);
   font-size: 25px;
 }
 
+.ingredientes{
+  height: 421px;
+}
 .ingredientes .ing_izq{
-    background-color: #FAF0CA;
     font-size: 18px;
+    text-align: justify;
     padding: 1%;
-    width: 30%;
+    width: 28%;
     margin-left: 20%;
     margin-top: 2%;
-    height: 300px;
+    height: 400px;
 }
 .ing_izq h2{
   font-size: 20px;
@@ -431,9 +434,9 @@ color: rgb(0, 0, 0);
 .ingredientes .ing_der{
   font-size: 20px;
   padding: 2%;
-  width: 27%;
+  width: 30%;
   margin-left: 52%;
-  margin-top: -19%;
+  margin-top: -28%;
 }
 
 .ingredientes .ing_der .media-icons {
@@ -493,13 +496,13 @@ color: rgb(0, 0, 0);
 
 /* Card recetas*/
 hr{
-  height: 300px;
+  height: 400px;
   margin-left: 50%;
-  margin-top: -21%;
+  margin-top: -25%;
 }
 .new-recetas {
   background-color: #d1b27c;
-  height: 70px;
+ /* height: 70px;*/
 }
 
 .new-recetas h2 {
@@ -521,12 +524,29 @@ hr{
   background-color: #0077B5;
   border-radius: 1px solid black;
 }
+
+.ingredientes .ing_izq .ck-content{
+  width: 95%;
+  margin-left: -12%;
+}
+
+.new-recetas .ck-content{
+  text-align: justify;
+  background-color: #FAF0CA;
+  padding-top: 1%;
+}
+
+.new-recetas .ck-content img{
+  margin-left: 4%;
+  padding-top: 1%;
+}
+
 /*grid cards*/
 
 
 .grid {
   width: 100%;
-  height: 530px;
+ /* height: 530px;*/
   flex-wrap: wrap;
   justify-content: center;
   display: inline;
