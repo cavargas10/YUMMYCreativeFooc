@@ -2,6 +2,7 @@
 include("../../seguridad/seguridad.php");
 include_once "../controlador/usuario_controlador.php";
 include_once "../modelo/usuario_modelo.php";
+include_once "../modelo/modelo_recetas.php";
 extract($_GET);
 
 $control2 = new usuario_modelo();
@@ -125,187 +126,14 @@ $control = new usuario_controlador();
                 <h2>Explore nuestras Recetas</h2>
             </div>
 
-            <div class="container-card-recet">
-                <div class="card-recet">
-                    <div class="img-card-recet">
-                        <img src="../../img/plato4.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <a href="new_receta_user.php">
-                            <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                        </a>
-                        <div class="card-inf">
-                            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                                officia ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-                                beatae asperiores temporibus numquam quod, repudiandae a.</p>
-                            <span class="rating">★★★★☆</span>
-                            <h3 class="card-view text-medium">5 Vistas</h3>
-                        </div>
-                    </div></a>
-                </div>
-            </div>
-            <div class="container-card-recet">
-                <div class="card-recet">
-                    <div class="img-card-recet">
-                        <img src="../../img/plato5.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                        <div class="card-inf">
-                            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                                officia
-                                ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-                                beatae
-                                asperiores temporibus numquam quod, repudiandae a.</p>
-                            <span class="rating">★★★★☆</span>
-                            <h3 class="card-view text-medium">5 Vistas</h3>
-                        </div>
-                    </div>
-                </div></a>
-            </div>
-            <div class="container-card-recet">
-                <div class="card-recet">
-                    <div class="img-card-recet">
-                        <img src="../../img/plato6.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                        <div class="card-inf">
-                            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                                officia
-                                ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-                                beatae
-                                asperiores temporibus numquam quod, repudiandae a.</p>
-                            <span class="rating">★★★★☆</span>
-                            <h3 class="card-view text-medium">5 Vistas</h3>
-                        </div>
-                    </div>
-                </div></a>
-            </div>
-
-            <div class="container-card-recet">
-                <div class="card-recet">
-                    <div class="img-card-recet">
-                        <img src="../../img/fot2.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                        <div class="card-inf">
-                            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                                officia
-                                ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-                                beatae
-                                asperiores temporibus numquam quod, repudiandae a.</p>
-                            <span class="rating">★★★★☆</span>
-                            <h3 class="card-view text-medium">5 Vistas</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container-card-recet">
-                <div class="card-recet">
-                    <div class="img-card-recet">
-                        <img src="../../img/img3d.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                        <div class="card-inf">
-                            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                                officia
-                                ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-                                beatae
-                                asperiores temporibus numquam quod, repudiandae a.</p>
-                            <span class="rating">★★★★☆</span>
-                            <h3 class="card-view text-medium">5 Vistas</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container-card-recet">
-                <div class="card-recet">
-                    <div class="img-card-recet">
-                        <img src="../../img/paso4.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                        <div class="card-inf">
-                            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                                officia
-                                ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-                                beatae
-                                asperiores temporibus numquam quod, repudiandae a.</p>
-                            <span class="rating">★★★★☆</span>
-                            <h3 class="card-view text-medium">5 Vistas</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container-card-recet">
-                <div class="card-recet">
-                    <div class="img-card-recet">
-                        <img src="../../img/fot.png" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                        <div class="card-inf">
-                            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                                officia
-                                ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-                                beatae
-                                asperiores temporibus numquam quod, repudiandae a.</p>
-                            <span class="rating">★★★★☆</span>
-                            <h3 class="card-view text-medium">5 Vistas</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container-card-recet">
-                <div class="card-recet">
-                    <div class="img-card-recet">
-                        <img src="../../img/plato6.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                        <div class="card-inf">
-                            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                                officia
-                                ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-                                beatae
-                                asperiores temporibus numquam quod, repudiandae a.</p>
-                            <span class="rating">★★★★☆</span>
-                            <h3 class="card-view text-medium">5 Vistas</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container-card-recet">
-                <div class="card-recet">
-                    <div class="img-card-recet">
-                        <img src="../../img/card1.png" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                        <div class="card-inf">
-                            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                                officia
-                                ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-                                beatae
-                                asperiores temporibus numquam quod, repudiandae a.</p>
-                            <span class="rating">★★★★☆</span>
-                            <h3 class="card-view text-medium">5 Vistas</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php
+            $control3 = new modelo_recetas();
+            $control3->PresentarRecetas();
+            ?>
         </div>
-
     </main>
 </body>
+
 <footer>
     <div class="content">
         <div class="top">

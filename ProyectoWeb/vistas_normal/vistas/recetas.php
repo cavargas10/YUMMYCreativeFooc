@@ -133,7 +133,6 @@ extract($_GET);
         $control3 = new modelo_recetas();
         $control3->PresentarRecetas();
         ?>
-  
     </div>
   </main>
 </body>

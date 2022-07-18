@@ -19,7 +19,7 @@ class modelo_recetas
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
     $resSQL=$miconexion->consulta("select * from receta order by idReceta DESC ");
-    $resSQL=$miconexion->presentarconsultaRecetasIndex();
+    $resSQL=$miconexion->presentarconsultaRecetas();
     //$this->Disconnect();
     return $resSQL;
   }

@@ -18,7 +18,7 @@ class modelo_tips
   public function PresentarTips() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from tips");
+    $resSQL=$miconexion->consulta("select * from tips order by idtips DESC");
     $resSQL=$miconexion->presentarconsultaTipsIndex();
     //$this->Disconnect();
     return $resSQL;
