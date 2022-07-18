@@ -146,7 +146,7 @@ $lista = $control2->EncontrarRecetas($idReceta);
                             echo "  <div class='medio'>
                                         <p>MEDIO</p>
                                     </div>
-                                    <div class='gr'>
+                                    <div class='gr'> 
                                         <p>en <b>SAL</b></p>
                                     </div>";
                         } elseif ($lista[26] == 'Bajo'){

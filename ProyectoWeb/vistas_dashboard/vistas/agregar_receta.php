@@ -188,7 +188,7 @@ $control3 = new modelo_receta();
               <option>Seleccione...</option>
               <option value='Alto'>Alto</option>
               <option value='Medio'>Medio</option>
-              <option value='Bajo'>Bajo</option>
+              <option value='Bajo'>Bajo</option> 
               <option value='No contiene'>No contiene</option>
             </select>
             <br><label for="sal"><b>Sal:</b></label>

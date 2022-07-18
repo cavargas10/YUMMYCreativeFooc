@@ -171,7 +171,7 @@ class clase_mysqli{
 		echo "<tr>";
 		for ($i=0; $i < $this->numcampos() ; $i++) { 
 			//echo "<td>".$this->nombrecampo($i)."</td>";
-			echo  "<th>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</th>";
+			echo  "<th>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</th>"; 
 		}
 		echo  "<th>BORRAR</th>";
 		echo  "<th>ACTUALIZAR</th>";
