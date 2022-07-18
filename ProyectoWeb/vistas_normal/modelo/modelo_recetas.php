@@ -4,11 +4,11 @@ require_once "../../dll/class_mysqli.php";
 
 class modelo_recetas
 {
-  private $idtips; 
+  private $idReceta; 
 
   #region Set y Get
   public function getidReceta(){
-    return $this->idtips; 
+    return $this->idReceta; 
   }
 
   public function setidReceta($idReceta){
@@ -24,7 +24,7 @@ class modelo_recetas
     return $resSQL;
   }
 
-  public function EncontrarTips($idReceta) {
+  public function EncontrarRecetas($idReceta) {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
     $resSQL=$miconexion->consulta("select * from receta where idReceta = $idReceta");

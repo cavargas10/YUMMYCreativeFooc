@@ -125,7 +125,6 @@ $control3 = new modelo_receta();
                     </div>
 
                     <div class="contenedorFormReceta">
-                        <?php echo $lista[2] ?>
                         <label for="titulo_Receta"><b>Título:</b></label>
                         <input type="text" name="titulo_Receta" id="titulo_Receta" placeholder="Ingrese el titulo de la receta" required value="<?php echo $lista[1] ?>"><br>
                         <label for="descripcion_Receta"><b>Descripción:</b></label>
@@ -268,13 +267,13 @@ $control3 = new modelo_receta();
                         <br><b>INGREDIENTES</b>
                         <br><label for="ingredientes_Receta"><b>Ingredientes:</b></label><br>
                         <div class="ck-content">
-                            <textarea name="ingredientes_Receta" id="ingredientes_Receta" value="<?php echo $lista[23] ?>"><?php echo $lista[23] ?></textarea><br>
+                            <textarea name="ingredientes_Receta" id="ingredientes_Receta"><?php echo $lista[23] ?></textarea><br>
                         </div>
 
                         <b>PASOS RECETA</b>
                         <br><label for="pasos_Receta"><b>Pasos Receta:</b></label><br>
                         <div class="ck-content">
-                            <textarea name="pasos_Receta" id="pasos_Receta" value="<?php echo $lista[24] ?>"><?php echo $lista[24] ?></textarea><br>
+                            <textarea name="pasos_Receta" id="pasos_Receta"><?php echo $lista[24] ?></textarea><br>
                         </div>
 
                     </div>
