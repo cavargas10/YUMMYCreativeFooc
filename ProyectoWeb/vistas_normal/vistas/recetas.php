@@ -72,14 +72,14 @@ $control3 = new modelo_recetas();
 
     <div class="card-search">
 
-      <form action="" method = "post">
+      <form action="" method="post">
 
         <div class="flex-box">
 
           <div class="input-box">
             <span>Tipo receta</span>
             <select name='categoria_Receta' id='categoria_Receta' class="tipo-receta">
-              <option value='Seleccione' selected disabled>Seleccione...</option>
+              <option value="" selected disabled>Seleccione...</option>
               <option value='Desayunos'>Desayunos</option>
               <option value='Almuerzos'>Almuerzos</option>
               <option value='Meriendas'>Meriendas</option>
@@ -91,7 +91,7 @@ $control3 = new modelo_recetas();
           <div class="input-box">
             <span>Ingredientes</span>
             <select name="" id="" class="ingred">
-              <option value="Seleccione" selected disabled>Seleccione...</option>
+              <option value="" selected disabled>Seleccione...</option>
               <?php
               $control3->EncontrarIngredienteTAG();
               ?>
@@ -101,7 +101,7 @@ $control3 = new modelo_recetas();
           <div class="input-box">
             <span>Dificultad</span>
             <select name="dificultad_Receta" id="dificultad_Receta" class="tipo-recet">
-              <option value="Seleccione" selected disabled>Seleccione...</option>
+              <option value="" selected disabled>Seleccione...</option>
               <option value='Facil'>Facil</option>
               <option value='Intermedio'>Intermedio</option>
               <option value='Dificil'>Dificil</option>
@@ -112,7 +112,7 @@ $control3 = new modelo_recetas();
           <div class="input-box">
             <span>Porciones</span>
             <select name="porciones_Receta" id="porciones_Receta" class="tipo-recet">
-              <option value="Seleccione" selected disabled>Seleccione...</option>
+              <option value="" selected disabled>Seleccione...</option>
               <option value='1 a 3'>1 a 3</option>
               <option value='4 a 6'>4 a 6</option>
               <option value='7 a 9'>7 a 9</option>
@@ -136,6 +136,7 @@ $control3 = new modelo_recetas();
       <?php
       $control3 = new modelo_recetas();
       $control3->PresentarRecetas();
+      //$control3->PresentarRecetas($categoria_Receta, $porciones_Receta, $dificultad_Receta);
       ?>
     </div>
   </main>

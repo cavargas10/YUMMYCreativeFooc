@@ -137,7 +137,6 @@ class clase_mysqli{
 				
 				if($i == 3){
 					echo "<td><img src = '".$row[3]."' width = 80></td>";
-					//echo "<td>Hola</td>";
 				}else{
 					echo "<td>".$row[$i]."</td>";
 				}
