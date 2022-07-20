@@ -38,6 +38,13 @@ class controlador_ingredientes{
         $userResponse = $user->ListaIngrediente();
     }
 
+	public function ListaIngredientePagina($pagina)
+    {
+		$offset=5*$pagina;
+        $user = new modelo_ingredientes();
+        $userResponse = $user->ListaIngrediente($offset);
+    }
+
 	public function DeleteIngrediente($idingredientes)
     {
         $user = new modelo_ingredientes();

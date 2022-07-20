@@ -49,6 +49,13 @@ class controlador_tips
 		$userResponse = $user->ListaTips();
 	}
 
+	public function ListaTipsPagina($pagina)
+	{	
+		$offset = 5 * $pagina;	
+		$user = new modelo_tips();
+		$userResponse = $user->ListaTipspagina($offset);
+	}
+
 	public function UpdateTips($idtips)
 	{
 		$user = new modelo_tips();
@@ -76,6 +83,7 @@ class controlador_tips
 			}
 		}
 	}
+	
 
 	public function DeleteTips($idtips)
 	{

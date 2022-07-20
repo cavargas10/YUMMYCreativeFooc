@@ -18,7 +18,7 @@ extract($_GET);
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
+ 
 <body>
   <div class="wrapper">
     <div class="sidebar">
@@ -112,14 +112,33 @@ extract($_GET);
       <div class="listaReceta">
       <button class="btnReceta"><a href="agregar_receta.php">Agregar</a></button>
         <?php
-        $control = new controlador_receta();
-        $control->ListaReceta();
+        // $control = new controlador_receta();
+        // $control->ListaReceta();
 
         if (isset($idReceta)) {
           $control1 = new controlador_receta();
           $control1->DeleteReceta($idReceta);
         }
         ?>
+      </div>
+
+      <div class="paginacion">
+        <?php
+          $npagina;
+          if(isset($_GET['pagina'])){
+            $npagina=$pagina;
+          }else{
+            $npagina=0;
+          }
+           $control = new controlador_receta();
+        $control->ListaRecetaPagina($npagina);
+        echo "<ul>";
+          echo "<li><a href='contenido_receta.php?pagina=".($npagina-1)."'> < </a></li>";
+          echo "<h2>".($npagina+1)."</h2>";
+          echo "<li><a href='contenido_receta.php?pagina=".($npagina+ 1)."'> > </a></li>";          
+          echo"</ul>";
+        ?>
+
       </div>
     </section>
   </div>

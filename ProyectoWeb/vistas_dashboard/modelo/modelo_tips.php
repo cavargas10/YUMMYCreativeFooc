@@ -16,7 +16,7 @@ class modelo_tips
   public function getidtips(){
     return $this->idtips; 
   }
-
+ 
   public function setidtips($idtips){
     $this->idtips = $idtips;
   }
@@ -40,11 +40,20 @@ class modelo_tips
   public function setfolder($folder){
     $this->folder = $folder;
   }
+
   
   public function ListaTips() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
     $resSQL=$miconexion->consulta("select idtips 'ID', titulo_Tips 'TITULO', descripcion_Tips 'CONTENIDO', imagen_Tips 'IMAGEN' from tips");
+    $resSQL=$miconexion->verconsultacrudTips();
+    //$this->Disconnect();
+    return $resSQL;
+  }
+  public function ListaTipsPagina($offset) {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $resSQL=$miconexion->consulta("select idtips 'ID', titulo_Tips 'TITULO', descripcion_Tips 'CONTENIDO', imagen_Tips 'IMAGEN' from tips LIMIT 5 OFFSET $offset");
     $resSQL=$miconexion->verconsultacrudTips();
     //$this->Disconnect();
     return $resSQL;

@@ -131,14 +131,33 @@ $control->CreateIngrediente();
 
       <div class="listaIngredientes">
         <?php
-          $control = new controlador_ingredientes();
-          $control->ListaIngrediente();
+          // $control = new controlador_ingredientes();
+          // $control->ListaIngrediente();
 
           if (isset($idingredientes)) {
             $control1 = new controlador_ingredientes();
             $control1->DeleteIngrediente($idingredientes);
           }
         ?>
+      </div>
+
+      <div class="paginacion">
+        <?php
+          $npagina;
+          if(isset($_GET['pagina'])){
+            $npagina=$pagina;
+          }else{
+            $npagina=0;
+          }
+           $control = new controlador_ingredientes();
+        $control->ListaIngredientePagina($npagina);
+        echo "<ul>";
+          echo "<li><a href='contenido_ingredientes.php?pagina=".($npagina-1)."'> < </a></li>";
+          echo "<h2>".($npagina+1)."</h2>";
+          echo "<li><a href='contenido_ingredientes.php?pagina=".($npagina+ 1)."'> > </a></li>";          
+          echo"</ul>";
+        ?>
+
       </div>
     </section>
   </div>

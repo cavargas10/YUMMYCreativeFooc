@@ -111,13 +111,35 @@ extract($_GET);
       <div class="listaVideos">
         <button class="btnVideos"><a href="agregar_videos.php">Agregar</a></button>
         <?php
-          $control = new controlador_videos();
-          $control->ListaVideo();
+          // $control = new controlador_videos();
+          // $control->ListaVideo();
 
           if (isset($idvideos)) {
             $control1 = new controlador_videos();
             $control1->DeleteVideo($idvideos);
           }
+        ?>
+      </div>
+
+      <div class="paginacion">
+        <?php
+          
+          $npagina;
+          
+
+          if(isset($_GET['pagina'])){
+            $npagina = $pagina;
+          }else {
+            $npagina = 0;
+          }
+          $control = new controlador_videos();
+          $control->ListaVideoPagina($npagina);
+          echo "<ul>";
+          echo "<li><a href='contenido_videos.php?pagina=".($npagina-1)."'> < </a></li>";
+          echo "<h2>".($npagina+1)."</h2>";
+          echo "<li><a href='contenido_videos.php?pagina=".($npagina+ 1)."'> > </a></li>";          
+          echo"</ul>";
+          
         ?>
       </div>
     </section>

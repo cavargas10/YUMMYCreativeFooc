@@ -19,7 +19,7 @@
     padding: 15px;
     border: 1px solid rgb(92, 69, 18);
   }
-
+ 
   td a{
     text-decoration: none;
     color: whitesmoke;
@@ -80,4 +80,32 @@
     cursor: pointer;
   } 
 
+
+  /* paginacion */
+.paginacion ul{
+  padding: 15px;
+  list-style: none;
+  background: #FFF;
+  margin-top: 15px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+
+}
+.paginacion h2{
+  margin: 0px 8px 0px 8px;
+
+}
+.paginacion a{
+  color: #428bca;
+  border: 1px solid #ddd;
+  padding: 5px;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  width: 25px;  
+}
   

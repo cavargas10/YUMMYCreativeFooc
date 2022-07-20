@@ -43,6 +43,13 @@ class controlador_videos{
         $user = new modelo_videos();
         $userResponse = $user->ListaVideo();
     }
+	
+    public function ListaVideoPagina($pagina)
+    {
+		$offset=2*$pagina;
+        $user = new modelo_videos();
+        $userResponse = $user->ListaVideoPagina($offset);
+    }
 
 	public function UpdateVideo($idvideos)
     {

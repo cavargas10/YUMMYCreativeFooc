@@ -87,6 +87,14 @@ class controlador_receta
 		$user = new modelo_receta();
 		$userResponse = $user->ListaReceta();
 	}
+	
+	
+	public function ListaRecetaPagina($pagina)
+	{
+		$offset=2*$pagina;
+		$user = new modelo_receta();
+		$userResponse = $user->ListaRecetaPagina($offset);
+	}
 
 	public function UpdateReceta($idReceta)
 	{

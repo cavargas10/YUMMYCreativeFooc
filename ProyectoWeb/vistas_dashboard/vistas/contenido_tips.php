@@ -18,6 +18,7 @@ extract($_GET);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
+
 <body>
   <div class="wrapper">
     <div class="sidebar">
@@ -111,8 +112,8 @@ extract($_GET);
       <div class="listaTips">
         <button class="btnTips"><a href="agregar_tips.php">Agregar</a></button>
         <?php
-          $control = new controlador_tips();
-          $control->ListaTips();
+          // $control = new controlador_tips();
+          // $control->ListaTipsPagina();
 
           if (isset($idtips)) {
             $control1 = new controlador_tips();
@@ -120,6 +121,33 @@ extract($_GET);
           }
         ?>
       </div>
+
+
+      <div class="paginacion">
+        <?php
+          
+          $npagina;
+          
+
+          if(isset($_GET['pagina'])){
+            $npagina = $pagina;
+          }else {
+            $npagina = 0;
+          }
+          $control = new controlador_tips();
+          $control->ListaTipsPagina($npagina);
+          echo "<ul>";
+         
+            echo "<li><a href='contenido_tips.php?pagina=".($npagina-1)."'> < </a></li>";
+      
+          echo "<h2>".($npagina+1)."</h2>";
+          echo "<li><a href='contenido_tips.php?pagina=".($npagina+ 1)."'> > </a></li>";          
+          echo"</ul>";
+          
+        ?>
+      </div>
+
+     
     </section>
   </div>
 
