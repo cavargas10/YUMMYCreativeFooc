@@ -38,7 +38,7 @@ extract($_GET);
         </li>
         <li>
           <a href="perfil_dashboard.php">
-          <i class="uil uil-user-circle"></i>
+            <i class="uil uil-user-circle"></i>
             <span class="link_name">Perfil</span>
           </a>
           <ul class="sub-menu blank">
@@ -48,7 +48,7 @@ extract($_GET);
         <li>
           <div class="icon-link">
             <a href="#">
-            <i class="uil uil-book-open"></i>
+              <i class="uil uil-book-open"></i>
               <span class="link_name">Contenido</span>
             </a>
             <i class='bx bxs-chevron-down arrow'></i>
@@ -63,7 +63,7 @@ extract($_GET);
         </li>
         <li>
           <a href="graficos_dashboard.php">
-          <i class="uil uil-chart-line"></i>
+            <i class="uil uil-chart-line"></i>
             <span class="link_name">Gráficos</span>
           </a>
           <ul class="sub-menu blank">
@@ -72,7 +72,7 @@ extract($_GET);
         </li>
         <li>
           <a href="clientes_dashboard.php">
-          <i class="uil uil-users-alt"></i>
+            <i class="uil uil-users-alt"></i>
             <span class="link_name">Clientes</span>
           </a>
           <ul class="sub-menu blank">
@@ -81,7 +81,7 @@ extract($_GET);
         </li>
         <li>
           <a href="ayuda_dashboard.php">
-          <i class="uil uil-question-circle"></i>
+            <i class="uil uil-question-circle"></i>
             <span class="link_name">AYUDA</span>
           </a>
           <ul class="sub-menu blank">
@@ -91,12 +91,12 @@ extract($_GET);
         <li>
           <div class="profile-details">
             <div class="profile-content">
-            </div>        
-             <div class="name-job">
+            </div>
+            <div class="name-job">
               <div class="profile_name">Salir</div>
             </div>
-            <a href="../../index.php"> 
-            <i class="uil uil-signout"></i>
+            <a href="../../index.php">
+              <i class="uil uil-signout"></i>
             </a>
 
           </div>
@@ -112,42 +112,42 @@ extract($_GET);
       <div class="listaTips">
         <button class="btnTips"><a href="agregar_tips.php">Agregar</a></button>
         <?php
-          // $control = new controlador_tips();
-          // $control->ListaTipsPagina();
+        // $control = new controlador_tips();
+        // $control->ListaTipsPagina();
 
-          if (isset($idtips)) {
-            $control1 = new controlador_tips();
-            $control1->DeleteTips($idtips);
-          }
+        if (isset($idtips)) {
+          $control1 = new controlador_tips();
+          $control1->DeleteTips($idtips);
+        }
         ?>
       </div>
 
 
       <div class="paginacion">
         <?php
-          
-          $npagina;
-          
 
-          if(isset($_GET['pagina'])){
-            $npagina = $pagina;
-          }else {
-            $npagina = 0;
-          }
-          $control = new controlador_tips();
-          $control->ListaTipsPagina($npagina);
-          echo "<ul>";
-         
-            echo "<li><a href='contenido_tips.php?pagina=".($npagina-1)."'> < </a></li>";
-      
-          echo "<h2>".($npagina+1)."</h2>";
-          echo "<li><a href='contenido_tips.php?pagina=".($npagina+ 1)."'> > </a></li>";          
-          echo"</ul>";
-          
+        $npagina;
+
+
+        if (isset($_GET['pagina'])) {
+          $npagina = $pagina;
+        } else {
+          $npagina = 0;
+        }
+        $control = new controlador_tips();
+        $control->ListaTipsPagina($npagina);
+        echo "<ul>";
+
+        echo "<li><a href='contenido_tips.php?pagina=" . ($npagina - 1) . "'> < </a></li>";
+
+        echo "<h2>" . ($npagina + 1) . "</h2>";
+        echo "<li><a href='contenido_tips.php?pagina=" . ($npagina + 1) . "'> > </a></li>";
+        echo "</ul>";
+
         ?>
       </div>
 
-     
+
     </section>
   </div>
 
@@ -155,7 +155,7 @@ extract($_GET);
     let arrow = document.querySelectorAll(".arrow");
     for (var i = 0; i < arrow.length; i++) {
       arrow[i].addEventListener("click", (e) => {
-        let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+        let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
         arrowParent.classList.toggle("showMenu");
       });
     }
@@ -164,20 +164,20 @@ extract($_GET);
     /* sidebarBtn.addEventListener("click", () => {
       sidebar.classList.toggle("close");
     }); */
-    $(function () {
+    $(function() {
       /* console.log("width: "+ document.body.clientWidth); */
-      
+
       resizeScreen();
-      $(window).resize(function(){
+      $(window).resize(function() {
         resizeScreen();
       })
-  
-      
-      
+
+
+
       function resizeScreen() {
-        if(document.body.clientWidth < 400){
+        if (document.body.clientWidth < 400) {
           $('.sidebar').addClass('close');
-        }else{
+        } else {
           $('.sidebar').removeClass('close');
         }
       }

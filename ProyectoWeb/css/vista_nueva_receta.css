@@ -775,67 +775,8 @@ span.close {
 
 
 /*Comentarios*/
-.center{
-  margin-top: 2%;
-  width: 100%;
-}
 
-.center p{
-  margin-left: 25%;
-  width: 12.15%;
-  font-size: 18px;
-  font-weight: bold;
-}
-.center .stars{
-  background-color: #FCF7E4;
-  margin-left: 25%;
-  width: 12%;
-  height:40px;
-  border: 1px solid rgb(194, 191, 191);
-  margin-bottom: 2%;
-}
-.stars input{
-  display: none;
-}
 
-.center input{
-  border: 1px solid rgb(194, 191, 191);
-  background-color: #FCF7E4;
-  width: 50%;
-  margin-left: 25%;
-  height: 200px;
-  font-size: 15px;
-}
-
-.stars label{
-  float: right;
-  font-size: 25px;
-  color: lightgrey;
-  margin: 0px 7px;
-  text-shadow: 1px 1px #bbb;
-}
-.stars label:before{
-  content: '★';
-}
-.stars input:checked ~ label{
-  color: gold;
-}
-.stars:not(:checked) > label:hover,
-.stars:not(:checked) > label:hover ~ label{
-  color: gold;
-}
-.stars input:checked > label:hover,
-.stars input:checked > label:hover ~ label{
-  color: gold;
-  text-shadow: 1px 1px goldenrod;
-}
-
-.boton-comentario{
-  margin-top: 1.5%;
-  margin-left: 40.2%;
-  width: 20%;
-  margin-bottom: 2%;
-}
 
 /* footer */
 

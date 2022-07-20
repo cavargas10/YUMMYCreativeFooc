@@ -16,7 +16,12 @@ $lista = $control2->EncontrarRecetas($idReceta);
     <title>Yummi Creative Food</title>
     <link rel="stylesheet" href="../../css/vista_nueva_receta.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
 </head>
 
 <body>
@@ -293,20 +298,8 @@ $lista = $control2->EncontrarRecetas($idReceta);
             </div>
 
             <div class="center">
-                <p>Valoracion:</p>
-                <div class="stars">
-                    <input type="radio" id="five" name="rate" value="5">
-                    <label for="five"></label>
-                    <input type="radio" id="four" name="rate" value="4">
-                    <label for="four"></label>
-                    <input type="radio" id="three" name="rate" value="3">
-                    <label for="three"></label>
-                    <input type="radio" id="two" name="rate" value="2">
-                    <label for="two"></label>
-                    <input type="radio" id="one" name="rate" value="1">
-                    <label for="one"></label>
-                    <span class="result"></span>
-                </div>
+                <p>Valoracion:<span id="rateYo"></span><br></p>
+
                 <p>Comentario: </p>
                 <input class="comentario" type="text" placeholder="  Ingrese su Comentario aqui..." name="comentario" readonly=»readonly»><br>
             </div>
@@ -316,6 +309,27 @@ $lista = $control2->EncontrarRecetas($idReceta);
             </div>
         </div>
     </main>
+    <script>
+        $(function() {
+            $("#rateYo").rateYo({
+                rating: 0,
+                spacing: "10px",
+                fullStar: true,
+                starWidth: "30px",
+                numStars: 5,
+                minValue: 1,
+                maxValue: 5,
+                multiColor: {
+
+                    "startColor": "#FF0000", //RED
+                    "endColor": "#FFFF00" //GREEN
+                }
+                onSet: function(rating, rateYoInstance) {
+                    $("#rating").val(rating);
+                }
+            });
+        });
+    </script>
 </body>
 
 

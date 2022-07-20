@@ -4,18 +4,21 @@ require_once "../../dll/class_mysqli.php";
 
 class modelo_recetas
 {
-  private $idReceta; 
+  private $idReceta;
   private $categoria_Receta;
   private $porciones_Receta;
   private $dificultad_Receta;
+  private $idingredientes;
   private $grupoEtario;
 
   #region Set y Get
-  public function getidReceta(){
-    return $this->idReceta; 
+  public function getidReceta()
+  {
+    return $this->idReceta;
   }
 
-  public function setidReceta($idReceta){
+  public function setidReceta($idReceta)
+  {
     $this->idReceta = $idReceta;
   }
 
@@ -39,30 +42,49 @@ class modelo_recetas
     $this->grupoEtario = $grupoEtario;
   }
 
-  //public function PresentarRecetas($categoria_Receta, $porciones_Receta, $dificultad_Receta) {
-  public function PresentarRecetas() {
+  public function getidingredientes()
+  {
+    return $this->idReceta;
+  }
+
+  public function setidingredientes($idingredientes)
+  {
+    $this->idingredientes = $idingredientes;
+  }
+
+  public function setnombre_Ingredientes($nombre_Ingredientes)
+  {
+    $this->nombre_Ingredientes = $nombre_Ingredientes;
+  }
+
+  public function PresentarRecetas($categoria_Receta, $idingredientes, $porciones_Receta, $dificultad_Receta)
+  {
+    //public function PresentarRecetas(){
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from receta order by idReceta DESC ");
-    // if($_POST['categoria_Receta']  == '' and $_POST['dificultad_Receta'] == '' and $_POST['porciones_Receta'] == ''){
-    //   $resSQL=$miconexion->consulta("select * from receta order by idReceta DESC ");
-    // }else{
-    //   $resSQL=$miconexion->consulta("select * from receta  
-    //                                   where categoria_Receta = $this->categoria_Receta OR
-    //                                         porciones_Receta = $this->porciones_Receta OR
-    //                                         dificultad_Receta = $this->dificultad_Receta
-    //                                   order by idReceta DESC ");
-    // }
-    $resSQL=$miconexion->presentarconsultaRecetasIndex();
+    //$resSQL = $miconexion->consulta("select * from receta order by idReceta DESC ");
+    
+    if ($_POST['categoria_Receta']  == '' and $_POST['idingredientes'] == '' and $_POST['dificultad_Receta'] == '' and $_POST['porciones_Receta'] == '') {
+      $resSQL = $miconexion->consulta("select * from receta order by idReceta DESC ");
+    } else {
+      $resSQL = $miconexion->consulta("select * from receta r, ingredientes i 
+                                       where r.categoria_Receta = $categoria_Receta OR
+                                             r.porciones_Receta = $porciones_Receta OR
+                                             r.dificultad_Receta = $dificultad_Receta OR
+                                             i.idingredientes = $idingredientes
+                                       order by idReceta DESC ");
+    }
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     //$this->Disconnect();
     return $resSQL;
   }
 
-  public function EncontrarRecetas($idReceta) {
+  public function EncontrarRecetas($idReceta)
+  {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from receta where idReceta = $idReceta");
-    $resSQL=$miconexion->consulta_lista();
+    $resSQL = $miconexion->consulta("select * from receta where idReceta = $idReceta");
+    $resSQL = $miconexion->consulta_lista();
     //$this->Disconnect();
     return $resSQL;
   }

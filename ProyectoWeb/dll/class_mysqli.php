@@ -304,10 +304,10 @@ class clase_mysqli{
 										<h1 class='card-title text-medium'>$row[1]</h1>
 									</a>
 									<div class='card-inf'>
-										<p class='text-medium'>$row[2]</p>
-										<h3><i class='uil uil-user-circle'></i> Grupo etario: $row[28]</h3>
-										<h3><i class='uil uil-graph-bar'></i> Dificultad: $row[22]</h3>
-										<h3><i class='uil uil-clock-eight'></i> Tiempo: $row[20] min.</h3>
+									<p class='text-medium'>$row[2]</p>
+									<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+									<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+									<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
 									</div>
 									<div class='val'>
 										<p class='valor'>★ <br> 4.5</p>
@@ -319,9 +319,51 @@ class clase_mysqli{
 		}
 	}
 
+	function 	presentarconsultaComentarios(){
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			for ($i=0; $i < 1; $i++) {
+				echo " <div class='datosComentarios'>
+							<div class='nombreComentario'>
+								<p>$row[0] $row[1] dijo: </p>
+							</div>
+							<div class='valoracion'> ";
+							if($row[2] == 1){
+								echo "<p class='estrella'> ★</p>
+								</div>
+							<div class='descComentario'>
+								<p>$row[3]</p>
+							</div></div><br>";
+							}elseif($row[2] == 2){
+								echo"<p class='estrella'> ★★</p></div>
+								<div class='descComentario'>
+									<p>$row[3]</p>
+								</div></div><br>";
+							}elseif($row[2] == 3){
+								echo"<p class='estrella'> ★★★</p></div>
+								<div class='descComentario'>
+									<p>$row[3]</p>
+								</div></div><br>";
+							}elseif($row[2] == 4){
+								echo"<p class='estrella'> ★★★★</p></div>
+								<div class='descComentario'>
+									<p>$row[3]</p>
+								</div></div><br>";
+							}elseif($row[2] == 5){
+								echo "<p class='estrella'> ★★★★★</p></div>
+								<div class='descComentario'>
+									<p>$row[3]</p>
+								</div></div><br>";
+							}
+							
+			}
+			
+		}
+	}
+
+
 	function comboBox(){
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
-			echo "<option value='".$row[1]."'>$row[1]</option>";
+			echo "<option value='".$row[0]."'>$row[1]</option>";
 		}
 	}
 
@@ -354,4 +396,3 @@ class clase_mysqli{
 	}
 */
 }
-?>

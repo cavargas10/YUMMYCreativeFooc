@@ -135,8 +135,8 @@ $control3 = new modelo_recetas();
 
       <?php
       $control3 = new modelo_recetas();
-      $control3->PresentarRecetas();
-      //$control3->PresentarRecetas($categoria_Receta, $porciones_Receta, $dificultad_Receta);
+      //$control3->PresentarRecetas();
+      $control3->PresentarRecetas($categoria_Receta, $nombre_Ingredientes, $porciones_Receta, $dificultad_Receta);
       ?>
     </div>
   </main>

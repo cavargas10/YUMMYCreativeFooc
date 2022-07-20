@@ -32,4 +32,5 @@ class modelo_recetas
     //$this->Disconnect();
     return $resSQL;
   }
+
 }

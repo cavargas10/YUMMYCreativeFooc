@@ -3,6 +3,8 @@ include("../../seguridad/seguridad.php");
 include_once "../controlador/usuario_controlador.php";
 include_once "../modelo/usuario_modelo.php";
 include_once "../modelo/modelo_recetas.php";
+include_once "../controlador/controlador_comentario.php";
+include_once "../modelo/modelo_comentario.php";
 extract($_GET);
 
 $control2 = new usuario_modelo();
@@ -12,7 +14,17 @@ $control = new usuario_controlador();
 $control3 = new modelo_recetas();
 $lista = $control3->EncontrarRecetas($idReceta);
 
+$control4 = new controlador_comentario();
+$control4->CreateComentarios($idReceta);
+
+date_default_timezone_set('America/Guayaquil');
+setlocale(LC_TIME, 'es_EC.UTF-8','esp');
+$fecha = date("Y-m-d");
+/* Convertimos la fecha a marca de tiempo */
+$marca = strtotime($fecha);
+strftime('%A %e de %B de %Y', $marca);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -25,7 +37,12 @@ $lista = $control3->EncontrarRecetas($idReceta);
     <link rel="stylesheet" href="../../css/vista_nueva_receta.css" />
     <link rel="stylesheet" href="../../css/vista_dropdown_User.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
 </head>
 
 <body>
@@ -66,6 +83,7 @@ $lista = $control3->EncontrarRecetas($idReceta);
             }
         </script>
     </header>
+
 
     <main class="container-main">
         <h1><?php echo $lista[1] ?></h1><br>
@@ -244,7 +262,6 @@ $lista = $control3->EncontrarRecetas($idReceta);
                         <a href="https://www.twitter.com"><i class="uil uil-twitter"></i></a>
                         <a href="https://www.instagram.com"><i class="uil uil-instagram"></i></a>
                     </div>
-
                 </h5>
 
             </div>
@@ -286,36 +303,54 @@ $lista = $control3->EncontrarRecetas($idReceta);
                 </div>
             </div>
         </div>
-
         <div class="comentarios">
-            <div class="new-recetas">
+            <div class="new-comentarios">
                 <h2>Comentarios</h2>
             </div>
 
-            <div class="center">
-                <p>Valoracion:</p>
-                <div class="stars">
-                    <input type="radio" id="five" name="rate" value="5">
-                    <label for="five"></label>
-                    <input type="radio" id="four" name="rate" value="4">
-                    <label for="four"></label>
-                    <input type="radio" id="three" name="rate" value="3">
-                    <label for="three"></label>
-                    <input type="radio" id="two" name="rate" value="2">
-                    <label for="two"></label>
-                    <input type="radio" id="one" name="rate" value="1">
-                    <label for="one"></label>
-                    <span class="result"></span>
-                </div>
-                <p>Comentario: </p>
-                <input class="comentario" type="text" placeholder="  Ingrese su Comentario aqui..." name="comentario"><br>
-            </div>
+            <form class="formComentario" method="post" action="">
+                <div class="contenedorFormComentarios">
+                    
+                    <label for="valoracion_Comentario"><b>Valoracion: </b> <span id="rateYo"></span></label>
 
-            <div class="boton-comentario">
-                <button onclick="document.getElementById('id01').style.display='block'">Envia tu comentario</button>
-            </div>
+                    <input type="hidden" name="rating" id="rating">
+
+                    <label for="comentario"><b>Comentario:</b></label><br>
+                    <textarea name="comentario" id="comentario" maxlength="100" required cols="30" rows="10" placeholder="Ingrese un Comentario!"></textarea>
+                    
+                </div>
+                <div>
+                    <br><button type="submit" value="Procesar" class="subbtnTips">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div class="comentariosUsuarios">
+            <?php
+            $control = new controlador_comentario();
+            $control->ListaComentarios($idReceta);
+            ?>
         </div>
     </main>
+    <script>
+        $(function() {
+            $("#rateYo").rateYo({
+                rating: 0,
+                spacing: "10px",
+                fullStar: true,
+                starWidth: "30px",
+                numStars: 5,
+                minValue: 1,
+                maxValue: 5,
+                multiColor: {
+                    "startColor": "#FF0000", //RED
+                    "endColor": "#FFCC00" //GREEN
+                },
+                onSet: function(rating, rateYoInstance) {
+                     $("#rating").val(rating);
+                }
+            });
+        });
+    </script>
 </body>
 
 
