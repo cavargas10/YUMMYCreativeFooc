@@ -312,6 +312,7 @@ $lista = $control2->EncontrarRecetas($idReceta);
     <script>
         $(function() {
             $("#rateYo").rateYo({
+                readOnly: true,
                 rating: 0,
                 spacing: "10px",
                 fullStar: true,
@@ -323,9 +324,6 @@ $lista = $control2->EncontrarRecetas($idReceta);
 
                     "startColor": "#FF0000", //RED
                     "endColor": "#FFFF00" //GREEN
-                }
-                onSet: function(rating, rateYoInstance) {
-                    $("#rating").val(rating);
                 }
             });
         });
