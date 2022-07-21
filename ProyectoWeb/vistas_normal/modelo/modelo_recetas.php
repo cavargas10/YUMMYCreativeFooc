@@ -57,23 +57,24 @@ class modelo_recetas
     $this->nombre_Ingredientes = $nombre_Ingredientes;
   }
 
-  public function PresentarRecetas($categoria_Receta, $idingredientes, $porciones_Receta, $dificultad_Receta)
+  public function PresentarRecetas()
   {
     //public function PresentarRecetas(){
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
     //$resSQL = $miconexion->consulta("select * from receta order by idReceta DESC ");
-    
-    if ($_POST['categoria_Receta']  == '' and $_POST['idingredientes'] == '' and $_POST['dificultad_Receta'] == '' and $_POST['porciones_Receta'] == '') {
-      $resSQL = $miconexion->consulta("select * from receta order by idReceta DESC ");
-    } else {
-      $resSQL = $miconexion->consulta("select * from receta r, ingredientes i 
-                                       where r.categoria_Receta = $categoria_Receta OR
-                                             r.porciones_Receta = $porciones_Receta OR
-                                             r.dificultad_Receta = $dificultad_Receta OR
-                                             i.idingredientes = $idingredientes
-                                       order by idReceta DESC ");
-    }
+    $resSQL = $miconexion->consulta("select * from receta order by idReceta DESC ");
+    // if ($_POST['categoria_Receta']  == '' and $_POST['idingredientes'] == '' and $_POST['dificultad_Receta'] == '' and $_POST['porciones_Receta'] == '') {
+    //   $resSQL = $miconexion->consulta("select * from receta order by idReceta DESC ");
+    // } else {
+    //   $resSQL = $miconexion->consulta("select * from receta, ingredientes  
+    //                                     where ingredientes.idingredientes = receta.idingredientes
+    //                                     And receta.categoria_Receta = $categoria_Receta
+    //                                     AND receta.dificultad_Receta = $dificultad_Receta 
+    //                                     AND receta.porciones_Receta = $porciones_Receta
+    //                                     AND ingredientes.nombre_Ingredientes = 'Agua'
+    //                                    order by idReceta DESC ");                                       
+    // }
     $resSQL = $miconexion->presentarconsultaRecetasIndex();
     //$this->Disconnect();
     return $resSQL;

@@ -313,7 +313,7 @@ $lista = $control2->EncontrarRecetas($idReceta);
         $(function() {
             $("#rateYo").rateYo({
                 readOnly: true,
-                rating: 0,
+                rating: 4,
                 spacing: "10px",
                 fullStar: true,
                 starWidth: "30px",
