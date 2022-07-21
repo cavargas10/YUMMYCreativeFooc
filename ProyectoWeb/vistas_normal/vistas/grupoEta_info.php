@@ -103,25 +103,27 @@ $control3 = new modelo_grupoEta_info();
             </ol>
         </div>
         <img class="img_emb" src="../../img/embarazo.jpg" alt="">
-    </div>
+    </div><br><br>
 
-    <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-        <button class="btn" onclick="filterSelection('Desayunos')"> Desayunos</button>
-        <button class="btn" onclick="filterSelection('Almuerzos')"> Almuerzos</button>
-        <button class="btn" onclick="filterSelection('Meriendas')"> Meriendas</button>
-        <button class="btn" onclick="filterSelection('Cenas')"> Cenas</button>
-        <button class="btn" onclick="filterSelection('Postres')"> Postres</button>
+    <div id="myBtnoContainer" class="myBtnoContainer">
+        <button class="btno active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btno" onclick="filterSelection('Desayunos')"> Desayunos</button>
+        <button class="btno" onclick="filterSelection('Almuerzos')"> Almuerzos</button>
+        <button class="btno" onclick="filterSelection('Meriendas')"> Meriendas</button>
+        <button class="btno" onclick="filterSelection('Cenas')"> Cenas</button>
+        <button class="btno" onclick="filterSelection('Postres')"> Postres</button>
 
     </div>
 
     <!-- Portfolio Gallery Grid -->
-    <div class="row">
-    <?php
-      $control3 = new modelo_grupoEta_info();
-      //$control3->PresentarRecetas();
-      $control3->PresentarRecetasGE();
-      ?>
+    <div class="grid">
+        <div class="row">
+            <?php
+            $control3 = new modelo_grupoEta_info();
+            //$control3->PresentarRecetas();
+            $control3->PresentarRecetasGE();
+            ?>
+        </div>
     </div>
 
     <script>
@@ -162,12 +164,12 @@ $control3 = new modelo_grupoEta_info();
 
 
         // Add active class to the current button (highlight it)
-        var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.getElementsByClassName("btn");
+        var btnContainer = document.getElementById("myBtnoContainer");
+        var btns = btnContainer.getElementsByClassName("btno");
         for (var i = 0; i < btns.length; i++) {
             btns[i].addEventListener("click", function() {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
+                var current = document.getElementsByClassName("btno active");
+                current[0].className = current[0].className.replace(" active", " ");
                 this.className += " active";
             });
         }

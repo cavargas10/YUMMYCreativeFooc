@@ -478,7 +478,7 @@ footer .bottom-details .bottom_text {
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 33.33%;
+  width: 30%;
   display: none; /* Hide all elements by default */
 }
 
@@ -489,31 +489,125 @@ footer .bottom-details .bottom_text {
   clear: both;
 }
 
-/* Content */
-.content {
-  background-color: white;
-  padding: 10px;
-}
 
 /* The "show" class is added to the filtered elements */
 .show {
-  display: block;
+  display: inline-block;
 }
 
 /* Style the buttons */
-.btn {
+.myBtnoContainer{
+  margin-left: 6%;
+}
+
+.btno {
+  width: 12%;
   border: none;
   outline: none;
   padding: 12px 16px;
   background-color: white;
   cursor: pointer;
+  color: #000;
 }
 
-.btn:hover {
-  background-color: #ddd;
+.btno:hover {
+  background-color: rgb(241, 195, 125);
 }
 
-.btn.active {
-  background-color: #666;
+.btno.active {
+  background-color: rgb(242, 173, 69);
   color: white;
+}
+
+.grid {
+  width: 100%;
+  height: 530px;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: inline;
+  flex-direction: column;
+}
+
+.container-card-recet {
+  width: 90%;
+  margin-left: 19%;
+  height: 530px;
+  margin-top: 3%;
+}
+
+.container-card-recet .card-recet {
+  background-color: #FCF7E4;
+  height: 450px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.25s;
+  width: 90%;
+  z-index: 0;
+}
+
+.grid .container-card-recet .card-recet:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.grid .container-card-recet .card-recet img {
+  width: 100%;
+  height: 220px;
+}
+
+.grid .container-card-recet .card-recet .card-title {
+  font-weight: 600;
+  margin-top: 2%;
+}
+
+.grid .container-card-recet .card-recet .text-medium {
+  padding: 0 1rem;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.grid .card-inf h3 {
+  font-size: 15px;
+  margin-top: 2%;
+  width: 35%;
+  margin-left: 15px;
+  text-align: left;
+  color: rgb(211, 134, 52);
+}
+.grid .container-card-recet .card-recet .card-content .cat{
+  color: whitesmoke;
+  font-size: 16.5px;
+  font-weight: bold;
+  margin-top: -2%;
+  background-color:rgb(211, 134, 52);
+}
+
+.grid .container-card-recet .card-recet .card-title {
+  color: rgb(225, 146, 61);
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+.grid .container-card-recet .card-content .card-inf h3 p {
+  width: 200%;
+  margin-top: -20%;
+  margin-left: 100%;
+  font-size: 15px;
+  color: #000;
+}
+
+.card-recet .val .valor{
+  background-color: #cea254;
+  color: whitesmoke;
+  border-radius: 10%;
+  width: 20%;
+  font-weight: bold;
+  font-size: 18px;
+  height: 55px;
+  margin-top: -16%;
+  margin-left: 70%;
 }
