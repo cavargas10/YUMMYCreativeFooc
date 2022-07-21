@@ -79,242 +79,210 @@
     </div>
 
     <div class="card-search">
-
-      <form action="">
-
-        <div class="flex-box">
-
-          <div class="input-box">
-            <span>Tipo receta</span>
-            <select name="" id="" class="tipo-receta">
-              <option value="Receta" selected disabled>Tipo Receta</option>
-              <option value="receta1">receta1</option>
-              <option value="receta2">receta2</option>
-              <option value="receta3">receta3</option>
-            </select>
-          </div>
-
-          <div class="input-box">
-            <span>Ingredientes</span>
-            <select name="" id="" class="ingred">
-              <option value="Ingrediente" selected disabled>Ingredientes</option>
-              <option value="Ingrediente1">Ingrediente1</option>
-              <option value="Ingrediente2">Ingrediente2</option>
-              <option value="Ingrediente3">Ingrediente3</option>
-            </select>
-          </div>
-
-          <div class="input-box">
-            <span>Dificultad</span>
-            <select name="" id="" class="tipo-recet">
-                  <option value="Dificultad" selected disabled>Dificultad</option>
-                  <option value="Dificultad1">Alta</option>
-                  <option value="Dificultad2">Media</option>
-                  <option value="Dificultad3">Baja</option>
-              </select>
-          </div>
-
-
-          <div class="input-box">
-            <span>Porciones</span>
-            <select name="" id="" class="tipo-recet">
-                    <option value="Porcion" selected disabled>Porciones</option>
-                    <option value="Porcion1">1-3 porciones</option>
-                    <option value="Porcion2">4-7 porciones</option>
-                    <option value="Porcion3">Más de 5 porciones</option>
-                </select>
-          </div>
-
+      <div class="flex-box">
+        <img class="gen" src="img/general.png" alt="">
+        <div class="input-box">
+          <span>Busqueda específica</span><br>
+          <h5>Busca tu receta por categoría, dificultad, porciones...</h5>
           <input type="submit" value="Buscar" class="submit-btn" id="">
         </div>
-
-      </form>
+      </div>
+      <div class="flex-box">
+        <img class="grup" src="img/grupo.png" alt="">
+        <div class="input-box">
+          <span>Búsqueda por grupo etario:</span><br>
+          <h5>Busca tu receta por el grupo etario...</h5>
+          <input type="submit" value="Buscar" class="submit-btn" id="">
+        </div>
+      </div>
     </div>
 
-    <div class="grid">
+      <div class="grid">
 
-      <div class="new-recetas">
-        <h1>Nuevas Recetas</h1>
-        <h2>Explore nuestras nuevas Recetas</h2>
-      </div>
+        <div class="new-recetas">
+          <h1>Nuevas Recetas</h1>
+          <h2>Explore nuestras nuevas Recetas</h2>
+        </div>
 
-      <div class="container-card-recet">
-        <div class="card-recet">
-          <div class="img-card-recet">
-            <img src="img/card1.png" alt="">
+        <div class="container-card-recet">
+          <div class="card-recet">
+            <div class="img-card-recet">
+              <img src="img/card1.png" alt="">
+            </div>
+            <div class="card-content">
+              <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
+              <div class="card-inf">
+                <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
+                  officia ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
+                  beatae asperiores temporibus numquam quod, repudiandae a.</p>
+                <span class="rating">★★★★☆</span>
+                <h3 class="card-view text-medium">5 Vistas</h3>
+              </div>
+            </div>
           </div>
-          <div class="card-content">
-            <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-            <div class="card-inf">
-              <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                officia ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-                beatae asperiores temporibus numquam quod, repudiandae a.</p>
-              <span class="rating">★★★★☆</span>
-              <h3 class="card-view text-medium">5 Vistas</h3>
+        </div>
+        <div class="container-card-recet">
+          <div class="card-recet">
+            <div class="img-card-recet">
+              <img src="img/card1.png" alt="">
+            </div>
+            <div class="card-content">
+              <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
+              <div class="card-inf">
+                <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
+                  officia
+                  ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
+                  beatae
+                  asperiores temporibus numquam quod, repudiandae a.</p>
+                <span class="rating">★★★★☆</span>
+                <h3 class="card-view text-medium">5 Vistas</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-card-recet">
+          <div class="card-recet">
+            <div class="img-card-recet">
+              <img src="img/card1.png" alt="">
+            </div>
+            <div class="card-content">
+              <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
+              <div class="card-inf">
+                <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
+                  officia
+                  ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
+                  beatae
+                  asperiores temporibus numquam quod, repudiandae a.</p>
+                <span class="rating">★★★★☆</span>
+                <h3 class="card-view text-medium">5 Vistas</h3>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="container-card-recet">
-        <div class="card-recet">
-          <div class="img-card-recet">
-            <img src="img/card1.png" alt="">
-          </div>
-          <div class="card-content">
-            <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-            <div class="card-inf">
-              <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                officia
-                ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-                beatae
-                asperiores temporibus numquam quod, repudiandae a.</p>
-              <span class="rating">★★★★☆</span>
-              <h3 class="card-view text-medium">5 Vistas</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container-card-recet">
-        <div class="card-recet">
-          <div class="img-card-recet">
-            <img src="img/card1.png" alt="">
-          </div>
-          <div class="card-content">
-            <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-            <div class="card-inf">
-              <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                officia
-                ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-                beatae
-                asperiores temporibus numquam quod, repudiandae a.</p>
-              <span class="rating">★★★★☆</span>
-              <h3 class="card-view text-medium">5 Vistas</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="mensaje">
-      <div class="inf-mensaje">
-        <img src="img/img1.jpg" alt=""></IMg>
-        <h1><br>“No empieces una dieta que terminará algun día, comienza un estilo de vida que dure para siempre"</br>
-        </h1>
-      </div>
-    </div>
 
-    <div class="grid">
-      <div class="new-recetas">
-        <h1>Platos más populares</h1>
-        <h2>Explora nuestras recetas más populares</h2>
+
+      <div class="mensaje">
+        <div class="inf-mensaje">
+          <img src="img/img1.jpg" alt=""></IMg>
+          <h1><br>“No empieces una dieta que terminará algun día, comienza un estilo de vida que dure para siempre"</br>
+          </h1>
+        </div>
       </div>
-      <section class="container-card-recet">
-        <div class="card-recet">
-          <img src="img/card1.png" alt="">
-          <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-          <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-            officia
-            ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-            beatae
-            asperiores temporibus numquam quod, repudiandae a.</p>
-          <span class="rating">★★★★☆</span>
-          <h3 class="card-view text-medium">5 Vistas</h3>
+
+      <div class="grid">
+        <div class="new-recetas">
+          <h1>Platos más populares</h1>
+          <h2>Explora nuestras recetas más populares</h2>
+        </div>
+        <section class="container-card-recet">
+          <div class="card-recet">
+            <img src="img/card1.png" alt="">
+            <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
+            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
+              officia
+              ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
+              beatae
+              asperiores temporibus numquam quod, repudiandae a.</p>
+            <span class="rating">★★★★☆</span>
+            <h3 class="card-view text-medium">5 Vistas</h3>
+          </div>
+        </section>
+
+        <section class="container-card-recet">
+          <div class="card-recet">
+            <img src="img/card1.png" alt="">
+            <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
+            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
+              officia
+              ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
+              beatae
+              asperiores temporibus numquam quod, repudiandae a.</p>
+            <span class="rating">★★★★☆</span>
+            <h3 class="card-view text-medium">5 Vistas</h3>
+          </div>
+        </section>
+
+        <section class="container-card-recet">
+          <div class="card-recet">
+            <img src="img/card1.png" alt="">
+            <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
+            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
+              officia
+              ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
+              beatae
+              asperiores temporibus numquam quod, repudiandae a.</p>
+            <span class="rating">★★★★☆</span>
+            <h3 class="card-view text-medium">5 Vistas</h3>
+          </div>
+        </section>
+      </div>
+
+      <div class="inf_general">
+        <div class="com">
+          <i class="uil uil-comments-alt"></i>
+          <h2>102</h2>
+          <h3>COMENTARIOS</h3>
+        </div>
+
+        <div class="com">
+          <i class="uil uil-restaurant"></i>
+          <h2>90</h2>
+          <h3>PLATOS</h3>
+        </div>
+
+        <div class="com">
+          <i class="uil uil-eye"></i>
+          <h2>256</h2>
+          <h3>VISTAS</h3>
+        </div>
+      </div>
+
+      <section class="recetas">
+        <div class="email">
+          <h1><b>COCINA CREATIVA</b></h1><br>
+          <h1><span>¿Quieres más delicias?</h1><br>
+          <h2>Suscríbete aquí y te enviaremos un correo electrónico cuando se publiquen nuevas recetas.</span></h2><br>
+
+          <!-- Boton Signup -->
+          <button onclick="document.getElementById('id02').style.display='block'">Suscribete</button>
+
+          <!-- Modal Signup -->
+          <div id="id02" class="modal">
+
+            <form class="modal-content animate" method="post" action="internas/procesar.php">
+              <div class="tittle-modal">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <h2 class="sus">Suscribete</h2>
+              </div>
+              <div class="container-form">
+
+                <label for="nombre_Usuario"><b>Nombre</b></label><br>
+                <input type="text" name="nombre_Usuario" id="nombre_Usuario" placeholder="Ingrese su Nombre" required><br>
+
+                <br><label for="apellido_Usuarios"><b>Apellido</b></label><br>
+                <input type="text" name="apellido_Usuario" id="apellido_Usuario" placeholder="Ingrese su Apellido" required><br>
+
+                <br><label for="correo_Usuario"><b>E-mail</b></label><br>
+                <input type="email" name="correo_Usuario" id="correo_Usuario" placeholder="Ingrese su Correo Electronico" required><br>
+
+                <br><label for="clave_Usuario"><b>Contraseña</b></label><br>
+                <input type="password" name="clave_Usuario" id="clave_Usuario" placeholder="Ingrese su Contraseña" required><br>
+
+                <br><button type="submit" value="Procesar">Suscribete</button>
+              </div>
+              <div class="container-sub">
+                <h4>!Ya tienes una cuenta!</h4>
+                <button type="button" class="subbtn1">Login</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="img">
+            <img src="img/fot2.jpg" class="img12" alt="" style="background-attachment:fixed">
+          </div>
         </div>
       </section>
-
-      <section class="container-card-recet">
-        <div class="card-recet">
-          <img src="img/card1.png" alt="">
-          <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-          <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-            officia
-            ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-            beatae
-            asperiores temporibus numquam quod, repudiandae a.</p>
-          <span class="rating">★★★★☆</span>
-          <h3 class="card-view text-medium">5 Vistas</h3>
-        </div>
-      </section>
-
-      <section class="container-card-recet">
-        <div class="card-recet">
-          <img src="img/card1.png" alt="">
-          <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-          <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-            officia
-            ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-            beatae
-            asperiores temporibus numquam quod, repudiandae a.</p>
-          <span class="rating">★★★★☆</span>
-          <h3 class="card-view text-medium">5 Vistas</h3>
-        </div>
-      </section>
-    </div>
-
-    <div class="inf_general">
-      <div class="com">
-        <i class="uil uil-comments-alt"></i>
-        <h2>102</h2>
-        <h3>COMENTARIOS</h3>
-      </div>
-
-      <div class="com">
-        <i class="uil uil-restaurant"></i>
-        <h2>90</h2>
-        <h3>PLATOS</h3>
-      </div>
-
-      <div class="com">
-        <i class="uil uil-eye"></i>
-        <h2>256</h2>
-        <h3>VISTAS</h3>
-      </div>
-    </div>
-
-    <section class="recetas">
-      <div class="email">
-        <h1><b>COCINA CREATIVA</b></h1><br>
-        <h1><span>¿Quieres más delicias?</h1><br>
-        <h2>Suscríbete aquí y te enviaremos un correo electrónico cuando se publiquen nuevas recetas.</span></h2><br>
-
-        <!-- Boton Signup -->
-        <button onclick="document.getElementById('id02').style.display='block'">Suscribete</button>
-
-        <!-- Modal Signup -->
-        <div id="id02" class="modal">
-
-          <form class="modal-content animate" method="post" action="internas/procesar.php">
-            <div class="tittle-modal">
-              <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-              <h2 class="sus">Suscribete</h2>
-            </div>
-            <div class="container-form">
-
-              <label for="nombre_Usuario"><b>Nombre</b></label><br>
-              <input type="text" name="nombre_Usuario" id="nombre_Usuario" placeholder="Ingrese su Nombre" required><br>
-
-              <br><label for="apellido_Usuarios"><b>Apellido</b></label><br>
-              <input type="text" name="apellido_Usuario" id="apellido_Usuario" placeholder="Ingrese su Apellido" required><br>
-
-              <br><label for="correo_Usuario"><b>E-mail</b></label><br>
-              <input type="email" name="correo_Usuario" id="correo_Usuario" placeholder="Ingrese su Correo Electronico" required><br>
-
-              <br><label for="clave_Usuario"><b>Contraseña</b></label><br>
-              <input type="password" name="clave_Usuario" id="clave_Usuario" placeholder="Ingrese su Contraseña" required><br>
-
-              <br><button type="submit" value="Procesar">Suscribete</button>
-            </div>
-            <div class="container-sub">
-              <h4>!Ya tienes una cuenta!</h4>
-              <button type="button" class="subbtn1">Login</button>
-            </div>
-          </form>
-        </div>
-
-        <div class="img">
-          <img src="img/fot2.jpg" class="img12" alt="" style="background-attachment:fixed">
-        </div>
-      </div>
-    </section>
   </main>
 </body>
 <footer>

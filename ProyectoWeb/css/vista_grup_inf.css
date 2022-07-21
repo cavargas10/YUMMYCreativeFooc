@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #FAF0CA;
+  background-color: #faf4df;
   font-family: 'calibri';
   width: 100%;
   height: 100%;
@@ -23,10 +23,10 @@ body {
   color: rgb(225, 146, 61);
 }
 .tips hr{
-  width: 3%;
+  width: 7%;
   background-color: rgb(241, 163, 80);
   height: 2px;
-  margin-left: 48.5%;
+  margin-left: 48%;
 }
 .tips{
   margin-top: 0%;
@@ -60,32 +60,46 @@ nav {
   color: #000;
 }
 
-
+.parrafo{
+  width: 100%;
+}
 .parrafo p{
   margin-top: 2%;
-  width: 60%;
+  width: 80%;
   text-align: justify;
-  margin-left: 20%;
+  margin-left: 10%;
+  font-size: 17px;
+  line-height: 1.7142857;
 }
 
 .parrafo h3{
+  font-size: 26px;
+  margin-top: 2.5%;
   text-align: center;
+  font-weight: bold;
+  color: #db9730;
+
+
 }
 .parrafo .tips{
   margin-top: 7%;
   text-align: center;
 }
 .parrafo .recom{
-  height: 280px;
+  margin-top: 2%;
+  width: 80%;
   text-align: justify;
-  width: 60%;
-  margin-left: 20%;
+  margin-left: 10%;
+  font-size: 17px;
+  line-height: 1.7142857;
 }
 .img_emb{
   width: 40%;
-  height: 280px;
+  padding: 0.3%;
+  background-color: #c5821e;
+  height: 300px;
   margin-left: 30%;
-  margin-top: 1%;
+  margin-top: 3%;
 }
 
 

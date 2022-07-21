@@ -80,57 +80,24 @@ $control = new usuario_controlador();
         </div>
 
         <div class="card-search">
-
-            <form action="">
-
-                <div class="flex-box">
-
-                    <div class="input-box">
-                        <span>Tipo receta</span>
-                        <select name="" id="" class="tipo-receta">
-                            <option value="Receta" selected disabled>Tipo Receta</option>
-                            <option value="receta1">receta1</option>
-                            <option value="receta2">receta2</option>
-                            <option value="receta3">receta3</option>
-                        </select>
-                    </div>
-
-                    <div class="input-box">
-                        <span>Ingredientes</span>
-                        <select name="" id="" class="ingred">
-                            <option value="Ingrediente" selected disabled>Ingredientes</option>
-                            <option value="Ingrediente1">Ingrediente1</option>
-                            <option value="Ingrediente2">Ingrediente2</option>
-                            <option value="Ingrediente3">Ingrediente3</option>
-                        </select>
-                    </div>
-
-                    <div class="input-box">
-                        <span>Dificultad</span>
-                        <select name="" id="" class="tipo-recet">
-                            <option value="Dificultad" selected disabled>Dificultad</option>
-                            <option value="Dificultad1">Alta</option>
-                            <option value="Dificultad2">Media</option>
-                            <option value="Dificultad3">Baja</option>
-                        </select>
-                    </div>
-
-
-                    <div class="input-box">
-                        <span>Porciones</span>
-                        <select name="" id="" class="tipo-recet">
-                            <option value="Porcion" selected disabled>Porciones</option>
-                            <option value="Porcion1">1-3 porciones</option>
-                            <option value="Porcion2">4-7 porciones</option>
-                            <option value="Porcion3">Más de 5 porciones</option>
-                        </select>
-                    </div>
-
+            <div class="flex-box">
+                <img class="gen" src="../../img/general.png" alt="">
+                <div class="input-box">
+                    <span>Busqueda específica</span><br>
+                    <h5>Busca tu receta por categoría, dificultad, porciones...</h5>
                     <input type="submit" value="Buscar" class="submit-btn" id="">
                 </div>
-
-            </form>
+            </div>
+            <div class="flex-box">
+                <img class="grup" src="../../img/grupo.png" alt="">
+                <div class="input-box">
+                    <span>Búsqueda por grupo etario:</span><br>
+                    <h5>Busca tu receta por el grupo etario...</h5>
+                    <input type="submit" value="Buscar" class="submit-btn" id="">
+                </div>
+            </div>
         </div>
+
 
         <div class="grid">
 
