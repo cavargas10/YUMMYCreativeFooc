@@ -1,0 +1,18 @@
+.grafica_uno{
+    width: 380px;
+    height: 350px;
+    padding: 0px 10px 0px 60px;
+}
+.container-graf{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-around ;
+    margin: 10px;
+}
+.name{
+margin-right: -199px;
+
+    display: flex;
+    justify-content: flex-start;
+}
