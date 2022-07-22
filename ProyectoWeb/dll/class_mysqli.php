@@ -36,6 +36,10 @@ class clase_mysqli
 		}
 		return $this->Conexion_ID;
 	}
+	function cerrar()
+	{
+		$this->Conexion_ID->close();
+	}
 	function consulta($sql = "")
 	{
 		if ($sql == "") {
@@ -477,7 +481,7 @@ class clase_mysqli
 							</div>
 						</div>
 					</div></div>";
-				}elseif ($row[28] == 'Madre en gestaci??n' && $row[3] == 'Postres') {
+				} elseif ($row[28] == 'Madre en gestaci??n' && $row[3] == 'Postres') {
 					echo "<div class='column Postres'>
 						<div class='container-card-recet'>
 						<div class='card-recet'>
