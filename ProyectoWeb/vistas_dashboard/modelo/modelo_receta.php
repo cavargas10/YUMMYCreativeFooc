@@ -234,11 +234,12 @@ class modelo_receta
     //$this->Disconnect();
     return $resSQL;
   }
+
   public function ListaRecetaPagina($offset)
   {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL = $miconexion->consulta("select idReceta 'ID', titulo_Receta 'TITULO', categoria_Receta 'CATEGORIA', grupoEtario 'GRUPO ETARIO' from receta LIMIT 5 OFFSET $offset");
+    $resSQL = $miconexion->consulta("select idReceta 'ID', titulo_Receta 'TITULO', categoria_Receta 'CATEGORIA', grupoEtario 'GRUPO ETARIO' from receta LIMIT 6 OFFSET $offset");
     $resSQL = $miconexion->verconsultacrudReceta();
     //$this->Disconnect();
     return $resSQL;

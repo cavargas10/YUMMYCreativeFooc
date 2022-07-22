@@ -126,17 +126,26 @@ extract($_GET);
         <?php
         $npagina;
         if (isset($_GET['pagina'])) {
-          $npagina = $pagina;
+          $npagina = $_GET['pagina'];
         } else {
           $npagina = 0;
         }
         $control = new controlador_receta();
         $control->ListaRecetaPagina($npagina);
-        echo "<ul>";
-        echo "<li><a href='contenido_receta.php?pagina=" . ($npagina - 1) . "'> < </a></li>";
-        echo "<h2>" . ($npagina + 1) . "</h2>";
-        echo "<li><a href='contenido_receta.php?pagina=" . ($npagina + 1) . "'> > </a></li>";
-        echo "</ul>";
+
+        if($npagina <= 0){
+          echo "<ul>";
+          echo "<h2>" . ($npagina + 1) . "</h2>";
+          echo "<li><a class = 'pagina' href='contenido_receta.php?pagina=" . ($npagina + 1) . "'> > </a></li>";
+          echo "</ul>";
+        }else {
+          echo "<ul>";
+          echo "<li><a class = 'pagina' href='contenido_receta.php?pagina=" . ($npagina - 1) . "'> < </a></li>";
+          echo "<h2>" . ($npagina + 1) . "</h2>";
+          echo "<li><a class = 'pagina' href='contenido_receta.php?pagina=" . ($npagina + 1) . "'> > </a></li>";
+          echo "</ul>";
+        }
+        
         ?>
 
       </div>
