@@ -371,7 +371,7 @@ class clase_mysqli
 								<div class='descComentario'>
 									<p>$row[3]</p>
 								</div></div><br>";
-				}
+			}
 		}
 	}
 

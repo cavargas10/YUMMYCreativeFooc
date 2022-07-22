@@ -1,9 +1,18 @@
 <?php
 include_once "../modelo/modelo_recetas.php";
+include_once "../controlador/controlador_comentario.php";
+include_once "../modelo/modelo_comentario.php";
 extract($_GET);
 
-$control2 = new modelo_recetas();
-$lista = $control2->EncontrarRecetas($idReceta);
+$control3 = new modelo_recetas();
+$lista = $control3->EncontrarRecetas($idReceta);
+
+// date_default_timezone_set('America/Guayaquil');
+// setlocale(LC_TIME, 'es_EC.UTF-8','esp');
+// $fecha = date("Y-m-d");
+// /* Convertimos la fecha a marca de tiempo */
+// $marca = strtotime($fecha);
+// strftime('%A %e de %B de %Y', $marca);
 
 ?>
 <!DOCTYPE html>
@@ -293,20 +302,31 @@ $lista = $control2->EncontrarRecetas($idReceta);
         </div>
 
         <div class="comentarios">
-            <div class="new-recetas">
+            <div class="new-comentarios">
                 <h2>Comentarios</h2>
             </div>
 
-            <div class="center">
-                <p>Valoracion:<span id="rateYo"></span><br></p>
+            <form class="formComentario" method="post" action="">
+                <div class="contenedorFormComentarios">
+                    
+                    <label for="valoracion_Comentario"><b>Valoracion: </b> <span id="rateYo"></span></label>
 
-                <p>Comentario: </p>
-                <input class="comentario" type="text" placeholder="  Ingrese su Comentario aqui..." name="comentario" readonly=»readonly»><br>
-            </div>
+                    <input type="hidden" name="rating" id="rating">
 
-            <div class="boton-comentario">
-                <button onclick="document.getElementById('id01').style.display='block'">Envia tu comentario</button>
-            </div>
+                    <label for="comentario"><b>Comentario:</b></label><br>
+                    <textarea name="comentario" id="comentario" maxlength="100" required cols="30" rows="10" placeholder="Ingrese un Comentario!"></textarea>
+                    
+                </div>
+                <div>
+                    <br><button type="submit" value="Procesar" class="subbtnTips">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div class="comentariosUsuarios">
+            <?php
+            $control = new controlador_comentario();
+            $control->ListaComentarios($idReceta);
+            ?>
         </div>
     </main>
     <script>
