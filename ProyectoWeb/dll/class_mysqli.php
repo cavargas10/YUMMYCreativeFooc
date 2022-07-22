@@ -344,7 +344,6 @@ class clase_mysqli
 	function presentarconsultaComentarios()
 	{
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
-			for ($i = 0; $i < 1; $i++) {
 				echo " <div class='datosComentarios'>
 							<div class='nombreComentario'>
 								<p>$row[0] $row[1] dijo: </p>
@@ -376,7 +375,6 @@ class clase_mysqli
 								<div class='descComentario'>
 									<p>$row[3]</p>
 								</div></div><br>";
-				}
 			}
 		}
 	}

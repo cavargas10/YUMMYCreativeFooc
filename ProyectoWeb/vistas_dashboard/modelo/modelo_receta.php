@@ -234,6 +234,7 @@ class modelo_receta
     //$this->Disconnect();
     return $resSQL;
   }
+
   public function ListaRecetaPagina($offset)
   {
     $miconexion = new clase_mysqli;

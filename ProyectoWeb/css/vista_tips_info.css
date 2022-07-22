@@ -20,7 +20,7 @@ body {
 
 /* Parte superior con el logo y el user*/
 .tips span{
-  color: rgb(225, 146, 61);
+  color: rgb(110, 76, 24);
 }
 .tips hr{
   width: 3%;
@@ -29,8 +29,23 @@ body {
   margin-left: 48.5%;
 }
 .tips{
+  text-align: center;
+  font-size: 30px;
   margin-top: 0%;
 }
+.contenido{
+  margin-top: 7%;
+}
+.contenido .ck-content{
+  width: 80%;
+  margin-left: 10%;
+  padding: 1%;
+}
+
+.contenido .ck-content .image{
+margin-left: 21%;
+}
+
 
 /* navbar */
 nav {

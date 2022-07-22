@@ -17,12 +17,12 @@ $lista = $control3->EncontrarRecetas($idReceta);
 $control4 = new controlador_comentario();
 $control4->CreateComentarios($idReceta);
 
-date_default_timezone_set('America/Guayaquil');
-setlocale(LC_TIME, 'es_EC.UTF-8','esp');
-$fecha = date("Y-m-d");
-/* Convertimos la fecha a marca de tiempo */
-$marca = strtotime($fecha);
-strftime('%A %e de %B de %Y', $marca);
+// date_default_timezone_set('America/Guayaquil');
+// setlocale(LC_TIME, 'es_EC.UTF-8','esp');
+// $fecha = date("Y-m-d");
+// /* Convertimos la fecha a marca de tiempo */
+// $marca = strtotime($fecha);
+// strftime('%A %e de %B de %Y', $marca);
 ?>
 
 

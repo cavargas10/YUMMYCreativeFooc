@@ -134,11 +134,18 @@ extract($_GET);
         }
         $control = new controlador_videos();
         $control->ListaVideoPagina($npagina);
-        echo "<ul>";
-        echo "<li><a href='contenido_videos.php?pagina=" . ($npagina - 1) . "'> < </a></li>";
-        echo "<h2>" . ($npagina + 1) . "</h2>";
-        echo "<li><a href='contenido_videos.php?pagina=" . ($npagina + 1) . "'> > </a></li>";
-        echo "</ul>";
+        if($npagina <= 0){
+          echo "<ul>";
+          echo "<h2>" . ($npagina + 1) . "</h2>";
+          echo "<li  class = 'pagina'><a href='contenido_videos.php?pagina=" . ($npagina + 1) . "'> > </a></li>";
+          echo "</ul>";
+        }else {
+          echo "<ul>";
+          echo "<li ><a  class = 'pagina' href='contenido_videos.php?pagina=" . ($npagina - 1) . "'> < </a></li>";
+          echo "<h2>" . ($npagina + 1) . "</h2>";
+          echo "<li ><a  class = 'pagina' href='contenido_videos.php?pagina=" . ($npagina + 1) . "'> > </a></li>";
+          echo "</ul>";
+        }
 
         ?>
       </div>
