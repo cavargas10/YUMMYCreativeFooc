@@ -106,7 +106,7 @@ $control3 = new modelo_grupoEta_info();
     </div><br><br>
 
     <div id="myBtnoContainer" class="myBtnoContainer">
-        <button class="btno active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btno active" onclick="filterSelection('all')"> Todos</button>
         <button class="btno" onclick="filterSelection('Desayunos')"> Desayunos</button>
         <button class="btno" onclick="filterSelection('Almuerzos')"> Almuerzos</button>
         <button class="btno" onclick="filterSelection('Meriendas')"> Meriendas</button>
