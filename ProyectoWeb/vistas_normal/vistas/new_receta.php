@@ -306,23 +306,33 @@ $lista = $control3->EncontrarRecetas($idReceta);
                 <h2>Comentarios</h2>
             </div>
 
-            <form class="formComentario" method="post" action="">
-                <div class="contenedorFormComentarios">
-                    
-                    <label for="valoracion_Comentario"><b>Valoracion: </b> <span id="rateYo"></span></label>
+            <div class="contenedorFormComentarios">
 
-                    <input type="hidden" name="rating" id="rating">
+                <label for="valoracion_Comentario"><b>Valoracion: </b> <span id="rateYo"></span></label>
 
-                    <label for="comentario"><b>Comentario:</b></label><br>
-                    <textarea name="comentario" id="comentario" maxlength="100" required cols="30" rows="10" placeholder="Ingrese un Comentario!"></textarea>
-                    
-                </div>
-                <div>
-                    <br><button type="submit" value="Procesar" class="subbtnTips">Enviar</button>
-                </div>
-            </form>
+                <input type="hidden" name="rating" id="rating" class="rating">
+
+                <label for="comentario"><b>Comentario:</b></label><br>
+                <textarea name="comentario" id="comentario" maxlength="50" required cols="30" rows="10" placeholder="Ingrese un Comentario!" readonly></textarea>
+
+            </div>
+            <div>
+                <button class="bt" onclick="document.getElementById('id01').style.display='block'">Enviar</button>
+            </div>
         </div>
         <div class="comentariosUsuarios">
+            <!-- <div class='datosComentarios'>
+                    <i class='uil uil-user-square'></i>
+                    <div class='nombreComentario'>
+                        <p>$row[0] $row[1] dijo: </p>
+                    </div>
+                    <div class='valoracion'>
+                        <p class='estrella'> ★</p>
+                    </div>
+                    <div class='descComentario'>
+                        <p>$row[3]</p>
+                    </div>
+                </div><br> -->
             <?php
             $control = new controlador_comentario();
             $control->ListaComentarios($idReceta);

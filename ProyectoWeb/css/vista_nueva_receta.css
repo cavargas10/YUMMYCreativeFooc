@@ -23,7 +23,7 @@ body {
 /* navbar */
 nav {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   background: #b5a384;
   height: 80px;
   width: 100%;
@@ -127,8 +127,9 @@ li a:hover {
   outline: none;
   cursor: pointer;
   font-size: 17px;
-  width: 41%;
+  width: 39%;
   margin-top: 0%;
+  margin-left: 0%;
   
 }
 
@@ -500,14 +501,85 @@ hr{
   margin-left: 4%;
   padding-top: 1%;
 }
+
 /*comentarios*/
-.formComentario{
-  width: 55%;
-  background-color: #0077B5;
-  margin-left: 22%;
+.comentarios{
+  background-color: rgb(216, 197, 171);;
+  width: 80%;
+  margin-left: 10%;
+}
+.comentarios .new-comentarios{
+  color: #69460a;
+  text-align: center;
+  font-size: 20px;
 }
 
+ .comentarios .contenedorFormComentarios{
+  text-align: left;
+  font-size: 20px;
+  margin-left: 3%;
+  color: rgb(26, 26, 26);
+}
+.comentarios .contenedorFormComentarios textarea{
+  width: 96%;
+  background-color: rgb(220, 219, 217);
+}
 
+.bt{
+  background-color: #d99115;
+  width: 30%;
+  margin-left: 35%;
+}
+/*sectiom comentarios*/
+
+.comentariosUsuarios{
+  margin-top: 2%;
+  font-size: 18px;
+}
+
+.comentariosUsuarios .datosComentarios{
+background-color:#FCF7E4;
+width: 80%;
+margin-left: 10%;
+margin-top: -1%;
+}
+.comentariosUsuarios .datosComentarios .nombreComentario{
+  color:rgb(78, 150, 252);
+  margin-top: -2.5%;
+  font-weight: bold;
+  width: 80%;
+  margin-left: 5%;
+  }
+
+  .comentariosUsuarios .datosComentarios .valoracion{
+    color:rgb(252, 188, 11);
+    font-weight: bold;
+    width: 80%;
+    margin-left: 5%;
+    }
+
+    .comentariosUsuarios .datosComentarios .descComentario{
+      color:rgb(73, 64, 39);
+      font-weight: bold;
+      width: 80%;
+      margin-left: 5%;
+      }
+
+  .datosComentarios .uil-user-square{
+        color:#d99115;
+        margin-left: 2%;
+        width: 70%;
+        height: 50px;
+        }
+    
+
+ .comentariosUsuarios .controlador_comentario{
+  margin-left: 35%;
+  width: 12%;
+}
+.uil{
+  width: 30%;
+}
 
 /*grid cards*/
 
@@ -609,6 +681,7 @@ button {
   border: none;
   cursor: pointer;
   width: 100%;
+  margin-left: 30%;
 }
 
 button:hover {

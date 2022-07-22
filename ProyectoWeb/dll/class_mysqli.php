@@ -340,34 +340,36 @@ class clase_mysqli
 	function presentarconsultaComentarios()
 	{
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
-				echo " <div class='datosComentarios'>
-							<div class='nombreComentario'>
+			echo " <div class='datosComentarios'>
+				<i class='uil uil-user-square'>	</i>		
+				<div class='nombreComentario'>
+							
 								<p>$row[0] $row[1] dijo: </p>
 							</div>
 							<div class='valoracion'> ";
-				if ($row[2] == 1) {
-					echo "<p class='estrella'> ★</p>
+			if ($row[2] == 1) {
+				echo "<p class='estrella'> ★</p>
 								</div>
 							<div class='descComentario'>
 								<p>$row[3]</p>
 							</div></div><br>";
-				} elseif ($row[2] == 2) {
-					echo "<p class='estrella'> ★★</p></div>
+			} elseif ($row[2] == 2) {
+				echo "<p class='estrella'> ★★</p></div>
 								<div class='descComentario'>
 									<p>$row[3]</p>
 								</div></div><br>";
-				} elseif ($row[2] == 3) {
-					echo "<p class='estrella'> ★★★</p></div>
+			} elseif ($row[2] == 3) {
+				echo "<p class='estrella'> ★★★</p></div>
 								<div class='descComentario'>
 									<p>$row[3]</p>
 								</div></div><br>";
-				} elseif ($row[2] == 4) {
-					echo "<p class='estrella'> ★★★★</p></div>
+			} elseif ($row[2] == 4) {
+				echo "<p class='estrella'> ★★★★</p></div>
 								<div class='descComentario'>
 									<p>$row[3]</p>
 								</div></div><br>";
-				} elseif ($row[2] == 5) {
-					echo "<p class='estrella'> ★★★★★</p></div>
+			} elseif ($row[2] == 5) {
+				echo "<p class='estrella'> ★★★★★</p></div>
 								<div class='descComentario'>
 									<p>$row[3]</p>
 								</div></div><br>";
@@ -475,7 +477,7 @@ class clase_mysqli
 							</div>
 						</div>
 					</div></div>";
-				}elseif ($row[28] == 'Madre en gestaci??n' && $row[3] == 'Postres') {
+				} elseif ($row[28] == 'Madre en gestaci??n' && $row[3] == 'Postres') {
 					echo "<div class='column Postres'>
 						<div class='container-card-recet'>
 						<div class='card-recet'>
