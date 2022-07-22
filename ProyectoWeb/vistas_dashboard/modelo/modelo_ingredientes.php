@@ -33,7 +33,7 @@ class modelo_ingredientes
   public function ListaIngredientePagina($offset) {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select idingredientes 'ID', nombre_Ingredientes 'INGREDIENTE' from ingredientes LIMIT 3 OFFSET $offset");
+    $resSQL=$miconexion->consulta("select nombre_Ingredientes 'INGREDIENTE' from ingredientes LIMIT 4 OFFSET $offset");
     $resSQL=$miconexion->verconsultacrudIngrediente();
     //$this->Disconnect();
     return $resSQL;

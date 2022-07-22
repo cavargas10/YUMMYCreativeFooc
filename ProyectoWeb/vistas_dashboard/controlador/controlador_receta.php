@@ -91,7 +91,7 @@ class controlador_receta
 	
 	public function ListaRecetaPagina($pagina)
 	{
-		$offset = 5 * $pagina;
+		$offset = 7 * $pagina;
 		$user = new modelo_receta();
 		$userResponse = $user->ListaRecetaPagina($offset);
 	}

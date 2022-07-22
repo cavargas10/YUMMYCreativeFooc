@@ -51,7 +51,7 @@ class controlador_tips
 
 	public function ListaTipsPagina($pagina)
 	{	
-		$offset = 5 * $pagina;	
+		$offset = 3 * $pagina;	
 		$user = new modelo_tips();
 		$userResponse = $user->ListaTipspagina($offset);
 	}
