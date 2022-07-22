@@ -85,7 +85,8 @@ $control = new usuario_controlador();
                 <div class="input-box">
                     <span>Busqueda específica</span><br>
                     <h5>Busca tu receta por categoría, dificultad, porciones...</h5>
-                    <input type="submit" value="Buscar" class="submit-btn" id="">
+                    <a href="recetas_user.php">
+                        <input type="submit" value="Buscar" class="submit-btn" id=""></a>
                 </div>
             </div>
             <div class="flex-box">
@@ -93,7 +94,8 @@ $control = new usuario_controlador();
                 <div class="input-box">
                     <span>Búsqueda por grupo etario:</span><br>
                     <h5>Busca tu receta por el grupo etario...</h5>
-                    <input type="submit" value="Buscar" class="submit-btn" id="">
+                    <a href="gruposEtarios_user.php">
+                        <input type="submit" value="Buscar" class="submit-btn" id=""></a>
                 </div>
             </div>
         </div>

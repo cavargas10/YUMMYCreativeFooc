@@ -84,7 +84,8 @@
         <div class="input-box">
           <span>Busqueda específica</span><br>
           <h5>Busca tu receta por categoría, dificultad, porciones...</h5>
-          <input type="submit" value="Buscar" class="submit-btn" id="">
+          <a href="vistas_normal/vistas/recetas.php">
+          <input type="submit" value="Buscar" class="submit-btn" id=""></a>
         </div>
       </div>
       <div class="flex-box">
@@ -92,7 +93,8 @@
         <div class="input-box">
           <span>Búsqueda por grupo etario:</span><br>
           <h5>Busca tu receta por el grupo etario...</h5>
-          <input type="submit" value="Buscar" class="submit-btn" id="">
+          <a href="vistas_normal/vistas/gruposEtarios.php">
+          <input  type="submit" value="Buscar" class="submit-btn" id=""></a>
         </div>
       </div>
     </div>
