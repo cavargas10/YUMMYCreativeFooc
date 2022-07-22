@@ -234,21 +234,20 @@ li a:hover {
   flex-wrap: wrap;
   justify-content: center;
   display: inline;
-
   flex-direction: column;
 }
 
 .container-card-recet {
   width: 27%;
   margin-left: 5%;
-  height: 500px;
+  height: 530px;
   margin-top: 3%;
   display: inline-block;
 }
 
 .container-card-recet .card-recet {
   background-color: #FCF7E4;
-  height: 460px;
+  height: 450px;
   border-radius: 8px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -269,6 +268,7 @@ li a:hover {
 
 .grid .container-card-recet .card-recet .card-title {
   font-weight: 600;
+  margin-top: 2%;
 }
 
 .grid .container-card-recet .card-recet .text-medium {
@@ -278,11 +278,20 @@ li a:hover {
   text-align: justify;
 }
 
-.grid .container-card-recet .card-recet h3 {
-  color: #1DA1F2;
+.grid .card-inf h3 {
   font-size: 15px;
-  margin-top: -7%;
-  margin-left: 74%;
+  margin-top: 2%;
+  width: 35%;
+  margin-left: 15px;
+  text-align: left;
+  color: rgb(211, 134, 52);
+}
+.grid .container-card-recet .card-recet .card-content .cat{
+  color: whitesmoke;
+  font-size: 16.5px;
+  font-weight: bold;
+  margin-top: -2%;
+  background-color:rgb(211, 134, 52);
 }
 
 .grid .container-card-recet .card-recet .card-title {
@@ -293,11 +302,24 @@ li a:hover {
 
 }
 
-.rating {
-  margin-left: -68%;
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: 400;
+.grid .container-card-recet .card-content .card-inf h3 p {
+  width: 200%;
+  margin-top: -20%;
+  margin-left: 100%;
+  font-size: 15px;
+  color: #000;
+}
+
+.card-recet .val .valor{
+  background-color: #cea254;
+  color: whitesmoke;
+  border-radius: 10%;
+  width: 20%;
+  font-weight: bold;
+  font-size: 18px;
+  height: 55px;
+  margin-top: -16%;
+  margin-left: 70%;
 }
 
 /**/
