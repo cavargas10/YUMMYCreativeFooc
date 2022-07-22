@@ -40,9 +40,9 @@ class controlador_ingredientes{
 
 	public function ListaIngredientePagina($pagina)
     {
-		$offset= 2 * $pagina;
+		$offset= 3 * $pagina;
         $user = new modelo_ingredientes();
-        $userResponse = $user->ListaIngrediente($offset);
+        $userResponse = $user->ListaIngredientePagina($offset);
     }
 
 	public function DeleteIngrediente($idingredientes)
