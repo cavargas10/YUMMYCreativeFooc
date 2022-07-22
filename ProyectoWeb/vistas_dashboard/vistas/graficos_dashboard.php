@@ -118,33 +118,16 @@ require_once "../../dll/class_mysqli.php";
         <i class='bx bx-menu'></i>
         <span class="text">Dashboard</span> <br />
       </div>
-
-
-
-
-
-
       <section class="container-graf">
-
-
-
-
         <div class="grafica_uno">
           <h1>Recetas grupo etarios</h1>
           <canvas id="m" width="10px" height="10px"></canvas>
         </div>
-
-
         <div class="grafica_uno">
           <h1 class="name">Comentarios por tipo de Receta</h1>
           <canvas id="q" width="10px" height="10px"></canvas>
         </div>
-
-
-
-
       </section>
-
     </section>
   </div>
 
@@ -190,7 +173,6 @@ require_once "../../dll/class_mysqli.php";
       data: {
         labels: ['Madre en gestacion', 'Primera Infancia', 'Segunda Infancia', 'Adolescencia', 'Juventud', 'adultez', 'Vejez'],
         datasets: [{
-          label: 'Num Comentarios',
           data: [5, 5, 5, 5, 5, 5],
           backgroundColor: [
             'rgba(255, 99, 132, 0.7)',
