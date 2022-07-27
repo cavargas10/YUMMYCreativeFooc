@@ -1,7 +1,17 @@
 <?php
+include("../../seguridad/seguridad.php");
+include_once "../controlador/usuario_controlador.php";
+include_once "../modelo/usuario_modelo.php";
 include_once "../modelo/modelo_grupoEta_info.php";
+
 extract($_GET);
+
 $control3 = new modelo_grupoEta_info();
+
+$control2 = new usuario_modelo();
+
+$control = new usuario_controlador();
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -12,61 +22,51 @@ $control3 = new modelo_grupoEta_info();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yummi Creative Food</title>
     <link rel="stylesheet" href="../../css/vista_grup_inf.css" />
+    <link rel="stylesheet" href="../../css/vista_dropdown_User.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="js/main.js"></script>
 </head>
 
 <body>
-
     <header>
 
         <div class="menu">
             <nav>
-                <a href="../../index.php" class="enlace">
+                <a href="index_user.php" class="enlace">
                     <img src="../../img/logo.png" alt="" class="logo">
                     <H2 class="nombre"><span>Yummy</span> Creative Food</H2>.
                 </a>
                 <ul>
-                    <li><a href="../../index.php">Inicio</a></li>
-                    <li><a class="active" href="gruposEtarios.php">Grupos Etarios</a></li>
-                    <li><a href="recetas.php">Recetas</a></li>
-                    <li><a href="tips.php">Tips</a></li>
-                    <li><a href="videos.php">Videos</a></li>
-                    <li><a href="acerca.php">Acerca de</a></li>
-                    <!-- Boton Login -->
-                    <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
+                    <li><a href="index_user.php">Inicio</a></li>
+                    <li><a class="active" href="gruposEtarios_user.php">Grupos Etarios</a></li>
+                    <li><a href="recetas_user.php">Recetas</a></li>
+                    <li><a href="tips_user.php">Tips</a></li>
+                    <li><a href="videos_user.php">Videos</a></li>
+                    <li><a href="acerca_user.php">Acerca de</a></li>
+                    <!-- Dropdown Uuario-->
+                    <li><button onclick="myFunction()" class="dropbtn"><?php echo $_SESSION['username']; ?></button></li>
+                    <div id="myDropdown" class="dropdown-content">
+                        <?php
+                        echo "<a href='perfil_user.php?idUsuario=" . $_SESSION['idUsuario'] . "'>Perfil</a>";
+                        ?>
+                        <a href="../../seguridad/exit.php?salir=true">Salir</a>
+                    </div>
                 </ul>
             </nav>
         </div>
-        <!-- Modal LOGIN-->
-        <div id="id01" class="modal">
-            <form class="modal-content animate" method="post" action="../../dll/validar.php">
-                <div class="tittle">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <p>Inicio de Sesión</p>
-                </div>
-                <div class="container-form">
 
-                    <label for="correo_Usuario"><b>E-mail</b></label><br>
-                    <input type="email" name="correo_Usuario" id="correo_Usuario" placeholder="Ingrese su Correo Electronico" required><br>
-
-                    <br><label for="clave_Usuario"><b>Contraseña</b></label><br>
-                    <input type="password" name="clave_Usuario" id="clave_Usuario" placeholder="Ingrese su Contraseña" required><br>
-                    <br><span class="psw"><a href="#">Olvido su contraseña?</a></span><br>
-                    <br><button type="submit" value="Procesar">Login</button>
-
-                </div>
-                <div class="container-sub">
-                    <h4>!Aún no tienes una cuenta!</h4>
-                    <!-- <button onclick="document.getElementById('id02').style.display='block'" class="subbtn">Suscribete</button>  -->
-                    <button type="button" class="subbtn">Suscribete</button>
-                </div>
-            </form>
-        </div>
+        <!-- Script Dropdown Uuario-->
+        <script>
+            /* Cuando el usuario hace clic en el botón, se alterna 
+    entre ocultar y mostrar el contenido desplegable */
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+        </script>
     </header>
 
     <div class="parrafo">
-        <h1 class="tips"><span>Mujer en </span>estado de gestación
+        <h1 class="tips"><span>Juventud
             <hr>
         </h1><br>
         <div class="parte">
@@ -121,7 +121,7 @@ $control3 = new modelo_grupoEta_info();
             <?php
             $control3 = new modelo_grupoEta_info();
             //$control3->PresentarRecetas();
-            $control3->PresentarRecetasGE();
+            $control3->PresentarRecetasGJuventud();
             ?>
         </div>
     </div>
@@ -224,42 +224,6 @@ $control3 = new modelo_grupoEta_info();
                 <li><a href="#">Tips</a></li>
                 <li><a href="#">Videos</a></li>
                 <li><a href="#">Acerca de</a></li>
-            </ul>
-            <ul class="box input-box">
-                <li class="link_name">Suscribete</li>
-                <!-- Boton Signup -->
-                <button onclick="document.getElementById('id03').style.display='block'">Suscribete</button>
-
-                <!-- Modal Signup -->
-                <div id="id03" class="modal">
-
-                    <form class="modal-content animate" method="post" action="../internas/procesar.php">
-                        <div class="tittle-modal">
-                            <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
-                            <h2 class="sus">Suscribete</h2>
-                        </div>
-                        <div class="container-form">
-
-                            <label for="nombre_Usuario"><b>Nombre</b></label><br>
-                            <input type="text" name="nombre_Usuario" id="nombre_Usuario" placeholder="Ingrese su Nombre" required><br>
-
-                            <br><label for="apellido_Usuario"><b>Apellido</b></label><br>
-                            <input type="text" name="apellido_Usuario" id="apellido_Usuario" placeholder="Ingrese su Apellido" required><br>
-
-                            <br><label for="correo_Usuario"><b>E-mail</b></label><br>
-                            <input type="email" name="correo_Usuario" id="correo_Usuario" placeholder="Ingrese su Correo Electronico" required><br>
-
-                            <br><label for="clave_Usuario"><b>Contraseña</b></label><br>
-                            <input type="password" name="clave_Usuario" id="clave_Usuario" placeholder="Ingrese su Contraseña" required><br>
-
-                            <br><button type="submit" value="Procesar">Suscribete</button>
-                        </div>
-                        <div class="container-sub">
-                            <h4>!Ya tienes una cuenta!</h4>
-                            <button type="submit" class="subbtn2">Login</button>
-                        </div>
-                    </form>
-                </div>
             </ul>
         </div>
         <div class="bottom-details">

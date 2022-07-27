@@ -68,15 +68,16 @@
     </div>
     <section class="container-card-recet">
       <div class="card-recet">
-        <a href="grupoEta_info.php">
+        <a href="grupoEta_info_Embarazo.php">
           <img src="../../img/Embarazada.jpg" />
-          <h1 class="card-title text-medium">Madre en estado de gestación </h1>
+          <h1 class="card-title text-medium">Embarazo</h1>
         </a>
       </div>
     </section>
 
     <section class="container-card-recet">
       <div class="card-recet">
+      <a href="grupoEta_info_PInfancia.php">
         <img src="../../img/PrimeraInfancia.jpg" />
         <h1 class="card-title text-medium">Primera Infancia</h1>
 
@@ -85,6 +86,7 @@
 
     <section class="container-card-recet">
       <div class="card-recet">
+      <a href="grupoEta_info_SInfancia.php">
         <img src="../../img/SegundaInfancia.jpg" />
         <h1 class="card-title text-medium">Segunda Infancia</h1>
 
@@ -93,6 +95,7 @@
 
     <section class="container-card-recet">
       <div class="card-recet">
+      <a href="grupoEta_info_Adolescencia.php">
         <img src="../../img/Adolecencia.jpg" />
         <h1 class="card-title text-medium">Adolescencia</h1>
 
@@ -101,6 +104,7 @@
 
     <section class="container-card-recet">
       <div class="card-recet">
+      <a href="grupoEta_info_Juventud.php">
         <img src="../../img/Juventud.jpg" />
         <h1 class="card-title text-medium">Juventud</h1>
 
@@ -109,6 +113,7 @@
 
     <section class="container-card-recet">
       <div class="card-recet">
+      <a href="grupoEta_info_Adultez.php">
         <img src="../../img/Adultez.jpg" />
         <h1 class="card-title text-medium">Adultez</h1>
       </div>
@@ -116,6 +121,7 @@
 
     <section class="container-card-recet">
       <div class="card-recet">
+      <a href="grupoEta_info_Vejez.php">
         <img src="../../img/Mayor.jpg" />
         <h1 class="card-title text-medium">Vejez</h1>
       </div>

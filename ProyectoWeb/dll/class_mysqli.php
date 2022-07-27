@@ -412,7 +412,7 @@ class clase_mysqli
 		}
 	}
 
-	function presentarconsultaRecetasGE()
+	function presentarconsultaRecetasGEmbarazo()
 	{
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
 			for ($i = 0; $i < 1; $i++) {
@@ -440,7 +440,7 @@ class clase_mysqli
 								</div>
 							</div>
 						</div></div>";
-				} elseif ($row[28] == 'Madre en gestaci??n' && $row[3] == 'Almuerzos') {
+				} elseif ($row[28] == 'Embarazo' && $row[3] == 'Almuerzos') {
 					echo "<div class='column Almuerzos'>
 							<div class='container-card-recet'>
 							<div class='card-recet'>
@@ -464,7 +464,7 @@ class clase_mysqli
 								</div>
 							</div>
 						</div></div>";
-				} elseif ($row[28] == 'Madre en gestaci??n' && $row[3] == 'Meriendas') {
+				} elseif ($row[28] == 'Embarazo' && $row[3] == 'Meriendas') {
 					echo "<div class='column Meriendas'>
 						<div class='container-card-recet'>
 						<div class='card-recet'>
@@ -488,7 +488,7 @@ class clase_mysqli
 							</div>
 						</div>
 					</div></div>";
-				} elseif ($row[28] == 'Madre en gestaci??n' && $row[3] == 'Cenas') {
+				} elseif ($row[28] == 'Embarazo' && $row[3] == 'Cenas') {
 					echo "<div class='column Cenas'>
 						<div class='container-card-recet'>
 						<div class='card-recet'>
@@ -512,7 +512,7 @@ class clase_mysqli
 							</div>
 						</div>
 					</div></div>";
-				} elseif ($row[28] == 'Madre en gestaci??n' && $row[3] == 'Postres') {
+				} elseif ($row[28] == 'Embarazo' && $row[3] == 'Postres') {
 					echo "<div class='column Postres'>
 						<div class='container-card-recet'>
 						<div class='card-recet'>
@@ -541,6 +541,780 @@ class clase_mysqli
 		}
 	}
 
+	function presentarconsultaRecetasGVejez()
+	{
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			for ($i = 0; $i < 1; $i++) {
+				if ($row[28] == 'Vejez' && $row[3] == 'Desayunos') {
+					echo "<div class='column Desayunos'>
+							<div class='container-card-recet'>
+							<div class='card-recet'>
+								<div class='img-card-recet'>
+									<img src='" . $row[4] . "'>
+								</div>
+								<div class='card-content'>
+									<p class='cat'>$row[3]</p>
+									<a href='new_receta.php?idReceta=$row[0]'>
+										<h1 class='card-title text-medium'>$row[1]</h1>
+									</a>
+									<div class='card-inf'>
+									<p class='text-medium'>$row[2]</p>
+									<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+									<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+									<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+									</div>
+									<div class='val'>
+										<p class='valor'>★ <br> 4.5</p>
+									</div>
+								</div>
+							</div>
+						</div></div>";
+				} elseif ($row[28] == 'Vejez' && $row[3] == 'Almuerzos') {
+					echo "<div class='column Almuerzos'>
+							<div class='container-card-recet'>
+							<div class='card-recet'>
+								<div class='img-card-recet'>
+									<img src='" . $row[4] . "'>
+								</div>
+								<div class='card-content'>
+									<p class='cat'>$row[3]</p>
+									<a href='new_receta.php?idReceta=$row[0]'>
+										<h1 class='card-title text-medium'>$row[1]</h1>
+									</a>
+									<div class='card-inf'>
+									<p class='text-medium'>$row[2]</p>
+									<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+									<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+									<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+									</div>
+									<div class='val'>
+										<p class='valor'>★ <br> 4.5</p>
+									</div>
+								</div>
+							</div>
+						</div></div>";
+				} elseif ($row[28] == 'Vejez' && $row[3] == 'Meriendas') {
+					echo "<div class='column Meriendas'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				} elseif ($row[28] == 'Vejez' && $row[3] == 'Cenas') {
+					echo "<div class='column Cenas'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				} elseif ($row[28] == 'Vejez' && $row[3] == 'Postres') {
+					echo "<div class='column Postres'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				}
+			}
+		}
+	}
+
+	function presentarconsultaRecetasGPInfancia()
+	{
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			for ($i = 0; $i < 1; $i++) {
+				if ($row[28] == 'Primera Infancia' && $row[3] == 'Desayunos') {
+					echo "<div class='column Desayunos'>
+							<div class='container-card-recet'>
+							<div class='card-recet'>
+								<div class='img-card-recet'>
+									<img src='" . $row[4] . "'>
+								</div>
+								<div class='card-content'>
+									<p class='cat'>$row[3]</p>
+									<a href='new_receta.php?idReceta=$row[0]'>
+										<h1 class='card-title text-medium'>$row[1]</h1>
+									</a>
+									<div class='card-inf'>
+									<p class='text-medium'>$row[2]</p>
+									<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+									<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+									<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+									</div>
+									<div class='val'>
+										<p class='valor'>★ <br> 4.5</p>
+									</div>
+								</div>
+							</div>
+						</div></div>";
+				} elseif ($row[28] == 'Primera Infancia' && $row[3] == 'Almuerzos') {
+					echo "<div class='column Almuerzos'>
+							<div class='container-card-recet'>
+							<div class='card-recet'>
+								<div class='img-card-recet'>
+									<img src='" . $row[4] . "'>
+								</div>
+								<div class='card-content'>
+									<p class='cat'>$row[3]</p>
+									<a href='new_receta.php?idReceta=$row[0]'>
+										<h1 class='card-title text-medium'>$row[1]</h1>
+									</a>
+									<div class='card-inf'>
+									<p class='text-medium'>$row[2]</p>
+									<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+									<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+									<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+									</div>
+									<div class='val'>
+										<p class='valor'>★ <br> 4.5</p>
+									</div>
+								</div>
+							</div>
+						</div></div>";
+				} elseif ($row[28] == 'Primera Infancia' && $row[3] == 'Meriendas') {
+					echo "<div class='column Meriendas'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				} elseif ($row[28] == 'Primera Infancia' && $row[3] == 'Cenas') {
+					echo "<div class='column Cenas'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				} elseif ($row[28] == 'Primera Infancia' && $row[3] == 'Postres') {
+					echo "<div class='column Postres'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				}
+			}
+		}
+	}
+
+
+	function presentarconsultaRecetasGSInfancia()
+	{
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			for ($i = 0; $i < 1; $i++) {
+				if ($row[28] == 'Segunda Infancia' && $row[3] == 'Desayunos') {
+					echo "<div class='column Desayunos'>
+							<div class='container-card-recet'>
+							<div class='card-recet'>
+								<div class='img-card-recet'>
+									<img src='" . $row[4] . "'>
+								</div>
+								<div class='card-content'>
+									<p class='cat'>$row[3]</p>
+									<a href='new_receta.php?idReceta=$row[0]'>
+										<h1 class='card-title text-medium'>$row[1]</h1>
+									</a>
+									<div class='card-inf'>
+									<p class='text-medium'>$row[2]</p>
+									<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+									<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+									<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+									</div>
+									<div class='val'>
+										<p class='valor'>★ <br> 4.5</p>
+									</div>
+								</div>
+							</div>
+						</div></div>";
+				} elseif ($row[28] == 'Segunda Infancia' && $row[3] == 'Almuerzos') {
+					echo "<div class='column Almuerzos'>
+							<div class='container-card-recet'>
+							<div class='card-recet'>
+								<div class='img-card-recet'>
+									<img src='" . $row[4] . "'>
+								</div>
+								<div class='card-content'>
+									<p class='cat'>$row[3]</p>
+									<a href='new_receta.php?idReceta=$row[0]'>
+										<h1 class='card-title text-medium'>$row[1]</h1>
+									</a>
+									<div class='card-inf'>
+									<p class='text-medium'>$row[2]</p>
+									<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+									<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+									<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+									</div>
+									<div class='val'>
+										<p class='valor'>★ <br> 4.5</p>
+									</div>
+								</div>
+							</div>
+						</div></div>";
+				} elseif ($row[28] == 'Segunda Infancia' && $row[3] == 'Meriendas') {
+					echo "<div class='column Meriendas'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				} elseif ($row[28] == 'Segunda Infancia' && $row[3] == 'Cenas') {
+					echo "<div class='column Cenas'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				} elseif ($row[28] == 'Segunda Infancia' && $row[3] == 'Postres') {
+					echo "<div class='column Postres'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				}
+			}
+		}
+	}
+
+	function presentarconsultaRecetasGJuventud()
+	{
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			for ($i = 0; $i < 1; $i++) {
+				if ($row[28] == 'Juventud' && $row[3] == 'Desayunos') {
+					echo "<div class='column Desayunos'>
+							<div class='container-card-recet'>
+							<div class='card-recet'>
+								<div class='img-card-recet'>
+									<img src='" . $row[4] . "'>
+								</div>
+								<div class='card-content'>
+									<p class='cat'>$row[3]</p>
+									<a href='new_receta.php?idReceta=$row[0]'>
+										<h1 class='card-title text-medium'>$row[1]</h1>
+									</a>
+									<div class='card-inf'>
+									<p class='text-medium'>$row[2]</p>
+									<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+									<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+									<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+									</div>
+									<div class='val'>
+										<p class='valor'>★ <br> 4.5</p>
+									</div>
+								</div>
+							</div>
+						</div></div>";
+				} elseif ($row[28] == 'Juventud' && $row[3] == 'Almuerzos') {
+					echo "<div class='column Almuerzos'>
+							<div class='container-card-recet'>
+							<div class='card-recet'>
+								<div class='img-card-recet'>
+									<img src='" . $row[4] . "'>
+								</div>
+								<div class='card-content'>
+									<p class='cat'>$row[3]</p>
+									<a href='new_receta.php?idReceta=$row[0]'>
+										<h1 class='card-title text-medium'>$row[1]</h1>
+									</a>
+									<div class='card-inf'>
+									<p class='text-medium'>$row[2]</p>
+									<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+									<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+									<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+									</div>
+									<div class='val'>
+										<p class='valor'>★ <br> 4.5</p>
+									</div>
+								</div>
+							</div>
+						</div></div>";
+				} elseif ($row[28] == 'Juventud' && $row[3] == 'Meriendas') {
+					echo "<div class='column Meriendas'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				} elseif ($row[28] == 'Juventud' && $row[3] == 'Cenas') {
+					echo "<div class='column Cenas'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				} elseif ($row[28] == 'Juventud' && $row[3] == 'Postres') {
+					echo "<div class='column Postres'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				}
+			}
+		}
+	}
+
+	function presentarconsultaRecetasGAdultez()
+	{
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			for ($i = 0; $i < 1; $i++) {
+				if ($row[28] == 'Adultez' && $row[3] == 'Desayunos') {
+					echo "<div class='column Desayunos'>
+							<div class='container-card-recet'>
+							<div class='card-recet'>
+								<div class='img-card-recet'>
+									<img src='" . $row[4] . "'>
+								</div>
+								<div class='card-content'>
+									<p class='cat'>$row[3]</p>
+									<a href='new_receta.php?idReceta=$row[0]'>
+										<h1 class='card-title text-medium'>$row[1]</h1>
+									</a>
+									<div class='card-inf'>
+									<p class='text-medium'>$row[2]</p>
+									<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+									<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+									<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+									</div>
+									<div class='val'>
+										<p class='valor'>★ <br> 4.5</p>
+									</div>
+								</div>
+							</div>
+						</div></div>";
+				} elseif ($row[28] == 'Adultez' && $row[3] == 'Almuerzos') {
+					echo "<div class='column Almuerzos'>
+							<div class='container-card-recet'>
+							<div class='card-recet'>
+								<div class='img-card-recet'>
+									<img src='" . $row[4] . "'>
+								</div>
+								<div class='card-content'>
+									<p class='cat'>$row[3]</p>
+									<a href='new_receta.php?idReceta=$row[0]'>
+										<h1 class='card-title text-medium'>$row[1]</h1>
+									</a>
+									<div class='card-inf'>
+									<p class='text-medium'>$row[2]</p>
+									<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+									<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+									<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+									</div>
+									<div class='val'>
+										<p class='valor'>★ <br> 4.5</p>
+									</div>
+								</div>
+							</div>
+						</div></div>";
+				} elseif ($row[28] == 'Adultez' && $row[3] == 'Meriendas') {
+					echo "<div class='column Meriendas'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				} elseif ($row[28] == 'Adultez' && $row[3] == 'Cenas') {
+					echo "<div class='column Cenas'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				} elseif ($row[28] == 'Adultez' && $row[3] == 'Postres') {
+					echo "<div class='column Postres'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				}
+			}
+		}
+	}
+
+	function presentarconsultaRecetasGAdolescencia()
+	{
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			for ($i = 0; $i < 1; $i++) {
+				if ($row[28] == 'Adolescencia' && $row[3] == 'Desayunos') {
+					echo "<div class='column Desayunos'>
+							<div class='container-card-recet'>
+							<div class='card-recet'>
+								<div class='img-card-recet'>
+									<img src='" . $row[4] . "'>
+								</div>
+								<div class='card-content'>
+									<p class='cat'>$row[3]</p>
+									<a href='new_receta.php?idReceta=$row[0]'>
+										<h1 class='card-title text-medium'>$row[1]</h1>
+									</a>
+									<div class='card-inf'>
+									<p class='text-medium'>$row[2]</p>
+									<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+									<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+									<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+									</div>
+									<div class='val'>
+										<p class='valor'>★ <br> 4.5</p>
+									</div>
+								</div>
+							</div>
+						</div></div>";
+				} elseif ($row[28] == 'Adolescencia' && $row[3] == 'Almuerzos') {
+					echo "<div class='column Almuerzos'>
+							<div class='container-card-recet'>
+							<div class='card-recet'>
+								<div class='img-card-recet'>
+									<img src='" . $row[4] . "'>
+								</div>
+								<div class='card-content'>
+									<p class='cat'>$row[3]</p>
+									<a href='new_receta.php?idReceta=$row[0]'>
+										<h1 class='card-title text-medium'>$row[1]</h1>
+									</a>
+									<div class='card-inf'>
+									<p class='text-medium'>$row[2]</p>
+									<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+									<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+									<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+									</div>
+									<div class='val'>
+										<p class='valor'>★ <br> 4.5</p>
+									</div>
+								</div>
+							</div>
+						</div></div>";
+				} elseif ($row[28] == 'Adolescencia' && $row[3] == 'Meriendas') {
+					echo "<div class='column Meriendas'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				} elseif ($row[28] == 'Adolescencia' && $row[3] == 'Cenas') {
+					echo "<div class='column Cenas'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				} elseif ($row[28] == 'Adolescencia' && $row[3] == 'Postres') {
+					echo "<div class='column Postres'>
+						<div class='container-card-recet'>
+						<div class='card-recet'>
+							<div class='img-card-recet'>
+								<img src='" . $row[4] . "'>
+							</div>
+							<div class='card-content'>
+								<p class='cat'>$row[3]</p>
+								<a href='new_receta.php?idReceta=$row[0]'>
+									<h1 class='card-title text-medium'>$row[1]</h1>
+								</a>
+								<div class='card-inf'>
+								<p class='text-medium'>$row[2]</p>
+								<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+								<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+								<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+								</div>
+								<div class='val'>
+									<p class='valor'>★ <br> 4.5</p>
+								</div>
+							</div>
+						</div>
+					</div></div>";
+				}
+			}
+		}
+	}
 
 	function comboBox()
 	{
