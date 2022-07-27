@@ -353,7 +353,7 @@ class clase_mysqli
 								</div>
 								<div class='card-content'>
 									<p class='cat'>$row[2]</p>
-									<a href='new_receta_user.php?idReceta=$row[0]'>
+									<a href='new_receta.php?idReceta=$row[0]'>
 										<h1 class='card-title text-medium'>$row[3]</h1>
 									</a>
 									<div class='card-inf'>

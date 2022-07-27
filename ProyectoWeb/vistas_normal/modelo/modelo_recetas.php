@@ -248,12 +248,11 @@ class modelo_recetas
     return $resSQL;
   }
 
-  public function EncontrarReceta($idReceta)
-  {
+  public function EncontrarRecetas($idReceta) {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL = $miconexion->consulta("select * from receta where idReceta = $idReceta");
-    $resSQL = $miconexion->consulta_lista();
+    $resSQL=$miconexion->consulta("select * from receta where idReceta = $idReceta");
+    $resSQL=$miconexion->consulta_lista();
     //$this->Disconnect();
     return $resSQL;
   }

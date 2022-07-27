@@ -138,13 +138,14 @@ $control4 = new controlador_recetas();
       </div>
 
       <?php
-      $control3 = new controlador_recetas();
+      
+      $control3 = new modelo_recetas();
       //$control3->PresentarRecetas();
       //$control3->BuscarReceta($categoria_Receta,$porciones_Receta,$dificultad_Receta,$nombre_Ingredientes);
       if(isset($_POST['Enviar'])){
         $control4->BuscarReceta();
       }else {
-        $control3->PresentarRecetas();
+        $control4->PresentarRecetas();
       }
       
       ?>

@@ -180,52 +180,7 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="main-cards">
-    <h3 class="heading-cards"><span>Jovenes </span>Desarrolladores</h3>
-    <div class="container-cards">
-      <div class="card-about">
-        <img src="../../img/carlos.jpeg">
-        <div class="details-cards">
-          <h3>Carlos Andres Vargas Ramirez</h3>
-          <p>Estudiante Ing. Sistemas Computacionales y Computacion UTPL</p>
-          <div class="social-links-cards">
-            <a href="#"><i class="uil uil-facebook-f"></i></a>
-            <a href=""><i class="uil uil-instagram"></i></a>
-            <a href=""><i class="uil uil-twitter-alt"></i></a>
-            <a href=""><i class="uil uil-whatsapp"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="card-about">
-        <img src="../../img/arianna.jpeg">
-        <div class="details-cards">
-          <h3>Arianna Michelle Vinueza Ortega</h3>
-          <p>Estudiante Ing. Sistemas Computacionales y Computacion UTPL</p>
-          <div class="social-links-cards">
-            <a href="#"><i class="uil uil-facebook-f"></i></a>
-            <a href=""><i class="uil uil-instagram"></i></a>
-            <a href=""><i class="uil uil-twitter-alt"></i></a>
-            <a href=""><i class="uil uil-whatsapp"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="card-about">
-        <img src="../../img/luis.jpg">
-        <div class="details-cards">
-          <h3>Luis Angel Celi Montaño</h3>
-          <p>Estudiante Ing. Sistemas Computacionales y Computacion UTPL</p>
-          <div class="social-links-cards">
-            <a href="#"><i class="uil uil-facebook-f"></i></a>
-            <a href=""><i class="uil uil-instagram"></i></a>
-            <a href=""><i class="uil uil-twitter-alt"></i></a>
-            <a href=""><i class="uil uil-whatsapp"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </div><br><br>
 </body>
 
 <footer>
