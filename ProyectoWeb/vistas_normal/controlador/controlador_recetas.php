@@ -29,11 +29,11 @@ class controlador_recetas
             $userResponse = $user->BuscarReceta($categoria_Receta, $porciones_Receta, $dificultad_Receta, $nombre_Ingredientes);
             if ($userResponse != 1) // exitoso
             {
-                echo '<script>alert("SQL correctos :)...");</script>';
+                //echo '<script>alert("SQL correctos :)...");</script>';
                 //echo "<script>location.href='../vistas/recetas.php'</script>";
             } else {
-                echo '<script>alert("SQL Incorrectos...s");</script>';
-                echo "<script>location.href='../vistas/recetas.php'</script>";
+                //echo '<script>alert("SQL Incorrectos...s");</script>';
+                //echo "<script>location.href='../vistas/recetas.php'</script>";
             }
         }
     }
@@ -46,7 +46,7 @@ class controlador_recetas
         $userResponse = $user->PresentarRecetas();
         if ($userResponse != 1) // exitoso
         {
-            echo '<script>alert("SQL correctos :)...");</script>';
+            //echo '<script>alert("SQL correctos :)...");</script>';
             //echo "<script>location.href='../vistas/recetas.php'</script>";
         } else {
             echo '<script>alert("SQL Incorrectos...s");</script>';

@@ -372,7 +372,7 @@ $control4->CreateComentarios($idReceta);
         <div class="link-boxes">
             <ul class="box">
                 <li class="link_name">Grupos Etarios</li>
-                <li><a href="#">Madre en gestación</a></li>
+                <li><a href="#">Embarazo</a></li>
                 <li><a href="#">Primera Infancia</a></li>
                 <li><a href="#">Segunda Infancia</a></li>
                 <li><a href="#">Adolescencia</a></li>

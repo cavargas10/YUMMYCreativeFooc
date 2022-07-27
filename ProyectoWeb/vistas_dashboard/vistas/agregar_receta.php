@@ -138,7 +138,7 @@ $control3 = new modelo_receta();
               <label for="grupoEtario"><b>Grupo Etario:</b></label>
               <p><select name="grupoEtario" id="grupoEtario" required><br>
                   <option>Seleccione...</option>
-                  <option value='Madre en gestación'>Madre en gestación</option>
+                  <option value='Embarazo'>Embarazo</option>
                   <option value='Primera Infancia'>Primera Infancia</option>
                   <option value='Segunda Infancia'>Segunda Infancia</option>
                   <option value='Adolescencia'>Adolescencia</option>

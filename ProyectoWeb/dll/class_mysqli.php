@@ -416,7 +416,7 @@ class clase_mysqli
 	{
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
 			for ($i = 0; $i < 1; $i++) {
-				if ($row[28] == 'Madre en gestaci??n' && $row[3] == 'Desayunos') {
+				if ($row[28] == 'Embarazo' && $row[3] == 'Desayunos') {
 					echo "<div class='column Desayunos'>
 							<div class='container-card-recet'>
 							<div class='card-recet'>
