@@ -173,4 +173,6 @@ class controlador_receta
 			echo "<script>location.href='../vistas/contenido_receta.php'</script>";
 		}
 	}
+
+	
 }

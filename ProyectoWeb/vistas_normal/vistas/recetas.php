@@ -1,7 +1,11 @@
 <?php
 include_once "../modelo/modelo_recetas.php";
+include_once "../controlador/controlador_recetas.php";
+
 extract($_GET);
 $control3 = new modelo_recetas();
+
+$control4 = new controlador_recetas();
 ?>
 
 <!DOCTYPE html>
@@ -90,7 +94,7 @@ $control3 = new modelo_recetas();
 
           <div class="input-box">
             <span>Ingredientes</span>
-            <select name="" id="" class="ingred">
+            <select name="nombre_Ingredientes" id="nombre_Ingredientes" class="ingred" >
               <option value="" selected disabled>Seleccione...</option>
               <?php
               $control3->EncontrarIngredienteTAG();
@@ -120,7 +124,7 @@ $control3 = new modelo_recetas();
             </select>
           </div>
 
-          <input type="submit" value="Buscar" class="submit-btn" id="">
+          <input type="submit" value="Buscar" class="submit-btn" name="Enviar">
         </div>
 
       </form>
@@ -134,9 +138,15 @@ $control3 = new modelo_recetas();
       </div>
 
       <?php
-      $control3 = new modelo_recetas();
+      $control3 = new controlador_recetas();
       //$control3->PresentarRecetas();
-      $control3->PresentarRecetas();
+      //$control3->BuscarReceta($categoria_Receta,$porciones_Receta,$dificultad_Receta,$nombre_Ingredientes);
+      if(isset($_POST['Enviar'])){
+        $control4->BuscarReceta();
+      }else {
+        $control3->PresentarRecetas();
+      }
+      
       ?>
     </div>
   </main>
