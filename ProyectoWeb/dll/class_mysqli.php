@@ -342,6 +342,36 @@ class clase_mysqli
 		}
 	}
 
+	function presentarconsultaTresRecetasUser()
+	{
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			for ($i = 0; $i < 1; $i++) {
+				echo "  <div class='container-card-recet'>
+							<div class='card-recet'>
+								<div class='img-card-recet'>
+									<img src='$row[4]'>
+								</div>
+								<div class='card-content'>
+									<p class='cat'>$row[3]</p>
+									<a href='new_receta_user.php?idReceta=$row[0]'>
+										<h1 class='card-title text-medium'>$row[1]</h1>
+									</a>
+									<div class='card-inf'>
+										<p class='text-medium'>$row[2]</p>
+										<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[28]</p></h3>
+										<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[22]</p></h3>
+										<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[20] min.</p></h3>
+									</div>
+									<div class='val'>
+										<p class='valor'>★ <br> 4.5</p>
+									</div>
+								</div>
+							</div>
+						</div>";
+			}
+		}
+	}
+
 	function presentarconsultaRecetas()
 	{
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {

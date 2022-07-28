@@ -2,7 +2,10 @@
 include("../../seguridad/seguridad.php");
 include_once "../controlador/usuario_controlador.php";
 include_once "../modelo/usuario_modelo.php";
+include_once "../modelo/modelo_principal.php";
 extract($_GET);
+
+$control3 = new modelo_principal();
 
 $control2 = new usuario_modelo();
 
@@ -102,74 +105,16 @@ $control = new usuario_controlador();
 
 
         <div class="grid">
-
             <div class="new-recetas">
                 <h1>Nuevas Recetas</h1>
                 <h2>Explore nuestras nuevas Recetas</h2>
             </div>
-
-            <div class="container-card-recet">
-                <div class="card-recet">
-                    <div class="img-card-recet">
-                        <img src="../../img/card1.png" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                        <div class="card-inf">
-                            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
-                                deserunt
-                                officia ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente
-                                sunt maxime
-                                beatae asperiores temporibus numquam quod, repudiandae a.</p>
-                            <span class="rating">★★★★☆</span>
-                            <h3 class="card-view text-medium">5 Vistas</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-card-recet">
-                <div class="card-recet">
-                    <div class="img-card-recet">
-                        <img src="../../img/card1.png" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                        <div class="card-inf">
-                            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
-                                deserunt
-                                officia
-                                ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt
-                                maxime
-                                beatae
-                                asperiores temporibus numquam quod, repudiandae a.</p>
-                            <span class="rating">★★★★☆</span>
-                            <h3 class="card-view text-medium">5 Vistas</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-card-recet">
-                <div class="card-recet">
-                    <div class="img-card-recet">
-                        <img src="../../img/card1.png" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                        <div class="card-inf">
-                            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
-                                deserunt
-                                officia
-                                ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt
-                                maxime
-                                beatae
-                                asperiores temporibus numquam quod, repudiandae a.</p>
-                            <span class="rating">★★★★☆</span>
-                            <h3 class="card-view text-medium">5 Vistas</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php
+            $control3 = new modelo_principal();
+            $control3->PresentarTresRecetas();
+            ?>
         </div>
+
         <div class="mensaje">
             <div class="inf-mensaje">
                 <img src="../../img/img1.jpg" alt=""></IMg>
