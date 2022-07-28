@@ -1346,6 +1346,39 @@ class clase_mysqli
 		}
 	}
 
+	function presentarContadorComentarios()
+	{
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			for ($i = 0; $i < 1; $i++) {
+				echo "<i class='uil uil-comments-alt'></i>
+						<h2>$row[0]</h2>
+						<h3>COMENTARIOS</h3>";
+			}
+		}
+	}
+
+	function presentarContadorReceta()
+	{
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			for ($i = 0; $i < 1; $i++) {
+				echo "<i class='uil uil-restaurant'></i>
+						<h2>$row[0]</h2>
+						<h3>RECETAS</h3>";
+			}
+		}
+	}
+
+	function presentarContadorUsuarios()
+	{
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			for ($i = 0; $i < 1; $i++) {
+				echo "<i class='uil uil-user-check'></i>
+						<h2>$row[0]</h2>
+						<h3>USUARIOS</h3>";
+			}
+		}
+	}
+
 	function comboBox()
 	{
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {

@@ -175,21 +175,24 @@ extract($_GET);
 
     <div class="inf_general">
       <div class="com">
-        <i class="uil uil-comments-alt"></i>
-        <h2>102</h2>
-        <h3>COMENTARIOS</h3>
+        <?php
+          $control4 = new modelo_index();
+          $control4->ContarComentariosIndex();
+          ?>
       </div>
 
       <div class="com">
-        <i class="uil uil-restaurant"></i>
-        <h2>90</h2>
-        <h3>PLATOS</h3>
+        <?php
+          $control4 = new modelo_index();
+          $control4->ContarRecetaIndex();
+          ?>
       </div>
 
       <div class="com">
-        <i class="uil uil-eye"></i>
-        <h2>256</h2>
-        <h3>VISTAS</h3>
+        <?php
+          $control4 = new modelo_index();
+          $control4->ContarUsuariosIndex();
+          ?>
       </div>
     </div>
 

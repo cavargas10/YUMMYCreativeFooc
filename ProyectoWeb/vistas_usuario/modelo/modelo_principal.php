@@ -37,5 +37,35 @@ class modelo_principal
     //$this->Disconnect();
     return $resSQL;
   }
+
+  public function ContarComentariosIndex()
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $resSQL = $miconexion->consulta("select count(idcomentarios) from comentarios");
+    $resSQL = $miconexion->presentarContadorComentarios();
+    //$this->Disconnect();
+    return $resSQL;
+  }
+
+  public function ContarRecetaIndex()
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $resSQL = $miconexion->consulta("select count(idReceta) from receta");
+    $resSQL = $miconexion->presentarContadorReceta();
+    //$this->Disconnect();
+    return $resSQL;
+  }
+
+  public function ContarUsuariosIndex()
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $resSQL = $miconexion->consulta("select count(idUsuario) from usuarios");
+    $resSQL = $miconexion->presentarContadorUsuarios();
+    //$this->Disconnect();
+    return $resSQL;
+  }
 }
 
