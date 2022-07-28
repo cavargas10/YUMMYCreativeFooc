@@ -85,16 +85,49 @@ $lista = $control3->EncontrarRecetas($idReceta);
     <main class="container-main">
         <h1><?php echo $lista[1] ?></h1><br>
         <section class="primera_sec">
-            <div class="izq">
-                <button class="im1">Imagen </button>
-                <button class="im2">Video</button>
-                <button class="im3">Diseño 3D</button>
-                <img class="img3d" src="<?php echo $lista[4] ?>" alt="">
-            </div>
+            <aside class="izq">
+                <button class="tablin" onclick="openPage('img', this, 'rgb(203, 170, 120)')"id="defaultOpen">IMAGEN</button>
+                <button class="tablin" onclick="openPage('video', this, 'rgb(203, 170, 120)')">VIDEO</button>
+                <button class="tablin" onclick="openPage('tresD', this, 'rgb(203, 170, 120)')">3D</button>
+
+                <div id="img" class="tabmulti">
+                    <img src="<?php echo $lista[4] ?>" alt="">
+                </div>
+
+                <div id="video" class="tabmulti">
+                <iframe width="885" height="460" src="<?php echo $lista[5] ?>" title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div id="tresD" class="tabmulti">
+                    <div class="sketchfab-embed-wrapper"> <iframe frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" 
+                    allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="885" 
+                    height="460" src="<?php echo $lista[6] ?>"> </iframe></div>
+                </div>
+
+                <script>
+                    function openPage(pageName, elmnt, color) {
+                        var i, tabcontent, tablinks;
+                        tabcontent = document.getElementsByClassName("tabmulti");
+                        for (i = 0; i < tabcontent.length; i++) {
+                            tabcontent[i].style.display = "none";
+                        }
+                        tablinks = document.getElementsByClassName("tablin");
+                        for (i = 0; i < tablinks.length; i++) {
+                            tablinks[i].style.backgroundColor = "";
+                        }
+                        document.getElementById(pageName).style.display = "block";
+                        elmnt.style.backgroundColor = color;
+                    }
+
+                    // Get the element with id="defaultOpen" and click on it
+                    document.getElementById("defaultOpen").click();
+                </script>
+            </aside>
 
             <aside class="der">
 
-                <button class="tablink" onclick="openCity('London', this, 'rgb(203, 170, 120)')" id="defaultOpen">Tabla <br> Nutricional</button>
+                <button class="tablink" onclick="openCity('London', this, 'rgb(203, 170, 120)')" id="defaultOpen2">Tabla <br> Nutricional</button>
                 <button class="tablink" onclick="openCity('Paris', this, 'rgb(203, 170, 120)')">Semáforo Nutricional</button>
 
                 <div id="London" class="tabcontent">
@@ -229,7 +262,7 @@ $lista = $control3->EncontrarRecetas($idReceta);
 
                     }
                     // Get the element with id="defaultOpen" and click on it
-                    document.getElementById("defaultOpen").click();
+                    document.getElementById("defaultOpen2").click();
                 </script>
 
             </aside>
@@ -321,18 +354,6 @@ $lista = $control3->EncontrarRecetas($idReceta);
             </div>
         </div>
         <div class="comentariosUsuarios">
-            <!-- <div class='datosComentarios'>
-                    <i class='uil uil-user-square'></i>
-                    <div class='nombreComentario'>
-                        <p>$row[0] $row[1] dijo: </p>
-                    </div>
-                    <div class='valoracion'>
-                        <p class='estrella'> ★</p>
-                    </div>
-                    <div class='descComentario'>
-                        <p>$row[3]</p>
-                    </div>
-                </div><br> -->
             <?php
             $control = new controlador_comentario();
             $control->ListaComentarios($idReceta);
