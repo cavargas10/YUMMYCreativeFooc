@@ -3,17 +3,25 @@ include("../../seguridad/seguridad.php");
 include_once "../controlador/usuario_controlador.php";
 include_once "../modelo/usuario_modelo.php";
 include_once "../modelo/modelo_recetas.php";
+include_once "../modelo/modelo_recetas.php";
+include_once "../controlador/controlador_recetas.php";
+
 extract($_GET);
 
 $control2 = new usuario_modelo();
 
 $control = new usuario_controlador();
 
+
+$control3 = new modelo_recetas();
+
+$control4 = new controlador_recetas();
+
 ?>
 <!DOCTYPE html>
 
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yummi Creative Food</title>
@@ -67,52 +75,55 @@ $control = new usuario_controlador();
 
         <div class="card-search">
 
-            <form action="">
+            <form action="" method="post">
 
                 <div class="flex-box">
 
                     <div class="input-box">
                         <span>Tipo receta</span>
-                        <select name="" id="" class="tipo-receta">
-                            <option value="Receta" selected disabled>Tipo Receta</option>
-                            <option value="receta1">receta1</option>
-                            <option value="receta2">receta2</option>
-                            <option value="receta3">receta3</option>
+                        <select name='categoria_Receta' id='categoria_Receta' class="tipo-receta">
+                            <option value="" selected disabled>Seleccione...</option>
+                            <option value='Desayunos'>Desayunos</option>
+                            <option value='Almuerzos'>Almuerzos</option>
+                            <option value='Meriendas'>Meriendas</option>
+                            <option value='Cenas'>Cenas</option>
+                            <option value='Postres'>Postres</option>
                         </select>
                     </div>
 
                     <div class="input-box">
                         <span>Ingredientes</span>
-                        <select name="" id="" class="ingred">
-                            <option value="Ingrediente" selected disabled>Ingredientes</option>
-                            <option value="Ingrediente1">Ingrediente1</option>
-                            <option value="Ingrediente2">Ingrediente2</option>
-                            <option value="Ingrediente3">Ingrediente3</option>
+                        <select name="nombre_Ingredientes" id="nombre_Ingredientes" class="ingred">
+                            <option value="" selected disabled>Seleccione...</option>
+                            <?php
+                            $control3->EncontrarIngredienteTAG();
+                            ?>
                         </select>
                     </div>
 
                     <div class="input-box">
                         <span>Dificultad</span>
-                        <select name="" id="" class="tipo-recet">
-                            <option value="Dificultad" selected disabled>Dificultad</option>
-                            <option value="Dificultad1">Dificultad1</option>
-                            <option value="Dificultad2">Dificultad2</option>
-                            <option value="Dificultad3">Dificultad3</option>
+                        <select name="dificultad_Receta" id="dificultad_Receta" class="tipo-recet">
+                            <option value="" selected disabled>Seleccione...</option>
+                            <option value='Facil'>Facil</option>
+                            <option value='Intermedio'>Intermedio</option>
+                            <option value='Dificil'>Dificil</option>
                         </select>
                     </div>
 
 
                     <div class="input-box">
                         <span>Porciones</span>
-                        <select name="" id="" class="tipo-recet">
-                            <option value="Porcion" selected disabled>Porciones</option>
-                            <option value="Porcion1">Porcion1</option>
-                            <option value="Porcion2">Porcion2</option>
-                            <option value="Porcion3">Porcion3</option>
+                        <select name="porciones_Receta" id="porciones_Receta" class="tipo-recet">
+                            <option value="" selected disabled>Seleccione...</option>
+                            <option value='1 a 3'>1 a 3</option>
+                            <option value='4 a 6'>4 a 6</option>
+                            <option value='7 a 9'>7 a 9</option>
+                            <option value='10 o mas'>10 o mas</option>
                         </select>
                     </div>
 
-                    <input type="submit" value="Buscar" class="submit-btn" id="">
+                    <input type="submit" value="Buscar" class="submit-btn" name="Enviar">
                 </div>
 
             </form>
@@ -124,10 +135,13 @@ $control = new usuario_controlador();
                 <h1>Todas las Recetas</h1>
                 <h2>Explore nuestras Recetas</h2>
             </div>
-
             <?php
             $control3 = new modelo_recetas();
-            $control3->PresentarRecetas();
+            if (isset($_POST['Enviar'])) {
+                $control4->BuscarReceta();
+            } else {
+                $control4->PresentarRecetas();
+            }
             ?>
         </div>
     </main>

@@ -224,6 +224,8 @@ $control3 = new modelo_receta();
               <p><input class="nutri" type="number" step=0.01 name="fibra" id="fibra" placeholder="Ingrese fibra" required><br></p>
               <label for="calcio"><b>Calcio (mg):</b></label>
               <p><input class="nutri" type="number" step=0.01 name="calcio" id="calcio" placeholder="Ingrese calcio" required><br></p>
+            </div>
+            <div class="tab">
               <label for="hierro"><b>Hierro (mg):</b></label>
               <p><input class="nutri" type="number" step=0.01 name="hierro" id="hierro" placeholder="Ingrese hierro" required><br></p>
               <label for="carbohidratos"><b>Carbohidratos (g):</b></label>
@@ -232,6 +234,8 @@ $control3 = new modelo_receta();
               <p><input class="nutri" type="number" step=0.01 name="azucares" id="azucares" placeholder="Ingrese azucares" required><br></p>
               <label for="azucarAnadido"><b>Azucar Añadido (g):</b></label>
               <p><input class="nutri" type="number" step=0.01 name="azucarAnadido" id="azucarAnadido" placeholder="Ingrese Azucar Añadido" required><br></p>
+            </div>
+            <div class="tab">
               <label for="potasio"><b>Potasio (mg):</b></label>
               <p><input class="nutri" type="number" step=0.01 name="potasio" id="potasio" placeholder="Ingrese potasio" required><br></p>
               <label for="sodio"><b>Sodio (mg):</b></label>
@@ -264,6 +268,8 @@ $control3 = new modelo_receta();
             </div>
             <!-- Circles which indicates the steps of the form: -->
             <div style="text-align:center;margin-top:40px;">
+              <span class="step"></span>
+              <span class="step"></span>
               <span class="step"></span>
               <span class="step"></span>
               <span class="step"></span>

@@ -18,7 +18,7 @@ $control3 = new modelo_receta();
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../estilos/dashboard_principal.css">
-    <link rel="stylesheet" href="../estilos/dashboard_contenido_receta.css">
+    <link rel="stylesheet" href="../estilos/dashboard_agregar_receta.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
@@ -117,168 +117,307 @@ $control3 = new modelo_receta();
                 <span class="text">Dashboard</span> <br />
             </div>
 
-
-            <div class="upReceta">
-                <form class="formReceta" method="post" action="" enctype="multipart/form-data">
+            <div class="addReceta">
+                <form class="formReceta" id="formReceta" method="post" action="" enctype="multipart/form-data">
                     <div class="tituloReceta">
-                        <h2 class="updateReceta">ACTUALIZAR RECETA</h2><br>
+                        <h2 class="agregarReceta">ACTUALIZAR RECETAS</h2><br>
                     </div>
-
                     <div class="contenedorFormReceta">
-                        <label for="titulo_Receta"><b>Título:</b></label>
-                        <input type="text" name="titulo_Receta" id="titulo_Receta" placeholder="Ingrese el titulo de la receta" required value="<?php echo $lista[1] ?>"><br>
-                        <label for="descripcion_Receta"><b>Descripción:</b></label>
-                        <input type="text" name="descripcion_Receta" id="descripcion_Receta" placeholder="Ingrese la descripcion de la receta" required value="<?php echo $lista[2] ?>">
-                        <br><label for="categoria_Receta"><b>Categoria Receta:</b></label>
-                        <select name='categoria_Receta' id='categoria_Receta' required><br>
-                            <option value="<?php echo $lista[3] ?>"><?php echo $lista[3] ?></option>
-                            <option value='Desayunos'>Desayunos</option>
-                            <option value='Almuerzos'>Almuerzos</option>
-                            <option value='Meriendas'>Meriendas</option>
-                            <option value='Cenas'>Cenas</option>
-                            <option value='Postres'>Postres</option>
-                            <?php
-                            // if ($lista[3] = 'Desayunos'){
-                            //     echo "<option value='Almuerzos'>Almuerzos</option>
-                            //     <option value='Meriendas'>Meriendas</option>
-                            //     <option value='Cenas'>Cenas</option>
-                            //     <option value='Postres'>Postres</option>"; 
-                            // } elseif ($lista[3] = 'Almuerzos'){
-                            //     echo "<option value='Desayunos'>Desayunos</option>
-                            //     <option value='Meriendas'>Meriendas</option>
-                            //     <option value='Cenas'>Cenas</option>
-                            //     <option value='Postres'>Postres</option>"; 
-                            // } elseif ($lista[3] = 'Meriendas'){
-                            //     echo "<option value='Desayunos'>Desayunos</option>
-                            //     <option value='Almuerzos'>Almuerzos</option>
-                            //     <option value='Cenas'>Cenas</option>
-                            //     <option value='Postres'>Postres</option>";
-                            // } elseif ($lista[3] = 'Cenas'){
-                            //     echo "<option value='Desayunos'>Desayunos</option>
-                            //     <option value='Almuerzos'>Almuerzos</option>
-                            //     <option value='Meriendas'>Meriendas</option>
-                            //     <option value='Postres'>Postres</option>";
-                            // } else {
-                            //     echo "<option value='Desayunos'>Desayunos</option>
-                            //     <option value='Almuerzos'>Almuerzos</option>
-                            //     <option value='Meriendas'>Meriendas</option>
-                            //     <option value='Cenas'>Cenas</option>";
-                            // }
-                            ?>
-                        </select>
-                        <br><label for="imagen_Receta"><b>Imagen:</b></label>
-                        <input type="file" name="imagen_Receta" id="imagen_Receta" accept="image/*" required value="<?php echo $lista[4] ?>"><br>
-                        <label for="url_Receta"><b>Video:</b></label>
-                        <input type="url" name="url_Receta" id="url_Receta" placeholder="Ingrese el link de youtube" required value="<?php echo $lista[5] ?>"><br>
-                        <label for="tresD_Receta"><b>3D:</b></label>
-                        <input type="url" name="tresD_Receta" id="tresD_Receta" placeholder="Ingrese el link de sketchfab" required value="<?php echo $lista[6] ?>"><br>
-                        <label for="grupoEtario"><b>Grupo Etario:</b></label>
-                        <select name="grupoEtario" id="grupoEtario" required><br>
-                            <option value="<?php echo $lista[28] ?>"><?php echo $lista[28] ?></option>
-                            <option value='Embarazo'>Embarazo</option>
-                            <option value='Primera Infancia'>Primera Infancia</option>
-                            <option value='Segunda Infancia'>Segunda Infancia</option>
-                            <option value='Adolescencia'>Adolescencia</option>
-                            <option value='Juventud'>Juventud</option>
-                            <option value='Adultez'>Adultez</option>
-                            <option value='Vejez'>Vejez</option>
-                        </select><br>
-
-                        <b>TABLA NUTRICIONAL</b><br>
-                        <label for="energia"><b>Energia:</b></label>
-                        <input type="number" step=0.01 name="energia" id="energia" placeholder="Ingrese Energia" required value="<?php echo $lista[8] ?>"> (Kcal)<br>
-                        <label for="proteina"><b>Proteina:</b></label>
-                        <input type="number" step=0.01 name="proteina" id="proteina" placeholder="Ingrese proteina" required value="<?php echo $lista[9] ?>"> (g)<br>
-                        <label for="fibra"><b>Fibra:</b></label>
-                        <input type="number" step=0.01 name="fibra" id="fibra" placeholder="Ingrese fibra" required value="<?php echo $lista[10] ?>"> (g)<br>
-                        <label for="calcio"><b>Calcio:</b></label>
-                        <input type="number" step=0.01 name="calcio" id="calcio" placeholder="Ingrese calcio" required value="<?php echo $lista[11] ?>"> (mg)<br>
-                        <label for="hierro"><b>Hierro:</b></label>
-                        <input type="number" step=0.01 name="hierro" id="hierro" placeholder="Ingrese hierro" required value="<?php echo $lista[12] ?>"> (mg)<br>
-                        <label for="carbohidratos"><b>Carbohidratos:</b></label>
-                        <input type="number" step=0.01 name="carbohidratos" id="carbohidratos" placeholder="Ingrese carbohidratos" required value="<?php echo $lista[13] ?>"> (g)<br>
-                        <label for="azucares"><b>Azucares:</b></label>
-                        <input type="number" step=0.01 name="azucares" id="azucares" placeholder="Ingrese azucares" required value="<?php echo $lista[14] ?>"> (g)<br>
-                        <label for="azucarAnadido"><b>Azucar Añadido:</b></label>
-                        <input type="number" step=0.01 name="azucarAnadido" id="azucarAnadido" placeholder="Ingrese Azucar Añadido" required value="<?php echo $lista[15] ?>"> (g)<br>
-                        <label for="potasio"><b>Potasio:</b></label>
-                        <input type="number" step=0.01 name="potasio" id="potasio" placeholder="Ingrese potasio" required value="<?php echo $lista[16] ?>"> (mg)<br>
-                        <label for="sodio"><b>Sodio:</b></label>
-                        <input type="number" step=0.01 name="sodio" id="sodio" placeholder="Ingrese sodio" required value="<?php echo $lista[17] ?>"> (mg)<br>
-                        <label for="grasas"><b>Grasas:</b></label>
-                        <input type="number" step=0.01 name="grasas" id="grasas" placeholder="Ingrese grasas" required value="<?php echo $lista[18] ?>"> (g)<br>
-                        <label for="grasasSaturadas"><b>Grasas Saturadas:</b></label>
-                        <input type="number" step=0.01 name="grasasSaturadas" id="grasasSaturadas" placeholder="Ingrese Grasas Saturadas" required value="<?php echo $lista[19] ?>"> (g)<br>
-
-                        <b>SEMAFORO NUTRICIONAL</b>
-                        <br><label for="azucar"><b>Azucar:</b></label>
-                        <select name="azucar" id="azucar" required><br>
-                            <option value="<?php echo $lista[25] ?>"><?php echo $lista[25] ?>
-                            <option value='Alto'>Alto</option>
-                            <option value='Medio'>Medio</option>
-                            <option value='Bajo'>Bajo</option>
-                            <option value='No contiene'>No contiene</option>
-                        </select>
-                        <br><label for="sal"><b>Sal:</b></label>
-                        <select name="sal" id="sal" required><br>
-                            <option value="<?php echo $lista[26] ?>"><?php echo $lista[26] ?>
-                            <option value='Alto'>Alto</option>
-                            <option value='Medio'>Medio</option>
-                            <option value='Bajo'>Bajo</option>
-                            <option value='No contiene'>No contiene</option>
-                        </select>
-                        <br><label for="grasa"><b>Grasa:</b></label>
-                        <select name="grasa" id="grasa" required><br>
-                            <option value="<?php echo $lista[27] ?>"><?php echo $lista[27] ?>
-                            <option value='Alto'>Alto</option>
-                            <option value='Medio'>Medio</option>
-                            <option value='Bajo'>Bajo</option>
-                            <option value='No contiene'>No contiene</option>
-                        </select>
-
-                        <br><b>OPCIONES</b>
-                        <br><label for="tiempo_Receta"><b>Tiempo:</b></label>
-                        <input type="numer" name="tiempo_Receta" id="tiempo_Receta" placeholder="Ingrese el tiempo de la receta" required value="<?php echo $lista[20] ?>"> min<br>
-
-                        <label for="porciones_Receta"><b>Porciones:</b></label>
-                        <select name="porciones_Receta" id="porciones_Receta" required><br>
-                            <option value="<?php echo $lista[21] ?>"><?php echo $lista[21] ?>
-                            <option value='1 a 3'>1 a 3</option>
-                            <option value='4 a 6'>4 a 6</option>
-                            <option value='7 a 9'>7 a 9</option>
-                            <option value='10 o mas'>10 o mas</option>
-                        </select>
-                        <br><label for="dificultad_Receta"><b>Dificultad:</b></label>
-                        <select name="dificultad_Receta" id="dificultad_Receta" required><br>
-                            <option value="<?php echo $lista[22] ?>"><?php echo $lista[22] ?>
-                            <option value='Facil'>Facil</option>
-                            <option value='Intermedio'>Intermedio</option>
-                            <option value='Dificil'>Dificil</option>
-                        </select>
-
-                        <br><label for="idingredientes"><b>Ingrediente Principal:</b></label>
-                        <select name="idingredientes" id="idingredientes" required><br>
-                            <option value="<?php echo $lista[29] ?>"><?php echo $lista[29] ?>
+                        <div class="tab">
+                            <label for="titulo_Receta"><b>Título:</b></label>
+                            <input type="text" name="titulo_Receta" id="titulo_Receta" placeholder="Ingrese el titulo de la receta" required value="<?php echo $lista[1] ?>"><br>
+                            <label for="descripcion_Receta"><b>Descripción:</b></label>
+                            <input type="text" name="descripcion_Receta" id="descripcion_Receta" placeholder="Ingrese la descripcion de la receta" required value="<?php echo $lista[2] ?>">
+                            <br><label for="categoria_Receta"><b>Categoria Receta:</b></label>
+                            <select name='categoria_Receta' id='categoria_Receta' required>
+                                <option value="<?php echo $lista[3] ?>"><?php echo $lista[3] ?></option>
                                 <?php
-                                $control3->EncontrarIngredienteTAG();
+                                if ($lista[3] == 'Desayunos') {
+                                    echo "  <option value='Almuerzos'>Almuerzos</option>
+                                        <option value='Meriendas'>Meriendas</option>
+                                        <option value='Cenas'>Cenas</option>
+                                        <option value='Postres'>Postres</option>";
+                                } elseif ($lista[3] == 'Almuerzos') {
+                                    echo "  <option value='Desayunos'>Desayunos</option>
+                                        <option value='Meriendas'>Meriendas</option>
+                                        <option value='Cenas'>Cenas</option>
+                                        <option value='Postres'>Postres</option>";
+                                } elseif ($lista[3] == 'Meriendas') {
+                                    echo "  <option value='Desayunos'>Desayunos</option>
+                                        <option value='Almuerzos'>Almuerzos</option>
+                                        <option value='Cenas'>Cenas</option>
+                                        <option value='Postres'>Postres</option>";
+                                } elseif ($lista[3] == 'Cenas') {
+                                    echo "  <option value='Desayunos'>Desayunos</option>
+                                        <option value='Almuerzos'>Almuerzos</option>
+                                        <option value='Meriendas'>Meriendas</option>
+                                        <option value='Postres'>Postres</option>";
+                                } elseif ($lista[3] == 'Postres') {
+                                    echo "  <option value='Desayunos'>Desayunos</option>
+                                        <option value='Almuerzos'>Almuerzos</option>
+                                        <option value='Meriendas'>Meriendas</option>
+                                        <option value='Cenas'>Cenas</option>";
+                                }
                                 ?>
-                        </select>
-
-                        <br><b>INGREDIENTES</b>
-                        <br><label for="ingredientes_Receta"><b>Ingredientes:</b></label><br>
-                        <div class="ck-content">
-                            <textarea name="ingredientes_Receta" id="ingredientes_Receta"><?php echo $lista[23] ?></textarea><br>
+                            </select>
+                            <label for="grupoEtario"><b>Grupo Etario:</b></label>
+                            <select name="grupoEtario" id="grupoEtario" required>
+                                <option value="<?php echo $lista[28] ?>"><?php echo $lista[28] ?></option>
+                                <?php
+                                if ($lista[28] == 'Embarazo') {
+                                    echo "<option value='Primera Infancia'>Primera Infancia</option>
+                                <option value='Segunda Infancia'>Segunda Infancia</option>
+                                <option value='Adolescencia'>Adolescencia</option>
+                                <option value='Juventud'>Juventud</option>
+                                <option value='Adultez'>Adultez</option>
+                                <option value='Vejez'>Vejez</option>";
+                                } elseif ($lista[28] == 'Primera Infancia') {
+                                    echo "<option value='Embarazo'>Embarazo</option>
+                                <option value='Segunda Infancia'>Segunda Infancia</option>
+                                <option value='Adolescencia'>Adolescencia</option>
+                                <option value='Juventud'>Juventud</option>
+                                <option value='Adultez'>Adultez</option>
+                                <option value='Vejez'>Vejez</option>";
+                                } elseif ($lista[28] == 'Segunda Infancia') {
+                                    echo "<option value='Embarazo'>Embarazo</option>
+                                <option value='Primera Infancia'>Primera Infancia</option>
+                                <option value='Adolescencia'>Adolescencia</option>
+                                <option value='Juventud'>Juventud</option>
+                                <option value='Adultez'>Adultez</option>
+                                <option value='Vejez'>Vejez</option>";
+                                } elseif ($lista[28] == 'Adolescencia') {
+                                    echo "<option value='Embarazo'>Embarazo</option>
+                                <option value='Primera Infancia'>Primera Infancia</option>
+                                <option value='Segunda Infancia'>Segunda Infancia</option>
+                                <option value='Juventud'>Juventud</option>
+                                <option value='Adultez'>Adultez</option>
+                                <option value='Vejez'>Vejez</option>";
+                                } elseif ($lista[28] == 'Juventud') {
+                                    echo "<option value='Embarazo'>Embarazo</option>
+                                <option value='Primera Infancia'>Primera Infancia</option>
+                                <option value='Segunda Infancia'>Segunda Infancia</option>
+                                <option value='Adolescencia'>Adolescencia</option>
+                                <option value='Adultez'>Adultez</option>
+                                <option value='Vejez'>Vejez</option>";
+                                } elseif ($lista[28] == 'Adultez') {
+                                    echo "<option value='Embarazo'>Embarazo</option>
+                                <option value='Primera Infancia'>Primera Infancia</option>
+                                <option value='Segunda Infancia'>Segunda Infancia</option>
+                                <option value='Adolescencia'>Adolescencia</option>
+                                <option value='Juventud'>Juventud</option>
+                                <option value='Vejez'>Vejez</option>";
+                                } elseif ($lista[28] == 'Vejez') {
+                                    echo "<option value='Embarazo'>Embarazo</option>
+                                <option value='Primera Infancia'>Primera Infancia</option>
+                                <option value='Segunda Infancia'>Segunda Infancia</option>
+                                <option value='Adolescencia'>Adolescencia</option>
+                                <option value='Juventud'>Juventud</option>
+                                <option value='Adultez'>Adultez</option>";
+                                }
+                                ?>
+                            </select>
                         </div>
 
-                        <b>PASOS RECETA</b>
-                        <br><label for="pasos_Receta"><b>Pasos Receta:</b></label><br>
-                        <div class="ck-content">
-                            <textarea name="pasos_Receta" id="pasos_Receta"><?php echo $lista[24] ?></textarea><br>
+                        <div class="tab">
+                            <label for="imagen_Receta"><b>Imagen:</b></label>
+                            <input type="file" name="imagen_Receta" id="imagen_Receta" accept="image/*" required value="<?php echo $lista[4] ?>"><br>
+                            <label for="url_Receta"><b>Video:</b></label>
+                            <input type="url" name="url_Receta" id="url_Receta" placeholder="Ingrese el link de youtube" required value="<?php echo $lista[5] ?>"><br>
+                            <label for="tresD_Receta"><b>3D:</b></label>
+                            <input type="url" name="tresD_Receta" id="tresD_Receta" placeholder="Ingrese el link de sketchfab" required value="<?php echo $lista[6] ?>"><br>
                         </div>
 
-                    </div>
-                    <div class="boton">
-                        <br><button type="submit" value="Procesar" class="btnIngredientes">Guardar</button>
+
+                        <div class="tab">
+                            <label for="tiempo_Receta"><b>Tiempo(min):</b></label>
+                            <input type="numer" name="tiempo_Receta" id="tiempo_Receta" placeholder="Ingrese el tiempo de la receta" required value="<?php echo $lista[20] ?>">
+
+                            <label for="porciones_Receta"><b>Porciones:</b></label>
+                            <select name="porciones_Receta" id="porciones_Receta" required>
+                                <option value="<?php echo $lista[21] ?>"><?php echo $lista[21] ?></option>
+                                <?php
+                                if ($lista[21] == '1 a 3') {
+                                    echo "  <option value='4 a 6'>4 a 6</option>
+                                        <option value='7 a 9'>7 a 9</option>
+                                        <option value='10 o mas'>10 o mas</option>";
+                                } elseif ($lista[21] == '4 a 6') {
+                                    echo "  <option value='1 a 3'>1 a 3</option>
+                                        <option value='7 a 9'>7 a 9</option>
+                                        <option value='10 o mas'>10 o mas</option>";
+                                } elseif ($lista[21] == '7 a 9') {
+                                    echo "  <option value='1 a 3'>1 a 3</option>
+                                        <option value='4 a 6'>4 a 6</option>
+                                        <option value='10 o mas'>10 o mas</option>";
+                                } elseif ($lista[21] == '10 o mas') {
+                                    echo "  <option value='1 a 3'>1 a 3</option>
+                                        <option value='4 a 6'>4 a 6</option>
+                                        <option value='7 a 9'>7 a 9</option>";
+                                }
+                                ?>
+                            </select>
+                            <label for="dificultad_Receta"><b>Dificultad:</b></label>
+                            <select name="dificultad_Receta" id="dificultad_Receta" required>
+                                <option value="<?php echo $lista[22] ?>"><?php echo $lista[22] ?></option>
+                                <?php
+                                if ($lista[22] == 'Facil') {
+                                    echo "  <option value='Intermedio'>Intermedio</option>
+                                        <option value='Dificil'>Dificil</option>";
+                                } elseif ($lista[22] == 'Intermedio') {
+                                    echo "  <option value='Facil'>Facil</option>
+                                        <option value='Dificil'>Dificil</option>";
+                                } elseif ($lista[22] == 'Dificil') {
+                                    echo "  <option value='Facil'>Facil</option>
+                                        <option value='Intermedio'>Intermedio</option>";
+                                }
+                                ?>
+                            </select>
+                            <label for="idingredientes"><b>Ingrediente Principal:</b></label>
+                            <select name="idingredientes" id="idingredientes" required><br>
+                                <option value="<?php echo $lista[29] ?>"><?php echo $lista[29] ?>
+                                    <?php
+                                    $control3->EncontrarIngredienteTAG();
+                                    ?>
+                            </select>
+                        </div>
+
+                        <div class="tab">
+                            <label for="azucar"><b>Azucar:</b></label>
+                            <select name="azucar" id="azucar" required>
+                                <option value="<?php echo $lista[25] ?>"><?php echo $lista[25] ?></option>
+                                <?php
+                                if ($lista[25] == 'Alto') {
+                                    echo "  <option value='Medio'>Medio</option>
+                                        <option value='Bajo'>Bajo</option>
+                                        <option value='No contiene'>No contiene</option>";
+                                } elseif ($lista[25] == 'Bajo') {
+                                    echo "  <option value='Alto'>Alto</option>
+                                        <option value='Medio'>Medio</option>
+                                        <option value='No contiene'>No contiene</option>";
+                                } elseif ($lista[25] == 'Medio') {
+                                    echo "  <option value='Alto'>Alto</option>
+                                        <option value='Bajo'>Bajo</option>
+                                        <option value='No contiene'>No contiene</option>";
+                                } elseif ($lista[25] == 'No contiene') {
+                                    echo "  <option value='Alto'>Alto</option>
+                                        <option value='Medio'>Medio</option>
+                                        <option value='Bajo'>Bajo</option>";
+                                }
+                                ?>
+                            </select>
+                            <label for="sal"><b>Sal:</b></label>
+                            <select name="sal" id="sal" required>
+                                <option value="<?php echo $lista[26] ?>"><?php echo $lista[26] ?></option>
+                                <?php
+                                if ($lista[26] == 'Alto') {
+                                    echo "  <option value='Medio'>Medio</option>
+                                        <option value='Bajo'>Bajo</option>
+                                        <option value='No contiene'>No contiene</option>";
+                                } elseif ($lista[26] == 'Bajo') {
+                                    echo "  <option value='Alto'>Alto</option>
+                                        <option value='Medio'>Medio</option>
+                                        <option value='No contiene'>No contiene</option>";
+                                } elseif ($lista[26] == 'Medio') {
+                                    echo "  <option value='Alto'>Alto</option>
+                                        <option value='Bajo'>Bajo</option>
+                                        <option value='No contiene'>No contiene</option>";
+                                } elseif ($lista[26] == 'No contiene') {
+                                    echo "  <option value='Alto'>Alto</option>
+                                        <option value='Medio'>Medio</option>
+                                        <option value='Bajo'>Bajo</option>";
+                                }
+                                ?>
+                            </select>
+                            <label for="grasa"><b>Grasa:</b></label>
+                            <select name="grasa" id="grasa" required>
+                                <option value="<?php echo $lista[27] ?>"><?php echo $lista[27] ?></option>
+                                <?php
+                                if ($lista[27] == 'Alto') {
+                                    echo "  <option value='Medio'>Medio</option>
+                                        <option value='Bajo'>Bajo</option>
+                                        <option value='No contiene'>No contiene</option>";
+                                } elseif ($lista[27] == 'Bajo') {
+                                    echo "  <option value='Alto'>Alto</option>
+                                        <option value='Medio'>Medio</option>
+                                        <option value='No contiene'>No contiene</option>";
+                                } elseif ($lista[27] == 'Medio') {
+                                    echo "  <option value='Alto'>Alto</option>
+                                        <option value='Bajo'>Bajo</option>
+                                        <option value='No contiene'>No contiene</option>";
+                                } elseif ($lista[27] == 'No contiene') {
+                                    echo "  <option value='Alto'>Alto</option>
+                                        <option value='Medio'>Medio</option>
+                                        <option value='Bajo'>Bajo</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
+
+                        <div class="tab">
+                            <label for="energia"><b>Energia (Kcal):</b></label>
+                            <input type="number" step=0.01 name="energia" id="energia" placeholder="Ingrese Energia" required value="<?php echo $lista[8] ?>">
+                            <label for="proteina"><b>Proteina (g):</b></label>
+                            <input type="number" step=0.01 name="proteina" id="proteina" placeholder="Ingrese proteina" required value="<?php echo $lista[9] ?>">
+                            <label for="fibra"><b>Fibra (g):</b></label>
+                            <input type="number" step=0.01 name="fibra" id="fibra" placeholder="Ingrese fibra" required value="<?php echo $lista[10] ?>">
+                            <label for="calcio"><b>Calcio (mg):</b></label>
+                            <input type="number" step=0.01 name="calcio" id="calcio" placeholder="Ingrese calcio" required value="<?php echo $lista[11] ?>">
+                        </div>
+
+                        <div class="tab">
+                            <label for="hierro"><b>Hierro (mg):</b></label>
+                            <input type="number" step=0.01 name="hierro" id="hierro" placeholder="Ingrese hierro" required value="<?php echo $lista[12] ?>">
+                            <label for="carbohidratos"><b>Carbohidratos (g):</b></label>
+                            <input type="number" step=0.01 name="carbohidratos" id="carbohidratos" placeholder="Ingrese carbohidratos" required value="<?php echo $lista[13] ?>">
+                            <label for="azucares"><b>Azucares (g):</b></label>
+                            <input type="number" step=0.01 name="azucares" id="azucares" placeholder="Ingrese azucares" required value="<?php echo $lista[14] ?>">
+                            <label for="azucarAnadido"><b>Azucar Añadido (g):</b></label>
+                            <input type="number" step=0.01 name="azucarAnadido" id="azucarAnadido" placeholder="Ingrese Azucar Añadido" required value="<?php echo $lista[15] ?>">
+                        </div>
+
+                        <div class="tab">
+                            <label for="potasio"><b>Potasio (mg):</b></label>
+                            <input type="number" step=0.01 name="potasio" id="potasio" placeholder="Ingrese potasio" required value="<?php echo $lista[16] ?>">
+                            <label for="sodio"><b>Sodio (mg):</b></label>
+                            <input type="number" step=0.01 name="sodio" id="sodio" placeholder="Ingrese sodio" required value="<?php echo $lista[17] ?>">
+                            <label for="grasas"><b>Grasas (g):</b></label>
+                            <input type="number" step=0.01 name="grasas" id="grasas" placeholder="Ingrese grasas" required value="<?php echo $lista[18] ?>">
+                            <label for="grasasSaturadas"><b>Grasas Saturadas (g):</b></label>
+                            <input type="number" step=0.01 name="grasasSaturadas" id="grasasSaturadas" placeholder="Ingrese Grasas Saturadas" required value="<?php echo $lista[19] ?>">
+                        </div>
+
+
+                        <div class="tab">
+                            <label for="ingredientes_Receta"><b>Ingredientes:</b></label><br>
+                            <div class="ck-content">
+                                <textarea name="ingredientes_Receta" id="ingredientes_Receta"><?php echo $lista[23] ?></textarea><br>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <label for="pasos_Receta"><b>Pasos Receta:</b></label><br>
+                            <div class="ck-content">
+                                <textarea name="pasos_Receta" id="pasos_Receta"><?php echo $lista[24] ?></textarea><br>
+                            </div>
+                        </div>
+
+                        <div style="overflow:auto;">
+                            <div style="float:right;">
+                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                            </div>
+                        </div>
+                        <!-- Circles which indicates the steps of the form: -->
+                        <div style="text-align:center;margin-top:40px;">
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -306,8 +445,6 @@ $control3 = new modelo_receta();
                 resizeScreen();
             })
 
-
-
             function resizeScreen() {
                 if (document.body.clientWidth < 400) {
                     $('.sidebar').addClass('close');
@@ -317,6 +454,83 @@ $control3 = new modelo_receta();
             }
         });
     </script>
+
+    <script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+
+        function showTab(n) {
+            // This function will display the specified tab of the form...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            //... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Submit";
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Next";
+            }
+            //... and run a function that will display the correct step indicator:
+            fixStepIndicator(n)
+        }
+
+        function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form...
+            if (currentTab >= x.length) {
+                // ... the form gets submitted:
+                document.getElementById("formReceta").submit();
+                return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+        }
+
+        function validateForm() {
+            // This function deals with validation of the form fields
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByTagName("input");
+            y = x[currentTab].getElementsByTagName("select");
+            // A loop that checks every input field in the current tab:
+            for (i = 0; i < y.length; i++) {
+                // If a field is empty...
+                if (y[i].value == "") {
+                    // add an "invalid" class to the field:
+                    y[i].className += " invalid";
+                    // and set the current valid status to false
+                    valid = false;
+                }
+            }
+            // If the valid status is true, mark the step as finished and valid:
+            if (valid) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+            }
+            return valid; // return the valid status
+        }
+
+        function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class on the current step:
+            x[n].className += " active";
+        }
+    </script>
+
 
     <script>
         // This sample still does not showcase all CKEditor 5 features (!)
