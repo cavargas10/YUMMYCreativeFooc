@@ -73,7 +73,9 @@ class controlador_receta
 
 			$userResponse = $user->CreateReceta();
 			if ($userResponse == 1) {
-				echo '<script>alert("SQL correctos :)...");</script>';
+				$f = $_POST['idingredientes'];
+
+				echo '<script>alert("SQL correctos :)...'.$f.'");</script>';
 				echo "<script>location.href='../vistas/contenido_receta.php'</script>";
 			} else {
 				echo '<script>alert("SQL Incorrectos...");</script>';
