@@ -210,7 +210,7 @@ class modelo_receta
     , '$this->fibra', '$this->calcio', '$this->hierro', '$this->carbohidratos', '$this->azucares'
     , '$this->azucarAnadido', '$this->potasio', '$this->sodio', '$this->grasas', '$this->grasasSaturadas'
     , '$this->tiempo_Receta', '$this->porciones_Receta', '$this->dificultad_Receta', '$this->ingredientes_Receta'
-    , '$this->pasos_Receta', '$this->azucar', '$this->sal', '$this->grasa', '$this->grupoEtario', '$this->idingredientes')");
+    , '$this->pasos_Receta', '$this->azucar', '$this->sal', '$this->grasa', '$this->grupoEtario', '','$this->idingredientes')");
     //$this->Disconnect();
     return $resSQL;
   }
