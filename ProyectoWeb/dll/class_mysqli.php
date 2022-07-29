@@ -1404,6 +1404,33 @@ class clase_mysqli
 		}
 		return $arreglo;
 	}
+
+	function traerGraficodos()
+	{
+		$arreglo = array();
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			$arreglo[] = $row;
+		}
+		return $arreglo;
+	}
+
+	function traerGraficoVideos()
+	{
+		$arreglo = array();
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			$arreglo[] = $row;
+		}
+		return $arreglo;
+	}
+
+	function traerGraficoTips()
+	{
+		$arreglo = array();
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			$arreglo[] = $row;
+		}
+		return $arreglo;
+	}
 }
 
 	/*

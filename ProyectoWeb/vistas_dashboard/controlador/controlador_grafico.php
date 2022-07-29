@@ -19,9 +19,33 @@ class controlador_grafico
 	{
 		$user = new modelo_grafico();
 		$userResponse = $user->ObtenerGrafico();
-		 
+
 		return json_encode($userResponse);
 		//echo '<script>json_encode('.$userResponse.');</script>';
-			
+
+	}
+
+	public function ObtenerGraficodos()
+	{
+		$user = new modelo_grafico();
+		$userResponse = $user->ObtenerGraficodos();
+
+		return json_encode($userResponse);
+	}
+
+	public function ObtenerGraficoVideos()
+	{
+		$user = new modelo_grafico();
+		$userResponse = $user->ObtenerGraficoVideos();
+
+		return json_encode($userResponse);
+	}
+
+	public function ObtenerGraficoTips()
+	{
+		$user = new modelo_grafico();
+		$userResponse = $user->ObtenerGraficoTips();
+
+		return json_encode($userResponse);
 	}
 }
