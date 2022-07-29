@@ -205,13 +205,16 @@ class modelo_recetas
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
     $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-                receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta 
-                from receta JOIN ingredientes 
-                on receta.idingredientes = ingredientes.idingredientes
-                where receta.categoria_Receta = '$categoria_Receta' 
-                AND receta.porciones_Receta = '$porciones_Receta' 
-                AND receta.dificultad_Receta = '$dificultad_Receta' 
-                AND ingredientes.nombre_Ingredientes = '$nombre_Ingredientes'";
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , SUM(comentarios.rating)/COUNT(comentarios.idcomentarios) as suma
+    
+    from receta, ingredientes , comentarios
+    WHERE receta.idingredientes = ingredientes.idingredientes
+    AND comentarios.idReceta = receta.idReceta
+    AND receta.categoria_Receta = '$categoria_Receta' 
+    AND receta.porciones_Receta = '$porciones_Receta' 
+    AND receta.dificultad_Receta = '$dificultad_Receta' 
+    AND ingredientes.nombre_Ingredientes = '$nombre_Ingredientes'
+    group by receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
     $resSQL = $miconexion->presentarconsultaRecetas();
@@ -248,11 +251,12 @@ class modelo_recetas
     return $resSQL;
   }
 
-  public function EncontrarRecetas($idReceta) {
+  public function EncontrarRecetas($idReceta)
+  {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select * from receta where idReceta = $idReceta");
-    $resSQL=$miconexion->consulta_lista();
+    $resSQL = $miconexion->consulta("select * from receta where idReceta = $idReceta");
+    $resSQL = $miconexion->consulta_lista();
     //$this->Disconnect();
     return $resSQL;
   }
@@ -262,8 +266,10 @@ class modelo_recetas
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
     $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-                receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta 
-                from receta ";
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,SUM(comentarios.rating)/COUNT(comentarios.idcomentarios) as suma
+    from receta, comentarios
+    where comentarios.idReceta = receta.idReceta
+    group by receta.titulo_Receta ";
     $resSQL = $miconexion->consulta($query);
     $resSQL = $miconexion->presentarconsultaRecetas();
     //$this->Disconnect();
