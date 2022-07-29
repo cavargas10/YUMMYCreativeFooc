@@ -1,6 +1,9 @@
 <?php
 require_once "../../dll/config.php";
 require_once "../../dll/class_mysqli.php";
+include_once "../controlador/controlador_grafico.php";
+include_once "../modelo/modelo_grafico.php";
+extract($_GET);
 
 ?>
 <!DOCTYPE html>
@@ -141,18 +144,13 @@ require_once "../../dll/class_mysqli.php";
     }
     let sidebar = document.querySelector(".sidebar");
     console.log(sidebarBtn);
-    /* sidebarBtn.addEventListener("click", () => {
-      sidebar.classList.toggle("close");
-    }); */
+    
     $(function() {
-      /* console.log("width: "+ document.body.clientWidth); */
 
       resizeScreen();
       $(window).resize(function() {
         resizeScreen();
       })
-
-
 
       function resizeScreen() {
         if (document.body.clientWidth < 400) {
@@ -166,41 +164,57 @@ require_once "../../dll/class_mysqli.php";
 
 
   <script>
-    // grafica
-    const c = document.getElementById('m');
-    const m = new Chart(c, {
-      type: 'doughnut',
-      data: {
-        labels: ['Madre en gestacion', 'Primera Infancia', 'Segunda Infancia', 'Adolescencia', 'Juventud', 'adultez', 'Vejez'],
-        datasets: [{
-          data: [5, 5, 5, 5, 5, 5],
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.7)',
-            'rgba(54, 162, 235, 0.7)',
-            'rgba(255, 206, 86, 0.7)',
-            'rgba(75, 192, 192, 0.7)',
-            'rgba(153, 102, 255, 0.7)',
-            'rgba(255, 159, 64, 0.7)'
-          ],
-          borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-          ],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
+    function CargarDatosGraficoPastel() {
+      $.ajax({
+        url: '../controlador/controlador_grafico.php',
+        type: 'POST'
+      }).done(function(resp) {
+        var titulo = [];
+        var cantidad = [];
+        var data = JSON.parse(resp);
+        for (var i = 0; i < data.length; i++) {
+          titulo.push(data[i][0]);
+          cantidad.push(data[i][1]);
         }
-      }
-    });
+        // grafica
+        const c = document.getElementById('m');
+        const m = new Chart(c, {
+          type: 'doughnut',
+          data: {
+            labels: titulo,
+            datasets: [{
+              data: cantidad,
+              backgroundColor: [
+                'rgba(255, 99, 132, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(255, 206, 86, 0.7)',
+                'rgba(75, 192, 192, 0.7)',
+                'rgba(153, 102, 255, 0.7)',
+                'rgba(255, 159, 64, 0.7)',
+                'rgba(205, 159, 64, 0.7)'
+              ],
+              borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(205, 159, 64, 1)'
+              ],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      })
+    }
   </script>
 
 

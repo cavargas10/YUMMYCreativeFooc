@@ -314,7 +314,7 @@ class clase_mysqli
 	function presentarconsultaTresRecetasIndex()
 	{
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
-			$newrow = str_replace("../../imagenesReceta/","",$row[4]);
+			$newrow = str_replace("../../imagenesReceta/", "", $row[4]);
 			for ($i = 0; $i < 1; $i++) {
 				echo "  <div class='container-card-recet'>
 							<div class='card-recet'>
@@ -1395,6 +1395,17 @@ class clase_mysqli
 			return $row;
 		}
 	}
+
+	function traerGrafico()
+	{
+		$arreglo = array();
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			$arreglo[] = $row;
+		}
+		return $arreglo;
+	}
+}
+
 	/*
 	function consulta_json(){
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
@@ -1415,4 +1426,3 @@ class clase_mysqli
 	    echo  json_encode($resultData);
 	}
 */
-}

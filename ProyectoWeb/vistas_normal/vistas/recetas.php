@@ -138,16 +138,16 @@ $control4 = new controlador_recetas();
       </div>
 
       <?php
-
       $control3 = new modelo_recetas();
-      //$control3->PresentarRecetas();
-      //$control3->BuscarReceta($categoria_Receta,$porciones_Receta,$dificultad_Receta,$nombre_Ingredientes);
       if (isset($_POST['Enviar'])) {
-        $control4->BuscarReceta();
-      } else {
+        if (isset($_POST['categoria_Receta']) == '' && isset($_POST['nombre_Ingredientes']) == '' && isset($_POST['dificultad_Receta']) == '' && isset($_POST['porciones_Receta']) == '') {
+          $control4->PresentarRecetas();
+        } else {
+          $control4->BuscarReceta();
+        }
+      }else{
         $control4->PresentarRecetas();
       }
-
       ?>
     </div>
   </main>

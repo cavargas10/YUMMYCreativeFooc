@@ -1,26 +1,18 @@
 <?php
-
-class Modelo_grafico
+require_once "../../dll/config.php";
+require_once "../../dll/class_mysqli.php";
+class modelo_grafico
 {
     private $conexion;
 
-    function __construct()
+    function ObtenerGrafico()
     {
-        require_once "../../dll/config.php";
-        require_once "../../dll/class_mysqli.php";
-        $this->conexion = new clase_mysqli;
-        $this->conexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    }
-    function traerDatos()
-    {
-        $sql = " call sp_datosBar() ";
-        $arreglo = array();
-        if ($consulta = $this->conexion->conexion->query($sql)) {
-            while ($consulta_VU = mysqli_fetch_array($consulta)) {
-                $arreglo[] = $consulta_VU;
-            }
-            return $arreglo;
-            $this->conexion->cerrar();
-        }
+        $miconexion = new clase_mysqli;
+        $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+        $resSQL = $miconexion->consulta("SELECT * from ingredientes");
+       // $resSQL = $miconexion->consulta("SELECT grupoEtario, COUNT(idReceta) FROM receta GROUP BY grupoEtario ");
+        $resSQL = $miconexion->traerGrafico();
+        //$this->Disconnect();
+        return $resSQL;
     }
 }
