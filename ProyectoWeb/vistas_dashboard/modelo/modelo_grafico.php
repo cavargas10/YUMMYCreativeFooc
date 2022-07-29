@@ -7,11 +7,13 @@ class modelo_grafico
 
     function ObtenerGrafico()
     {
+        
         $miconexion = new clase_mysqli;
         $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-        $resSQL = $miconexion->consulta("SELECT * from ingredientes");
-       // $resSQL = $miconexion->consulta("SELECT grupoEtario, COUNT(idReceta) FROM receta GROUP BY grupoEtario ");
+        //$resSQL = $miconexion->consulta("SELECT * from ingredientes");
+        $resSQL = $miconexion->consulta("SELECT grupoEtario, COUNT(idReceta) FROM receta GROUP BY grupoEtario ");
         $resSQL = $miconexion->traerGrafico();
+       // echo $resSQL;
         //$this->Disconnect();
         return $resSQL;
     }

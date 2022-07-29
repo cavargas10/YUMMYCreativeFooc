@@ -19,6 +19,9 @@ class controlador_grafico
 	{
 		$user = new modelo_grafico();
 		$userResponse = $user->ObtenerGrafico();
-		echo json_encode($userResponse);
+		 
+		return json_encode($userResponse);
+		//echo '<script>json_encode('.$userResponse.');</script>';
+			
 	}
 }

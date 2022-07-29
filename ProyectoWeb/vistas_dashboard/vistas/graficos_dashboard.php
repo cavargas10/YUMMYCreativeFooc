@@ -4,6 +4,10 @@ require_once "../../dll/class_mysqli.php";
 include_once "../controlador/controlador_grafico.php";
 include_once "../modelo/modelo_grafico.php";
 extract($_GET);
+$control4 = new controlador_grafico();
+$lista = $control4->ObtenerGrafico();
+
+echo $lista;
 
 ?>
 <!DOCTYPE html>
@@ -15,17 +19,13 @@ extract($_GET);
   <link rel="stylesheet" href="../estilos/dashboard_graficos.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
 
   <!-- graficas -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.esm.js" integrity="sha512-YM18yiANXJFpbiOZjLzUrK/lNfTiBcwtTLeAntG4B8dJY+NdUDjxfPNGPEMuOdXlT7U/uT+zbIvbQYAEFog+MA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.esm.min.js" integrity="sha512-yPOQ2pPoQ9JtP0/jDKpXiKyWNCJWT5OI+6r1EqZmTg+afKQOBpy08VYboeq+Tt9kl9/FOCueEhH6cmHN3nAdJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.js" integrity="sha512-5m2r+g00HDHnhXQDbRLAfZBwPpPCaK+wPLV6lm8VQ+09ilGdHfXV7IVyKPkLOTfi4vTTUVJnz7ELs7cA87/GMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/helpers.esm.js" integrity="sha512-dSutS1n8KEMUnQMa9YGa6CxAmoUfaZdxL2+s2xBgEq7WHaWdtjna/rzGsjqkT27GxKBDLT0Fr3C/TzzHvBRaAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/helpers.esm.min.js" integrity="sha512-vxCPccgWacJoW2HlxhlKKtczdzvcg0r1UuB9LfNGt6vsDbgLfSFxKlolUS2mqKNXrOK5b93S45309T+V5BhueA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -124,7 +124,10 @@ extract($_GET);
       <section class="container-graf">
         <div class="grafica_uno">
           <h1>Recetas grupo etarios</h1>
-          <canvas id="m" width="10px" height="10px"></canvas>
+          <!-- <button class="CargarDatosGraficoPastel" id="CargarDatosGraficoPastel" onclick="CargarDatosGraficoPastel()">ENVIAR</button> -->
+          <canvas id="m" width="10px" height="10px">
+          <script></script>
+          </canvas>
         </div>
         <div class="grafica_uno">
           <h1 class="name">Comentarios por tipo de Receta</h1>
@@ -135,6 +138,7 @@ extract($_GET);
   </div>
 
   <script>
+    
     let arrow = document.querySelectorAll(".arrow");
     for (var i = 0; i < arrow.length; i++) {
       arrow[i].addEventListener("click", (e) => {
@@ -143,7 +147,6 @@ extract($_GET);
       });
     }
     let sidebar = document.querySelector(".sidebar");
-    console.log(sidebarBtn);
     
     $(function() {
 
@@ -164,22 +167,19 @@ extract($_GET);
 
 
   <script>
-    function CargarDatosGraficoPastel() {
-      $.ajax({
-        url: '../controlador/controlador_grafico.php',
-        type: 'POST'
-      }).done(function(resp) {
-        var titulo = [];
-        var cantidad = [];
-        var data = JSON.parse(resp);
-        for (var i = 0; i < data.length; i++) {
-          titulo.push(data[i][0]);
-          cantidad.push(data[i][1]);
-        }
-        // grafica
-        const c = document.getElementById('m');
-        const m = new Chart(c, {
-          type: 'doughnut',
+    var jsvar = '<?=$lista?>';
+    jsvar = JSON.parse(jsvar);
+    let titulo = [];
+    let cantidad = [];
+    jsvar.forEach(element => {
+      
+      titulo.push(element.grupoEtario);
+      cantidad.push(element["COUNT(idReceta)"]);
+      console.log(titulo);console.log(cantidad);
+    });
+    var ctx =  document.getElementById('m');
+    var myChart  = new Chart(ctx,{
+      type: 'doughnut',
           data: {
             labels: titulo,
             datasets: [{
@@ -212,12 +212,8 @@ extract($_GET);
               }
             }
           }
-        });
-      })
-    }
-  </script>
-
-
+        })
+        </script>
   <script>
     // grafica
     const w = document.getElementById('q');
