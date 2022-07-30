@@ -86,12 +86,17 @@ $control->UpdateVideo($idvideos);
           </ul>
         </li>
         <li>
-          <a href="ayuda_dashboard.php">
-            <i class="uil uil-question-circle"></i>
-            <span class="link_name">AYUDA</span>
-          </a>
-          <ul class="sub-menu blank">
+          <div class="icon-link">
+            <a href="ayuda_dashboard.php">
+              <i class="uil uil-question-circle"></i>
+              <span class="link_name">AYUDA</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
             <li><a class="link_name" href="#">AYUDA</a></li>
+            <li><a href="ayuda_videos_dashboard.php">Videos</a></li>
+            <li><a href="ayuda_manual_dashboard.php">Manual de Usuario</a></li>
           </ul>
         </li>
         <li>

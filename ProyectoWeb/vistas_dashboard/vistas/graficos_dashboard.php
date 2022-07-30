@@ -78,7 +78,7 @@ $lis4 = $control4->ObtenerGraficoTips();
           </ul>
         </li>
         <li>
-          <a href="graficos_dashboard.php">
+          <a href="#">
             <i class="uil uil-chart-line"></i>
             <span class="link_name">Gráficos</span>
           </a>
@@ -96,16 +96,20 @@ $lis4 = $control4->ObtenerGraficoTips();
           </ul>
         </li>
         <li>
-          <a href="ayuda_dashboard.php">
-            <i class="uil uil-question-circle"></i>
-            <span class="link_name">AYUDA</span>
-          </a>
-          <ul class="sub-menu blank">
+          <div class="icon-link">
+            <a href="ayuda_dashboard.php">
+              <i class="uil uil-question-circle"></i>
+              <span class="link_name">AYUDA</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
             <li><a class="link_name" href="#">AYUDA</a></li>
+            <li><a href="ayuda_videos_dashboard.php">Videos</a></li>
+            <li><a href="ayuda_manual_dashboard.php">Manual de Usuario</a></li>
           </ul>
         </li>
         <li>
-
           <div class="profile-details">
             <div class="profile-content">
             </div>

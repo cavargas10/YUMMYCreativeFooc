@@ -1,17 +1,10 @@
-<?php
-include("../../seguridad/seguridad.php");
-include_once "../controlador/controlador_receta.php";
-include_once "../modelo/modelo_receta.php";
-extract($_GET);
-?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../estilos/dashboard_principal.css">
-  <link rel="stylesheet" href="../estilos/dashboard_contenido_receta.css">
+  <link rel="stylesheet" href="../estilos/dashboard_ayuda.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
@@ -28,7 +21,7 @@ extract($_GET);
       </div>
       <ul class="nav-links">
         <li>
-          <a href="perfil_dashboard.php">
+          <a href="dashboard_principal.php">
             <i class="uil uil-estate"></i>
             <span class="link_name">Dashboard</span>
           </a>
@@ -38,7 +31,7 @@ extract($_GET);
         </li>
         <li>
           <a href="perfil_dashboard.php">
-            <i class="uil uil-user-circle"></i>
+          <i class="uil uil-user-circle"></i>
             <span class="link_name">Perfil</span>
           </a>
           <ul class="sub-menu blank">
@@ -48,7 +41,7 @@ extract($_GET);
         <li>
           <div class="icon-link">
             <a href="#">
-              <i class="uil uil-book-open"></i>
+            <i class="uil uil-book-open"></i>
               <span class="link_name">Contenido</span>
             </a>
             <i class='bx bxs-chevron-down arrow'></i>
@@ -63,7 +56,7 @@ extract($_GET);
         </li>
         <li>
           <a href="graficos_dashboard.php">
-            <i class="uil uil-chart-line"></i>
+          <i class="uil uil-chart-line"></i>
             <span class="link_name">Gráficos</span>
           </a>
           <ul class="sub-menu blank">
@@ -72,7 +65,7 @@ extract($_GET);
         </li>
         <li>
           <a href="clientes_dashboard.php">
-            <i class="uil uil-users-alt"></i>
+          <i class="uil uil-users-alt"></i>
             <span class="link_name">Clientes</span>
           </a>
           <ul class="sub-menu blank">
@@ -96,12 +89,12 @@ extract($_GET);
         <li>
           <div class="profile-details">
             <div class="profile-content">
-            </div>
-            <div class="name-job">
+            </div>        
+             <div class="name-job">
               <div class="profile_name">Salir</div>
             </div>
-            <a href="../../index.php">
-              <i class="uil uil-signout"></i>
+            <a href="../../index.php"> 
+            <i class="uil uil-signout"></i>
             </a>
 
           </div>
@@ -111,49 +104,9 @@ extract($_GET);
     <section class="home-section">
       <div class="home-content">
         <i class='bx bx-menu'></i>
-        <span class="text">Contenido / Recetas</span> <br />
+        <span class="text">Ayuda / Manual de Usuario</span> <br />
       </div>
 
-      <div class="listaReceta">
-        <button class="btnReceta"><a href="agregar_receta.php">Agregar</a></button>
-        <?php
-        // $control = new controlador_receta();
-        // $control->ListaReceta();
-
-        if (isset($idReceta)) {
-          $control1 = new controlador_receta();
-          $control1->DeleteReceta($idReceta);
-        }
-        ?>
-      </div>
-
-      <div class="paginacion">
-        <?php
-        $npagina;
-        if (isset($_GET['pagina'])) {
-          $npagina = $_GET['pagina'];
-        } else {
-          $npagina = 0;
-        }
-        $control = new controlador_receta();
-        $control->ListaRecetaPagina($npagina);
-
-        if($npagina <= 0){
-          echo "<ul>";
-          echo "<h2>" . ($npagina + 1) . "</h2>";
-          echo "<li><a class = 'pagina' href='contenido_receta.php?pagina=" . ($npagina + 1) . "'> > </a></li>";
-          echo "</ul>";
-        }else {
-          echo "<ul>";
-          echo "<li><a class = 'pagina' href='contenido_receta.php?pagina=" . ($npagina - 1) . "'> < </a></li>";
-          echo "<h2>" . ($npagina + 1) . "</h2>";
-          echo "<li><a class = 'pagina' href='contenido_receta.php?pagina=" . ($npagina + 1) . "'> > </a></li>";
-          echo "</ul>";
-        }
-        
-        ?>
-
-      </div>
     </section>
   </div>
 
@@ -161,7 +114,7 @@ extract($_GET);
     let arrow = document.querySelectorAll(".arrow");
     for (var i = 0; i < arrow.length; i++) {
       arrow[i].addEventListener("click", (e) => {
-        let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+        let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
         arrowParent.classList.toggle("showMenu");
       });
     }
@@ -170,20 +123,20 @@ extract($_GET);
     /* sidebarBtn.addEventListener("click", () => {
       sidebar.classList.toggle("close");
     }); */
-    $(function() {
+    $(function () {
       /* console.log("width: "+ document.body.clientWidth); */
-
+      
       resizeScreen();
-      $(window).resize(function() {
+      $(window).resize(function(){
         resizeScreen();
       })
-
-
-
+  
+      
+      
       function resizeScreen() {
-        if (document.body.clientWidth < 400) {
+        if(document.body.clientWidth < 400){
           $('.sidebar').addClass('close');
-        } else {
+        }else{
           $('.sidebar').removeClass('close');
         }
       }
