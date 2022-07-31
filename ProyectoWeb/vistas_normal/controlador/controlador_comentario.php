@@ -8,7 +8,7 @@ class controlador_comentario
 	var $Servidor;
 
 
-	function controlador_tips($host = "", $user = "", $pass = "", $db = "")
+	function controlador_comentario($host = "", $user = "", $pass = "", $db = "")
 	{
 		$this->BaseDatos = $db;
 		$this->Servidor = $host;
