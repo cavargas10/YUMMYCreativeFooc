@@ -86,7 +86,7 @@ $lista = $control3->EncontrarRecetas($idReceta);
         <h1><?php echo $lista[1] ?></h1><br>
         <section class="primera_sec">
             <aside class="izq">
-                <button class="tablin" onclick="openPage('img', this, 'rgb(203, 170, 120)')"id="defaultOpen">IMAGEN</button>
+                <button class="tablin" onclick="openPage('img', this, 'rgb(203, 170, 120)')" id="defaultOpen">IMAGEN</button>
                 <button class="tablin" onclick="openPage('video', this, 'rgb(203, 170, 120)')">VIDEO</button>
                 <button class="tablin" onclick="openPage('tresD', this, 'rgb(203, 170, 120)')">3D</button>
 
@@ -95,14 +95,11 @@ $lista = $control3->EncontrarRecetas($idReceta);
                 </div>
 
                 <div id="video" class="tabmulti">
-                <iframe width="885" height="460" src="<?php echo $lista[5] ?>" title="YouTube video player" frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="875" height="460" src="<?php echo $lista[5] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
                 <div id="tresD" class="tabmulti">
-                    <div class="sketchfab-embed-wrapper"> <iframe frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" 
-                    allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="885" 
-                    height="460" src="<?php echo $lista[6] ?>"> </iframe></div>
+                    <div class="sketchfab-embed-wrapper"> <iframe frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="875" height="460" src="<?php echo $lista[6] ?>"> </iframe></div>
                 </div>
 
                 <script>
@@ -125,148 +122,152 @@ $lista = $control3->EncontrarRecetas($idReceta);
                 </script>
             </aside>
 
-            <aside class="der">
+            <div class="blur">
+                <button class="bt1" onclick="document.getElementById('id01').style.display='block'">Registrate</button>
+            </div>
 
-                <button class="tablink" onclick="openCity('London', this, 'rgb(203, 170, 120)')" id="defaultOpen2">Tabla <br> Nutricional</button>
-                <button class="tablink" onclick="openCity('Paris', this, 'rgb(203, 170, 120)')">Semáforo Nutricional</button>
+                <aside class="der">
 
-                <div id="London" class="tabcontent">
-                    <h1 class="tabla">Tabla Nutricional</h1><br><br>
-                    <p><?php echo $lista[8] ?> kcal = <?php echo $lista[7] ?> kj /por porción</p>
-                    <p><?php echo $lista[8] ?> (Kca) Energia</p>
-                    <p><?php echo $lista[9] ?> (g) Proteina</p>
-                    <p><?php echo $lista[10] ?> (g) Fibra</p>
-                    <p><?php echo $lista[11] ?> (mg) Calcio</p>
-                    <p><?php echo $lista[12] ?> (mg) Hierro</p>
-                    <p><?php echo $lista[13] ?> (g) Carbohidratos</p>
-                    <p><?php echo $lista[14] ?> (g) Azucares</p>
-                    <p><?php echo $lista[15] ?> (g) Azucar Añadido</p>
-                    <p><?php echo $lista[16] ?> (mg) Potasio</p>
-                    <p><?php echo $lista[17] ?> (mg) Sodio</p>
-                    <p><?php echo $lista[18] ?> (g) Grasas</p>
-                    <p><?php echo $lista[19] ?> (g) Grasas Saturadas</p>
-                </div>
+                    <button class="tablink" onclick="openCity('London', this, 'rgb(203, 170, 120)')" id="defaultOpen2">Tabla <br> Nutricional</button>
+                    <button class="tablink" onclick="openCity('Paris', this, 'rgb(203, 170, 120)')">Semáforo Nutricional</button>
 
-                <div id="Paris" class="tabcontent">
-                    <h1>Semáforo Nutricional</h1><br><br>
-                    <div class="sem">
-                        <!-- AZUCAR -->
-                        <?php if ($lista[25] == 'Alto') {
-                            echo "  <div class='alto'>
-                                        <p>ALTO</p>
-                                    </div>
-                                    <div class='az'>
-                                        <p>en <b>AZÚCAR</b></p>
-                                    </div>";
-                        } elseif ($lista[25] == 'Medio') {
-                            echo "  <div class='medio'>
-                                        <p>MEDIO</p>
-                                    </div>
-                                    <div class='gr'>
-                                        <p>en <b>AZÚCAR</b></p>
-                                    </div>";
-                        } elseif ($lista[25] == 'Bajo') {
-                            echo "  <div class='bajo'>
-                                        <p>BAJO</p>
-                                    </div>
-                                    <div class='sal'>
-                                        <p>en <b>AZÚCAR</b></p>
-                                    </div>";
-                        } elseif ($lista[25] == 'No contiene') {
-                            echo "  <div class='no'>
-                                        <p>No contiene</p>
-                                    </div>
-                                    <div class='cont'>
-                                        <p><b>AZÚCAR</b></p>
-                                    </div>";
-                        }
-
-                        // SAL
-                        if ($lista[26] == 'Alto') {
-                            echo "  <div class='alto'>
-                                        <p>ALTO</p>
-                                    </div>
-                                    <div class='az'>
-                                        <p>en <b>SAL</b></p>
-                                    </div>";
-                        } elseif ($lista[26] == 'Medio') {
-                            echo "  <div class='medio'>
-                                        <p>MEDIO</p>
-                                    </div>
-                                    <div class='gr'> 
-                                        <p>en <b>SAL</b></p>
-                                    </div>";
-                        } elseif ($lista[26] == 'Bajo') {
-                            echo "  <div class='bajo'>
-                                        <p>BAJO</p>
-                                    </div>
-                                    <div class='sal'>
-                                        <p>en <b>SAL</b></p>
-                                    </div>";
-                        } elseif ($lista[26] == 'No contiene') {
-                            echo "  <div class='no'>
-                                        <p>No contiene</p>
-                                    </div>
-                                    <div class='cont'>
-                                        <p><b>SAL</b></p>
-                                    </div>";
-                        }
-
-                        // GRASA
-                        if ($lista[27] == 'Alto') {
-                            echo "  <div class='alto'>
-                                        <p>ALTO</p>
-                                    </div>
-                                    <div class='az'>
-                                        <p>en <b>GRASA</b></p>
-                                    </div>";
-                        } elseif ($lista[27] == 'Medio') {
-                            echo "  <div class='medio'>
-                                        <p>MEDIO</p>
-                                    </div>
-                                    <div class='gr'>
-                                        <p>en <b>GRASA</b></p>
-                                    </div>";
-                        } elseif ($lista[27] == 'Bajo') {
-                            echo "  <div class='bajo'>
-                                        <p>BAJO</p>
-                                    </div>
-                                    <div class='sal'>
-                                        <p>en <b>GRASA</b></p>
-                                    </div>";
-                        } elseif ($lista[27] == 'No contiene') {
-                            echo "  <div class='no'>
-                                        <p>No contiene</p>
-                                    </div>
-                                    <div class='cont'>
-                                        <p><b>GRASA</b></p>
-                                    </div>";
-                        }
-                        ?>
+                    <div id="London" class="tabcontent">
+                        <h1 class="tabla">Tabla Nutricional</h1><br><br>
+                        <p><?php echo $lista[8] ?> kcal = <?php echo $lista[7] ?> kj /por porción</p>
+                        <p><?php echo $lista[8] ?> (Kca) Energia</p>
+                        <p><?php echo $lista[9] ?> (g) Proteina</p>
+                        <p><?php echo $lista[10] ?> (g) Fibra</p>
+                        <p><?php echo $lista[11] ?> (mg) Calcio</p>
+                        <p><?php echo $lista[12] ?> (mg) Hierro</p>
+                        <p><?php echo $lista[13] ?> (g) Carbohidratos</p>
+                        <p><?php echo $lista[14] ?> (g) Azucares</p>
+                        <p><?php echo $lista[15] ?> (g) Azucar Añadido</p>
+                        <p><?php echo $lista[16] ?> (mg) Potasio</p>
+                        <p><?php echo $lista[17] ?> (mg) Sodio</p>
+                        <p><?php echo $lista[18] ?> (g) Grasas</p>
+                        <p><?php echo $lista[19] ?> (g) Grasas Saturadas</p>
                     </div>
-                </div>
 
-                <script>
-                    function openCity(cityName, elmnt, color) {
-                        var i, tabcontent, tablinks;
-                        tabcontent = document.getElementsByClassName("tabcontent");
-                        for (i = 0; i < tabcontent.length; i++) {
-                            tabcontent[i].style.display = "none";
-                        }
-                        tablinks = document.getElementsByClassName("tablink");
-                        for (i = 0; i < tablinks.length; i++) {
-                            tablinks[i].style.backgroundColor = "";
-                        }
-                        document.getElementById(cityName).style.display = "block";
-                        elmnt.style.backgroundColor = color;
+                    <div id="Paris" class="tabcontent">
+                        <h1>Semáforo Nutricional</h1><br><br>
+                        <div class="sem">
+                            <!-- AZUCAR -->
+                            <?php if ($lista[25] == 'Alto') {
+                                echo "  <div class='alto'>
+                        <p>ALTO</p>
+                    </div>
+                    <div class='az'>
+                        <p>en <b>AZÚCAR</b></p>
+                    </div>";
+                            } elseif ($lista[25] == 'Medio') {
+                                echo "  <div class='medio'>
+                        <p>MEDIO</p>
+                    </div>
+                    <div class='gr'>
+                        <p>en <b>AZÚCAR</b></p>
+                    </div>";
+                            } elseif ($lista[25] == 'Bajo') {
+                                echo "  <div class='bajo'>
+                        <p>BAJO</p>
+                    </div>
+                    <div class='sal'>
+                        <p>en <b>AZÚCAR</b></p>
+                    </div>";
+                            } elseif ($lista[25] == 'No contiene') {
+                                echo "  <div class='no'>
+                        <p>No contiene</p>
+                    </div>
+                    <div class='cont'>
+                        <p><b>AZÚCAR</b></p>
+                    </div>";
+                            }
 
-                    }
-                    // Get the element with id="defaultOpen" and click on it
-                    document.getElementById("defaultOpen2").click();
-                </script>
+                            // SAL
+                            if ($lista[26] == 'Alto') {
+                                echo "  <div class='alto'>
+                        <p>ALTO</p>
+                    </div>
+                    <div class='az'>
+                        <p>en <b>SAL</b></p>
+                    </div>";
+                            } elseif ($lista[26] == 'Medio') {
+                                echo "  <div class='medio'>
+                        <p>MEDIO</p>
+                    </div>
+                    <div class='gr'> 
+                        <p>en <b>SAL</b></p>
+                    </div>";
+                            } elseif ($lista[26] == 'Bajo') {
+                                echo "  <div class='bajo'>
+                        <p>BAJO</p>
+                    </div>
+                    <div class='sal'>
+                        <p>en <b>SAL</b></p>
+                    </div>";
+                            } elseif ($lista[26] == 'No contiene') {
+                                echo "  <div class='no'>
+                        <p>No contiene</p>
+                    </div>
+                    <div class='cont'>
+                        <p><b>SAL</b></p>
+                    </div>";
+                            }
 
-            </aside>
+                            // GRASA
+                            if ($lista[27] == 'Alto') {
+                                echo "  <div class='alto'>
+                        <p>ALTO</p>
+                    </div>
+                    <div class='az'>
+                        <p>en <b>GRASA</b></p>
+                    </div>";
+                            } elseif ($lista[27] == 'Medio') {
+                                echo "  <div class='medio'>
+                        <p>MEDIO</p>
+                    </div>
+                    <div class='gr'>
+                        <p>en <b>GRASA</b></p>
+                    </div>";
+                            } elseif ($lista[27] == 'Bajo') {
+                                echo "  <div class='bajo'>
+                        <p>BAJO</p>
+                    </div>
+                    <div class='sal'>
+                        <p>en <b>GRASA</b></p>
+                    </div>";
+                            } elseif ($lista[27] == 'No contiene') {
+                                echo "  <div class='no'>
+                        <p>No contiene</p>
+                    </div>
+                    <div class='cont'>
+                        <p><b>GRASA</b></p>
+                    </div>";
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </aside>
+            
         </section>
+        <script>
+            function openCity(cityName, elmnt, color) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].style.backgroundColor = "";
+                }
+                document.getElementById(cityName).style.display = "block";
+                elmnt.style.backgroundColor = color;
+
+            }
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen2").click();
+        </script>
+
 
         <div class="new-recetas">
             <h2><?php echo $lista[1] ?></h2>
