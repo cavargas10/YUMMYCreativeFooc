@@ -205,13 +205,257 @@ class modelo_recetas
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
     $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-                receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta 
-                from receta JOIN ingredientes 
-                on receta.idingredientes = ingredientes.idingredientes
-                where receta.categoria_Receta = '$categoria_Receta' 
-                AND receta.porciones_Receta = '$porciones_Receta' 
-                AND receta.dificultad_Receta = '$dificultad_Receta' 
-                AND ingredientes.nombre_Ingredientes = '$nombre_Ingredientes'";
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , SUM(comentarios.rating)/COUNT(comentarios.idcomentarios) as suma
+    
+    from receta, ingredientes , comentarios
+    WHERE receta.idingredientes = ingredientes.idingredientes
+    AND comentarios.idReceta = receta.idReceta
+    AND receta.categoria_Receta = '$categoria_Receta' 
+    AND receta.porciones_Receta = '$porciones_Receta' 
+    AND receta.dificultad_Receta = '$dificultad_Receta' 
+    AND ingredientes.nombre_Ingredientes = '$nombre_Ingredientes'
+    group by receta.titulo_Receta";
+    $resSQL = $miconexion->consulta($query);
+    //$this->Disconnect();
+    $resSQL = $miconexion->presentarconsultaRecetas();
+    return $resSQL;
+  }
+
+  public function BuscarReceta2($categoria_Receta)
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
+    
+    from receta, ingredientes , comentarios
+    WHERE receta.categoria_Receta = '$categoria_Receta'
+    AND comentarios.idReceta = receta.idReceta
+    group by receta.titulo_Receta";
+    $resSQL = $miconexion->consulta($query);
+    //$this->Disconnect();
+    $resSQL = $miconexion->presentarconsultaRecetas();
+    return $resSQL;
+  }
+
+  public function BuscarReceta3($nombre_Ingredientes)
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
+    
+    from receta, ingredientes , comentarios
+    WHERE receta.idingredientes = ingredientes.idingredientes
+    AND comentarios.idReceta = receta.idReceta
+    AND ingredientes.idingredientes = '$nombre_Ingredientes'
+    group by receta.titulo_Receta";
+    $resSQL = $miconexion->consulta($query);
+    //$this->Disconnect();
+    $resSQL = $miconexion->presentarconsultaRecetas();
+    return $resSQL;
+  }
+
+  public function BuscarReceta4($dificultad_Receta)
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
+    
+    from receta, ingredientes , comentarios
+    WHERE receta.dificultad_Receta = '$dificultad_Receta'
+    AND comentarios.idReceta = receta.idReceta 
+    group by receta.titulo_Receta";
+    $resSQL = $miconexion->consulta($query);
+    //$this->Disconnect();
+    $resSQL = $miconexion->presentarconsultaRecetas();
+    return $resSQL;
+  }
+
+  public function BuscarReceta5($porciones_Receta)
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
+    
+    from receta, ingredientes , comentarios
+    WHERE receta.porciones_Receta = '$porciones_Receta' 
+    AND comentarios.idReceta = receta.idReceta
+    group by receta.titulo_Receta";
+    $resSQL = $miconexion->consulta($query);
+    //$this->Disconnect();
+    $resSQL = $miconexion->presentarconsultaRecetas();
+    return $resSQL;
+  }
+
+  public function BuscarReceta6($categoria_Receta, $nombre_Ingredientes)
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
+    
+    from receta, ingredientes , comentarios
+    WHERE receta.idingredientes = ingredientes.idingredientes 
+    AND ingredientes.idingredientes = '$nombre_Ingredientes'
+    AND comentarios.idReceta = receta.idReceta
+    AND receta.categoria_Receta = '$categoria_Receta'
+    group by receta.titulo_Receta";
+    $resSQL = $miconexion->consulta($query);
+    //$this->Disconnect();
+    $resSQL = $miconexion->presentarconsultaRecetas();
+    return $resSQL;
+  }
+
+  public function BuscarReceta7($categoria_Receta, $dificultad_Receta)
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
+    
+    from receta, ingredientes , comentarios
+    WHERE receta.categoria_Receta = '$categoria_Receta'
+    AND comentarios.idReceta = receta.idReceta
+    AND receta.dificultad_Receta = '$dificultad_Receta'
+    group by receta.titulo_Receta";
+    $resSQL = $miconexion->consulta($query);
+    //$this->Disconnect();
+    $resSQL = $miconexion->presentarconsultaRecetas();
+    return $resSQL;
+  }
+
+  public function BuscarReceta8($categoria_Receta, $porciones_Receta)
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
+    
+    from receta, ingredientes , comentarios
+    WHERE receta.categoria_Receta = '$categoria_Receta'
+    AND comentarios.idReceta = receta.idReceta
+    AND receta.porciones_Receta = '$porciones_Receta'
+    group by receta.titulo_Receta";
+    $resSQL = $miconexion->consulta($query);
+    //$this->Disconnect();
+    $resSQL = $miconexion->presentarconsultaRecetas();
+    return $resSQL;
+  }
+
+  public function BuscarReceta9($categoria_Receta, $nombre_Ingredientes, $dificultad_Receta)
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
+    
+    from receta, ingredientes , comentarios
+    WHERE receta.idingredientes = ingredientes.idingredientes
+    AND ingredientes.idingredientes = '$nombre_Ingredientes'
+    AND comentarios.idReceta = receta.idReceta
+    AND receta.categoria_Receta = '$categoria_Receta'
+    AND receta.dificultad_Receta = '$dificultad_Receta'
+    group by receta.titulo_Receta";
+    $resSQL = $miconexion->consulta($query);
+    //$this->Disconnect();
+    $resSQL = $miconexion->presentarconsultaRecetas();
+    return $resSQL;
+  }
+
+  public function BuscarReceta10($categoria_Receta, $nombre_Ingredientes, $porciones_Receta)
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
+    
+    from receta, ingredientes , comentarios
+    WHERE receta.idingredientes = ingredientes.idingredientes
+    AND ingredientes.idingredientes = '$nombre_Ingredientes'
+    AND comentarios.idReceta = receta.idReceta
+    AND receta.categoria_Receta = '$categoria_Receta'
+    AND receta.porciones_Receta = '$porciones_Receta'
+    group by receta.titulo_Receta";
+    $resSQL = $miconexion->consulta($query);
+    //$this->Disconnect();
+    $resSQL = $miconexion->presentarconsultaRecetas();
+    return $resSQL;
+  }
+
+  public function BuscarReceta11($nombre_Ingredientes, $dificultad_Receta)
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
+    
+    from receta, ingredientes , comentarios
+    WHERE receta.idingredientes = ingredientes.idingredientes
+    AND ingredientes.idingredientes = '$nombre_Ingredientes'
+    AND comentarios.idReceta = receta.idReceta
+    AND receta.dificultad_Receta = '$dificultad_Receta'
+    group by receta.titulo_Receta";
+    $resSQL = $miconexion->consulta($query);
+    //$this->Disconnect();
+    $resSQL = $miconexion->presentarconsultaRecetas();
+    return $resSQL;
+  }
+
+  public function BuscarReceta12($nombre_Ingredientes, $porciones_Receta)
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
+    
+    from receta, ingredientes , comentarios
+    WHERE receta.idingredientes = ingredientes.idingredientes
+    AND ingredientes.idingredientes = '$nombre_Ingredientes'
+    AND comentarios.idReceta = receta.idReceta
+    AND receta.porciones_Receta = '$porciones_Receta'
+    group by receta.titulo_Receta";
+    $resSQL = $miconexion->consulta($query);
+    //$this->Disconnect();
+    $resSQL = $miconexion->presentarconsultaRecetas();
+    return $resSQL;
+  }
+
+  public function BuscarReceta13($nombre_Ingredientes, $porciones_Receta, $dificultad_Receta)
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
+    
+    from receta, ingredientes , comentarios
+    WHERE receta.idingredientes = ingredientes.idingredientes
+    AND ingredientes.idingredientes = '$nombre_Ingredientes'
+    AND comentarios.idReceta = receta.idReceta
+    AND receta.porciones_Receta = '$porciones_Receta'
+    AND receta.dificultad_Receta = '$dificultad_Receta'
+    group by receta.titulo_Receta";
+    $resSQL = $miconexion->consulta($query);
+    //$this->Disconnect();
+    $resSQL = $miconexion->presentarconsultaRecetas();
+    return $resSQL;
+  }
+
+  public function BuscarReceta14($porciones_Receta, $dificultad_Receta)
+  {
+    $miconexion = new clase_mysqli;
+    $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
+    
+    from receta, ingredientes , comentarios
+    WHERE receta.idingredientes = ingredientes.idingredientes
+    AND receta.porciones_Receta = '$porciones_Receta'
+    AND comentarios.idReceta = receta.idReceta
+    AND receta.dificultad_Receta = '$dificultad_Receta'
+    group by receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
     $resSQL = $miconexion->presentarconsultaRecetas();

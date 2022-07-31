@@ -136,17 +136,85 @@ $control4 = new controlador_recetas();
                 <h2>Explore nuestras Recetas</h2>
             </div>
             <?php
-            $control3 = new modelo_recetas();
-            if (isset($_POST['Enviar'])) {
-                if (isset($_POST['categoria_Receta']) == '' && isset($_POST['nombre_Ingredientes']) == '' && isset($_POST['dificultad_Receta']) == '' && isset($_POST['porciones_Receta']) == '') {
-                    $control4->PresentarRecetas();
-                } else {
-                    $control4->BuscarReceta();
-                }
-            } else {
-                $control4->PresentarRecetas();
-            }
-            ?>
+      $control3 = new modelo_recetas();
+      if (isset($_POST['Enviar'])) {
+        if (
+          isset($_POST['categoria_Receta']) == '' && isset($_POST['nombre_Ingredientes']) == ''
+          && isset($_POST['dificultad_Receta']) == '' && isset($_POST['porciones_Receta']) == ''
+        ) {
+          $control4->PresentarRecetas();
+        } elseif (
+          isset($_POST['categoria_Receta']) != '' && isset($_POST['nombre_Ingredientes']) == ''
+          && isset($_POST['dificultad_Receta']) == '' && isset($_POST['porciones_Receta']) == ''
+        ) {
+          $control4->BuscarReceta2();
+        } elseif (
+          isset($_POST['categoria_Receta']) == '' && isset($_POST['nombre_Ingredientes']) != ''
+          && isset($_POST['dificultad_Receta']) == '' && isset($_POST['porciones_Receta']) == ''
+        ) {
+          $control4->BuscarReceta3();
+        } elseif (
+          isset($_POST['categoria_Receta']) == '' && isset($_POST['nombre_Ingredientes']) == ''
+          && isset($_POST['dificultad_Receta']) != '' && isset($_POST['porciones_Receta']) == ''
+        ) {
+          $control4->BuscarReceta4();
+        } elseif (
+          isset($_POST['categoria_Receta']) == '' && isset($_POST['nombre_Ingredientes']) == ''
+          && isset($_POST['dificultad_Receta']) == '' && isset($_POST['porciones_Receta']) != ''
+        ) {
+          $control4->BuscarReceta5();
+        } elseif (
+          isset($_POST['categoria_Receta']) != '' && isset($_POST['nombre_Ingredientes']) != ''
+          && isset($_POST['dificultad_Receta']) == '' && isset($_POST['porciones_Receta']) == ''
+        ) {
+          $control4->BuscarReceta6();
+        } elseif (
+          isset($_POST['categoria_Receta']) != '' && isset($_POST['nombre_Ingredientes']) == ''
+          && isset($_POST['dificultad_Receta']) != '' && isset($_POST['porciones_Receta']) == ''
+        ) {
+          $control4->BuscarReceta7();
+        } elseif (
+          isset($_POST['categoria_Receta']) != '' && isset($_POST['nombre_Ingredientes']) == ''
+          && isset($_POST['dificultad_Receta']) == '' && isset($_POST['porciones_Receta']) != ''
+        ) {
+          $control4->BuscarReceta8();
+        } elseif (
+          isset($_POST['categoria_Receta']) != '' && isset($_POST['nombre_Ingredientes']) != ''
+          && isset($_POST['dificultad_Receta']) != '' && isset($_POST['porciones_Receta']) == ''
+        ) {
+          $control4->BuscarReceta9();
+        } elseif (
+          isset($_POST['categoria_Receta']) != '' && isset($_POST['nombre_Ingredientes']) != ''
+          && isset($_POST['dificultad_Receta']) == '' && isset($_POST['porciones_Receta']) != ''
+        ) {
+          $control4->BuscarReceta10();
+        } elseif (
+          isset($_POST['categoria_Receta']) == '' && isset($_POST['nombre_Ingredientes']) != ''
+          && isset($_POST['dificultad_Receta']) != '' && isset($_POST['porciones_Receta']) == ''
+        ) {
+          $control4->BuscarReceta11();
+        } elseif (
+          isset($_POST['categoria_Receta']) == '' && isset($_POST['nombre_Ingredientes']) != ''
+          && isset($_POST['dificultad_Receta']) == '' && isset($_POST['porciones_Receta']) != ''
+        ) {
+          $control4->BuscarReceta12();
+        } elseif (
+          isset($_POST['categoria_Receta']) == '' && isset($_POST['nombre_Ingredientes']) != ''
+          && isset($_POST['dificultad_Receta']) != '' && isset($_POST['porciones_Receta']) != ''
+        ) {
+          $control4->BuscarReceta13();
+        } elseif (
+          isset($_POST['categoria_Receta']) == '' && isset($_POST['nombre_Ingredientes']) == ''
+          && isset($_POST['dificultad_Receta']) != '' && isset($_POST['porciones_Receta']) != ''
+        ) {
+          $control4->BuscarReceta14();
+        } else {
+          $control4->BuscarReceta();
+        }
+      } else {
+        $control4->PresentarRecetas();
+      }
+      ?>
         </div>
     </main>
 </body>
