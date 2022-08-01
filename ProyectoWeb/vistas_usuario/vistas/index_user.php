@@ -129,47 +129,10 @@ $control = new usuario_controlador();
                 <h1>Platos más populares</h1>
                 <h2>Explora nuestras recetas más populares</h2>
             </div>
-            <section class="container-card-recet">
-                <div class="card-recet">
-                    <img src="../../img/card1.png" alt="">
-                    <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                    <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                        officia
-                        ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-                        beatae
-                        asperiores temporibus numquam quod, repudiandae a.</p>
-                    <span class="rating">★★★★☆</span>
-                    <h3 class="card-view text-medium">5 Vistas</h3>
-                </div>
-            </section>
-
-            <section class="container-card-recet">
-                <div class="card-recet">
-                    <img src="../../img/card1.png" alt="">
-                    <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                    <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                        officia
-                        ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-                        beatae
-                        asperiores temporibus numquam quod, repudiandae a.</p>
-                    <span class="rating">★★★★☆</span>
-                    <h3 class="card-view text-medium">5 Vistas</h3>
-                </div>
-            </section>
-
-            <section class="container-card-recet">
-                <div class="card-recet">
-                    <img src="../../img/card1.png" alt="">
-                    <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                    <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                        officia
-                        ipsam architecto, deleniti nobis blanditiis consectetur qui esse velit, sapiente sunt maxime
-                        beatae
-                        asperiores temporibus numquam quod, repudiandae a.</p>
-                    <span class="rating">★★★★☆</span>
-                    <h3 class="card-view text-medium">5 Vistas</h3>
-                </div>
-            </section>
+            <?php
+            $control3 = new modelo_principal();
+            $control3->PresentarTresRecetas();
+            ?>
         </div>
 
         <div class="inf_general">

@@ -219,7 +219,7 @@ class modelo_recetas
     GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetas();
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     return $resSQL;
   }
 
@@ -239,7 +239,7 @@ class modelo_recetas
     GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetas();
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     return $resSQL;
   }
 
@@ -260,7 +260,7 @@ class modelo_recetas
     GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetas();
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     return $resSQL;
   }
 
@@ -287,7 +287,7 @@ class modelo_recetas
     GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetas();
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     return $resSQL;
   }
 
@@ -314,7 +314,7 @@ class modelo_recetas
     GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetas();
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     return $resSQL;
   }
 
@@ -336,7 +336,7 @@ class modelo_recetas
     GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetas();
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     return $resSQL;
   }
 
@@ -357,7 +357,7 @@ class modelo_recetas
     GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetas();
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     return $resSQL;
   }
 
@@ -378,7 +378,7 @@ class modelo_recetas
     GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetas();
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     return $resSQL;
   }
 
@@ -401,7 +401,7 @@ class modelo_recetas
     GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetas();
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     return $resSQL;
   }
 
@@ -424,7 +424,7 @@ class modelo_recetas
     GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetas();
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     return $resSQL;
   }
 
@@ -446,7 +446,7 @@ class modelo_recetas
     GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetas();
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     return $resSQL;
   }
 
@@ -468,7 +468,7 @@ class modelo_recetas
     GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetas();
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     return $resSQL;
   }
 
@@ -491,7 +491,7 @@ class modelo_recetas
     GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetas();
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     return $resSQL;
   }
 
@@ -512,7 +512,7 @@ class modelo_recetas
     GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetas();
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     return $resSQL;
   }
 
@@ -570,7 +570,7 @@ class modelo_recetas
 
     GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
-    $resSQL = $miconexion->presentarconsultaRecetas();
+    $resSQL = $miconexion->presentarconsultaRecetasIndex();
     //$this->Disconnect();
     return $resSQL;
   }
