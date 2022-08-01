@@ -205,19 +205,21 @@ class modelo_recetas
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
     $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , SUM(comentarios.rating)/COUNT(comentarios.idcomentarios) as suma
-    
-    from receta, ingredientes , comentarios
-    WHERE receta.idingredientes = ingredientes.idingredientes
-    AND comentarios.idReceta = receta.idReceta
-    AND receta.categoria_Receta = '$categoria_Receta' 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+    LEFT JOIN ingredientes on receta.idingredientes = ingredientes.idingredientes
+
+    WHERE receta.categoria_Receta = '$categoria_Receta'
     AND receta.porciones_Receta = '$porciones_Receta' 
-    AND receta.dificultad_Receta = '$dificultad_Receta' 
-    AND ingredientes.nombre_Ingredientes = '$nombre_Ingredientes'
-    group by receta.titulo_Receta";
+    AND receta.dificultad_Receta = '$dificultad_Receta'
+    AND ingredientes.idingredientes = '$nombre_Ingredientes'
+
+    GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetasIndex();
+    $resSQL = $miconexion->presentarconsultaRecetas();
     return $resSQL;
   }
 
@@ -225,16 +227,19 @@ class modelo_recetas
   {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
     
-    from receta, ingredientes , comentarios
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+
     WHERE receta.categoria_Receta = '$categoria_Receta'
-    AND comentarios.idReceta = receta.idReceta
-    group by receta.titulo_Receta";
+
+    GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetasIndex();
+    $resSQL = $miconexion->presentarconsultaRecetas();
     return $resSQL;
   }
 
@@ -242,17 +247,20 @@ class modelo_recetas
   {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+
     $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+    LEFT JOIN ingredientes on receta.idingredientes = ingredientes.idingredientes
     
-    from receta, ingredientes , comentarios
-    WHERE receta.idingredientes = ingredientes.idingredientes
-    AND comentarios.idReceta = receta.idReceta
-    AND ingredientes.idingredientes = '$nombre_Ingredientes'
-    group by receta.titulo_Receta";
+    WHERE ingredientes.idingredientes = '$nombre_Ingredientes'
+
+    GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetasIndex();
+    $resSQL = $miconexion->presentarconsultaRecetas();
     return $resSQL;
   }
 
@@ -267,9 +275,19 @@ class modelo_recetas
     WHERE receta.dificultad_Receta = '$dificultad_Receta'
     AND comentarios.idReceta = receta.idReceta 
     group by receta.titulo_Receta";
+
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+
+    WHERE receta.dificultad_Receta = '$dificultad_Receta'
+
+    GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetasIndex();
+    $resSQL = $miconexion->presentarconsultaRecetas();
     return $resSQL;
   }
 
@@ -284,9 +302,19 @@ class modelo_recetas
     WHERE receta.porciones_Receta = '$porciones_Receta' 
     AND comentarios.idReceta = receta.idReceta
     group by receta.titulo_Receta";
+
+    $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+
+    WHERE receta.porciones_Receta = '$porciones_Receta' 
+
+    GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetasIndex();
+    $resSQL = $miconexion->presentarconsultaRecetas();
     return $resSQL;
   }
 
@@ -294,18 +322,21 @@ class modelo_recetas
   {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+
     $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
-    
-    from receta, ingredientes , comentarios
-    WHERE receta.idingredientes = ingredientes.idingredientes 
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+    LEFT JOIN ingredientes on receta.idingredientes = ingredientes.idingredientes
+
+    WHERE receta.categoria_Receta = '$categoria_Receta'
     AND ingredientes.idingredientes = '$nombre_Ingredientes'
-    AND comentarios.idReceta = receta.idReceta
-    AND receta.categoria_Receta = '$categoria_Receta'
-    group by receta.titulo_Receta";
+
+    GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetasIndex();
+    $resSQL = $miconexion->presentarconsultaRecetas();
     return $resSQL;
   }
 
@@ -313,17 +344,20 @@ class modelo_recetas
   {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+
     $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
-    
-    from receta, ingredientes , comentarios
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+
     WHERE receta.categoria_Receta = '$categoria_Receta'
-    AND comentarios.idReceta = receta.idReceta
     AND receta.dificultad_Receta = '$dificultad_Receta'
-    group by receta.titulo_Receta";
+
+    GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetasIndex();
+    $resSQL = $miconexion->presentarconsultaRecetas();
     return $resSQL;
   }
 
@@ -331,17 +365,20 @@ class modelo_recetas
   {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+
     $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
-    
-    from receta, ingredientes , comentarios
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+
     WHERE receta.categoria_Receta = '$categoria_Receta'
-    AND comentarios.idReceta = receta.idReceta
     AND receta.porciones_Receta = '$porciones_Receta'
-    group by receta.titulo_Receta";
+
+    GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetasIndex();
+    $resSQL = $miconexion->presentarconsultaRecetas();
     return $resSQL;
   }
 
@@ -349,19 +386,22 @@ class modelo_recetas
   {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+
     $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
-    
-    from receta, ingredientes , comentarios
-    WHERE receta.idingredientes = ingredientes.idingredientes
-    AND ingredientes.idingredientes = '$nombre_Ingredientes'
-    AND comentarios.idReceta = receta.idReceta
-    AND receta.categoria_Receta = '$categoria_Receta'
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+    LEFT JOIN ingredientes on receta.idingredientes = ingredientes.idingredientes
+
+    WHERE receta.categoria_Receta = '$categoria_Receta'
     AND receta.dificultad_Receta = '$dificultad_Receta'
-    group by receta.titulo_Receta";
+    AND ingredientes.idingredientes = '$nombre_Ingredientes'
+
+    GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetasIndex();
+    $resSQL = $miconexion->presentarconsultaRecetas();
     return $resSQL;
   }
 
@@ -369,19 +409,22 @@ class modelo_recetas
   {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+
     $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
-    
-    from receta, ingredientes , comentarios
-    WHERE receta.idingredientes = ingredientes.idingredientes
-    AND ingredientes.idingredientes = '$nombre_Ingredientes'
-    AND comentarios.idReceta = receta.idReceta
-    AND receta.categoria_Receta = '$categoria_Receta'
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+    LEFT JOIN ingredientes on receta.idingredientes = ingredientes.idingredientes
+
+    WHERE receta.categoria_Receta = '$categoria_Receta'
     AND receta.porciones_Receta = '$porciones_Receta'
-    group by receta.titulo_Receta";
+    AND ingredientes.idingredientes = '$nombre_Ingredientes'
+
+    GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetasIndex();
+    $resSQL = $miconexion->presentarconsultaRecetas();
     return $resSQL;
   }
 
@@ -389,18 +432,21 @@ class modelo_recetas
   {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+
     $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
-    
-    from receta, ingredientes , comentarios
-    WHERE receta.idingredientes = ingredientes.idingredientes
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+    LEFT JOIN ingredientes on receta.idingredientes = ingredientes.idingredientes
+
+    WHERE receta.dificultad_Receta = '$dificultad_Receta'
     AND ingredientes.idingredientes = '$nombre_Ingredientes'
-    AND comentarios.idReceta = receta.idReceta
-    AND receta.dificultad_Receta = '$dificultad_Receta'
-    group by receta.titulo_Receta";
+
+    GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetasIndex();
+    $resSQL = $miconexion->presentarconsultaRecetas();
     return $resSQL;
   }
 
@@ -408,18 +454,21 @@ class modelo_recetas
   {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+
     $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
-    
-    from receta, ingredientes , comentarios
-    WHERE receta.idingredientes = ingredientes.idingredientes
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+    LEFT JOIN ingredientes on receta.idingredientes = ingredientes.idingredientes
+
+    WHERE receta.porciones_Receta = '$porciones_Receta' 
     AND ingredientes.idingredientes = '$nombre_Ingredientes'
-    AND comentarios.idReceta = receta.idReceta
-    AND receta.porciones_Receta = '$porciones_Receta'
-    group by receta.titulo_Receta";
+
+    GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetasIndex();
+    $resSQL = $miconexion->presentarconsultaRecetas();
     return $resSQL;
   }
 
@@ -427,19 +476,22 @@ class modelo_recetas
   {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+
     $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
-    
-    from receta, ingredientes , comentarios
-    WHERE receta.idingredientes = ingredientes.idingredientes
-    AND ingredientes.idingredientes = '$nombre_Ingredientes'
-    AND comentarios.idReceta = receta.idReceta
-    AND receta.porciones_Receta = '$porciones_Receta'
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+    LEFT JOIN ingredientes on receta.idingredientes = ingredientes.idingredientes
+
+    WHERE receta.porciones_Receta = '$porciones_Receta' 
     AND receta.dificultad_Receta = '$dificultad_Receta'
-    group by receta.titulo_Receta";
+    AND ingredientes.idingredientes = '$nombre_Ingredientes'
+
+    GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetasIndex();
+    $resSQL = $miconexion->presentarconsultaRecetas();
     return $resSQL;
   }
 
@@ -447,18 +499,20 @@ class modelo_recetas
   {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+
     $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta , nota
-    
-    from receta, ingredientes , comentarios
-    WHERE receta.idingredientes = ingredientes.idingredientes
-    AND receta.porciones_Receta = '$porciones_Receta'
-    AND comentarios.idReceta = receta.idReceta
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+
+    WHERE receta.porciones_Receta = '$porciones_Receta' 
     AND receta.dificultad_Receta = '$dificultad_Receta'
-    group by receta.titulo_Receta";
+
+    GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
     //$this->Disconnect();
-    $resSQL = $miconexion->presentarconsultaRecetasIndex();
+    $resSQL = $miconexion->presentarconsultaRecetas();
     return $resSQL;
   }
 
@@ -505,12 +559,18 @@ class modelo_recetas
   {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+
     $query = "SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-                receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta 
-                from receta ";
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+
+    GROUP BY receta.titulo_Receta";
     $resSQL = $miconexion->consulta($query);
-    $resSQL = $miconexion->presentarconsultaRecetasIndex();
+    $resSQL = $miconexion->presentarconsultaRecetas();
     //$this->Disconnect();
     return $resSQL;
   }
 }
+

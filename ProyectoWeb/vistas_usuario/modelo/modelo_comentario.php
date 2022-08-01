@@ -45,6 +45,10 @@ class modelo_comentario
     $this->idReceta = $idReceta;
   }
 
+  public function setnota($nota){
+    $this->nota = $nota;
+  }
+
   
    public function ListaComentarios($idReceta) {
      $miconexion = new clase_mysqli;

@@ -23,10 +23,12 @@ class modelo_index
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
     $resSQL = $miconexion->consulta("SELECT receta.idReceta, receta.imagen_Receta, receta.categoria_Receta, receta.titulo_Receta, 
-    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,SUM(comentarios.rating)/COUNT(comentarios.idcomentarios) as suma
-    from receta, comentarios
-    where comentarios.idReceta = receta.idReceta
-    group by receta.titulo_Receta order by idReceta DESC LIMIT 3");
+    receta.descripcion_Receta, receta.grupoEtario, receta.dificultad_Receta, receta.tiempo_Receta,  
+    (if(Sum(comentarios.rating) is NULL,0,Sum(comentarios.rating)) / if(if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)) = 0,1,if(COUNT(comentarios.idcomentarios) = 0,0,COUNT(comentarios.idcomentarios)))) as Suma
+
+    FROM receta LEFT JOIN comentarios ON comentarios.idReceta = receta.idReceta 
+
+    GROUP BY receta.titulo_Receta DESC LIMIT 3");
      
     $resSQL = $miconexion->presentarconsultaTresRecetasIndex();
     //$this->Disconnect();
