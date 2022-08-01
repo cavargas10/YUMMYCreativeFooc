@@ -342,6 +342,37 @@ class clase_mysqli
 		}
 	}
 
+	function presentarconsultaTresRecetasIndex2()
+	{
+		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+			$newrow = str_replace("../../imagenesReceta/", "", $row[1]);
+			for ($i = 0; $i < 1; $i++) {
+				echo "  <div class='container-card-recet'>
+							<div class='card-recet'>
+								<div class='img-card-recet'>
+									<img src='../../imagenesReceta/" . $newrow . "'>
+								</div>
+								<div class='card-content'>
+									<p class='cat'>$row[2]</p>
+									<a href='new_receta.php?idReceta=$row[0]'>
+										<h1 class='card-title text-medium'>$row[3]</h1>
+									</a>
+									<div class='card-inf'>
+										<p class='text-medium'>$row[4]</p>
+										<h3><i class='uil uil-user-circle'></i> Grupo etario: <p>$row[5]</p></h3>
+										<h3><i class='uil uil-graph-bar'></i> Dificultad: <p>$row[6]</p></h3>
+										<h3><i class='uil uil-clock-eight'></i> Tiempo: <p>$row[7] min.</p></h3>
+									</div>
+									<div class='val'>
+										<p class='valor'>★ <br>".number_format($row[8], 2)."</p>
+									</div>
+								</div>
+							</div>
+						</div>";
+			}
+		}
+	}
+
 	function presentarconsultaTresRecetasUser()
 	{
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {

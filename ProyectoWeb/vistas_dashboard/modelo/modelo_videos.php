@@ -43,7 +43,7 @@ class modelo_videos
   public function ListaVideoPagina($offset) {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select idvideos 'ID', titulo_Video 'TITULO', descripcion_Video 'CONTENIDO', url_Video 'VIDEO' from videos LIMIT 2 OFFSET $offset");
+    $resSQL=$miconexion->consulta("select idvideos 'ID', titulo_Video 'TITULO', descripcion_Video 'CONTENIDO', url_Video 'VIDEO' from videos ORDER by idvideos DESC LIMIT 2 OFFSET $offset");
     $resSQL=$miconexion->verconsultacrudVideos();
     //$this->Disconnect();
     return $resSQL;

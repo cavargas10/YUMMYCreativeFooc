@@ -89,7 +89,7 @@ $control4->CreateComentarios($idReceta);
         <h1><?php echo $lista[1] ?></h1><br>
         <section class="primera_sec">
             <aside class="izq">
-                <button class="tablin" onclick="openPage('img', this, 'rgb(203, 170, 120)')"id="defaultOpen">IMAGEN</button>
+                <button class="tablin" onclick="openPage('img', this, 'rgb(203, 170, 120)')" id="defaultOpen">IMAGEN</button>
                 <button class="tablin" onclick="openPage('video', this, 'rgb(203, 170, 120)')">VIDEO</button>
                 <button class="tablin" onclick="openPage('tresD', this, 'rgb(203, 170, 120)')">3D</button>
 
@@ -98,14 +98,11 @@ $control4->CreateComentarios($idReceta);
                 </div>
 
                 <div id="video" class="tabmulti">
-                <iframe width="885" height="460" src="<?php echo $lista[5] ?>" title="YouTube video player" frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="885" height="460" src="<?php echo $lista[5] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
                 <div id="tresD" class="tabmulti">
-                    <div class="sketchfab-embed-wrapper"> <iframe frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" 
-                    allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="885" 
-                    height="460" src="<?php echo $lista[6] ?>"> </iframe></div>
+                    <div class="sketchfab-embed-wrapper"> <iframe frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="885" height="460" src="<?php echo $lista[6] ?>"> </iframe></div>
                 </div>
 
                 <script>
@@ -308,32 +305,13 @@ $control4->CreateComentarios($idReceta);
         <div class="grid">
 
             <div class="new-recetas">
-                <h2>Recetas Relacionadas</h2>
+                <h2>Recetas Mejor Valoradas</h2>
             </div>
 
-            <div class="container-card-recet">
-                <div class="card-recet">
-                    <div class="img-card-recet">
-                        <img src="../../img/plato4.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <p class="cat">Categoría </p>
-                        <a href="new_receta.php">
-                            <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                        </a>
-                        <div class="card-inf"><br>
-                            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                                officia ipsam architecto, deleniti nobis..</p>
-                            <h3><i class="uil uil-user-circle"></i> Grupo etario: </h3>
-                            <h3><i class="uil uil-graph-bar"></i> Dificultad: </h3>
-                            <h3><i class="uil uil-clock-eight"></i> Tiempo: </h3>
-                        </div>
-                        <div class="val">
-                            <p class="valor">★ <br> 4.5</p>
-                        </div>
-                    </div></a>
-                </div>
-            </div>
+            <?php
+            $control3 = new modelo_recetas();
+            $control3->PresentarTresRecetasVotos2();
+            ?>
         </div>
         <div class="comentarios">
             <div class="new-comentarios">
@@ -342,14 +320,14 @@ $control4->CreateComentarios($idReceta);
 
             <form class="formComentario" method="post" action="">
                 <div class="contenedorFormComentarios">
-                    
+
                     <label for="valoracion_Comentario"><b>Valoracion: </b> <span id="rateYo"></span></label>
 
                     <input type="hidden" name="rating" id="rating">
 
                     <label for="comentario"><b>Comentario:</b></label><br>
                     <textarea name="comentario" id="comentario" maxlength="100" required cols="30" rows="10" placeholder="Ingrese un Comentario!"></textarea>
-                    
+
                 </div>
                 <div>
                     <br><button type="submit" value="Procesar" class="subbtnTips">Enviar</button>
@@ -378,7 +356,7 @@ $control4->CreateComentarios($idReceta);
                     "endColor": "#FFCC00" //GREEN
                 },
                 onSet: function(rating, rateYoInstance) {
-                     $("#rating").val(rating);
+                    $("#rating").val(rating);
                 }
             });
         });

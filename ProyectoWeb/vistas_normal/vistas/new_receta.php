@@ -126,128 +126,128 @@ $lista = $control3->EncontrarRecetas($idReceta);
                 <button class="bt1" onclick="document.getElementById('id01').style.display='block'">Registrate</button>
             </div>
 
-                <aside class="der">
+            <aside class="der">
 
-                    <button class="tablink" onclick="openCity('London', this, 'rgb(203, 170, 120)')" id="defaultOpen2">Tabla <br> Nutricional</button>
-                    <button class="tablink" onclick="openCity('Paris', this, 'rgb(203, 170, 120)')">Semáforo Nutricional</button>
+                <button class="tablink" onclick="openCity('London', this, 'rgb(203, 170, 120)')" id="defaultOpen2">Tabla <br> Nutricional</button>
+                <button class="tablink" onclick="openCity('Paris', this, 'rgb(203, 170, 120)')">Semáforo Nutricional</button>
 
-                    <div id="London" class="tabcontent">
-                        <h1 class="tabla">Tabla Nutricional</h1><br><br>
-                        <p><?php echo $lista[8] ?> kcal = <?php echo $lista[7] ?> kj /por porción</p>
-                        <p><?php echo $lista[8] ?> (Kca) Energia</p>
-                        <p><?php echo $lista[9] ?> (g) Proteina</p>
-                        <p><?php echo $lista[10] ?> (g) Fibra</p>
-                        <p><?php echo $lista[11] ?> (mg) Calcio</p>
-                        <p><?php echo $lista[12] ?> (mg) Hierro</p>
-                        <p><?php echo $lista[13] ?> (g) Carbohidratos</p>
-                        <p><?php echo $lista[14] ?> (g) Azucares</p>
-                        <p><?php echo $lista[15] ?> (g) Azucar Añadido</p>
-                        <p><?php echo $lista[16] ?> (mg) Potasio</p>
-                        <p><?php echo $lista[17] ?> (mg) Sodio</p>
-                        <p><?php echo $lista[18] ?> (g) Grasas</p>
-                        <p><?php echo $lista[19] ?> (g) Grasas Saturadas</p>
-                    </div>
+                <div id="London" class="tabcontent">
+                    <h1 class="tabla">Tabla Nutricional</h1><br><br>
+                    <p><?php echo $lista[8] ?> kcal = <?php echo $lista[7] ?> kj /por porción</p>
+                    <p><?php echo $lista[8] ?> (Kca) Energia</p>
+                    <p><?php echo $lista[9] ?> (g) Proteina</p>
+                    <p><?php echo $lista[10] ?> (g) Fibra</p>
+                    <p><?php echo $lista[11] ?> (mg) Calcio</p>
+                    <p><?php echo $lista[12] ?> (mg) Hierro</p>
+                    <p><?php echo $lista[13] ?> (g) Carbohidratos</p>
+                    <p><?php echo $lista[14] ?> (g) Azucares</p>
+                    <p><?php echo $lista[15] ?> (g) Azucar Añadido</p>
+                    <p><?php echo $lista[16] ?> (mg) Potasio</p>
+                    <p><?php echo $lista[17] ?> (mg) Sodio</p>
+                    <p><?php echo $lista[18] ?> (g) Grasas</p>
+                    <p><?php echo $lista[19] ?> (g) Grasas Saturadas</p>
+                </div>
 
-                    <div id="Paris" class="tabcontent">
-                        <h1>Semáforo Nutricional</h1><br><br>
-                        <div class="sem">
-                            <!-- AZUCAR -->
-                            <?php if ($lista[25] == 'Alto') {
-                                echo "  <div class='alto'>
+                <div id="Paris" class="tabcontent">
+                    <h1>Semáforo Nutricional</h1><br><br>
+                    <div class="sem">
+                        <!-- AZUCAR -->
+                        <?php if ($lista[25] == 'Alto') {
+                            echo "  <div class='alto'>
                         <p>ALTO</p>
                     </div>
                     <div class='az'>
                         <p>en <b>AZÚCAR</b></p>
                     </div>";
-                            } elseif ($lista[25] == 'Medio') {
-                                echo "  <div class='medio'>
+                        } elseif ($lista[25] == 'Medio') {
+                            echo "  <div class='medio'>
                         <p>MEDIO</p>
                     </div>
                     <div class='gr'>
                         <p>en <b>AZÚCAR</b></p>
                     </div>";
-                            } elseif ($lista[25] == 'Bajo') {
-                                echo "  <div class='bajo'>
+                        } elseif ($lista[25] == 'Bajo') {
+                            echo "  <div class='bajo'>
                         <p>BAJO</p>
                     </div>
                     <div class='sal'>
                         <p>en <b>AZÚCAR</b></p>
                     </div>";
-                            } elseif ($lista[25] == 'No contiene') {
-                                echo "  <div class='no'>
+                        } elseif ($lista[25] == 'No contiene') {
+                            echo "  <div class='no'>
                         <p>No contiene</p>
                     </div>
                     <div class='cont'>
                         <p><b>AZÚCAR</b></p>
                     </div>";
-                            }
+                        }
 
-                            // SAL
-                            if ($lista[26] == 'Alto') {
-                                echo "  <div class='alto'>
+                        // SAL
+                        if ($lista[26] == 'Alto') {
+                            echo "  <div class='alto'>
                         <p>ALTO</p>
                     </div>
                     <div class='az'>
                         <p>en <b>SAL</b></p>
                     </div>";
-                            } elseif ($lista[26] == 'Medio') {
-                                echo "  <div class='medio'>
+                        } elseif ($lista[26] == 'Medio') {
+                            echo "  <div class='medio'>
                         <p>MEDIO</p>
                     </div>
                     <div class='gr'> 
                         <p>en <b>SAL</b></p>
                     </div>";
-                            } elseif ($lista[26] == 'Bajo') {
-                                echo "  <div class='bajo'>
+                        } elseif ($lista[26] == 'Bajo') {
+                            echo "  <div class='bajo'>
                         <p>BAJO</p>
                     </div>
                     <div class='sal'>
                         <p>en <b>SAL</b></p>
                     </div>";
-                            } elseif ($lista[26] == 'No contiene') {
-                                echo "  <div class='no'>
+                        } elseif ($lista[26] == 'No contiene') {
+                            echo "  <div class='no'>
                         <p>No contiene</p>
                     </div>
                     <div class='cont'>
                         <p><b>SAL</b></p>
                     </div>";
-                            }
+                        }
 
-                            // GRASA
-                            if ($lista[27] == 'Alto') {
-                                echo "  <div class='alto'>
+                        // GRASA
+                        if ($lista[27] == 'Alto') {
+                            echo "  <div class='alto'>
                         <p>ALTO</p>
                     </div>
                     <div class='az'>
                         <p>en <b>GRASA</b></p>
                     </div>";
-                            } elseif ($lista[27] == 'Medio') {
-                                echo "  <div class='medio'>
+                        } elseif ($lista[27] == 'Medio') {
+                            echo "  <div class='medio'>
                         <p>MEDIO</p>
                     </div>
                     <div class='gr'>
                         <p>en <b>GRASA</b></p>
                     </div>";
-                            } elseif ($lista[27] == 'Bajo') {
-                                echo "  <div class='bajo'>
+                        } elseif ($lista[27] == 'Bajo') {
+                            echo "  <div class='bajo'>
                         <p>BAJO</p>
                     </div>
                     <div class='sal'>
                         <p>en <b>GRASA</b></p>
                     </div>";
-                            } elseif ($lista[27] == 'No contiene') {
-                                echo "  <div class='no'>
+                        } elseif ($lista[27] == 'No contiene') {
+                            echo "  <div class='no'>
                         <p>No contiene</p>
                     </div>
                     <div class='cont'>
                         <p><b>GRASA</b></p>
                     </div>";
-                            }
-                            ?>
-                        </div>
+                        }
+                        ?>
                     </div>
-                </aside>
-            
+                </div>
+            </aside>
+
         </section>
         <script>
             function openCity(cityName, elmnt, color) {
@@ -307,32 +307,13 @@ $lista = $control3->EncontrarRecetas($idReceta);
         <div class="grid">
 
             <div class="new-recetas">
-                <h2>Recetas Relacionadas</h2>
+                <h2>Recetas Mejor Valoradas</h2>
             </div>
 
-            <div class="container-card-recet">
-                <div class="card-recet">
-                    <div class="img-card-recet">
-                        <img src="../../img/plato4.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <p class="cat">Categoría </p>
-                        <a href="new_receta.php">
-                            <h1 class="card-title text-medium">Mushroon and cream vegan vegetables </h1>
-                        </a>
-                        <div class="card-inf"><br>
-                            <p class="text-medium"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt
-                                officia ipsam architecto, deleniti nobis..</p>
-                            <h3><i class="uil uil-user-circle"></i> Grupo etario: </h3>
-                            <h3><i class="uil uil-graph-bar"></i> Dificultad: </h3>
-                            <h3><i class="uil uil-clock-eight"></i> Tiempo: </h3>
-                        </div>
-                        <div class="val">
-                            <p class="valor">★ <br> 4.5</p>
-                        </div>
-                    </div></a>
-                </div>
-            </div>
+            <?php
+            $control3 = new modelo_recetas();
+            $control3->PresentarTresRecetasVotos2();
+            ?>
         </div>
 
         <div class="comentarios">

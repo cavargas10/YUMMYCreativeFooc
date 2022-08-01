@@ -278,7 +278,12 @@ class modelo_receta
   {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL = $miconexion->consulta("delete from receta where idReceta ='$this->idReceta'");
+    $resSQL = $miconexion->consulta("delete libros,editoriales
+    from libros
+    join editoriales
+    on libros.codigoeditorial=editoriales.codigo
+    where editoriales.nombre='Emece'");
+    $resSQL = $miconexion->consulta("DELETE comentarios , receta from comentarios JOIN receta where comentarios.idReceta = receta.idReceta");
     //$this->Disconnect();
     return $resSQL;
   }

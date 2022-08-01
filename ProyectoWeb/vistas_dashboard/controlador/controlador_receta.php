@@ -172,7 +172,7 @@ class controlador_receta
 			echo "<script>location.href='../vistas/contenido_receta.php'</script>";
 		} else {
 			echo '<script>alert("SQL Incorrectos...");</script>';
-			echo "<script>location.href='../vistas/contenido_receta.php'</script>";
+			//echo "<script>location.href='../vistas/contenido_receta.php'</script>";
 		}
 	}
 

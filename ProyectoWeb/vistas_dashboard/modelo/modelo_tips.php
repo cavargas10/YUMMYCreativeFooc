@@ -53,7 +53,7 @@ class modelo_tips
   public function ListaTipsPagina($offset) {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("select idtips 'ID', titulo_Tips 'TITULO', descripcion_Tips 'DESCRIPCION', imagen_Tips 'IMAGEN' from tips LIMIT 3 OFFSET $offset");
+    $resSQL=$miconexion->consulta("select idtips 'ID', titulo_Tips 'TITULO', descripcion_Tips 'DESCRIPCION', imagen_Tips 'IMAGEN' from tips ORDER by idtips DESC LIMIT 3 OFFSET $offset");
     $resSQL=$miconexion->verconsultacrudTips();
     //$this->Disconnect();
     return $resSQL;
